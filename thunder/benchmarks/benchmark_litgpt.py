@@ -290,7 +290,10 @@ class Benchmark_litGPT:
                 use_fused=use_fused,
                 use_multi_tensor=use_multi_tensor,
             )
-            self.optimizer_step = self.optimizer.step
+            if torch_compile_step:
+                self.optimizer_step = torch.compile(self.optimizer.step)
+            else:
+                self.optimizer_step = self.optimizer.step
 
         # Compile the model
         self.model = self.setup_compile(self.model)

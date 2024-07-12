@@ -197,7 +197,7 @@ def _dispatch_sqrt(x):
 
 
 @thunder.jit
-def _single_tensor_adam_impl(
+def _single_tensor_adam(
     params: list[Tensor],
     grads: list[Tensor],
     exp_avgs: list[Tensor],
