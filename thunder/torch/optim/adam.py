@@ -232,7 +232,8 @@ def _single_tensor_adam_impl(
         step_t = state_steps[i]
 
         # update step
-        step_t = thunder.prims.copy_(step_t + 1, step_t)
+        step_t += 1
+        # step_t = thunder.prims.copy_(step_t + 1, step_t)
 
         if weight_decay != 0:
             grad = grad.add(param, alpha=weight_decay)
@@ -240,8 +241,10 @@ def _single_tensor_adam_impl(
         assert not torch.is_complex(param)
 
         # Decay the first and second moment running average coefficient
-        exp_avg = thunder.prims.copy_(exp_avg * beta1 + grad * (1 - beta1), exp_avg)
-        exp_avg_sq = thunder.prims.copy_((exp_avg_sq * beta2) + (1 - beta2) * grad * grad, exp_avg_sq)
+        # exp_avg = thunder.prims.copy_(exp_avg * beta1 + grad * (1 - beta1), exp_avg)
+        exp_avg.mul_(beta1).add_(grad, alpha=(1 - beta1))
+        # exp_avg_sq = thunder.prims.copy_((exp_avg_sq * beta2) + (1 - beta2) * grad * grad, exp_avg_sq)
+        exp_avg_sq.mul_(beta2).addcmul_(grad, grad, value=(1 - beta2))
 
         assert not capturable and not differentiable
 
@@ -256,8 +259,8 @@ def _single_tensor_adam_impl(
         assert not amsgrad
         denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt) + eps
 
-        # param.addcdiv_(exp_avg, denom, value=-step_size)
-        param = thunder.prims.copy_(param + (-step_size) * exp_avg / denom, param)
+        # param = thunder.prims.copy_(param + (-step_size) * exp_avg / denom, param)
+        param.addcdiv_(exp_avg, denom, value=-step_size)
 
 
 _single_tensor_adam = thunder.jit(_single_tensor_adam_impl, disable_inplace_copy_check=True)
