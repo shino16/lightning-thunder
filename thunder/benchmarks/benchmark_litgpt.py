@@ -65,13 +65,14 @@ def is_transformer_engine(low_precision_mode: str) -> bool:
     return low_precision_mode == "fp8-delayed-te"
 
 
-def configure_optimizers(model, weight_decay, learning_rate, betas, device_type):
-    import inspect
-
-    fused_available = "fused" in inspect.signature(torch.optim.Adam).parameters
-    use_fused = fused_available and device_type == "cuda"
+def configure_optimizers(model, weight_decay, learning_rate, betas, device_type, use_fused, use_multi_tensor):
     optimizer = torch.optim.Adam(
-        model.parameters(), lr=learning_rate, weight_decay=weight_decay, betas=betas, fused=use_fused
+        model.parameters(),
+        lr=learning_rate,
+        weight_decay=weight_decay,
+        betas=betas,
+        fused=use_fused,
+        foreach=use_multi_tensor,
     )
     return optimizer
 
@@ -131,6 +132,9 @@ class Benchmark_litGPT:
         max_iters: int = 45,
         warmup_iters: int = 25,
         use_thunder_adam: bool = False,
+        use_fused: bool = False,
+        use_multi_tensor: bool = False,
+        torch_compile_step: bool = False,
     ):
         seed = 1337
         torch.manual_seed(seed)
@@ -147,8 +151,18 @@ class Benchmark_litGPT:
         assert self.max_iters > self.warmup_iters
 
         self.device = device
+
         self.model_name = model_name
-        self.config = Config.from_name(self.model_name)
+        if self.model_name == "handmade":
+            self.config = Config(
+                block_size=512,
+                n_layer=2,
+                n_embd=128,
+                n_head=4,
+                padding_multiple=128,
+            )
+        else:
+            self.config = Config.from_name(self.model_name)
         self.compile = compile
         self.dynamic = dynamic
         self.distributed_mode = distributed_mode
@@ -244,6 +258,7 @@ class Benchmark_litGPT:
         print(f"Loading model with {self.config.__dict__}")
         self.model = self.init_model()
         print(f"Time to instantiate model: {time.perf_counter() - t0:.02f} seconds.")
+        print(f"{len(list(self.model.parameters()))=}")
 
         if self.use_te_fp8_autocast:
             te_precision = TransformerEnginePrecision(weights_dtype=torch.bfloat16, replace_layers=True)
@@ -267,7 +282,13 @@ class Benchmark_litGPT:
             self.optimizer_step = self.optimizer.step
         else:
             self.optimizer = configure_optimizers(
-                self.model, weight_decay, learning_rate, (beta1, beta2), device_type="cuda"
+                self.model,
+                weight_decay,
+                learning_rate,
+                (beta1, beta2),
+                device_type="cuda",
+                use_fused=use_fused,
+                use_multi_tensor=use_multi_tensor,
             )
             self.optimizer_step = self.optimizer.step
 

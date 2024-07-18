@@ -196,8 +196,7 @@ def _dispatch_sqrt(x):
     return math.sqrt(x)
 
 
-@thunder.jit
-def _single_tensor_adam(
+def _single_tensor_adam_impl(
     params: list[Tensor],
     grads: list[Tensor],
     exp_avgs: list[Tensor],
@@ -260,3 +259,6 @@ def _single_tensor_adam(
 
         # param.addcdiv_(exp_avg, denom, value=-step_size)
         param = thunder.prims.copy_(param + (-step_size) * exp_avg / denom, param)
+
+
+_single_tensor_adam = thunder.jit(_single_tensor_adam_impl, disable_inplace_copy_check=True)
