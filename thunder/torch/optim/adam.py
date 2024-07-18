@@ -235,8 +235,7 @@ def _single_tensor_adam_impl(
         step_t = thunder.prims.copy_(step_t + 1, step_t)
 
         if weight_decay != 0:
-            #     grad = grad.add(param, alpha=weight_decay)
-            grad = grad.add(param * weight_decay)
+            grad = grad.add(param, alpha=weight_decay)
 
         assert not torch.is_complex(param)
 
