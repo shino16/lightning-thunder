@@ -19,6 +19,7 @@ from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
 )
 
 import thunder
+import thunder.torch.optim.adam
 from thunder.tests.litgpt_model import Config, GPT, Block
 from lightning.fabric.utilities.throughput import measure_flops
 from lightning.fabric.utilities import Throughput
@@ -67,10 +68,17 @@ def is_transformer_engine(low_precision_mode: str) -> bool:
 def configure_optimizers(model, weight_decay, learning_rate, betas, device_type):
     import inspect
 
-    fused_available = "fused" in inspect.signature(torch.optim.AdamW).parameters
+    fused_available = "fused" in inspect.signature(torch.optim.Adam).parameters
     use_fused = fused_available and device_type == "cuda"
-    optimizer = torch.optim.AdamW(
+    optimizer = torch.optim.Adam(
         model.parameters(), lr=learning_rate, weight_decay=weight_decay, betas=betas, fused=use_fused
+    )
+    return optimizer
+
+
+def configure_thunder_adam(model, weight_decay, learning_rate, betas):
+    optimizer = thunder.torch.optim.adam.Adam(
+        model.parameters(), lr=learning_rate, weight_decay=weight_decay, betas=betas
     )
     return optimizer
 
@@ -122,6 +130,7 @@ class Benchmark_litGPT:
         low_precision_mode: str = "none",
         max_iters: int = 45,
         warmup_iters: int = 25,
+        use_thunder_adam: bool = False,
     ):
         seed = 1337
         torch.manual_seed(seed)
@@ -248,9 +257,19 @@ class Benchmark_litGPT:
             self.setup_activation_checkpointing()
 
         # Initialize the optimizer after the model is sharded if using FSDP
-        self.optimizer = configure_optimizers(
-            self.model, weight_decay, learning_rate, (beta1, beta2), device_type="cuda"
-        )
+        if use_thunder_adam:
+            self.optimizer = configure_thunder_adam(self.model, weight_decay, learning_rate, (beta1, beta2))
+            # adam_step_executor = thunder.extend.OperatorExecutor("adam_step_executor")
+            # adam_step_executor.register_operator(
+            #     'torch.optim.adam._single_tensor_adam',
+            #     fn=thunder.optim.adam._single_tensor_adam)
+            # thunder.add_default_executor(adam_step_executor)
+            self.optimizer_step = self.optimizer.step
+        else:
+            self.optimizer = configure_optimizers(
+                self.model, weight_decay, learning_rate, (beta1, beta2), device_type="cuda"
+            )
+            self.optimizer_step = self.optimizer.step
 
         # Compile the model
         self.model = self.setup_compile(self.model)
@@ -495,7 +514,7 @@ class Benchmark_litGPT:
             loss.backward()
 
             # Simple Gradient Accumulation Implementation
-            self.optimizer.step()
+            self.optimizer_step()
             self.optimizer.zero_grad(set_to_none=True)
 
             if self.nsys_enabled and i == self.profiler_stop and global_rank in [0, None]:
