@@ -5031,6 +5031,11 @@ def softmax(a: TensorLike, dim: int, dtype: None | dtypeLike = None, _stacklevel
     return _softmax(a, dim=dim, dtype=dtype)
 
 
+@torchsymbol(torch.optim.Adam.step, id="torch.optim.Adam.step", tags=(prims.OpTags.DONT_DCE,))
+def _adam_step(optim):
+    pass
+
+
 def torch_device(type: DeviceLike, index: int | None = None) -> devices.Device:
     if isinstance(type, (devices.Device, torch.device)):
         # PyTorch behavior:
