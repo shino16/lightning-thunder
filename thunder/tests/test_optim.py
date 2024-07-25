@@ -18,13 +18,16 @@ def test_single_tensor_adam_like(executor, device, _):
         param.grad = make_tensor_like(param)
         ref_param.grad = param.grad.clone().detach()
 
+    adam_ex = thunder.extend.get_executor("adam_ex")
+    executors = [adam_ex] + executor.executors_list()
+
+    adam = torch.optim.Adam(params, foreach=False)
+    jitted_step = thunder.jit(adam.step, executors=executors)
+    jitted_step()
+    jitted_step()
+
     ref_adam = torch.optim.Adam(ref_params, foreach=False)
     ref_adam.step()
     ref_adam.step()
-
-    adam = thunder.torch.optim.adam.Adam(params, foreach=False)
-    jitted_step = executor.make_callable(adam.step)
-    jitted_step()
-    jitted_step()
 
     torch.testing.assert_close(actual=params, expected=ref_params)
