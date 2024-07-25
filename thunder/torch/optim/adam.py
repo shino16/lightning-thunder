@@ -6,119 +6,105 @@ from torch.optim.optimizer import _get_scalar_dtype
 import thunder
 
 
-class Adam(torch.optim.Adam):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+def _init_group(
+    optim,
+    group,
+    params_with_grad,
+    grads,
+    exp_avgs,
+    exp_avg_sqs,
+    max_exp_avg_sqs,
+    state_steps,
+):
+    has_complex = False
+    for p in group["params"]:
+        if p.grad is not None:
+            has_complex |= torch.is_complex(p)
+            params_with_grad.append(p)
+            grads.append(p.grad)
 
-    def _init_group(
-        self,
-        group,
-        params_with_grad,
-        grads,
-        exp_avgs,
-        exp_avg_sqs,
-        max_exp_avg_sqs,
-        state_steps,
-    ):
-        has_complex = False
-        for p in group["params"]:
-            if p.grad is not None:
-                has_complex |= torch.is_complex(p)
-                params_with_grad.append(p)
-                grads.append(p.grad)
+            state = optim.state[p]
+            # Lazy state initialization
+            if len(state) == 0:
+                # PyTorch hosts `step` on CPU if both capturable and fused are off.
+                # This is because kernel launches are costly on CUDA and XLA.
+                state["step"] = torch.zeros(
+                    (),
+                    dtype=_get_scalar_dtype(is_fused=group["fused"]),
+                    device=p.device,
+                )
 
-                state = self.state[p]
-                # Lazy state initialization
-                if len(state) == 0:
-                    # PyTorch hosts `step` on CPU if both capturable and fused are off.
-                    # This is because kernel launches are costly on CUDA and XLA.
-                    state["step"] = torch.zeros(
-                        (),
-                        dtype=_get_scalar_dtype(is_fused=group["fused"]),
-                        device=p.device,
-                    )
-
-                    # Exponential moving average of gradient values
-                    state["exp_avg"] = torch.zeros_like(p)
-                    # Exponential moving average of squared gradient values
-                    state["exp_avg_sq"] = torch.zeros_like(p)
-                    if group["amsgrad"]:
-                        # Maintains max of all exp. moving avg. of sq. grad. values
-                        state["max_exp_avg_sq"] = torch.zeros_like(p)
-
-                exp_avgs.append(state["exp_avg"])
-                exp_avg_sqs.append(state["exp_avg_sq"])
-
+                # Exponential moving average of gradient values
+                state["exp_avg"] = torch.zeros_like(p)
+                # Exponential moving average of squared gradient values
+                state["exp_avg_sq"] = torch.zeros_like(p)
                 if group["amsgrad"]:
-                    max_exp_avg_sqs.append(state["max_exp_avg_sq"])
-                if group["differentiable"] and state["step"].requires_grad:
-                    raise RuntimeError("`requires_grad` is not supported for `step` in differentiable mode")
+                    # Maintains max of all exp. moving avg. of sq. grad. values
+                    state["max_exp_avg_sq"] = torch.zeros_like(p)
 
-                # Foreach without capturable does not support a tensor lr
-                if group["foreach"] and torch.is_tensor(group["lr"]) and not group["capturable"]:
-                    raise RuntimeError("lr as a Tensor is not supported for capturable=False and foreach=True")
+            exp_avgs.append(state["exp_avg"])
+            exp_avg_sqs.append(state["exp_avg_sq"])
 
-                state_steps.append(state["step"])
-        return has_complex
+            if group["amsgrad"]:
+                max_exp_avg_sqs.append(state["max_exp_avg_sq"])
+            if group["differentiable"] and state["step"].requires_grad:
+                raise RuntimeError("`requires_grad` is not supported for `step` in differentiable mode")
 
-    @_use_grad_for_differentiable
-    def step(self, closure=None):
-        """Perform a single optimization step.
+            # Foreach without capturable does not support a tensor lr
+            if group["foreach"] and torch.is_tensor(group["lr"]) and not group["capturable"]:
+                raise RuntimeError("lr as a Tensor is not supported for capturable=False and foreach=True")
 
-        Args:
-            closure (Callable, optional): A closure that reevaluates the model
-                and returns the loss.
-        """
-        self._cuda_graph_capture_health_check()
+            state_steps.append(state["step"])
+    return has_complex
 
-        loss = None
-        if closure is not None:
-            with torch.enable_grad():
-                loss = closure()
 
-        for group in self.param_groups:
-            params_with_grad: list[Tensor] = []
-            grads: list[Tensor] = []
-            exp_avgs: list[Tensor] = []
-            exp_avg_sqs: list[Tensor] = []
-            max_exp_avg_sqs: list[Tensor] = []
-            state_steps: list[Tensor] = []
-            beta1, beta2 = group["betas"]
+@_use_grad_for_differentiable
+def step(optim):
+    """Perform a single optimization step."""
+    optim._cuda_graph_capture_health_check()
 
-            has_complex = self._init_group(
-                group,
-                params_with_grad,
-                grads,
-                exp_avgs,
-                exp_avg_sqs,
-                max_exp_avg_sqs,
-                state_steps,
-            )
+    for group in optim.param_groups:
+        params_with_grad: list[Tensor] = []
+        grads: list[Tensor] = []
+        exp_avgs: list[Tensor] = []
+        exp_avg_sqs: list[Tensor] = []
+        max_exp_avg_sqs: list[Tensor] = []
+        state_steps: list[Tensor] = []
+        beta1, beta2 = group["betas"]
 
-            adam(
-                params_with_grad,
-                grads,
-                exp_avgs,
-                exp_avg_sqs,
-                max_exp_avg_sqs,
-                state_steps,
-                amsgrad=group["amsgrad"],
-                has_complex=has_complex,
-                beta1=beta1,
-                beta2=beta2,
-                lr=group["lr"],
-                weight_decay=group["weight_decay"],
-                eps=group["eps"],
-                maximize=group["maximize"],
-                foreach=group["foreach"],
-                capturable=group["capturable"],
-                differentiable=group["differentiable"],
-                fused=group["fused"],
-                grad_scale=getattr(self, "grad_scale", None),
-                found_inf=getattr(self, "found_inf", None),
-            )
+        has_complex = _init_group(
+            optim,
+            group,
+            params_with_grad,
+            grads,
+            exp_avgs,
+            exp_avg_sqs,
+            max_exp_avg_sqs,
+            state_steps,
+        )
 
-        return loss
+        adam(
+            params_with_grad,
+            grads,
+            exp_avgs,
+            exp_avg_sqs,
+            max_exp_avg_sqs,
+            state_steps,
+            amsgrad=group["amsgrad"],
+            has_complex=has_complex,
+            beta1=beta1,
+            beta2=beta2,
+            lr=group["lr"],
+            weight_decay=group["weight_decay"],
+            eps=group["eps"],
+            maximize=group["maximize"],
+            foreach=group["foreach"],
+            capturable=group["capturable"],
+            differentiable=group["differentiable"],
+            fused=group["fused"],
+            grad_scale=getattr(optim, "grad_scale", None),
+            found_inf=getattr(optim, "found_inf", None),
+        )
 
 
 def adam(
@@ -229,9 +215,8 @@ def _single_tensor_adam(
 
         assert not capturable and not differentiable
 
-        step = step_t.to(param.dtype)
-        bias_correction1 = 1 - beta1**step
-        bias_correction2 = 1 - beta2**step
+        bias_correction1 = 1 - beta1**step_t
+        bias_correction2 = 1 - beta2**step_t
 
         step_size = lr / bias_correction1
 
