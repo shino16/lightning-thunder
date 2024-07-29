@@ -1234,13 +1234,18 @@ class TensorProxy(Proxy, TensorProxyInterface):
         device: devices.Device | None = None,
         dtype: dtypes.dtype | None = None,
         requires_grad: bool | None = None,
-        grad: TensorProxy | None = None,
+        grad: Tensor | None = None,
         prefix: None | str = None,
         distparallel_type: DistParallelType | None = None,
         history: None | tuple = None,
         thunder_fsdp_padding_size: int | None = None,
     ):
         super().__init__(name, prefix=prefix, history=history)
+
+        if grad is not None:
+            grad_pr = ProvenanceRecord(inst=PseudoInst.CONSTANT, inputs=[], value="grad")
+            t_grad_pr = ProvenanceRecord(PseudoInst.LOAD_ATTR, inputs=[history, grad_pr])
+            grad = tensorproxy(grad, name=self.name + "_grad", history=t_grad_pr)
 
         (
             self._shape,
@@ -1641,11 +1646,6 @@ def tensorproxy(t: torch.Tensor, /, *, name: None | str, history: None | tuple =
         torch_device = t.device
     device = devices.to_device(torch_device)
     dtype = dtypes.to_dtype(t.dtype)
-    grad = None
-    if t.grad is not None:
-        grad_pr = ProvenanceRecord(inst=PseudoInst.CONSTANT, inputs=[], value="grad")
-        t_grad_pr = ProvenanceRecord(PseudoInst.LOAD_ATTR, inputs=[history, grad_pr])
-        grad = tensorproxy(t.grad, name=name + "_grad", history=t_grad_pr)
     # See Note [DistributedDataParallel and distparallel_type]
     distparallel_type = getattr(t, "distparallel_type", None)
     _thunder_fsdp_padding_size = getattr(t, "_thunder_fsdp_padding_size", None)
@@ -1656,7 +1656,7 @@ def tensorproxy(t: torch.Tensor, /, *, name: None | str, history: None | tuple =
         device=device,
         dtype=dtype,
         requires_grad=t.requires_grad,
-        grad=grad,
+        grad=t.grad,
         distparallel_type=distparallel_type,
         history=history,
         thunder_fsdp_padding_size=_thunder_fsdp_padding_size,
