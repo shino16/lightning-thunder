@@ -36,6 +36,7 @@ import thunder.core.devices as devices
 from thunder.core.transform_common import (
     dce,
     Transform,
+    flatten_nested_ops,
     functionalize_inplace_ops,
     check_inplace_to_views,
 )
@@ -529,6 +530,10 @@ def jit(
 
             prologue_traces = [prologue_trc]
             computation_traces = [computation_trc]
+
+            computation_trc = flatten_nested_ops(computation_trc)
+            computation_traces.append(computation_trc)
+
             orig_to_view_swap_map = check_inplace_to_views(computation_trc)
             vanilla_tensor_args: set[int] | None = None
             if not compile_options.get("skip_inplace_functionalization", False):
