@@ -380,6 +380,23 @@ class Transform(ABC):
         return state_dict
 
 
+def flatten_nested_ops(computation_trace: Trace) -> Trace:
+    def flatten(bsyms: list[BoundSymbol], new_bsyms: list[BoundSymbol]):
+        for bsym in bsyms:
+            if bsym.sym.tags and prims.OpTags.NESTED in bsym.sym.tags:
+                flatten(bsym.subsymbols, new_bsyms)
+            else:
+                new_bsyms.append(bsym)
+
+    new_bsyms = []
+    flatten(computation_trace.bound_symbols, new_bsyms)
+
+    flat_trace = from_trace(computation_trace)
+    flat_trace.bound_symbols = new_bsyms
+    flat_trace.set_provenance(TraceProvenance("Flatten nested ops"))
+    return flat_trace
+
+
 def order_proxies(bsyms: Sequence[BoundSymbol]) -> dict[str, int]:
     """computes a canonical ordering of proxies in the bound symbols based on the order of appearance
     note that it would not cover unused inputs when applied to traces.bound_symbols

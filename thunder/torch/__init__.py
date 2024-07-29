@@ -12,6 +12,7 @@ from numbers import Number
 from typing import Any, overload
 from types import NoneType, ModuleType
 from collections.abc import Callable
+from torch.optim import adam as torch_adam
 
 import opt_einsum
 
@@ -5105,9 +5106,63 @@ def softmax(a: TensorLike, dim: int, dtype: None | dtypeLike = None, _stacklevel
     return _softmax(a, dim=dim, dtype=dtype)
 
 
-@torchsymbol(torch.optim.Adam.step, id="torch.optim.Adam.step", tags=(prims.OpTags.DONT_DCE,))
-def _adam_step(optim):
-    pass
+@torchsymbol(torch_adam.adam, id="torch.optim.adam.adam", tags=(prims.OpTags.NESTED,))
+def _adam(
+    params: list[TensorLike],
+    grads: list[TensorLike],
+    exp_avgs: list[TensorLike],
+    exp_avg_sqs: list[TensorLike],
+    max_exp_avg_sqs: list[TensorLike],
+    state_steps: list[TensorLike],
+    foreach: None | bool = None,
+    capturable: bool = False,
+    differentiable: bool = False,
+    fused: None | bool = None,
+    grad_scale: None | TensorLike = None,
+    found_inf: None | TensorLike = None,
+    has_complex: bool = False,
+    *,
+    amsgrad: bool,
+    beta1: float,
+    beta2: float,
+    lr: float | TensorLike,
+    weight_decay: float,
+    eps: float,
+    maximize: bool,
+):
+    from torch import Tensor
+    from thunder.core.proxies import TensorProxy
+
+    def _dispatch_sqrt(x):
+        if isinstance(x, (Tensor, TensorProxy)):
+            return x.sqrt()
+        return math.sqrt(x)
+
+    for i, param in enumerate(params):
+        grad = grads[i] if not maximize else -grads[i]
+        exp_avg = exp_avgs[i]
+        exp_avg_sq = exp_avg_sqs[i]
+        step_t = state_steps[i]
+
+        step_t += 1
+
+        if weight_decay != 0:
+            grad = grad.add(param, alpha=weight_decay)
+
+        exp_avg.mul_(beta1).add_(grad, alpha=(1 - beta1))
+        exp_avg_sq.mul_(beta2).addcmul_(grad, grad, value=(1 - beta2))
+
+        bias_correction1 = 1 - beta1**step_t
+        bias_correction2 = 1 - beta2**step_t
+
+        step_size = lr / bias_correction1
+
+        bias_correction2_sqrt = _dispatch_sqrt(bias_correction2)
+
+        assert not amsgrad
+        denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt) + eps
+
+        param.addcdiv_(exp_avg, denom, value=-step_size)
 
 
 def torch_device(type: DeviceLike, index: int | None = None) -> devices.Device:

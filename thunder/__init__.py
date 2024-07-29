@@ -37,6 +37,7 @@ from thunder.core.transform_common import (
     dce,
     Transform,
     wrap_return_value_along_with_argments,
+    flatten_nested_ops,
 )
 from thunder.core.functionalization import (
     check_inplace_to_views,
@@ -546,6 +547,7 @@ def jit(
             computation_traces = [computation_trc]
 
             computation_trc = wrap_return_value_along_with_argments(computation_trc)
+            computation_trc = flatten_nested_ops(computation_trc)
             computation_traces.append(computation_trc)
 
             orig_to_view_swap_map = check_inplace_to_views(computation_trc)
