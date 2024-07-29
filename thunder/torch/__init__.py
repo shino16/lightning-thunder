@@ -255,7 +255,7 @@ def numel(a: TensorLike, /) -> int:
 register_method("numel", numel)
 
 
-@torchsymbol(torch.Tensor.is_complex, is_property=True, id="torch.is_complex")
+@torchsymbol(torch.is_complex, is_property=True, id="torch.is_complex")
 def is_complex(a: TensorLike, /) -> bool:
     return dtypes.is_complex_dtype(a.dtype)
 
@@ -768,7 +768,20 @@ def zeros(*shape: int, device: None | DeviceLike = None, dtype: None | dtypeLike
 
 
 @torchsymbol(torch.zeros_like)
-def zeros_like(a: TensorLike, /, *, device: DeviceLike | None = None, dtype: dtypeLike | None = None) -> TensorLike:
+def zeros_like(
+    a: TensorLike,
+    /,
+    *,
+    device: DeviceLike | None = None,
+    dtype: dtypeLike | None = None,
+    memory_format: torch.memory_format = torch.preserve_format,
+) -> TensorLike:
+    utils.check(
+        memory_format == torch.preserve_format,
+        lambda: "preserve_format!=torch.preserve_format is not supported within thunder.jit",
+        NotImplementedError,
+    )
+
     return full_like(a, 0, device=device, dtype=dtype)
 
 
@@ -2125,6 +2138,16 @@ def addcdiv(a: TensorLike, b: TensorLike, c: TensorLike, /, *, value: None | Num
 @torchsymbol(torch.Tensor.addcdiv_, is_method=True, tags=(prims.OpTags.IN_PLACE,))
 def addcdiv_(a: TensorLike, b: TensorLike, c: TensorLike, /, *, value: None | Number = None) -> TensorLike:
     return prims.copy_(addcdiv(a, b, c, value=value), a)
+
+
+@torchsymbol(torch.Tensor.lerp, is_method=True)
+def lerp(start: TensorLike, end: TensorLike, weight: float | TensorLike) -> TensorLike:
+    return start + weight * (end - start)
+
+
+@torchsymbol(torch.Tensor.lerp_, is_method=True, tags=(prims.OpTags.IN_PLACE,))
+def lerp_(start: TensorLike, end: TensorLike, weight: float | TensorLike) -> TensorLike:
+    return prims.copy_(lerp(start, end, weight), start)
 
 
 #
