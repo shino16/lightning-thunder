@@ -1426,6 +1426,10 @@ class TensorProxy(Proxy, TensorProxyInterface):
     def thunder_fsdp_padding_size(self):
         return self._thunder_fsdp_padding_size
 
+    @property
+    def is_sparse(self):
+        return False
+
     # We need to implement `__len__` as
     # > In addition to bypassing any instance attributes in the
     # > interest of correctness, implicit special method lookup
@@ -1811,6 +1815,9 @@ _cls_to_number_proxy_map = {
 
 
 def tensorproxy(t: torch.Tensor, /, *, name: None | str, history: None | tuple = None) -> TensorProxy:
+    if t.is_sparse:
+        raise RuntimeError("thunder.jit not supported with sparse tensors")
+
     if hasattr(t, "_thunder_device"):
         torch_device = t._thunder_device
     else:
