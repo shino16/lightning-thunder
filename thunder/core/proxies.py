@@ -1357,18 +1357,13 @@ class TensorProxy(Proxy, TensorProxyInterface):
         device: devices.Device | None = None,
         dtype: dtypes.dtype | None = None,
         requires_grad: bool | None = None,
-        grad: Tensor | None = None,
+        grad: TensorProxy | None = None,
         prefix: None | str = None,
         distparallel_type: DistParallelType | None = None,
         history: None | tuple = None,
         thunder_fsdp_padding_size: int | None = None,
     ):
         super().__init__(name, prefix=prefix, history=history)
-
-        if grad is not None:
-            grad_pr = ProvenanceRecord(inst=PseudoInst.CONSTANT, inputs=[], value="grad")
-            t_grad_pr = ProvenanceRecord(PseudoInst.LOAD_ATTR, inputs=[history, grad_pr])
-            grad = tensorproxy(grad, name=self.name + "_grad", history=t_grad_pr)
 
         (
             self._shape,
@@ -1802,7 +1797,9 @@ _cls_to_number_proxy_map = {
 }
 
 
-def tensorproxy(t: torch.Tensor, /, *, name: None | str, history: None | tuple = None) -> TensorProxy:
+def tensorproxy(
+    t: torch.Tensor, /, *, grad: None | TensorProxy = None, name: None | str, history: None | tuple = None
+) -> TensorProxy:
     if t.is_sparse:
         raise RuntimeError("thunder.jit not supported with sparse tensors")
 
@@ -1822,7 +1819,7 @@ def tensorproxy(t: torch.Tensor, /, *, name: None | str, history: None | tuple =
         device=device,
         dtype=dtype,
         requires_grad=t.requires_grad,
-        grad=t.grad,
+        grad=grad,
         distparallel_type=distparallel_type,
         history=history,
         thunder_fsdp_padding_size=_thunder_fsdp_padding_size,
