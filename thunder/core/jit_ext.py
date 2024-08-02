@@ -90,6 +90,8 @@ from thunder.core.interpreter import (
     WrappedValue,
     unwrap,
     wrap,
+    wrap_args,
+    wrap_kwargs,
     wrap_const,
     PseudoInst,
     ProvenanceRecord,
@@ -952,6 +954,31 @@ def record_function_exit_lookaside(*args, **kwargs):
     return torch.autograd.profiler.record_function.__exit__(*args, **kwargs)
 
 
+@register_general_jit_lookaside(torch.optim.Adam._init_group)
+def adam_init_group_lookaside(obj, *args, **kwargs):
+    uobj = unwrap(obj)
+    uargs = tuple(unwrap(arg) for arg in args)
+    ukwargs = {unwrap(k): unwrap(v) for k, v in kwargs.items()}
+
+    is_complex = torch.optim.Adam._init_group(uobj, *uargs, **ukwargs)
+
+    if args:
+        tensor_lists = args[1:] + tuple(kwargs.values())
+    else:
+        tensor_lists = args + tuple(v for k, v in kwargs.items() if k != "group")
+
+    for arg in tensor_lists:
+        assert isinstance(arg.value, list), f"{arg} {arg.value}"
+        arg.item_wrappers += [None] * (len(arg.value) - len(arg.item_wrappers))
+
+    wrapped_fn = wrap_const(torch.optim.Adam._init_group)
+    pr = ProvenanceRecord(
+        inst=PseudoInst.OPAQUE,
+        inputs=[wrapped_fn.provenance, wrap_args(args).provenance, wrap_kwargs(kwargs).provenance],
+    )
+    return wrap(is_complex, provenance=pr)
+
+
 # Adds proxy methods
 # NOTE These methods map to themselves, which prevents the interpreter from looking into them
 #   This is OK because these methods are written in a tracing-safe manner, and trying to
@@ -1535,6 +1562,27 @@ def unpack_inputs(ctx, prologue_trace, pro_to_comp_inps, pro_to_epi_inps, args, 
                 raise NotImplementedError(f"Unpacking from BINARY_SUBSCR with elaborate inputs {inputs=} {provenance}")
             return output
 
+        def from_build_list(provenance, *, new_output=False):
+            inputs = [from_provenance(i, new_output=True) for i in provenance.inputs]
+            print(inputs)
+
+            if not inputs:
+                return provenance.value
+
+            if new_output:
+                output = Proxy("seq")
+            else:
+                output = p
+
+            max_ordering = max(param_ordering[id(i)][1] for i in inputs)
+            param_ordering[id(output)] = (
+                output,
+                max_ordering + [cpnt for i in inputs for cpnt in ([math.inf] + param_ordering[id(i)])],
+            )
+            bsym = prims.unpack_sequence.bind(inputs, len(inputs), output=output)
+            prologue_trace.bound_symbols.append(bsym)
+            return output
+
         def from_opaque(provenance, *, new_output=False):
             fn = provenance.inputs[0]
             args = provenance.inputs[1]
@@ -1580,6 +1628,7 @@ def unpack_inputs(ctx, prologue_trace, pro_to_comp_inps, pro_to_epi_inps, args, 
                 "LOAD_ATTR": from_load_attr,
                 "CONSTANT": from_constant,
                 "BINARY_SUBSCR": from_binary_subscr,
+                "BUILD_LIST": from_build_list,
                 "OPAQUE": from_opaque,
             }
 
