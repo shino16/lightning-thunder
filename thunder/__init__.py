@@ -759,26 +759,29 @@ def jit(
                     NotImplementedError,
                 )
 
-        result = cache_entry.computation_fn(*inps)
+        with pytorch.cuda.nvtx.range("computation_fn"):
+            result = cache_entry.computation_fn(*inps)
 
         if cache_entry.backward_fn:
             # Run the compiled forward function
             data_for_autograd, (saved_tensors, saved_other) = result
 
             # Connect produced tensors with PyTorch's autograd graph
-            ThunderFunction.apply(
-                cache_entry.return_none_instead_of_grads,
-                cache_entry.backward_fn,
-                saved_tensors,
-                saved_other,
-                data_for_autograd["flat_output"],
-                *data_for_autograd["flat_args"],
-            )
-            result = data_for_autograd["output"]
+            with pytorch.cuda.nvtx.range("backward_fn"):
+                ThunderFunction.apply(
+                    cache_entry.return_none_instead_of_grads,
+                    cache_entry.backward_fn,
+                    saved_tensors,
+                    saved_other,
+                    data_for_autograd["flat_output"],
+                    *data_for_autograd["flat_args"],
+                )
+                result = data_for_autograd["output"]
 
         if cache_entry.epilogue_fn:
             result, comp_to_epi = result
-            cache_entry.epilogue_fn(*pro_to_epi, *comp_to_epi)
+            with pytorch.cuda.nvtx.range("epilogue_fn"):
+                cache_entry.epilogue_fn(*pro_to_epi, *comp_to_epi)
 
         cs.last_trace_host_execution_stop = time.perf_counter_ns()
         cs.last_computation_execution_stop = cs.last_trace_host_execution_stop
