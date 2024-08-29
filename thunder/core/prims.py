@@ -284,6 +284,7 @@ class OpTags(Enum):
     DONT_DCE = auto()
     IN_PLACE = auto()
     NESTED = auto()
+    AUTO_REGISTERED = auto()
 
 
 # TODO RC1 Document this function and describe the parts of a primitive
