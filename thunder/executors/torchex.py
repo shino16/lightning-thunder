@@ -399,7 +399,12 @@ def _zeros_transform(*shape: int, device: None | DeviceLike = None, dtype: None 
 
 
 def _zeros_like_transform(
-    a: TensorLike, /, *, device: None | DeviceLike = None, dtype: None | dtypeLike = None
+    a: TensorLike,
+    /,
+    *,
+    device: None | DeviceLike = None,
+    dtype: None | dtypeLike = None,
+    memory_format=torch.preserve_format,
 ) -> TensorLike:
     torch_device: None | torch.device = to_torch_device(device)
     torch_dtype: None | torch.dtype = to_torch_dtype(dtype)
