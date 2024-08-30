@@ -805,7 +805,16 @@ def zeros(*shape: int, device: None | DeviceLike = None, dtype: None | dtypeLike
 
 
 @torchsymbol(torch.zeros_like)
-def zeros_like(a: TensorLike, /, *, device: DeviceLike | None = None, dtype: dtypeLike | None = None) -> TensorLike:
+def zeros_like(
+    a: TensorLike,
+    /,
+    *,
+    device: DeviceLike | None = None,
+    dtype: dtypeLike | None = None,
+    memory_format: torch.memory_format | None = None,
+) -> TensorLike:
+    if memory_format is not None:
+        warnings.warn("zeros_like currently ignores memory_format")
     return full_like(a, 0, device=device, dtype=dtype)
 
 

@@ -1485,6 +1485,13 @@ class TensorProxy(Proxy, TensorProxyInterface):
         return self._grad
 
     @property
+    def is_sparse(self):
+        return False
+
+    def __hash__(self):
+        return id(self)
+
+    @property
     def distparallel_type(self):
         return self._distparallel_type
 
