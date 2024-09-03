@@ -937,6 +937,18 @@ def _general_jit_torch_finfo_lookaside(dtype: thunder.dtypes.dtype):
     return res
 
 
+@register_general_jit_lookaside(torch.autograd.profiler.record_function.__enter__)
+@interpreter_needs_wrap
+def _general_jit_record_function_enter_lookaside(*args, **kwargs):
+    return torch.autograd.profiler.record_function.__enter__(*args, **kwargs)
+
+
+@register_general_jit_lookaside(torch.autograd.profiler.record_function.__exit__)
+@interpreter_needs_wrap
+def _general_jit_record_function_exit_lookaside(*args, **kwargs):
+    return torch.autograd.profiler.record_function.__exit__(*args, **kwargs)
+
+
 # Adds proxy methods
 # NOTE These methods map to themselves, which prevents the interpreter from looking into them
 #   This is OK because these methods are written in a tracing-safe manner, and trying to
