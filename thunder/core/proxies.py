@@ -1417,6 +1417,7 @@ class TensorProxy(Proxy, TensorProxyInterface):
         self,
         name: str | None = None,
         *,
+        hash=None,
         like: TensorProxy | FutureTensorProxy | None = None,
         shape: ShapeLike | None = None,
         device: devices.Device | None = None,
@@ -1431,6 +1432,7 @@ class TensorProxy(Proxy, TensorProxyInterface):
     ):
         super().__init__(name, prefix=prefix, history=history, tags=tags)
 
+        self._hash = hash
         (
             self._shape,
             self._device,
@@ -1489,7 +1491,7 @@ class TensorProxy(Proxy, TensorProxyInterface):
         return False
 
     def __hash__(self):
-        return id(self)
+        return self._hash
 
     @property
     def distparallel_type(self):
@@ -1697,6 +1699,8 @@ class TensorProxy(Proxy, TensorProxyInterface):
         return method(other, self)
 
     def __eq__(self, other):
+        if isinstance(other, torch.Tensor) and hash(self) == id(other):
+            return True
         method = resolve_method("eq", self, other)
         return method(self, other)
 
@@ -1904,6 +1908,7 @@ def tensorproxy(t: torch.Tensor, /, *, name: None | str, history: None | tuple =
     # NOTE Without tuple(t.shape) then the shape would be a torch.Size object
     return TensorProxy(
         name,
+        hash=hash(t),
         shape=tuple(t.shape),
         device=device,
         dtype=dtype,

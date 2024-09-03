@@ -511,7 +511,10 @@ def _infer_name_postfix_from_provenance(pr: ProvenanceRecord) -> str:
             postfix = get_postfix(lhs)
 
             if rhs.inst == PseudoInst.CONSTANT:
-                rhs_postfix = str(rhs.value)
+                if isinstance(rhs.value, TensorProxy):
+                    rhs_postfix = f"Tensor_{hash(rhs.value)}"
+                else:
+                    rhs_postfix = str(rhs.value)
 
                 if lhs.ext_flag & EXT_FLAG_IS_MODULE:
                     if rhs_postfix not in MODULE_MEMBER_DICT_ATTRS:
@@ -1491,6 +1494,9 @@ def unpack_inputs(ctx, prologue_trace, pro_to_comp_inps, pro_to_epi_inps, args, 
         def from_constant(provenance, *, new_output=False):
             if isinstance(provenance.value, (int, str)):
                 return provenance.value
+            elif isinstance(provenance.value, TensorProxy):
+                unpack(provenance.value)
+                return provenance.value
             else:
                 raise NotImplementedError(f"constant of type {type(provenance.value)} {provenance.value}")
 
@@ -1545,7 +1551,7 @@ def unpack_inputs(ctx, prologue_trace, pro_to_comp_inps, pro_to_epi_inps, args, 
                 output = Proxy("subscr")  # name? collectify?
             else:
                 output = p
-            if isinstance(idx, (int, str)):
+            if isinstance(idx, (int, str, TensorProxy)):
                 if isinstance(idx, int):
                     idx = int(idx)
                 elif isinstance(idx, str):
