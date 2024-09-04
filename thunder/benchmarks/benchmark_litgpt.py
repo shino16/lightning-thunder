@@ -202,10 +202,13 @@ class TorchAOFP8Handler:
 def configure_optimizers(model, weight_decay, learning_rate, betas, device_type):
     import inspect
 
-    fused_available = "fused" in inspect.signature(torch.optim.AdamW).parameters
-    use_fused = fused_available and device_type == "cuda"
-    optimizer = torch.optim.AdamW(
-        model.parameters(), lr=learning_rate, weight_decay=weight_decay, betas=betas, fused=use_fused
+    # fused_available = "fused" in inspect.signature(torch.optim.AdamW).parameters
+    # use_fused = fused_available and device_type == "cuda"
+    # optimizer = torch.optim.AdamW(
+    #     model.parameters(), lr=learning_rate, weight_decay=weight_decay, betas=betas, fused=use_fused
+    # )
+    optimizer = torch.optim.Adam(
+        model.parameters(), lr=learning_rate, weight_decay=weight_decay, betas=betas, fused=False, foreach=False
     )
     return optimizer
 
@@ -383,7 +386,8 @@ class Benchmark_litGPT:
             self.setup_activation_checkpointing()
 
         # Compile the model
-        self.model = self.setup_compile(self.model)
+        # self.model = self.setup_compile(self.model)
+        self.train = self.setup_compile(self.train)
 
         if not distributed_first:
             self.model = self.setup_distributed(self.model)
@@ -590,12 +594,14 @@ class Benchmark_litGPT:
                         raise ValueError(
                             "TransformerEngine executor cannot be used as an executor of Thunder when Thunder is used as torch.compile backend"
                         )
-                backend = ThunderCompiler(executors=executors)
+                backend = ThunderCompiler(executors=executors, disable_torch_autograd=True)
                 # Because Lightning Fabric is imported in this script it monkey patches the torch.compile function
                 # https://github.com/Lightning-AI/pytorch-lightning/blob/828fd998961f6a60f92c35254bb94d6e049ad069/src/lightning/fabric/wrappers.py#L421
                 # using __wrapped__ to access the original torch.compile function did not work
                 # so we are using the lower level torch._dynamo.optimize function
                 model = torch._dynamo.optimize(backend=backend)(model)
+                self.is_thunder_as_torchcompile_backend = True
+                self.thunder_as_torch_compile_backend = backend
             else:
                 model = thunder.jit(model, executors=executors)
 
@@ -843,22 +849,27 @@ def benchmark_main(return_metrics_as_json=False, json_path="", **kwargs) -> None
             torch.cuda.memory._record_memory_history(enabled=None)
 
         if benchmark.dump_thunder_traces:
+            graph_modules = []
             if benchmark.is_thunder_as_torchcompile_backend:
-                print(f"{len(benchmark.thunder_as_torch_compile_backend.gm_to_thunder)} ThunderModule's are created")
+                print(f"{len(benchmark.thunder_as_torch_compile_backend.thunder_fns)} ThunderModule's are created")
                 fwd_traces, bwd_traces = [], []
-                for jitted in benchmark.thunder_as_torch_compile_backend.gm_to_thunder.values():
+                for jitted in benchmark.thunder_as_torch_compile_backend.thunder_fns:
                     fwd_traces.append(thunder.last_traces(jitted))
                     bwd_traces.append(thunder.last_backward_traces(jitted))
+                    graph_modules.append(benchmark.thunder_as_torch_compile_backend.thunder_to_gm[jitted])
             else:
                 fwd_traces = [thunder.last_traces(benchmark.model)]
                 bwd_traces = [thunder.last_backward_traces(benchmark.model)]
 
-            for i, f_traces in enumerate(fwd_traces, start=1):
+            for i, (f_traces, gm) in enumerate(zip(fwd_traces, graph_modules), start=1):
+                print(f"##########\n#{i}-th GraphModule\n##########")
+                gm.print_readable()
                 print(f"##########\n#{i}-th ThunderModule\n##########")
                 print(f_traces[-1])
             for i, b_traces in enumerate(bwd_traces, start=1):
-                print(f"##########\n#{i}-th ThunderModule\n##########")
-                print(b_traces[-1])
+                if b_traces:
+                    print(f"##########\n#{i}-th ThunderModule\n##########")
+                    print(b_traces[-1])
 
     if global_rank in [0, None]:
         if return_metrics_as_json:

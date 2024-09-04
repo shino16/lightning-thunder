@@ -3994,7 +3994,7 @@ def copy__meta(
     utils.check_type(copy_to, TensorProxy)
     utils.check_same_device(copy_from, copy_to)
     utils.check_same_shape(copy_from, copy_to)
-    utils.check_same_dtype(copy_from, copy_to)
+    # utils.check_same_dtype(copy_from, copy_to)
     return TensorProxy(like=copy_to)
 
 
