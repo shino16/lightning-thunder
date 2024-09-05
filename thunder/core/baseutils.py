@@ -452,10 +452,17 @@ def build_callable(fn_name: str, python_str: str, file_name: str, ctx: dict) -> 
     lines = python_str.splitlines(keepends=True)
     size = len(python_str)
     inspect.linecache.cache[program_name] = size, mtime, lines, program_name
+    from inspect import currentframe, getframeinfo
+    from datetime import datetime
 
     try:
+        if "nvFusion0" in python_str:
+            print(ctx["nvFusion0"].last_used)
+        print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
         code: CodeType = compile(python_str, program_name, mode="exec")
+        print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
         exec(code, ctx)
+        print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
         _callable: Callable = ctx[fn_name]  # Grab from globals()
         return _callable
     except Exception as e:

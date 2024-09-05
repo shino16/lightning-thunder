@@ -1,3 +1,5 @@
+from inspect import currentframe, getframeinfo
+from datetime import datetime
 from functools import wraps
 from typing import Any
 from collections import defaultdict, namedtuple
@@ -423,6 +425,7 @@ def jit(
             cache_info.update(autocast_thunder_dtype=str(autocast_thunder_dtype))
 
         cache_info["is_autocast_enabled"] = is_autocast_enabled
+        print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
 
         is_ddp_enabled = getattr(fn, "use_ddp", False)
         is_fsdp_enabled = getattr(fn, "use_fsdp", False)
@@ -486,6 +489,7 @@ def jit(
                     cs.last_computation_transformation_stop = 0
 
                     return cache_entry, inps, pro_to_epi
+        print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
 
         if cd.cache_option is CACHE_OPTIONS.SAME_INPUT:
             if len(cs.interpreter_cache):
@@ -524,6 +528,7 @@ def jit(
 
         cs.cache_misses += 1
         cs.last_trace_cache_stop = time.perf_counter_ns()
+        print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
 
         # Resets use of compile flags
         cs.last_compile_reasons = defaultdict(list)
@@ -565,6 +570,7 @@ def jit(
                         alias_tensor_indices=alias_tensor_indices,
                     )
                 )
+                print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
                 computation_trc = computation_traces[-1]
                 if len(computation_traces) > orig_len:
                     from thunder.core.pytree import tree_flatten
@@ -597,6 +603,7 @@ def jit(
 
             # Makes the prologue callable
             cs.last_prologue_transformation_start = time.perf_counter_ns()
+            print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
 
             transform: Transform
             for transform in transforms:
@@ -628,6 +635,7 @@ def jit(
             prologue_trc = prologue_traces[-1]
             pro = prologue_trc.python_callable()
 
+            print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
             if epilogue_trc is not None:
                 epilogue = epilogue_trc.python_callable()
             else:
@@ -642,6 +650,7 @@ def jit(
             cs.last_interpreter_log = last_interpreter_log
             cs.last_interpreted_instructions = (i for i in last_interpreter_log if isinstance(i, dis.Instruction))
 
+            print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
             cs.last_prologue_execution_start = time.perf_counter_ns()
             if interpretation is INTERPRETATION_OPTIONS.TRANSLATE_PYTHON:
                 inps, pro_to_epi = pro(*args, **kwargs)
@@ -694,6 +703,7 @@ def jit(
                 computation_traces.append(computation_trc)
 
             for transform in transforms:
+                print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
                 # NOTE: `backward_trc` could be None.
                 new_computation_trc = transform.transform_trace_post_optimization(
                     computation_trc, executors_list=cd.executors_list
@@ -712,6 +722,7 @@ def jit(
             computation_trc = transform_to_torch_types(computation_trc)
             comp = computation_trc.python_callable()
 
+            print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
             if backward_trc is not None:
                 backward_fn = backward_trc.python_callable()
             else:
@@ -761,7 +772,9 @@ def jit(
                     NotImplementedError,
                 )
 
+        print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
         result = cache_entry.computation_fn(*inps)
+        print(__file__, getframeinfo(currentframe()).lineno, datetime.now().minute, datetime.now().second)
 
         if cache_entry.backward_fn:
             # Run the compiled forward function
