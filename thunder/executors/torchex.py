@@ -706,6 +706,7 @@ tan = _register_torch_operation("tan")
 tanh = _register_torch_operation("tanh")
 trunc = _register_torch_operation("trunc")
 real = _register_torch_operation("real")
+conj = _register_torch_operation("conj")
 
 
 def _elementwise_unary_checker(a: Number | TensorLike) -> bool:
@@ -760,6 +761,7 @@ _register_elementwise_unary_implementation(prims.tan, tan)
 _register_elementwise_unary_implementation(prims.tanh, tanh)
 _register_elementwise_unary_implementation(prims.trunc, trunc)
 _register_elementwise_unary_implementation(prims.real, real)
+_register_elementwise_unary_implementation(prims.conj, conj)
 
 _register_elementwise_unary_implementation(ltorch.abs, torch_abs)
 _register_elementwise_unary_implementation(ltorch.acos, acos)

@@ -209,6 +209,7 @@ class PrimIDs(Enum):
     TANH = auto()
     TRUNC = auto()
     REAL = auto()
+    CONJ = auto()
     # Elementwise binary prims
     ADD = auto()
     ATAN2 = auto()
@@ -2225,6 +2226,11 @@ real = make_prim(
     meta=real_meta,
 )
 
+conj = _make_elementwise_unary_prim(
+    PrimIDs.CONJ,
+    "conj",
+    supported_input_dtypes=dtypes.complex_dtypes,
+)
 #
 # Elementwise binary prims
 #

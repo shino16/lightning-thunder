@@ -1708,6 +1708,11 @@ def real(a):
     return clang.real(a)
 
 
+@torchsymbol(torch.conj, is_method=True)
+def conj(a):
+    return clang.conj(a)
+
+
 #
 # nn.functional elementwise unary
 #

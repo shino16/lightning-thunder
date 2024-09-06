@@ -1773,6 +1773,18 @@ def real(a: TensorProxy | Number):
     )
 
 
+@clangop()
+def conj(a: TensorProxy | Number):
+    if not dtypes.is_complex_dtype(dtypes.to_dtype(a)):
+        return a
+
+    return _elementwise_unary_wrapper(
+        a,
+        prim=prims.conj,
+        type_promotion_kind=utils.ELEMENTWISE_TYPE_PROMOTION_KIND.COMPLEX_TO_FLOAT,
+    )
+
+
 #
 # Elementwise binary operations
 #
