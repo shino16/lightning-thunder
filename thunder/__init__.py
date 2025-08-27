@@ -872,6 +872,10 @@ def jit(
         pytorch.set_grad_enabled(cd.is_grad_enabled)
 
         cs.last_computation = cache_entry.computation_fn
+
+        # Reflect the state of is_grad_enabled, as its changes have been recorded only inside Thunder
+        pytorch.set_grad_enabled(cd.is_grad_enabled)
+
         return result
 
     if isinstance(fn, pytorch.nn.Module):
