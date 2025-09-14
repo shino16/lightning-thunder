@@ -133,6 +133,7 @@ class ThunderCompiler:
     def __call__(self, gm: torch.fx.GraphModule, sample_args: list[torch.SymInt, torch.Tensor]):
         from thunder import jit
 
+        gm.print_readable()
         remove_empty_autocast(gm)
 
         # Dynamo uses lazy generation of the underlying Python code, so we need to
@@ -152,6 +153,7 @@ class ThunderCompiler:
             sample_args,
         )
         self.subgraph_infos.append(subgraph_info)
+        split_module.print_readable()
         return split_module
 
     def save_reproducer_to_folder(

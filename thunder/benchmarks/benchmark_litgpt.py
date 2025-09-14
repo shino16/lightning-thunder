@@ -5,7 +5,7 @@ import time
 import warnings
 from contextlib import nullcontext
 from dataclasses import dataclass, field
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 from looseversion import LooseVersion
 
 import torch
@@ -67,6 +67,156 @@ if world_size > 1:
     pg = torch_dist.distributed_c10d._get_default_group()
 device = torch.device("cuda", local_rank)
 torch.cuda.set_device(device)
+
+
+def display_memory_allocation():
+    """Display current GPU memory allocation information."""
+    if torch.cuda.is_available():
+        allocated = torch.cuda.memory_allocated() / 1024**3  # Convert to GB
+        reserved = torch.cuda.memory_reserved() / 1024**3   # Convert to GB
+        max_allocated = torch.cuda.max_memory_allocated() / 1024**3  # Convert to GB
+        print(f"Memory before backward: Allocated: {allocated:.2f} GB, Reserved: {reserved:.2f} GB, Max Allocated: {max_allocated:.2f} GB")
+
+        # Quick summary of memory usage
+        try:
+            snapshot = torch.cuda.memory_snapshot()
+            if snapshot:
+                print("Memory snapshot summary:")
+                total_active = sum(seg.get('size', 0) for seg in snapshot if seg.get('state') == 'active_allocated') / 1024**3
+                total_reserved = sum(seg.get('size', 0) for seg in snapshot if seg.get('state') in ['active_allocated', 'active_pending_free']) / 1024**3
+                print(f"  Active allocated: {total_active:.2f} GB")
+                print(f"  Total reserved: {total_reserved:.2f} GB")
+        except Exception as e:
+            print(f"Could not get memory snapshot: {e}")
+
+
+def analyze_tensor_memory(model, threshold_gb=0.1):
+    """Analyze and display tensor memory usage above threshold."""
+    print(f"\n=== Tensor Memory Analysis (showing tensors > {threshold_gb:.1f} GB) ===")
+
+    total_memory = 0
+    tensor_info = []
+
+    # Analyze model parameters
+    for name, param in model.named_parameters():
+        if param.is_cuda:
+            size_gb = param.numel() * param.element_size() / 1024**3
+            total_memory += size_gb
+            if size_gb > threshold_gb:
+                tensor_info.append((name, size_gb, param.shape, param.dtype, "parameter"))
+
+    # Analyze model buffers
+    for name, buffer in model.named_buffers():
+        if buffer.is_cuda:
+            size_gb = buffer.numel() * buffer.element_size() / 1024**3
+            total_memory += size_gb
+            if size_gb > threshold_gb:
+                tensor_info.append((name, size_gb, buffer.shape, buffer.dtype, "buffer"))
+
+    # Sort by memory usage (largest first)
+    tensor_info.sort(key=lambda x: x[1], reverse=True)
+
+    print(f"Model parameters/buffers total: {total_memory:.2f} GB")
+    print(f"Found {len(tensor_info)} tensors above {threshold_gb:.1f} GB threshold:")
+
+    for name, size_gb, shape, dtype, tensor_type in tensor_info:
+        print(f"  {tensor_type:10} | {size_gb:8.3f} GB | {str(shape):25} | {str(dtype):15} | {name}")
+
+    # Show memory breakdown by layer type
+    layer_memory = {}
+    for name, size_gb, shape, dtype, tensor_type in tensor_info:
+        if tensor_type == "parameter":
+            # Extract layer type from parameter name
+            if "wte" in name or "embed" in name:
+                layer_type = "embedding"
+            elif "lm_head" in name:
+                layer_type = "lm_head"
+            elif "attn" in name:
+                layer_type = "attention"
+            elif "mlp" in name or "fc" in name:
+                layer_type = "mlp"
+            elif "ln" in name or "norm" in name:
+                layer_type = "norm"
+            else:
+                layer_type = "other"
+
+            if layer_type not in layer_memory:
+                layer_memory[layer_type] = 0
+            layer_memory[layer_type] += size_gb
+
+    if layer_memory:
+        print(f"\nMemory breakdown by layer type:")
+        for layer_type, memory_gb in sorted(layer_memory.items(), key=lambda x: x[1], reverse=True):
+            print(f"  {layer_type:12} | {memory_gb:8.3f} GB")
+
+    # Try to get additional tensor information from garbage collector
+    import gc
+    cuda_tensors = []
+    tensor_count_by_size = {}
+
+    for obj in gc.get_objects():
+        try:
+            if torch.is_tensor(obj) and obj.is_cuda:
+                size_gb = obj.numel() * obj.element_size() / 1024**3
+                shape_str = str(tuple(obj.shape))
+
+                # Count tensors by shape and size
+                key = (shape_str, str(obj.dtype))
+                if key not in tensor_count_by_size:
+                    tensor_count_by_size[key] = {'count': 0, 'total_gb': 0, 'individual_gb': size_gb}
+                tensor_count_by_size[key]['count'] += 1
+                tensor_count_by_size[key]['total_gb'] += size_gb
+
+                if size_gb > threshold_gb:
+                    # Try to get tensor name/info if available
+                    tensor_name = getattr(obj, '_debug_name', 'unknown')
+
+                    # Try to get grad_fn information
+                    grad_fn_name = 'no_grad_fn'
+                    if hasattr(obj, 'grad_fn') and obj.grad_fn is not None:
+                        grad_fn_name = obj.grad_fn.__class__.__name__
+                    elif hasattr(obj, 'requires_grad') and obj.requires_grad:
+                        grad_fn_name = 'leaf_tensor'
+
+                    cuda_tensors.append((tensor_name, size_gb, obj.shape, obj.dtype, grad_fn_name))
+        except (ReferenceError, RuntimeError):
+            # Skip objects that are no longer valid (weak references, etc.)
+            continue
+
+    # Show tensor statistics by shape/type
+    print(f"\nTensor statistics by shape/dtype (showing groups > {threshold_gb:.1f} GB total):")
+    sorted_stats = sorted(tensor_count_by_size.items(), key=lambda x: x[1]['total_gb'], reverse=True)
+    for (shape_str, dtype_str), stats in sorted_stats:
+        if stats['total_gb'] > threshold_gb:
+            print(f"  {stats['count']:3d} tensors | {stats['total_gb']:8.3f} GB total | {stats['individual_gb']:8.3f} GB each | {shape_str:25} | {dtype_str}")
+
+    if cuda_tensors:
+        cuda_tensors.sort(key=lambda x: x[1], reverse=True)
+        print(f"\nLargest individual CUDA tensors (> {threshold_gb:.1f} GB):")
+
+        # Separate tensors with grad_fn (saved for backward) from others
+        grad_fn_tensors = [(name, size_gb, shape, dtype, grad_fn_name) for name, size_gb, shape, dtype, grad_fn_name in cuda_tensors if grad_fn_name != 'no_grad_fn' and grad_fn_name != 'leaf_tensor']
+        other_tensors = [(name, size_gb, shape, dtype, grad_fn_name) for name, size_gb, shape, dtype, grad_fn_name in cuda_tensors if grad_fn_name == 'no_grad_fn' or grad_fn_name == 'leaf_tensor']
+
+        if grad_fn_tensors:
+            total_backward_memory = sum(x[1] for x in grad_fn_tensors)
+            print(f"\n*** TENSORS SAVED FOR BACKWARD (have grad_fn): {total_backward_memory:.2f} GB total ***")
+            for name, size_gb, shape, dtype, grad_fn_name in grad_fn_tensors[:15]:  # Show top 15
+                print(f"  {grad_fn_name:25} | {size_gb:8.3f} GB | {str(shape):25} | {str(dtype):15}")
+
+        if other_tensors:
+            print(f"\nOther large tensors:")
+            for name, size_gb, shape, dtype, grad_fn_name in other_tensors[:10]:  # Show top 10
+                print(f"  {grad_fn_name:25} | {size_gb:8.3f} GB | {str(shape):25} | {str(dtype):15}")
+
+    # Additional analysis: Use PyTorch's memory profiler if available
+    try:
+        print(f"\nPyTorch Memory Summary:")
+        print(torch.cuda.memory_summary(device=None, abbreviated=True))
+    except Exception as e:
+        print(f"Could not get PyTorch memory summary: {e}")
+
+    print("=" * 80)
 
 
 def check_fp8_compute_capability() -> None:
@@ -742,6 +892,8 @@ class Benchmark_litGPT:
                         torch.nn.functional.cross_entropy(logits, targets, ignore_index=-1)
                         / self.gradient_accumulation_steps
                     )
+                    display_memory_allocation()
+                    analyze_tensor_memory(self.model, threshold_gb=0.1)
                     loss.backward()
 
             input_ids, targets = next(self.train_data_iter)
@@ -776,6 +928,8 @@ class Benchmark_litGPT:
             loss = (
                 torch.nn.functional.cross_entropy(logits, targets, ignore_index=-1) / self.gradient_accumulation_steps
             )
+            display_memory_allocation()
+            analyze_tensor_memory(self.model, threshold_gb=0.1)
             loss.backward()
 
             self._torchao_fp8_handler.sync_float8_amax_and_scale_history_for_delayed_scaling(self.model)
