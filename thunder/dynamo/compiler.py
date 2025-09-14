@@ -106,6 +106,7 @@ class ThunderCompiler:
         self._torch_compile = torch.compile
 
     def __call__(self, gm: torch.fx.GraphModule, sample_args: list[torch.SymInt, torch.Tensor]):
+        gm.print_readable()
         remove_empty_autocast(gm)
 
         # Dynamo uses lazy generation of the underlying Python code, so we need to
@@ -116,6 +117,7 @@ class ThunderCompiler:
         # and unsupported sections which are passed to `torch.compile(backend='inductor')`
         split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
         self.subgraph_infos.append(subgraph_info)
+        split_module.print_readable()
         return split_module
 
     def save_reproducer_to_folder(
