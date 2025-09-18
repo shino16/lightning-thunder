@@ -27,7 +27,7 @@ else:
 
 x = torch.randn(512 // 4, device="cuda", requires_grad=enable_grad)
 y = jfn(x)
-y.sum().backward()
+# y.sum().backward()
 
 if use_thunderfx:
     for sinfo in jfn._backend.subgraph_infos:

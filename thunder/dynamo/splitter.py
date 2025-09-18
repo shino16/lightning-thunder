@@ -5,7 +5,6 @@ from functools import partial
 
 import torch
 from torch.fx.passes.split_module import split_module
-from torch._inductor.compile_fx import compile_fx
 
 from thunder.dynamo.utils import (
     SubgraphInfo,
