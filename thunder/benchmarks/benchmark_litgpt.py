@@ -639,6 +639,10 @@ class Benchmark_litGPT:
                 executors.insert(0, transformer_engine_ex)
                 transforms.insert(0, TransformerEngineTransform())
 
+            from thunder.dev_utils.debug_memory_transform import DebugMemoryTransform, DebugMemoryFXTransform
+
+            transforms.append(DebugMemoryTransform())
+
             if "dynamo" in self.compile:
                 if self.distributed_mode == "fsdp2":
                     print("Resetting cache size for when fsdp2 and using thunder as backend torch.compile")
@@ -646,12 +650,14 @@ class Benchmark_litGPT:
 
                     dynamo_config.cache_size_limit = 64
 
-                self.backend = ThunderCompiler(executors=executors, transforms=transforms)
+                debug_memory_fx_transform = DebugMemoryFXTransform()
+                self.backend = ThunderCompiler(executors=executors, transforms=transforms, pre_inductor_transforms=[debug_memory_fx_transform])
                 # Because Lightning Fabric is imported in this script it monkey patches the torch.compile function
                 # https://github.com/Lightning-AI/pytorch-lightning/blob/828fd998961f6a60f92c35254bb94d6e049ad069/src/lightning/fabric/wrappers.py#L421
                 # using __wrapped__ to access the original torch.compile function did not work
                 # so we are using the lower level torch._dynamo.optimize function
                 model = torch._dynamo.optimize(backend=self.backend)(model)
+                self.debug_memory_fx_transform = debug_memory_fx_transform
             else:
                 jit_options = {}
                 jit_options["fp8_shard_intermediate_activation"] = self.fp8_shard_intermediate_activation
@@ -776,7 +782,7 @@ class Benchmark_litGPT:
             loss = (
                 torch.nn.functional.cross_entropy(logits, targets, ignore_index=-1) / self.gradient_accumulation_steps
             )
-            loss.backward()
+            # loss.backward()
 
             self._torchao_fp8_handler.sync_float8_amax_and_scale_history_for_delayed_scaling(self.model)
 
@@ -980,6 +986,10 @@ def benchmark_main(return_metrics_as_json=False, json_path="", **kwargs) -> None
                 for i, b_traces in enumerate(bwd_traces, start=1):
                     print(f"##########\n#{i}-th ThunderModule\n##########")
                     print(b_traces[-1])
+
+        if debug_memory_fx_transform := getattr(benchmark, "debug_memory_fx_transform", None):
+            for gm in debug_memory_fx_transform.augumented_graph_modules:
+                print(gm.print_readable())
 
     if global_rank in [0, None]:
         if return_metrics_as_json:
