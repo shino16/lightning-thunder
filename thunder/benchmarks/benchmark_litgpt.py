@@ -650,16 +650,14 @@ class Benchmark_litGPT:
 
                     dynamo_config.cache_size_limit = 64
 
-                self.backend = ThunderCompiler(executors=executors, transforms=transforms, pre_inductor_transforms=[])
-                # self.debug_memory_fx_transform = debug_memory_fx_tran
-                # debug_memory_fx_transform = DebugMemoryFXTransform()
-                # self.backend = ThunderCompiler(executors=executors, transforms=transforms, pre_inductor_transforms=[debug_memory_fx_transform])
-                # # Because Lightning Fabric is imported in this script it monkey patches the torch.compile function
-                # # https://github.com/Lightning-AI/pytorch-lightning/blob/828fd998961f6a60f92c35254bb94d6e049ad069/src/lightning/fabric/wrappers.py#L421
-                # # using __wrapped__ to access the original torch.compile function did not work
-                # # so we are using the lower level torch._dynamo.optimize function
-                # model = torch._dynamo.optimize(backend=self.backend)(model)
-                # self.debug_memory_fx_transform = debug_memory_fx_transform
+                debug_memory_fx_transform = DebugMemoryFXTransform()
+                self.backend = ThunderCompiler(executors=executors, transforms=transforms, pre_inductor_transforms=[debug_memory_fx_transform])
+                # Because Lightning Fabric is imported in this script it monkey patches the torch.compile function
+                # https://github.com/Lightning-AI/pytorch-lightning/blob/828fd998961f6a60f92c35254bb94d6e049ad069/src/lightning/fabric/wrappers.py#L421
+                # using __wrapped__ to access the original torch.compile function did not work
+                # so we are using the lower level torch._dynamo.optimize function
+                model = torch._dynamo.optimize(backend=self.backend)(model)
+                self.debug_memory_fx_transform = debug_memory_fx_transform
             else:
                 jit_options = {}
                 jit_options["fp8_shard_intermediate_activation"] = self.fp8_shard_intermediate_activation
@@ -784,7 +782,7 @@ class Benchmark_litGPT:
             loss = (
                 torch.nn.functional.cross_entropy(logits, targets, ignore_index=-1) / self.gradient_accumulation_steps
             )
-            # loss.backward()
+            loss.backward()
 
             self._torchao_fp8_handler.sync_float8_amax_and_scale_history_for_delayed_scaling(self.model)
 
