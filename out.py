@@ -6,13 +6,28 @@ from thunder.executors.torchex import no_autocast
 @no_autocast
 def computation(l_x_):
   # l_x_: "cuda:0 f32[128]"
-  [cos] = nvFusion0(l_x_)
-    # sin = prims.sin(l_x_)  # sin: "cuda:0 f32[128]"
-    # cos = prims.cos(sin)  # cos: "cuda:0 f32[128]"
-  # alloc - 512 bytes
+
+  # <eval_with_key>.2:5: 	    sin = l_x_.sin();  l_x_ = None
+  t4 = torch.sin(l_x_)  # t4: "cuda:0 f32[128]"
+    # t4 = ltorch.sin(l_x_)  # t4: "cuda:0 f32[128]"
+      # t4 = prims.sin(l_x_)  # t4: "cuda:0 f32[128]"
+  # alloc          - 512 bytes
   # total 1024 bytes allocated
-  debug_post_nvFusion01([cos], l_x_)
-  return (cos,)
+  debug_post_sin1(t4, l_x_)
+
+  # <eval_with_key>.2:6: 	    cos = sin.cos();  sin = None
+  t5 = torch.cos(t4)  # t5: "cuda:0 f32[128]"
+    # t5 = ltorch.cos(t4)  # t5: "cuda:0 f32[128]"
+      # t5 = prims.cos(t4)  # t5: "cuda:0 f32[128]"
+  # alloc          - 512 bytes
+  # total 1536 bytes allocated
+  debug_post_cos2(t5, t4)
+  del t4
+  # free_requested - 512 bytes
+  # free_completed - 512 bytes
+  # total 1024 bytes allocated
+  debug_post_python_del3(None)
+  return (t5,)
 # Constructed by Unwrap the actual return value
 import torch
 from thunder.executors.torchex import no_autocast
@@ -21,18 +36,21 @@ from thunder.executors.torchex import no_autocast
 @no_autocast
 def computation(sinc_1):
   # sinc_1: "cuda:0 f32[128]"
-  [exp] = nvFusion0(sinc_1)
-    # exp = prims.exp(sinc_1)  # exp: "cuda:0 f32[128]"
-  # alloc - 512 bytes
+
+  # <eval_with_key>.4:5: 	    exp = sinc_1.exp();  sinc_1 = None
+  t2 = torch.exp(sinc_1)  # t2: "cuda:0 f32[128]"
+    # t2 = ltorch.exp(sinc_1)  # t2: "cuda:0 f32[128]"
+      # t2 = prims.exp(sinc_1)  # t2: "cuda:0 f32[128]"
+  # alloc          - 512 bytes
   # total 1536 bytes allocated
-  debug_post_nvFusion01([exp], sinc_1)
-  return (exp,)
-[[([cos] = nvFusion0(l_x_)
-  # sin = prims.sin(l_x_)  # sin: "cuda:0 f32[128]"
-  # cos = prims.cos(sin)  # cos: "cuda:0 f32[128]",
+  debug_post_exp1(t2, sinc_1)
+  return (t2,)
+[[(t4 = torch.sin(l_x_)  # t4: "cuda:0 f32[128]"
+  # t4 = ltorch.sin(l_x_)  # t4: "cuda:0 f32[128]"
+    # t4 = prims.sin(l_x_)  # t4: "cuda:0 f32[128]",
    1024,
    [{'action': 'alloc',
-     'addr': 139907659989504,
+     'addr': 140266147152384,
      'compile_context': 'N/A',
      'frames': [{'filename': '??',
                  'line': 0,
@@ -60,136 +78,99 @@ def computation(sinc_1):
                  'line': 0,
                  'name': 'c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, '
                          'c10::SymInt const&, c10::Allocator*, bool)'},
+                {'filename': 'EmptyTensor.cpp',
+                 'line': 0,
+                 'name': 'at::TensorBase '
+                         'at::detail::_empty_generic<long>(c10::ArrayRef<long>, '
+                         'c10::Allocator*, c10::DispatchKeySet, '
+                         'c10::ScalarType, std::optional<c10::MemoryFormat>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'at::detail::empty_strided_generic(c10::ArrayRef<long>, '
-                         'c10::ArrayRef<long>, c10::Allocator*, '
-                         'c10::DispatchKeySet, c10::ScalarType)'},
+                 'name': 'at::detail::empty_generic(c10::ArrayRef<long>, '
+                         'c10::Allocator*, c10::DispatchKeySet, '
+                         'c10::ScalarType, std::optional<c10::MemoryFormat>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'at::detail::empty_strided_cuda(c10::ArrayRef<long>, '
-                         'c10::ArrayRef<long>, c10::ScalarType, '
-                         'std::optional<c10::Device>)'},
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'c10::ScalarType, std::optional<c10::Device>, '
+                         'std::optional<c10::MemoryFormat>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'at::detail::empty_strided_cuda(c10::ArrayRef<long>, '
-                         'c10::ArrayRef<long>, std::optional<c10::ScalarType>, '
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'std::optional<c10::ScalarType>, '
                          'std::optional<c10::Layout>, '
-                         'std::optional<c10::Device>, std::optional<bool>)'},
+                         'std::optional<c10::Device>, std::optional<bool>, '
+                         'std::optional<c10::MemoryFormat>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'at::native::empty_strided_cuda(c10::ArrayRef<long>, '
-                         'c10::ArrayRef<long>, std::optional<c10::ScalarType>, '
-                         'std::optional<c10::Layout>, '
-                         'std::optional<c10::Device>, std::optional<bool>)'},
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'c10::TensorOptions const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::create_out(c10::ArrayRef<long>, '
+                         'c10::ArrayRef<long>, c10::TensorOptions const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::structured_sin_out_functional::set_output_raw_strided(long, '
+                         'c10::ArrayRef<long>, c10::ArrayRef<long>, '
+                         'c10::TensorOptions, c10::ArrayRef<at::Dimname>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'nvfuser::setFillAllocationWithNan(bool)'},
+                 'name': 'at::TensorIteratorBase::fast_set_up(at::TensorIteratorConfig '
+                         'const&)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'nvfuser::KernelExecutor::run(nvfuser::KernelArgumentHolder, '
-                         'nvfuser::KernelArgumentHolder, nvfuser::LaunchParams '
-                         'const&, nvfuser::CompileParams)'},
+                 'name': 'at::TensorIteratorBase::build(at::TensorIteratorConfig&)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'std::__detail::_Map_base<nvfuser::TensorView*, '
-                         'std::pair<nvfuser::TensorView* const, bool>, '
-                         'std::allocator<std::pair<nvfuser::TensorView* const, '
-                         'bool> >, std::__detail::_Select1st, '
-                         'std::equal_to<nvfuser::TensorView*>, '
-                         'std::hash<nvfuser::TensorView*>, '
-                         'std::__detail::_Mod_range_hashing, '
-                         'std::__detail::_Default_ranged_hash, '
-                         'std::__detail::_Prime_rehash_policy, '
-                         'std::__detail::_Hashtable_traits<false, false, '
-                         'true>, true>::operator[](nvfuser::TensorView*&&)'},
+                 'name': 'at::TensorIteratorBase::build_borrowing_unary_float_op(at::TensorBase '
+                         'const&, at::TensorBase const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::wrapper_CUDA_sin(at::Tensor const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor '
+                         '(at::Tensor const&), &at::(anonymous '
+                         'namespace)::wrapper_CUDA_sin>, at::Tensor, '
+                         'c10::guts::typelist::typelist<at::Tensor const&> >, '
+                         'at::Tensor (at::Tensor '
+                         'const&)>::call(c10::OperatorKernel*, '
+                         'c10::DispatchKeySet, at::Tensor const&)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'nvfuser::FusionKernelRuntime::fusionSegments() '
-                         'const'},
+                 'name': 'at::_ops::sin::redispatch(c10::DispatchKeySet, '
+                         'at::Tensor const&)'},
+                {'filename': 'VariableType_0.cpp',
+                 'line': 0,
+                 'name': 'torch::autograd::VariableType::(anonymous '
+                         'namespace)::sin(c10::DispatchKeySet, at::Tensor '
+                         'const&)'},
+                {'filename': 'VariableType_0.cpp',
+                 'line': 0,
+                 'name': 'c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor '
+                         '(c10::DispatchKeySet, at::Tensor const&), '
+                         '&torch::autograd::VariableType::(anonymous '
+                         'namespace)::sin>, at::Tensor, '
+                         'c10::guts::typelist::typelist<c10::DispatchKeySet, '
+                         'at::Tensor const&> >, at::Tensor '
+                         '(c10::DispatchKeySet, at::Tensor '
+                         'const&)>::call(c10::OperatorKernel*, '
+                         'c10::DispatchKeySet, at::Tensor const&)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'nvfuser::FusionKernelRuntime::fusionSegments() '
-                         'const'},
-                {'filename': '??',
+                 'name': 'at::_ops::sin::call(at::Tensor const&)'},
+                {'filename': 'python_torch_functions_2.cpp',
                  'line': 0,
-                 'name': 'nvfuser::FusionKernelRuntime::fusionSegments() '
-                         'const'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'nvfuser::FusionExecutorCache::runFusionWithInputs(nvfuser::KernelArgumentHolder, '
-                         'std::optional<nvfuser::PrimDataType>, '
-                         'std::optional<signed char>)'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'nvfuser::python_frontend::FusionDefinition::execute(nvfuser::KernelArgumentHolder, '
-                         'std::optional<signed char>, bool, bool, bool, '
-                         'std::vector<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> >, '
-                         'std::allocator<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > > >, '
-                         'std::vector<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> >, '
-                         'std::allocator<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > > >) '
-                         'const'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'std::_Hashtable<long, long, std::allocator<long>, '
-                         'std::__detail::_Identity, std::equal_to<long>, '
-                         'std::hash<long>, std::__detail::_Mod_range_hashing, '
-                         'std::__detail::_Default_ranged_hash, '
-                         'std::__detail::_Prime_rehash_policy, '
-                         'std::__detail::_Hashtable_traits<false, true, true> '
-                         '>::~_Hashtable()'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'std::_Hashtable<long, long, std::allocator<long>, '
-                         'std::__detail::_Identity, std::equal_to<long>, '
-                         'std::hash<long>, std::__detail::_Mod_range_hashing, '
-                         'std::__detail::_Default_ranged_hash, '
-                         'std::__detail::_Prime_rehash_policy, '
-                         'std::__detail::_Hashtable_traits<false, true, true> '
-                         '>::~_Hashtable()'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'std::_Hashtable<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> >, '
-                         'std::pair<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > '
-                         'const, void*>, '
-                         'std::allocator<std::pair<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > '
-                         'const, void*> >, std::__detail::_Select1st, '
-                         'std::equal_to<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > >, '
-                         'std::hash<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > >, '
-                         'std::__detail::_Mod_range_hashing, '
-                         'std::__detail::_Default_ranged_hash, '
-                         'std::__detail::_Prime_rehash_policy, '
-                         'std::__detail::_Hashtable_traits<true, false, true> '
-                         '>::~_Hashtable()'},
+                 'name': 'torch::autograd::THPVariable_sin(_object*, _object*, '
+                         '_object*)'},
                 {'filename': '??', 'line': 0, 'name': 'PyCMethod_New'},
                 {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
-                {'filename': '/opt/pytorch/nvfuser/python/nvfuser/__init__.py',
-                 'line': 333,
-                 'name': 'execute'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
-                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
-                {'filename': '/opt/pytorch/lightning-thunder/thunder/executors/nvfuserex_impl.py',
-                 'line': 546,
-                 'name': '__call__'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': 'thunder.computation_2',
-                 'line': 9,
+                 'line': 11,
                  'name': 'computation'},
                 {'filename': '??',
                  'line': 0,
@@ -201,16 +182,16 @@ def computation(sinc_1):
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
-                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py',
                  'line': 120,
                  'name': 'decorate_context'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
                 {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
                  'line': 794,
                  'name': 'wrapped'},
@@ -231,25 +212,23 @@ def computation(sinc_1):
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
-                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
-                {'filename': '??', 'line': 0, 'name': 'PyObject_Call'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/opt/pytorch/lightning-thunder/thunder/core/module.py',
                  'line': 80,
                  'name': 'forward'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': 'PyObject_Call'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
                  'line': 1786,
                  'name': '_call_impl'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '',
-                 'line': 0,
-                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
                  'line': 1775,
                  'name': '_wrapped_call_impl'},
@@ -259,7 +238,6 @@ def computation(sinc_1):
                 {'filename': '',
                  'line': 0,
                  'name': 'dynamo__custom_eval_frame'},
-                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '<eval_with_key>.11',
                  'line': 5,
                  'name': 'forward'},
@@ -279,12 +257,22 @@ def computation(sinc_1):
                 {'filename': '',
                  'line': 0,
                  'name': 'dynamo__custom_eval_frame'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
-                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
                  'line': 1775,
                  'name': '_wrapped_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
+                 'line': 400,
+                 'name': '__call__'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
@@ -295,17 +283,17 @@ def computation(sinc_1):
                  'line': 0,
                  'name': 'dynamo__custom_eval_frame'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
-                 'line': 400,
-                 'name': '__call__'},
+                 'line': 837,
+                 'name': 'call_wrapped'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
                 {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
                 {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
                 {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
-                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
-                 'line': 837,
-                 'name': 'call_wrapped'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 1005,
+                 'name': '_fn'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
@@ -323,9 +311,6 @@ def computation(sinc_1):
                 {'filename': '??', 'line': 0, 'name': '__libc_init_first'},
                 {'filename': '??', 'line': 0, 'name': '__libc_start_main'},
                 {'filename': '??', 'line': 0, 'name': '_start'},
-                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
-                 'line': 1005,
-                 'name': '_fn'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
                  'line': 1786,
                  'name': '_call_impl'},
@@ -349,12 +334,13 @@ def computation(sinc_1):
                  'name': '<module>'}],
      'size': 512,
      'stream': 0,
-     'time_us': 1758154383573738}])],
- [([exp] = nvFusion0(sinc_1)
-  # exp = prims.exp(sinc_1)  # exp: "cuda:0 f32[128]",
+     'time_us': 1758187444783766}]),
+  (t5 = torch.cos(t4)  # t5: "cuda:0 f32[128]"
+  # t5 = ltorch.cos(t4)  # t5: "cuda:0 f32[128]"
+    # t5 = prims.cos(t4)  # t5: "cuda:0 f32[128]",
    1536,
    [{'action': 'alloc',
-     'addr': 139907659989504,
+     'addr': 140266147152896,
      'compile_context': 'N/A',
      'frames': [{'filename': '??',
                  'line': 0,
@@ -382,136 +368,99 @@ def computation(sinc_1):
                  'line': 0,
                  'name': 'c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, '
                          'c10::SymInt const&, c10::Allocator*, bool)'},
+                {'filename': 'EmptyTensor.cpp',
+                 'line': 0,
+                 'name': 'at::TensorBase '
+                         'at::detail::_empty_generic<long>(c10::ArrayRef<long>, '
+                         'c10::Allocator*, c10::DispatchKeySet, '
+                         'c10::ScalarType, std::optional<c10::MemoryFormat>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'at::detail::empty_strided_generic(c10::ArrayRef<long>, '
-                         'c10::ArrayRef<long>, c10::Allocator*, '
-                         'c10::DispatchKeySet, c10::ScalarType)'},
+                 'name': 'at::detail::empty_generic(c10::ArrayRef<long>, '
+                         'c10::Allocator*, c10::DispatchKeySet, '
+                         'c10::ScalarType, std::optional<c10::MemoryFormat>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'at::detail::empty_strided_cuda(c10::ArrayRef<long>, '
-                         'c10::ArrayRef<long>, c10::ScalarType, '
-                         'std::optional<c10::Device>)'},
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'c10::ScalarType, std::optional<c10::Device>, '
+                         'std::optional<c10::MemoryFormat>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'at::detail::empty_strided_cuda(c10::ArrayRef<long>, '
-                         'c10::ArrayRef<long>, std::optional<c10::ScalarType>, '
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'std::optional<c10::ScalarType>, '
                          'std::optional<c10::Layout>, '
-                         'std::optional<c10::Device>, std::optional<bool>)'},
+                         'std::optional<c10::Device>, std::optional<bool>, '
+                         'std::optional<c10::MemoryFormat>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'at::native::empty_strided_cuda(c10::ArrayRef<long>, '
-                         'c10::ArrayRef<long>, std::optional<c10::ScalarType>, '
-                         'std::optional<c10::Layout>, '
-                         'std::optional<c10::Device>, std::optional<bool>)'},
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'c10::TensorOptions const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::create_out(c10::ArrayRef<long>, '
+                         'c10::ArrayRef<long>, c10::TensorOptions const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::structured_cos_out_functional::set_output_raw_strided(long, '
+                         'c10::ArrayRef<long>, c10::ArrayRef<long>, '
+                         'c10::TensorOptions, c10::ArrayRef<at::Dimname>)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'nvfuser::setFillAllocationWithNan(bool)'},
+                 'name': 'at::TensorIteratorBase::fast_set_up(at::TensorIteratorConfig '
+                         'const&)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'nvfuser::KernelExecutor::run(nvfuser::KernelArgumentHolder, '
-                         'nvfuser::KernelArgumentHolder, nvfuser::LaunchParams '
-                         'const&, nvfuser::CompileParams)'},
+                 'name': 'at::TensorIteratorBase::build(at::TensorIteratorConfig&)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'std::__detail::_Map_base<nvfuser::TensorView*, '
-                         'std::pair<nvfuser::TensorView* const, bool>, '
-                         'std::allocator<std::pair<nvfuser::TensorView* const, '
-                         'bool> >, std::__detail::_Select1st, '
-                         'std::equal_to<nvfuser::TensorView*>, '
-                         'std::hash<nvfuser::TensorView*>, '
-                         'std::__detail::_Mod_range_hashing, '
-                         'std::__detail::_Default_ranged_hash, '
-                         'std::__detail::_Prime_rehash_policy, '
-                         'std::__detail::_Hashtable_traits<false, false, '
-                         'true>, true>::operator[](nvfuser::TensorView*&&)'},
+                 'name': 'at::TensorIteratorBase::build_borrowing_unary_float_op(at::TensorBase '
+                         'const&, at::TensorBase const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::wrapper_CUDA_cos(at::Tensor const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor '
+                         '(at::Tensor const&), &at::(anonymous '
+                         'namespace)::wrapper_CUDA_cos>, at::Tensor, '
+                         'c10::guts::typelist::typelist<at::Tensor const&> >, '
+                         'at::Tensor (at::Tensor '
+                         'const&)>::call(c10::OperatorKernel*, '
+                         'c10::DispatchKeySet, at::Tensor const&)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'nvfuser::FusionKernelRuntime::fusionSegments() '
-                         'const'},
+                 'name': 'at::_ops::cos::redispatch(c10::DispatchKeySet, '
+                         'at::Tensor const&)'},
+                {'filename': 'VariableType_0.cpp',
+                 'line': 0,
+                 'name': 'torch::autograd::VariableType::(anonymous '
+                         'namespace)::cos(c10::DispatchKeySet, at::Tensor '
+                         'const&)'},
+                {'filename': 'VariableType_0.cpp',
+                 'line': 0,
+                 'name': 'c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor '
+                         '(c10::DispatchKeySet, at::Tensor const&), '
+                         '&torch::autograd::VariableType::(anonymous '
+                         'namespace)::cos>, at::Tensor, '
+                         'c10::guts::typelist::typelist<c10::DispatchKeySet, '
+                         'at::Tensor const&> >, at::Tensor '
+                         '(c10::DispatchKeySet, at::Tensor '
+                         'const&)>::call(c10::OperatorKernel*, '
+                         'c10::DispatchKeySet, at::Tensor const&)'},
                 {'filename': '??',
                  'line': 0,
-                 'name': 'nvfuser::FusionKernelRuntime::fusionSegments() '
-                         'const'},
-                {'filename': '??',
+                 'name': 'at::_ops::cos::call(at::Tensor const&)'},
+                {'filename': 'python_torch_functions_2.cpp',
                  'line': 0,
-                 'name': 'nvfuser::FusionKernelRuntime::fusionSegments() '
-                         'const'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'nvfuser::FusionExecutorCache::runFusionWithInputs(nvfuser::KernelArgumentHolder, '
-                         'std::optional<nvfuser::PrimDataType>, '
-                         'std::optional<signed char>)'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'nvfuser::python_frontend::FusionDefinition::execute(nvfuser::KernelArgumentHolder, '
-                         'std::optional<signed char>, bool, bool, bool, '
-                         'std::vector<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> >, '
-                         'std::allocator<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > > >, '
-                         'std::vector<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> >, '
-                         'std::allocator<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > > >) '
-                         'const'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'std::_Hashtable<long, long, std::allocator<long>, '
-                         'std::__detail::_Identity, std::equal_to<long>, '
-                         'std::hash<long>, std::__detail::_Mod_range_hashing, '
-                         'std::__detail::_Default_ranged_hash, '
-                         'std::__detail::_Prime_rehash_policy, '
-                         'std::__detail::_Hashtable_traits<false, true, true> '
-                         '>::~_Hashtable()'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'std::_Hashtable<long, long, std::allocator<long>, '
-                         'std::__detail::_Identity, std::equal_to<long>, '
-                         'std::hash<long>, std::__detail::_Mod_range_hashing, '
-                         'std::__detail::_Default_ranged_hash, '
-                         'std::__detail::_Prime_rehash_policy, '
-                         'std::__detail::_Hashtable_traits<false, true, true> '
-                         '>::~_Hashtable()'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': 'std::_Hashtable<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> >, '
-                         'std::pair<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > '
-                         'const, void*>, '
-                         'std::allocator<std::pair<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > '
-                         'const, void*> >, std::__detail::_Select1st, '
-                         'std::equal_to<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > >, '
-                         'std::hash<std::__cxx11::basic_string<char, '
-                         'std::char_traits<char>, std::allocator<char> > >, '
-                         'std::__detail::_Mod_range_hashing, '
-                         'std::__detail::_Default_ranged_hash, '
-                         'std::__detail::_Prime_rehash_policy, '
-                         'std::__detail::_Hashtable_traits<true, false, true> '
-                         '>::~_Hashtable()'},
+                 'name': 'torch::autograd::THPVariable_cos(_object*, _object*, '
+                         '_object*)'},
                 {'filename': '??', 'line': 0, 'name': 'PyCMethod_New'},
                 {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
-                {'filename': '/opt/pytorch/nvfuser/python/nvfuser/__init__.py',
-                 'line': 333,
-                 'name': 'execute'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
-                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
-                {'filename': '/opt/pytorch/lightning-thunder/thunder/executors/nvfuserex_impl.py',
-                 'line': 546,
-                 'name': '__call__'},
-                {'filename': '??',
-                 'line': 0,
-                 'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
-                {'filename': 'thunder.computation_5',
-                 'line': 9,
+                {'filename': 'thunder.computation_2',
+                 'line': 15,
                  'name': 'computation'},
                 {'filename': '??',
                  'line': 0,
@@ -523,16 +472,16 @@ def computation(sinc_1):
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
-                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py',
                  'line': 120,
                  'name': 'decorate_context'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
                 {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
                  'line': 794,
                  'name': 'wrapped'},
@@ -553,15 +502,41 @@ def computation(sinc_1):
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
-                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
-                {'filename': '??', 'line': 0, 'name': 'PyObject_Call'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/opt/pytorch/lightning-thunder/thunder/core/module.py',
                  'line': 80,
                  'name': 'forward'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': 'PyObject_Call'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '<eval_with_key>.11',
+                 'line': 5,
+                 'name': 'forward'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
                 {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
                  'line': 1786,
@@ -572,6 +547,7 @@ def computation(sinc_1):
                 {'filename': '',
                  'line': 0,
                  'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
                  'line': 1775,
                  'name': '_wrapped_call_impl'},
@@ -581,7 +557,665 @@ def computation(sinc_1):
                 {'filename': '',
                  'line': 0,
                  'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
+                 'line': 400,
+                 'name': '__call__'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'dynamo_eval_custom_code'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
+                 'line': 837,
+                 'name': 'call_wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 1005,
+                 'name': '_fn'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyEval_EvalCode'},
+                {'filename': '??', 'line': 0, 'name': 'PyRun_StringFlags'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyRun_SimpleFileObject'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyRun_SimpleFileObject'},
+                {'filename': '??', 'line': 0, 'name': '_PyRun_AnyFileObject'},
+                {'filename': '??', 'line': 0, 'name': 'Py_RunMain'},
+                {'filename': '??', 'line': 0, 'name': 'Py_BytesMain'},
+                {'filename': '??', 'line': 0, 'name': '__libc_init_first'},
+                {'filename': '??', 'line': 0, 'name': '__libc_start_main'},
+                {'filename': '??', 'line': 0, 'name': '_start'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 413,
+                 'name': '__call__'},
+                {'filename': '/opt/pytorch/lightning-thunder/main.py',
+                 'line': 15,
+                 'name': 'fn'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 804,
+                 'name': 'compile_wrapper'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py',
+                 'line': 265,
+                 'name': '__call__'},
+                {'filename': '/opt/pytorch/lightning-thunder/main.py',
+                 'line': 29,
+                 'name': '<module>'}],
+     'size': 512,
+     'stream': 0,
+     'time_us': 1758187444930889}]),
+  (del t4,
+   1024,
+   [{'action': 'free_requested',
+     'addr': 140266147152384,
+     'compile_context': 'N/A',
+     'frames': [{'filename': '??',
+                 'line': 0,
+                 'name': 'torch::unwind::unwind()'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'torch::CapturedTraceback::gather(bool, bool, bool)'},
+                {'filename': 'memory_snapshot.cpp',
+                 'line': 0,
+                 'name': 'torch::cuda::(anonymous '
+                         'namespace)::gather_with_cpp()'},
+                {'filename': 'CUDACachingAllocator.cpp',
+                 'line': 0,
+                 'name': 'c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::free(c10::cuda::CUDACachingAllocator::Native::(anonymous '
+                         'namespace)::Block*)'},
+                {'filename': 'CUDACachingAllocator.cpp',
+                 'line': 0,
+                 'name': 'c10::cuda::CUDACachingAllocator::Native::local_raw_delete(void*)'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'c10::StorageImpl::~StorageImpl()'},
+                {'filename': 'TensorImpl.cpp',
+                 'line': 0,
+                 'name': 'c10::TensorImpl::~TensorImpl() [clone .localalias]'},
+                {'filename': 'python_variable.cpp',
+                 'line': 0,
+                 'name': 'THPVariable_subclass_clear(THPVariable*)'},
+                {'filename': 'python_variable.cpp',
+                 'line': 0,
+                 'name': 'THPVariable_subclass_dealloc(_object*)'},
+                {'filename': 'thunder.computation_2',
+                 'line': 17,
+                 'name': 'computation'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
                 {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/executors/torchex.py',
+                 'line': 169,
+                 'name': 'no_autocast_fn'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py',
+                 'line': 120,
+                 'name': 'decorate_context'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 794,
+                 'name': 'wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 889,
+                 'name': 'fn_'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 839,
+                 'name': 'wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/core/module.py',
+                 'line': 80,
+                 'name': 'forward'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': 'PyObject_Call'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '<eval_with_key>.11',
+                 'line': 5,
+                 'name': 'forward'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
+                 'line': 400,
+                 'name': '__call__'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'dynamo_eval_custom_code'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
+                 'line': 837,
+                 'name': 'call_wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 1005,
+                 'name': '_fn'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyEval_EvalCode'},
+                {'filename': '??', 'line': 0, 'name': 'PyRun_StringFlags'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyRun_SimpleFileObject'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyRun_SimpleFileObject'},
+                {'filename': '??', 'line': 0, 'name': '_PyRun_AnyFileObject'},
+                {'filename': '??', 'line': 0, 'name': 'Py_RunMain'},
+                {'filename': '??', 'line': 0, 'name': 'Py_BytesMain'},
+                {'filename': '??', 'line': 0, 'name': '__libc_init_first'},
+                {'filename': '??', 'line': 0, 'name': '__libc_start_main'},
+                {'filename': '??', 'line': 0, 'name': '_start'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 413,
+                 'name': '__call__'},
+                {'filename': '/opt/pytorch/lightning-thunder/main.py',
+                 'line': 15,
+                 'name': 'fn'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 804,
+                 'name': 'compile_wrapper'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py',
+                 'line': 265,
+                 'name': '__call__'},
+                {'filename': '/opt/pytorch/lightning-thunder/main.py',
+                 'line': 29,
+                 'name': '<module>'}],
+     'size': 512,
+     'stream': 0,
+     'time_us': 1758187444945219},
+    {'action': 'free_completed',
+     'addr': 140266147152384,
+     'compile_context': 'N/A',
+     'frames': [{'filename': '??',
+                 'line': 0,
+                 'name': 'torch::unwind::unwind()'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'torch::CapturedTraceback::gather(bool, bool, bool)'},
+                {'filename': 'memory_snapshot.cpp',
+                 'line': 0,
+                 'name': 'torch::cuda::(anonymous '
+                         'namespace)::gather_with_cpp()'},
+                {'filename': 'CUDACachingAllocator.cpp',
+                 'line': 0,
+                 'name': 'c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::free(c10::cuda::CUDACachingAllocator::Native::(anonymous '
+                         'namespace)::Block*)'},
+                {'filename': 'CUDACachingAllocator.cpp',
+                 'line': 0,
+                 'name': 'c10::cuda::CUDACachingAllocator::Native::local_raw_delete(void*)'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'c10::StorageImpl::~StorageImpl()'},
+                {'filename': 'TensorImpl.cpp',
+                 'line': 0,
+                 'name': 'c10::TensorImpl::~TensorImpl() [clone .localalias]'},
+                {'filename': 'python_variable.cpp',
+                 'line': 0,
+                 'name': 'THPVariable_subclass_clear(THPVariable*)'},
+                {'filename': 'python_variable.cpp',
+                 'line': 0,
+                 'name': 'THPVariable_subclass_dealloc(_object*)'},
+                {'filename': 'thunder.computation_2',
+                 'line': 17,
+                 'name': 'computation'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/executors/torchex.py',
+                 'line': 169,
+                 'name': 'no_autocast_fn'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py',
+                 'line': 120,
+                 'name': 'decorate_context'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 794,
+                 'name': 'wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 889,
+                 'name': 'fn_'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 839,
+                 'name': 'wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/core/module.py',
+                 'line': 80,
+                 'name': 'forward'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': 'PyObject_Call'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '<eval_with_key>.11',
+                 'line': 5,
+                 'name': 'forward'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
+                 'line': 400,
+                 'name': '__call__'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'dynamo_eval_custom_code'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
+                 'line': 837,
+                 'name': 'call_wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 1005,
+                 'name': '_fn'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyEval_EvalCode'},
+                {'filename': '??', 'line': 0, 'name': 'PyRun_StringFlags'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyRun_SimpleFileObject'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyRun_SimpleFileObject'},
+                {'filename': '??', 'line': 0, 'name': '_PyRun_AnyFileObject'},
+                {'filename': '??', 'line': 0, 'name': 'Py_RunMain'},
+                {'filename': '??', 'line': 0, 'name': 'Py_BytesMain'},
+                {'filename': '??', 'line': 0, 'name': '__libc_init_first'},
+                {'filename': '??', 'line': 0, 'name': '__libc_start_main'},
+                {'filename': '??', 'line': 0, 'name': '_start'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 413,
+                 'name': '__call__'},
+                {'filename': '/opt/pytorch/lightning-thunder/main.py',
+                 'line': 15,
+                 'name': 'fn'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 804,
+                 'name': 'compile_wrapper'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py',
+                 'line': 265,
+                 'name': '__call__'},
+                {'filename': '/opt/pytorch/lightning-thunder/main.py',
+                 'line': 29,
+                 'name': '<module>'}],
+     'size': 512,
+     'stream': 0,
+     'time_us': 1758187444945219}])],
+ [(t2 = torch.exp(sinc_1)  # t2: "cuda:0 f32[128]"
+  # t2 = ltorch.exp(sinc_1)  # t2: "cuda:0 f32[128]"
+    # t2 = prims.exp(sinc_1)  # t2: "cuda:0 f32[128]",
+   1536,
+   [{'action': 'alloc',
+     'addr': 140266147152384,
+     'compile_context': 'N/A',
+     'frames': [{'filename': '??',
+                 'line': 0,
+                 'name': 'torch::unwind::unwind()'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'torch::CapturedTraceback::gather(bool, bool, bool)'},
+                {'filename': 'memory_snapshot.cpp',
+                 'line': 0,
+                 'name': 'torch::cuda::(anonymous '
+                         'namespace)::gather_with_cpp()'},
+                {'filename': 'CUDACachingAllocator.cpp',
+                 'line': 0,
+                 'name': 'c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::malloc(signed '
+                         'char, unsigned long, CUstream_st*)'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::malloc(void**, '
+                         'signed char, unsigned long, CUstream_st*)'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::allocate(unsigned '
+                         'long)'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, '
+                         'c10::SymInt const&, c10::Allocator*, bool)'},
+                {'filename': 'EmptyTensor.cpp',
+                 'line': 0,
+                 'name': 'at::TensorBase '
+                         'at::detail::_empty_generic<long>(c10::ArrayRef<long>, '
+                         'c10::Allocator*, c10::DispatchKeySet, '
+                         'c10::ScalarType, std::optional<c10::MemoryFormat>)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::detail::empty_generic(c10::ArrayRef<long>, '
+                         'c10::Allocator*, c10::DispatchKeySet, '
+                         'c10::ScalarType, std::optional<c10::MemoryFormat>)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'c10::ScalarType, std::optional<c10::Device>, '
+                         'std::optional<c10::MemoryFormat>)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'std::optional<c10::ScalarType>, '
+                         'std::optional<c10::Layout>, '
+                         'std::optional<c10::Device>, std::optional<bool>, '
+                         'std::optional<c10::MemoryFormat>)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::detail::empty_cuda(c10::ArrayRef<long>, '
+                         'c10::TensorOptions const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::create_out(c10::ArrayRef<long>, '
+                         'c10::ArrayRef<long>, c10::TensorOptions const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::structured_exp_out_functional::set_output_raw_strided(long, '
+                         'c10::ArrayRef<long>, c10::ArrayRef<long>, '
+                         'c10::TensorOptions, c10::ArrayRef<at::Dimname>)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::TensorIteratorBase::fast_set_up(at::TensorIteratorConfig '
+                         'const&)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::TensorIteratorBase::build(at::TensorIteratorConfig&)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::TensorIteratorBase::build_borrowing_unary_float_op(at::TensorBase '
+                         'const&, at::TensorBase const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'at::(anonymous '
+                         'namespace)::wrapper_CUDA_exp(at::Tensor const&)'},
+                {'filename': 'RegisterCUDA_0.cpp',
+                 'line': 0,
+                 'name': 'c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor '
+                         '(at::Tensor const&), &at::(anonymous '
+                         'namespace)::wrapper_CUDA_exp>, at::Tensor, '
+                         'c10::guts::typelist::typelist<at::Tensor const&> >, '
+                         'at::Tensor (at::Tensor '
+                         'const&)>::call(c10::OperatorKernel*, '
+                         'c10::DispatchKeySet, at::Tensor const&)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::_ops::exp::redispatch(c10::DispatchKeySet, '
+                         'at::Tensor const&)'},
+                {'filename': 'VariableType_2.cpp',
+                 'line': 0,
+                 'name': 'torch::autograd::VariableType::(anonymous '
+                         'namespace)::exp(c10::DispatchKeySet, at::Tensor '
+                         'const&)'},
+                {'filename': 'VariableType_2.cpp',
+                 'line': 0,
+                 'name': 'c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor '
+                         '(c10::DispatchKeySet, at::Tensor const&), '
+                         '&torch::autograd::VariableType::(anonymous '
+                         'namespace)::exp>, at::Tensor, '
+                         'c10::guts::typelist::typelist<c10::DispatchKeySet, '
+                         'at::Tensor const&> >, at::Tensor '
+                         '(c10::DispatchKeySet, at::Tensor '
+                         'const&)>::call(c10::OperatorKernel*, '
+                         'c10::DispatchKeySet, at::Tensor const&)'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': 'at::_ops::exp::call(at::Tensor const&)'},
+                {'filename': 'python_torch_functions_2.cpp',
+                 'line': 0,
+                 'name': 'torch::autograd::THPVariable_exp(_object*, _object*, '
+                         '_object*)'},
+                {'filename': '??', 'line': 0, 'name': 'PyCMethod_New'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': 'thunder.computation_5',
+                 'line': 11,
+                 'name': 'computation'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/executors/torchex.py',
+                 'line': 169,
+                 'name': 'no_autocast_fn'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py',
+                 'line': 120,
+                 'name': 'decorate_context'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 794,
+                 'name': 'wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 889,
+                 'name': 'fn_'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/__init__.py',
+                 'line': 839,
+                 'name': 'wrapped'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/opt/pytorch/lightning-thunder/thunder/core/module.py',
+                 'line': 80,
+                 'name': 'forward'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': 'PyObject_Call'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1786,
+                 'name': '_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
+                 'line': 1775,
+                 'name': '_wrapped_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
                 {'filename': '<eval_with_key>.11',
                  'line': 7,
                  'name': 'forward'},
@@ -601,12 +1235,22 @@ def computation(sinc_1):
                 {'filename': '',
                  'line': 0,
                  'name': 'dynamo__custom_eval_frame'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
-                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
-                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '??', 'line': 0, 'name': 'PyMethod_New'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
                  'line': 1775,
                  'name': '_wrapped_call_impl'},
+                {'filename': '??',
+                 'line': 0,
+                 'name': '_PyEval_EvalFrameDefault'},
+                {'filename': '',
+                 'line': 0,
+                 'name': 'dynamo__custom_eval_frame'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
+                {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
+                {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
+                 'line': 400,
+                 'name': '__call__'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
@@ -617,17 +1261,17 @@ def computation(sinc_1):
                  'line': 0,
                  'name': 'dynamo__custom_eval_frame'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
-                 'line': 400,
-                 'name': '__call__'},
+                 'line': 837,
+                 'name': 'call_wrapped'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
                 {'filename': '??', 'line': 0, 'name': '_PyObject_Call_Prepend'},
                 {'filename': '??', 'line': 0, 'name': 'PyType_GetModule'},
                 {'filename': '??', 'line': 0, 'name': '_PyObject_MakeTpCall'},
-                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py',
-                 'line': 837,
-                 'name': 'call_wrapped'},
+                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
+                 'line': 1005,
+                 'name': '_fn'},
                 {'filename': '??',
                  'line': 0,
                  'name': '_PyEval_EvalFrameDefault'},
@@ -645,9 +1289,6 @@ def computation(sinc_1):
                 {'filename': '??', 'line': 0, 'name': '__libc_init_first'},
                 {'filename': '??', 'line': 0, 'name': '__libc_start_main'},
                 {'filename': '??', 'line': 0, 'name': '_start'},
-                {'filename': '/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py',
-                 'line': 1005,
-                 'name': '_fn'},
                 {'filename': '/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py',
                  'line': 1786,
                  'name': '_call_impl'},
@@ -671,7 +1312,7 @@ def computation(sinc_1):
                  'name': '<module>'}],
      'size': 512,
      'stream': 0,
-     'time_us': 1758154389372086}])]]
+     'time_us': 1758187451181153}])]]
 [[(cos,
    1024,
    [{'action': 'snapshot',
@@ -679,11 +1320,11 @@ def computation(sinc_1):
      'compile_context': 'N/A',
      'size': 1024,
      'stream': 0,
-     'time_us': 1758154383701718}]),
+     'time_us': 1758187444981033}]),
   (sinc,
    1536,
    [{'action': 'alloc',
-     'addr': 139907659990016,
+     'addr': 140266147152384,
      'compile_context': 'N/A',
      'frames': [{'filename': '??',
                  'line': 0,
@@ -1004,11 +1645,11 @@ def computation(sinc_1):
                  'name': '<module>'}],
      'size': 512,
      'stream': 0,
-     'time_us': 1758154384540538}]),
+     'time_us': 1758187445930491}]),
   (sinc_1,
    1536,
    [{'action': 'alloc',
-     'addr': 139907659990528,
+     'addr': 140266147153408,
      'compile_context': 'N/A',
      'frames': [{'filename': '??',
                  'line': 0,
@@ -1329,9 +1970,9 @@ def computation(sinc_1):
                  'name': '<module>'}],
      'size': 512,
      'stream': 0,
-     'time_us': 1758154389149938},
+     'time_us': 1758187451012225},
     {'action': 'free_requested',
-     'addr': 139907659990016,
+     'addr': 140266147152384,
      'compile_context': 'N/A',
      'frames': [{'filename': '??',
                  'line': 0,
@@ -1564,9 +2205,9 @@ def computation(sinc_1):
                  'name': '<module>'}],
      'size': 512,
      'stream': 0,
-     'time_us': 1758154389150007},
+     'time_us': 1758187451012305},
     {'action': 'free_completed',
-     'addr': 139907659990016,
+     'addr': 140266147152384,
      'compile_context': 'N/A',
      'frames': [{'filename': '??',
                  'line': 0,
@@ -1799,7 +2440,7 @@ def computation(sinc_1):
                  'name': '<module>'}],
      'size': 512,
      'stream': 0,
-     'time_us': 1758154389150007}])]]
+     'time_us': 1758187451012305}])]]
 class GraphModule(torch.nn.Module):
     def forward(self, cos: "f32[128]"):
          # File: <debug>:0 in <debug>, code: memory_events = [snapshot - 1024 bytes], total 1024 bytes allocated
