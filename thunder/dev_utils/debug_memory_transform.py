@@ -1,4 +1,4 @@
-import torch.cuda
+import torch
 from thunder.dev_utils.debug_transform import DebugTransform
 from thunder.core.prims import PrimIDs
 
@@ -25,6 +25,7 @@ class DebugMemoryTransform(DebugTransform):
         return bsym.sym.id == PrimIDs.DEL or super().is_applicable(bsym)
 
     def create_debug_boundsymbol(self, name, bsym, call_ctx, pass_result=False):
+        name = name.replace(".", "__")
         debug_bsym = super().create_debug_boundsymbol(name, bsym, call_ctx, pass_result)
         if bsym.sym.id == PrimIDs.DEL and pass_result:
             # Arguments are deleted; pass only the output
@@ -61,8 +62,18 @@ class DebugMemoryFXTransform:
     def __call__(self, graph_module: torch.fx.GraphModule):
         torch.cuda.memory._record_memory_history(clear_history=True, device=self.device_index)
         self.memory_events.append([])
-        nodes = list(graph_module.graph.nodes)
-        for node in nodes:
-            node.append(graph_module.graph.create_node("call_function", self._collect_memory_events(node)))
+
+        def recurse(module: torch.fx.GraphModule):
+            nodes = list(module.graph.nodes)
+            for node in nodes:
+                node.append(module.graph.create_node("call_function", self._collect_memory_events(node)))
+                if node.target in (torch.ops.higher_order.tag_activation_checkpoint, torch.ops.higher_order.autograd_function_apply):
+                    m = node.graph.owning_module
+                    for arg_node in node.args:
+                        if arg_node.op == "get_attr":
+                            called_module = getattr(m, arg_node.target)
+                            recurse(called_module)
+
+        recurse(graph_module)
         self.augumented_graph_modules.append(graph_module)
         return graph_module
