@@ -990,6 +990,8 @@ def benchmark_main(return_metrics_as_json=False, json_path="", **kwargs) -> None
         if debug_memory_fx_transform := getattr(benchmark, "debug_memory_fx_transform", None):
             for gm in debug_memory_fx_transform.augumented_graph_modules:
                 print(gm.print_readable())
+            from pprint import pprint
+            pprint(benchmark.backend.subgraph_infos)
 
     if global_rank in [0, None]:
         if return_metrics_as_json:

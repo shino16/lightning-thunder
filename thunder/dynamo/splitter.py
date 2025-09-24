@@ -203,7 +203,8 @@ def _splitter(
                 graph_module = transform(graph_module)
             recompile_graph(graph_module)
 
-            jit_fn = torch_inductor(graph_module)
+            # jit_fn = torch_inductor(graph_module)
+            jit_fn = graph_module
             # Update the node name from "submod_*" to "inductor_*" for more user-friendly names
             update_node_and_submodule(split_gm, node, node.name.replace("submod", "inductor"), jit_fn)
             submodule_to_compiled_fns[getattr(original_split_gm, node_name)] = CompiledFunction(

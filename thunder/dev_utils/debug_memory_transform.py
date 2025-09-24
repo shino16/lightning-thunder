@@ -45,6 +45,7 @@ class DebugMemoryFXTransform:
         self.augumented_graph_modules = []
 
     def _collect_memory_events(self, node: torch.fx.Node):
+        @torch._dynamo.disable
         def inner_fn():
             torch.cuda.synchronize()
             snapshot = torch.cuda.memory._snapshot(device=self.device_index)

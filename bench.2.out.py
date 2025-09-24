@@ -1,7 +1,7 @@
 Loading model with {'name': 'Gemma-2-27b-like', 'hf_config': {'org': 'google', 'name': 'gemma-2-27b'}, 'scale_embeddings': True, 'attention_scores_scalar': 144, 'block_size': 8192, 'sliding_window_size': 4096, 'sliding_window_layer_placing': 2, 'vocab_size': 256000, 'padding_multiple': 512, 'padded_vocab_size': 256000, 'n_layer': 2, 'n_head': 32, 'head_size': 128, 'n_embd': 2, 'rotary_percentage': 1.0, 'parallel_residual': False, 'bias': False, 'lm_head_bias': False, 'n_query_groups': 16, 'shared_attention_norm': False, 'norm_class_name': 'RMSNorm', 'post_attention_norm': True, 'post_mlp_norm': True, 'norm_eps': 1e-05, 'mlp_class_name': 'GemmaMLP', 'gelu_approximate': 'tanh', 'intermediate_size': 16, 'rope_condense_ratio': 1, 'rope_base': 10000, 'rope_adjustments': None, 'n_expert': 0, 'n_expert_per_token': 0, 'attention_logit_softcapping': 50.0, 'final_logit_softcapping': 30.0, 'rope_n_elem': 128}
 Time to instantiate model: 0.06 seconds.
 Model Flops/Throughput calculation failed for model Gemma-2-27b-like. Skipping throughput metric collection.
-iter 0: loss 13.0000, iter time: 6766.60ms, t: 8192
+iter 0: loss 13.0000, iter time: 5195.87ms, t: 8192
 Model name: Gemma-2-27b-like
 Seq Length: 8192
 Micro BS: 1
@@ -11,7 +11,7 @@ Number of parameters: 0.00B
 Distributed Mode: none
 Compiler: dynamo_thunder
 Low Precision Mode: none
-Average iter time: 6766.60 ms
+Average iter time: 5195.87 ms
 Memory used: 60.58 GB
 Saved for backward size: 4001.07 MiB
 Saved for backward number of tensors: 6

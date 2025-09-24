@@ -1,41 +1,43 @@
+from functools import partial
 import torch
-from torch.fx import Interpreter
 import thunder
 from thunder.dynamo import thunderfx
-from pprint import pprint, pformat
+from pprint import pprint
 from thunder.dev_utils.debug_memory_transform import DebugMemoryTransform, DebugMemoryFXTransform
-from thunder.core.prims import PrimIDs
 from thunder.dynamo.utils import CompilerType
-from functools import partial
 
 use_thunderfx = True
 enable_grad = True
 
 
-def fn(x):
-    return x.sin().cos().sinc().sinc().exp()
+def fn(x, y):
+    z = x.sinc() * 2
+    w = z @ y
+    del z
+    return w
 
+checkpoint_fn = partial(torch.utils.checkpoint.checkpoint, fn, use_reentrant=False)
 
 debug_memory_transform = DebugMemoryTransform()
 debug_memory_fx_transform = DebugMemoryFXTransform()
 
 
 if use_thunderfx:
-    jfn = thunderfx(fn, executors=[], transforms=[debug_memory_transform], pre_inductor_transforms=[debug_memory_fx_transform])
+    jfn = thunderfx(checkpoint_fn, executors=[], transforms=[debug_memory_transform], pre_inductor_transforms=[debug_memory_fx_transform])
 else:
-    jfn = thunder.jit(fn, executors=[], transforms=[debug_memory_transform])
+    jfn = thunder.jit(checkpoint_fn, executors=[], transforms=[debug_memory_transform])
 
-x = torch.randn(512 // 4, device="cuda", requires_grad=enable_grad)
-y = jfn(x)
+x = torch.randn((128, 128), device="cuda", requires_grad=enable_grad)
+y = torch.randn((128, 128), device="cuda", requires_grad=enable_grad)
+y = jfn(x, y)
 y.sum().backward()
 
 if use_thunderfx:
     for sinfo in jfn._backend.subgraph_infos:
-        for jfn in sinfo.submodule_to_compiled_functions.values():
-            if jfn.compiler == CompilerType.THUNDER:
-                print(thunder.last_traces(jfn.compiled_fn)[-1])
+        for thunder_fn in sinfo.thunder_compiled_fns:
+            print(thunder.last_traces(thunder_fn)[-1])
 
-pprint(debug_memory_transform.memory_events)
-pprint(debug_memory_fx_transform.memory_events)
+# pprint(debug_memory_transform.memory_events)
+# pprint(debug_memory_fx_transform.memory_events)
 for gm in debug_memory_fx_transform.augumented_graph_modules:
     gm.print_readable()
