@@ -318,7 +318,7 @@ def try_execute_thunder_symbol(thunder_symbol: Symbol, node: torch.fx.Node) -> t
                 return False, SplitReason(
                     SplitReasonType.EXCEPTION_META_THUNDER_OP,
                     f"Failed while running meta for node with name: {node.name} and target: {node.target}, see exception field",
-                    exception=str(e),
+                    exception=f"{function_to_run.__qualname__}, {', '.join(map(repr, proxy_args))}, {', '.join(map(repr, proxy_kwargs))}",
                 )
 
         # Execution with proxies was successful.
