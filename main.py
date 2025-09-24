@@ -5,18 +5,18 @@ from thunder.dynamo import thunderfx
 from pprint import pprint
 from thunder.dev_utils.debug_memory_transform import DebugMemoryTransform, DebugMemoryFXTransform
 from thunder.dynamo.utils import CompilerType
-
+from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import apply_activation_checkpointing
+from torch.utils.checkpoint import checkpoint
 use_thunderfx = True
 enable_grad = True
 
 
-def fn(x, y):
-    z = x.sinc() * 2
-    w = z @ y
-    del z
-    return w
+def fn(x):
+    w = x @ x
+    return w.mT * 2
 
-checkpoint_fn = partial(torch.utils.checkpoint.checkpoint, fn, use_reentrant=False)
+def checkpoint_fn(x):
+    return checkpoint(fn, x, use_reentrant=False)
 
 debug_memory_transform = DebugMemoryTransform()
 debug_memory_fx_transform = DebugMemoryFXTransform()
@@ -28,8 +28,7 @@ else:
     jfn = thunder.jit(checkpoint_fn, executors=[], transforms=[debug_memory_transform])
 
 x = torch.randn((128, 128), device="cuda", requires_grad=enable_grad)
-y = torch.randn((128, 128), device="cuda", requires_grad=enable_grad)
-y = jfn(x, y)
+y = jfn(x)
 y.sum().backward()
 
 if use_thunderfx:

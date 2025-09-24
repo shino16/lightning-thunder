@@ -133,6 +133,7 @@ class ThunderCompiler:
 
     def __call__(self, gm: torch.fx.GraphModule, sample_args: list[torch.SymInt, torch.Tensor]):
         from thunder import jit
+        gm.print_readable()
 
         remove_empty_autocast(gm)
 
