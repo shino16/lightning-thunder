@@ -4,6 +4,7 @@ All GraphModules collected here come from `sglang/srt/model_executor/cuda_graph_
 
 Reproduce with:
 ```sh
+cd /opt/pytorch/lightning-thunder
 git checkout 1bb32071b54f7b4fc766a41b236d967aea6e6dd8
 python3 -m sglang.bench_one_batch \
   --model-path Qwen/Qwen3-30B-A3B-Instruct-2507 \
