@@ -1,15 +1,29 @@
 [`gm/`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/gm) contains the GraphModule compiled by ThunderFX.
 
-All GraphModules collected here come from `sglang/srt/model_executor/cuda_graph_runner.py::patch_model`.
+ThunderFX compiled the following modules with SGLang.
 
-Reproduce with:
+- Qwen/Qwen3-30B-A3B-Instruct-2507
+- Qwen/Qwen3-0.6B
+- openai/gpt-oss-20b
+- mistralai/Magistral-Small-2509
+- mistralai/Ministral-8B-Instruct-2410
+- mistralai/Mistral-Large-Instruct-2411
+- mistralai/Mixtral-8x7B-Instruct-v0.1
+- microsoft/Phi-4-mini-reasoning
+- huihui-ai/Qwen2.5-32B-Instruct-abliterated
+- unsloth/Qwen3-30B-A3B-GGUF
+- unsloth/gpt-oss-20b-BF16
+
+You can run the models in the same configuration with the following command:
+
 ```sh
-cd /opt/pytorch/lightning-thunder
-git checkout 1bb32071b54f7b4fc766a41b236d967aea6e6dd8
 python3 -m sglang.bench_one_batch \
-  --model-path Qwen/Qwen3-30B-A3B-Instruct-2507 \
-  --tp-size 4 \
-  --trust-remote-code \
-  --enable-torch-compile
+    --model-path <model_name> \
+    --tp-size 4 \
+    --trust-remote-code \
+    --enable-torch-compile
 ```
-after editing `sglang/srt/model_executor/cuda_graph_runner.py::patch_model` appropriately.
+
+See [`sglang_scripts/save_graph_modules.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/sglang_scripts/save_graph_modules.py) for the details. Note that SGLang was patched to replace weights with dummy random tensors with the same metadata.
+
+See [`gm/all_ops.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/gm/all_ops.py) for the list of ops in those GraphModules that Thunder did not support. This file was produced by [`sglang_scripts/extract_ops.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/sglang_scripts/extract_ops.py).
