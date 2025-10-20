@@ -61,7 +61,7 @@ def main():
     model_name = sys.argv[1]
     os.environ["THUNDER_SAVE_DIR"] = os.path.join("gm", model_name)
 
-    populate_dummy_model_cache(model_name)
+    # populate_dummy_model_cache(model_name)
 
     args = [
         "--model-path",
@@ -70,6 +70,8 @@ def main():
         str(torch.cuda.device_count()),
         "--trust-remote-code",
         "--enable-torch-compile",
+        "--load-format",
+        "dummy",
     ] + sys.argv[2:]
     parser = argparse.ArgumentParser()
     ServerArgs.add_cli_args(parser)
