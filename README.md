@@ -18,6 +18,12 @@ ThunderFX compiled the following modules with SGLang.
 You can run the models in the same configuration with the following command:
 
 ```sh
+python3 sglang_scripts/save_graph_modules.py <model_name>
+```
+
+whose output should be the same as
+
+```sh
 python3 -m sglang.bench_one_batch \
     --model-path <model_name> \
     --tp-size 4 \
@@ -25,6 +31,6 @@ python3 -m sglang.bench_one_batch \
     --enable-torch-compile
 ```
 
-See [`sglang_scripts/save_graph_modules.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/sglang_scripts/save_graph_modules.py) for the details. Note that SGLang was patched to replace weights with dummy random tensors with the same metadata.
+except that the former sets some NVTX annotations for profiling and creates dummy model cache to skip downloading. See [`sglang_scripts/save_graph_modules.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/sglang_scripts/save_graph_modules.py) for the details.
 
 See [`gm/all_ops.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/gm/all_ops.py) for the list of ops in those GraphModules that Thunder did not support. This file was produced by [`sglang_scripts/extract_ops.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/sglang_scripts/extract_ops.py).
