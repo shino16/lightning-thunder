@@ -1,18 +1,18 @@
 import os
-from contextlib import contextmanager
-import unittest.mock
 import functools
 
-import torch
-import thunder
-from thunder.dynamo import thunderfx
+from safetensors.torch import save_file
+from huggingface_hub import get_safetensors_metadata, get_hf_file_metadata, hf_hub_url
+from huggingface_hub.file_download import repo_folder_name, _get_pointer_path
+import huggingface_hub.constants
 
+import torch
 import sglang
-from sglang.srt.model_executor.cuda_graph_runner import GroupCoordinator, _to_torch
 
 
 def nvtx_annotate(name):
     """Decorator to add NVTX range markers around a function"""
+
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
@@ -22,32 +22,36 @@ def nvtx_annotate(name):
                 return result
             finally:
                 torch.cuda.nvtx.range_pop()
+
         return wrapper
+
     return decorator
 
 
-@contextmanager
-def patch_model(
-    model: torch.nn.Module,
-    enable_compile: bool,
-    num_tokens: int,
-    tp_group: GroupCoordinator,
-):
-    """Patch the model to make it compatible with with torch.compile"""
-    backup_ca_comm = None
+def populate_dummy_model_cache(model_name):
+    dtype_map = {
+        "F32": torch.float32,
+        "F16": torch.float16,
+        "BF16": torch.bfloat16,
+        "F8_E4M3": torch.float8_e4m3fn,
+    }
 
-    try:
-        if enable_compile:
-            yield thunderfx(
-                torch.no_grad()(model.forward),
-                dynamic=False,
-            )
-        else:
-            yield model.forward
-    finally:
-        if enable_compile:
-            _to_torch(model, reverse=True, num_tokens=num_tokens)
-            tp_group.ca_comm = backup_ca_comm
+    storage_folder = os.path.join(
+        huggingface_hub.constants.HF_HUB_CACHE, repo_folder_name(repo_id=model_name, repo_type="model")
+    )
+    metadata = get_safetensors_metadata(model_name)
+
+    for filename, file_metadata in metadata.files_metadata.items():
+        print(f"Preparing dummy cache for {filename}")
+        dummy_tensors = {}
+        for tensor_name, tensor_info in file_metadata.tensors.items():
+            dtype = dtype_map[tensor_info.dtype]
+            dummy_tensors[tensor_name] = torch.empty(tensor_info.shape, dtype=dtype)
+        commit_hash = get_hf_file_metadata(hf_hub_url(model_name, filename)).commit_hash
+        pointer_path = _get_pointer_path(storage_folder, commit_hash, filename)
+        print(f"Saving dummy cache to {pointer_path}")
+        os.makedirs(os.path.dirname(pointer_path), exist_ok=True)
+        save_file(dummy_tensors, pointer_path)
 
 
 def main():
@@ -57,9 +61,14 @@ def main():
     model_name = sys.argv[1]
     os.environ["THUNDER_SAVE_DIR"] = os.path.join("gm", model_name)
     os.environ["SGLANG_USE_DUMMY_WEIGHTS"] = "1"
+
+    populate_dummy_model_cache(model_name)
+
     args = [
-        "--model-path", model_name,
-        "--tp-size", str(torch.cuda.device_count()),
+        "--model-path",
+        model_name,
+        "--tp-size",
+        str(torch.cuda.device_count()),
         "--trust-remote-code",
         "--enable-torch-compile",
     ] + sys.argv[2:]
@@ -77,6 +86,7 @@ def main():
 
     # Patch sglang functions with NVTX annotations for profiling
     import sglang.bench_one_batch as bench_module
+
     original_extend = bench_module.extend
     original_decode = bench_module.decode
     bench_module.extend = nvtx_annotate("extend_prefill")(original_extend)
@@ -104,14 +114,14 @@ def main():
     # Check the output directory (configured via THUNDER_SAVE_DIR env var, defaults to thunderfx_debug/)
     debug_dir = os.path.join(os.getcwd(), os.environ.get("THUNDER_SAVE_DIR", "thunderfx_debug"))
     if os.path.exists(debug_dir):
-        print(f"\n{'='*80}")
+        print(f"\n{'=' * 80}")
         print(f"ThunderFX debug info saved to: {debug_dir}")
-        print(f"Files:")
+        print("Files:")
         for fname in sorted(os.listdir(debug_dir)):
             fpath = os.path.join(debug_dir, fname)
             size = os.path.getsize(fpath)
             print(f"  - {fname} ({size:,} bytes)")
-        print(f"{'='*80}\n")
+        print(f"{'=' * 80}\n")
     else:
         print("\nWarning: No thunderfx debug info found. This may be expected if compilation was skipped.")
 
