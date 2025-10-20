@@ -11,10 +11,8 @@ Usage:
 """
 
 import sys
-import os
 import re
 from pathlib import Path
-from typing import Set, List, Dict, Tuple
 
 
 def get_indentation(line: str) -> int:
@@ -48,50 +46,24 @@ def normalize_operation(op: str) -> str:
     # Pattern 1: variable at the beginning followed by dot (like "output_parallel.is_cpu")
     # But preserve module paths like "torch.ops" or "torch.cuda"
     # Don't replace if it's a known module name
-    known_modules = ['torch', 'numpy', 'np', 'F', 'nn', 'math']
-    if not any(op.startswith(f'{mod}.') for mod in known_modules):
-        normalized = re.sub(r'^([a-z_]\w*)\.', r'VAR.', normalized)
+    known_modules = ["torch", "numpy", "np", "F", "nn", "math"]
+    if not any(op.startswith(f"{mod}.") for mod in known_modules):
+        normalized = re.sub(r"^([a-z_]\w*)\.", r"VAR.", normalized)
 
-    # Pattern 2: Replace function arguments (variables between parentheses and commas)
-    # But keep string literals, numbers, and module paths
-    # Match variables as function arguments: func(var, var)
-    def replace_arg(match):
-        arg = match.group(1).strip()
-        # Keep if it's: a number, a string, a module path (contains .), or a keyword
-        if (arg.startswith(("'", '"')) or  # string
-            arg.replace('.', '').replace('-', '').isdigit() or  # number
-            '.' in arg or  # module path like torch.ops
-            arg in ['True', 'False', 'None']):  # keywords
-            return match.group(0)
-        else:
-            return 'VAR' + match.group(2)
+    # Pattern 2: Replace identifiers between [,(:] and [,)}] with VAR
+    normalized = re.sub(r"([,(:])\s*([a-z_]\w*)(\s*[,)}])", lambda m: m.group(1) + "VAR" + m.group(3), normalized)
 
-    # Replace variables after opening parens or commas
-    normalized = re.sub(r'([,(])\s*([a-z_]\w*)(\s*[,)])', lambda m: m.group(1) + 'VAR' + m.group(3), normalized)
-
-    # Pattern 3: After = in keyword arguments (but preserve string values, numbers, module paths)
-    def replace_kwarg_value(match):
-        value = match.group(1).strip()
-        # Keep string literals, numbers, module paths
-        if (value.startswith(("'", '"')) or
-            '.' in value or  # module path or attribute access
-            value.replace('-', '').replace('.', '').isdigit() or
-            value in ['True', 'False', 'None']):
-            return match.group(0)
-        else:
-            return '= VAR'
-
-    # This one is trickier - for now, skip normalizing kwarg values
-    # since they might be meaningful (like group_name = 'tp:0')
+    # Pattern 3: Replace integer literals with INT
+    normalized = re.sub(r"\b\d+\b", "INT", normalized)
 
     return normalized
 
 
-def extract_ops_from_file(filepath: Path) -> Set[str]:
+def extract_ops_from_file(filepath: Path) -> set[str]:
     """Extract operations from inductor_* classes in a single file."""
     ops = set()
 
-    with open(filepath, 'r') as f:
+    with open(filepath) as f:
         lines = f.readlines()
 
     i = 0
@@ -99,7 +71,7 @@ def extract_ops_from_file(filepath: Path) -> Set[str]:
         line = lines[i]
 
         # Check if this is an inductor_* class definition
-        if re.match(r'^\s*class\s+inductor_\w+\(', line):
+        if re.match(r"^\s*class\s+inductor_\w+\(", line):
             class_indent = get_indentation(line)
             i += 1
 
@@ -113,7 +85,7 @@ def extract_ops_from_file(filepath: Path) -> Set[str]:
                     break
 
                 # Check if this is a nested class definition
-                if re.match(r'^\s*class\s+\w+\(', current_line):
+                if re.match(r"^\s*class\s+\w+\(", current_line):
                     nested_class_indent = current_indent
                     # Skip the entire nested class
                     i += 1
@@ -131,36 +103,41 @@ def extract_ops_from_file(filepath: Path) -> Set[str]:
                 stripped = current_line.strip()
 
                 # Skip empty lines, comment-only lines, function definitions, and returns
-                if not stripped or stripped.startswith('#') or stripped.startswith('def ') or stripped.startswith('return'):
+                if (
+                    not stripped
+                    or stripped.startswith("#")
+                    or stripped.startswith("def ")
+                    or stripped.startswith("return")
+                ):
                     i += 1
                     continue
 
                 # Extract meaningful expressions from the line
                 expression = None
 
-                if '=' in stripped:
+                if "=" in stripped:
                     # Has assignment - extract right-hand side
-                    eq_pos = stripped.find('=')
+                    eq_pos = stripped.find("=")
 
-                    if ';' in stripped:
+                    if ";" in stripped:
                         # Pattern: variable = expression; ...
-                        semicolon_pos = stripped.find(';', eq_pos)
-                        expression = stripped[eq_pos + 1:semicolon_pos].strip()
+                        semicolon_pos = stripped.find(";", eq_pos)
+                        expression = stripped[eq_pos + 1 : semicolon_pos].strip()
                     else:
                         # Pattern: variable = expression
-                        expression = stripped[eq_pos + 1:].strip()
+                        expression = stripped[eq_pos + 1 :].strip()
                 else:
                     # No assignment - use the whole line as expression
-                    if ';' in stripped:
+                    if ";" in stripped:
                         # Pattern: expression; ...
-                        semicolon_pos = stripped.find(';')
+                        semicolon_pos = stripped.find(";")
                         expression = stripped[:semicolon_pos].strip()
                     else:
                         # Pattern: expression
                         expression = stripped
 
                 # Add non-empty expressions (skip trivial values like "None")
-                if expression and expression not in ['None', '()', '{}', '[]']:
+                if expression and expression not in ["None", "()", "{}", "[]"]:
                     ops.add(expression)
 
                 i += 1
@@ -170,18 +147,18 @@ def extract_ops_from_file(filepath: Path) -> Set[str]:
     return ops
 
 
-def extract_ops_from_model(model_name: str) -> List[str]:
+def extract_ops_from_model(model_name: str) -> list[str]:
     """Extract operations from all files for a given model."""
     # Get the base directory (project root)
     base_dir = Path(__file__).parent.parent
-    source_dir = base_dir / 'gm' / model_name
+    source_dir = base_dir / "gm" / model_name
 
     if not source_dir.exists():
         print(f"Error: Directory {source_dir} does not exist")
         sys.exit(1)
 
     # Find all Python files in the directory
-    py_files = list(source_dir.glob('*.py'))
+    py_files = list(source_dir.glob("*.py"))
 
     if not py_files:
         print(f"Error: No Python files found in {source_dir}")
@@ -191,7 +168,7 @@ def extract_ops_from_model(model_name: str) -> List[str]:
 
     # Collect all operations with pattern-based deduplication
     # Map: normalized_pattern -> first occurrence of that pattern
-    pattern_to_op: Dict[str, str] = {}
+    pattern_to_op: dict[str, str] = {}
 
     for py_file in py_files:
         ops = extract_ops_from_file(py_file)
@@ -210,7 +187,7 @@ def extract_ops_from_model(model_name: str) -> List[str]:
     return sorted(unique_ops)
 
 
-def save_ops(model_dir_name: str, ops: List[str], output_dir: Path):
+def save_ops(model_dir_name: str, ops: list[str], output_dir: Path):
     """Save extracted operations to the output file."""
     output_file = output_dir / f"{model_dir_name}.py"
 
@@ -218,14 +195,14 @@ def save_ops(model_dir_name: str, ops: List[str], output_dir: Path):
     output_file.parent.mkdir(parents=True, exist_ok=True)
 
     # Write operations to file
-    with open(output_file, 'w') as f:
+    with open(output_file, "w") as f:
         for op in ops:
             f.write(f"{op}\n")
 
     print(f"  → Saved {len(ops)} unique operations to {output_file}")
 
 
-def find_all_models(gm_dir: Path) -> List[Tuple[str, Path]]:
+def find_all_models(gm_dir: Path) -> list[tuple[str, Path]]:
     """
     Find all model directories in the gm/ directory.
     Returns list of (model_name, model_path) tuples.
@@ -233,10 +210,10 @@ def find_all_models(gm_dir: Path) -> List[Tuple[str, Path]]:
     models = []
 
     # Walk through all subdirectories
-    for item in gm_dir.rglob('*'):
+    for item in gm_dir.rglob("*"):
         if item.is_dir():
             # Check if this directory contains .py files (indicating it's a model directory)
-            py_files = list(item.glob('*.py'))
+            py_files = list(item.glob("*.py"))
             if py_files:
                 # Use just the directory name (not full path) as model name
                 model_name = item.name
@@ -247,7 +224,7 @@ def find_all_models(gm_dir: Path) -> List[Tuple[str, Path]]:
 
 def main():
     base_dir = Path(__file__).parent.parent  # Go up to project root
-    gm_dir = base_dir / 'gm'
+    gm_dir = base_dir / "gm"
 
     if len(sys.argv) > 1:
         # Single model mode
@@ -278,7 +255,7 @@ def main():
         print("=" * 70)
 
         # Collect all operations across all models with global deduplication
-        global_pattern_to_op: Dict[str, str] = {}
+        global_pattern_to_op: dict[str, str] = {}
 
         for model_name, model_path in models:
             print(f"\n[{model_name}]")
@@ -307,7 +284,7 @@ def main():
         output_file = gm_dir / "all_ops.py"
         output_file.parent.mkdir(parents=True, exist_ok=True)
 
-        with open(output_file, 'w') as f:
+        with open(output_file, "w") as f:
             for op in all_unique_ops:
                 f.write(f"{op}\n")
 
@@ -316,6 +293,5 @@ def main():
         print("=" * 70)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
