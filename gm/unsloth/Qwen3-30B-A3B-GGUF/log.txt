@@ -1,0 +1,317 @@
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-16 19:14:32 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
+[2025-10-16 19:14:32 TP0] Init torch distributed begin.
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-16 19:14:34 TP0] sglang is using nccl==2.28.3
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-16 19:14:37 TP0] Init torch distributed ends. mem usage=1.51 GB
+[2025-10-16 19:14:38 TP0] Load weight begin. avail mem=181.10 GB
+[2025-10-16 19:14:38 TP2] Using dummy random weights instead of downloading from HuggingFace
+[2025-10-16 19:14:38 TP3] Using dummy random weights instead of downloading from HuggingFace
+[2025-10-16 19:14:38 TP1] Using dummy random weights instead of downloading from HuggingFace
+[2025-10-16 19:14:38 TP0] Using dummy random weights instead of downloading from HuggingFace
+[2025-10-16 19:14:38 TP0] Load weight end. type=Qwen3MoeForCausalLM, dtype=torch.bfloat16, avail mem=166.80 GB, mem usage=14.31 GB.
+[2025-10-16 19:14:38 TP0] Using KV cache dtype: torch.bfloat16
+[2025-10-16 19:14:39 TP2] KV Cache is allocated. #tokens: 5918604, K size: 67.73 GB, V size: 67.73 GB
+[2025-10-16 19:14:39 TP3] KV Cache is allocated. #tokens: 5918604, K size: 67.73 GB, V size: 67.73 GB
+[2025-10-16 19:14:39 TP1] KV Cache is allocated. #tokens: 5918604, K size: 67.73 GB, V size: 67.73 GB
+[2025-10-16 19:14:39 TP0] KV Cache is allocated. #tokens: 5918604, K size: 67.73 GB, V size: 67.73 GB
+[2025-10-16 19:14:39 TP0] Memory pool end. avail mem=30.56 GB
+[2025-10-16 19:14:40 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=30.00 GB
+[2025-10-16 19:14:40 TP0] Capture cuda graph bs [1]
+  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=30.00 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+[2025-10-16 19:14:53 TP2] Registering 0 cuda graph addresses
+[2025-10-16 19:14:53 TP3] Registering 0 cuda graph addresses
+Capturing batches (bs=1 avail_mem=30.00 GB): 100%|██████████| 1/1 [00:12<00:00, 12.63s/it][2025-10-16 19:14:53 TP1] Registering 0 cuda graph addresses
+Capturing batches (bs=1 avail_mem=30.00 GB): 100%|██████████| 1/1 [00:12<00:00, 12.67s/it]
+[2025-10-16 19:14:53 TP0] Registering 0 cuda graph addresses
+[2025-10-16 19:14:53 TP0] Capture cuda graph end. Time elapsed: 13.39 s. mem usage=0.07 GB. avail mem=29.94 GB.
+Process Process-1:
+Traceback (most recent call last):
+Process Process-4:
+Process Process-2:
+  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 308, in get_tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/tokenization_auto.py", line 1144, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2070, in from_pretrained
+    return cls._from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2108, in _from_pretrained
+    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2316, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 308, in get_tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2/tokenization_qwen2.py", line 172, in __init__
+    with open(vocab_file, encoding="utf-8") as vocab_handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 308, in get_tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/tokenization_auto.py", line 1144, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2070, in from_pretrained
+    return cls._from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/tokenization_auto.py", line 1144, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2108, in _from_pretrained
+    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2316, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The above exception was the direct cause of the following exception:
+
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2/tokenization_qwen2.py", line 172, in __init__
+    with open(vocab_file, encoding="utf-8") as vocab_handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2070, in from_pretrained
+    return cls._from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2108, in _from_pretrained
+    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2316, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2/tokenization_qwen2.py", line 172, in __init__
+    with open(vocab_file, encoding="utf-8") as vocab_handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+
+The above exception was the direct cause of the following exception:
+
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+Process Process-3:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 170, in load_model
+    tokenizer = get_tokenizer(
+                ^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 323, in get_tokenizer
+    raise RuntimeError(err_msg) from e
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+RuntimeError: Failed to load the tokenizer. If you are using a LLaMA V1 model consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 170, in load_model
+    tokenizer = get_tokenizer(
+                ^^^^^^^^^^^^^^
+max_total_num_tokens=5918604
+  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 323, in get_tokenizer
+    raise RuntimeError(err_msg) from e
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+RuntimeError: Failed to load the tokenizer. If you are using a LLaMA V1 model consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 308, in get_tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/tokenization_auto.py", line 1144, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 170, in load_model
+    tokenizer = get_tokenizer(
+                ^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 323, in get_tokenizer
+    raise RuntimeError(err_msg) from e
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2070, in from_pretrained
+    return cls._from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Failed to load the tokenizer. If you are using a LLaMA V1 model consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2108, in _from_pretrained
+    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2316, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2/tokenization_qwen2.py", line 172, in __init__
+    with open(vocab_file, encoding="utf-8") as vocab_handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 170, in load_model
+    tokenizer = get_tokenizer(
+                ^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 323, in get_tokenizer
+    raise RuntimeError(err_msg) from e
+RuntimeError: Failed to load the tokenizer. If you are using a LLaMA V1 model consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
+[rank3]:[W1016 19:14:58.558710570 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]:[W1016 19:14:58.609095810 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W1016 19:14:58.629255251 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W1016 19:14:58.675835790 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+
+================================================================================
+ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/unsloth/Qwen3-30B-A3B-GGUF
+Files:
+  - log.txt (22,952 bytes)
+  - rank0_0.py (10,194 bytes)
+  - rank0_1.py (3,619 bytes)
+  - rank0_10.py (4,946 bytes)
+  - rank0_11.py (3,332 bytes)
+  - rank0_12.py (21,891 bytes)
+  - rank0_13.py (4,550 bytes)
+  - rank0_14.py (8,205 bytes)
+  - rank0_2.py (1,368 bytes)
+  - rank0_3.py (3,225 bytes)
+  - rank0_4.py (3,225 bytes)
+  - rank0_5.py (15,751 bytes)
+  - rank0_6.py (1,657 bytes)
+  - rank0_7.py (4,921 bytes)
+  - rank0_8.py (1,512 bytes)
+  - rank0_9.py (21,890 bytes)
+  - rank1_0.py (10,210 bytes)
+  - rank1_1.py (3,619 bytes)
+  - rank1_10.py (4,946 bytes)
+  - rank1_11.py (3,332 bytes)
+  - rank1_12.py (21,891 bytes)
+  - rank1_13.py (4,550 bytes)
+  - rank1_14.py (8,205 bytes)
+  - rank1_2.py (1,368 bytes)
+  - rank1_3.py (3,225 bytes)
+  - rank1_4.py (3,225 bytes)
+  - rank1_5.py (15,751 bytes)
+  - rank1_6.py (1,657 bytes)
+  - rank1_7.py (4,921 bytes)
+  - rank1_8.py (1,512 bytes)
+  - rank1_9.py (21,890 bytes)
+  - rank2_0.py (10,212 bytes)
+  - rank2_1.py (3,619 bytes)
+  - rank2_10.py (4,946 bytes)
+  - rank2_11.py (3,332 bytes)
+  - rank2_12.py (21,891 bytes)
+  - rank2_13.py (4,550 bytes)
+  - rank2_14.py (8,205 bytes)
+  - rank2_2.py (1,368 bytes)
+  - rank2_3.py (3,225 bytes)
+  - rank2_4.py (3,225 bytes)
+  - rank2_5.py (15,751 bytes)
+  - rank2_6.py (1,657 bytes)
+  - rank2_7.py (4,921 bytes)
+  - rank2_8.py (1,512 bytes)
+  - rank2_9.py (21,890 bytes)
+  - rank3_0.py (10,216 bytes)
+  - rank3_1.py (3,619 bytes)
+  - rank3_10.py (4,946 bytes)
+  - rank3_11.py (3,332 bytes)
+  - rank3_12.py (21,891 bytes)
+  - rank3_13.py (4,550 bytes)
+  - rank3_14.py (8,205 bytes)
+  - rank3_2.py (1,368 bytes)
+  - rank3_3.py (3,225 bytes)
+  - rank3_4.py (3,225 bytes)
+  - rank3_5.py (15,751 bytes)
+  - rank3_6.py (1,657 bytes)
+  - rank3_7.py (4,921 bytes)
+  - rank3_8.py (1,512 bytes)
+  - rank3_9.py (21,890 bytes)
+================================================================================
+
