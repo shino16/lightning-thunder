@@ -13,6 +13,7 @@ ThunderFX compiled the following modules with SGLang.
 - huihui-ai/Qwen2.5-32B-Instruct-abliterated
 - unsloth/Qwen3-30B-A3B-GGUF
 - unsloth/gpt-oss-20b-BF16
+- deepseek-ai/DeepSeek-V3.1
 
 You can run the models in the same configuration with the following command:
 
