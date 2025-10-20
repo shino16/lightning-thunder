@@ -62,7 +62,7 @@ def main():
         "--tp-size", str(torch.cuda.device_count()),
         "--trust-remote-code",
         "--enable-torch-compile",
-    ]
+    ] + sys.argv[2:]
     parser = argparse.ArgumentParser()
     ServerArgs.add_cli_args(parser)
     BenchArgs.add_cli_args(parser)
