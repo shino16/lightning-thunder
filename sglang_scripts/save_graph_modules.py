@@ -60,7 +60,6 @@ def main():
 
     model_name = sys.argv[1]
     os.environ["THUNDER_SAVE_DIR"] = os.path.join("gm", model_name)
-    os.environ["SGLANG_USE_DUMMY_WEIGHTS"] = "1"
 
     populate_dummy_model_cache(model_name)
 
