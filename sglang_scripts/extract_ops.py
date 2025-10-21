@@ -180,7 +180,7 @@ def extract_ops_from_model(model_name: str) -> tuple[dict[str, str], dict[str, l
             if normalized not in pattern_to_op:
                 # First time seeing this pattern, save the original operation
                 pattern_to_op[normalized] = op
-                pattern_to_files.setdefault(normalized, []).append(py_file.name)
+            pattern_to_files.setdefault(normalized, []).append(py_file.name)
 
         print(f"  - {py_file.name}: found {len(ops)} operations")
 
@@ -200,7 +200,7 @@ def save_ops(model_dir_name: str, ops: dict[str, str], files: dict[str, list[str
         for pattern, op in ops.items():
             f.write(f"{pattern} -> {op}\n")
             for file in files[pattern]:
-                f.write(f"  - {file}\n")
+                f.write(f"#  - {file}\n")
 
     print(f"  → Saved {len(ops)} unique operations to {output_file}")
 
@@ -259,6 +259,7 @@ def main():
 
         # Collect all operations across all models with global deduplication
         global_pattern_to_op: dict[str, str] = {}
+        global_pattern_to_files: dict[str, list[str]] = {}
 
         for model_name, model_path in models:
             print(f"\n[{model_name}]")
@@ -273,26 +274,26 @@ def main():
 
                 # Add to global collection with pattern-based deduplication
                 for pattern, op in ops.items():
-                    normalized = normalize_operation(op)
-                    if normalized not in global_pattern_to_op:
-                        global_pattern_to_op[normalized] = pattern
-
+                    if pattern not in global_pattern_to_op:
+                        global_pattern_to_op[pattern] = op
+                    global_pattern_to_files.setdefault(pattern, []).extend(
+                        str(rel_path / file) for file in files[pattern]
+                    )
             except Exception as e:
                 print(f"  ✗ Error processing {model_name}: {e}")
-
-        # Get all unique operations and sort
-        all_unique_ops = sorted(global_pattern_to_op.values())
 
         # Save to single combined file
         output_file = gm_dir / "all_ops.py"
         output_file.parent.mkdir(parents=True, exist_ok=True)
 
         with open(output_file, "w") as f:
-            for op in all_unique_ops:
-                f.write(f"{op}\n")
+            for pattern, op in global_pattern_to_op.items():
+                files = ", ".join(global_pattern_to_files[pattern])
+                f.write(f"#  - {files}\n")
+                f.write(f"{op}\n\n")
 
         print("\n" + "=" * 70)
-        print(f"Done! Saved {len(all_unique_ops)} unique operations to {output_file}")
+        print(f"Done! Saved {len(global_pattern_to_op)} unique operations to {output_file}")
         print("=" * 70)
 
 
