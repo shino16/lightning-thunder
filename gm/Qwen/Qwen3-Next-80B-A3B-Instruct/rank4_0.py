@@ -1,4 +1,4 @@
-# Rank: 3, Graph 0
+# Rank: 4, Graph 0
 
 class GraphModule(torch.nn.Module):
     def forward(self, l_input_: "i64[1]", l_self_parameters_weight_: "bf16[18992, 2048]"):
@@ -10,8 +10,8 @@ class GraphModule(torch.nn.Module):
     class thunder_0(torch.nn.Module):
         def forward(self, l_input_: "i64[1]", l_self_parameters_weight_: "bf16[18992, 2048]"):
              # File: /opt/sglang/sglang-src/python/sglang/srt/layers/vocab_parallel_embedding.py:136 in get_masked_input_and_mask, code: org_vocab_mask = (input_ >= org_vocab_start_index) & (input_ < org_vocab_end_index)
-            ge: "b8[1]" = l_input_ >= 56976
-            lt: "b8[1]" = l_input_ < 75968
+            ge: "b8[1]" = l_input_ >= 75968
+            lt: "b8[1]" = l_input_ < 94960
             org_vocab_mask: "b8[1]" = ge & lt;  ge = lt = None
             
              # File: /opt/sglang/sglang-src/python/sglang/srt/layers/vocab_parallel_embedding.py:137 in get_masked_input_and_mask, code: added_vocab_mask = (input_ >= added_vocab_start_index) & (
@@ -24,7 +24,7 @@ class GraphModule(torch.nn.Module):
             added_vocab_mask: "b8[1]" = ge_1 & lt_1;  ge_1 = lt_1 = None
             
              # File: /opt/sglang/sglang-src/python/sglang/srt/layers/vocab_parallel_embedding.py:145 in get_masked_input_and_mask, code: valid_offset = (org_vocab_start_index * org_vocab_mask) + (
-            mul: "i64[1]" = 56976 * org_vocab_mask
+            mul: "i64[1]" = 75968 * org_vocab_mask
             
              # File: /opt/sglang/sglang-src/python/sglang/srt/layers/vocab_parallel_embedding.py:146 in get_masked_input_and_mask, code: added_offset * added_vocab_mask
             mul_1: "i64[1]" = 132944 * added_vocab_mask
@@ -56,8 +56,8 @@ class GraphModule(torch.nn.Module):
         class _model(torch.nn.Module):
             def forward(self, l_input_: "i64[1]", l_self_parameters_weight_: "bf16[18992, 2048]"):
                  # File: /opt/sglang/sglang-src/python/sglang/srt/layers/vocab_parallel_embedding.py:136 in get_masked_input_and_mask, code: org_vocab_mask = (input_ >= org_vocab_start_index) & (input_ < org_vocab_end_index)
-                ge: "b8[1]" = l_input_ >= 56976
-                lt: "b8[1]" = l_input_ < 75968
+                ge: "b8[1]" = l_input_ >= 75968
+                lt: "b8[1]" = l_input_ < 94960
                 org_vocab_mask: "b8[1]" = ge & lt;  ge = lt = None
                 
                  # File: /opt/sglang/sglang-src/python/sglang/srt/layers/vocab_parallel_embedding.py:137 in get_masked_input_and_mask, code: added_vocab_mask = (input_ >= added_vocab_start_index) & (
@@ -70,7 +70,7 @@ class GraphModule(torch.nn.Module):
                 added_vocab_mask: "b8[1]" = ge_1 & lt_1;  ge_1 = lt_1 = None
                 
                  # File: /opt/sglang/sglang-src/python/sglang/srt/layers/vocab_parallel_embedding.py:145 in get_masked_input_and_mask, code: valid_offset = (org_vocab_start_index * org_vocab_mask) + (
-                mul: "i64[1]" = 56976 * org_vocab_mask
+                mul: "i64[1]" = 75968 * org_vocab_mask
                 
                  # File: /opt/sglang/sglang-src/python/sglang/srt/layers/vocab_parallel_embedding.py:146 in get_masked_input_and_mask, code: added_offset * added_vocab_mask
                 mul_1: "i64[1]" = 132944 * added_vocab_mask

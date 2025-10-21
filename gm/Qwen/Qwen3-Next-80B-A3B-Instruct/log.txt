@@ -1,478 +1,293 @@
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-Parse safetensors files:   0%|          | 0/41 [00:00<?, ?it/s]Parse safetensors files:   2%|▏         | 1/41 [00:03<02:03,  3.08s/it]Parse safetensors files:   7%|▋         | 3/41 [00:03<00:37,  1.01it/s]Parse safetensors files:  22%|██▏       | 9/41 [00:03<00:08,  3.92it/s]Parse safetensors files: 100%|██████████| 41/41 [00:03<00:00, 10.96it/s]
-`torch_dtype` is deprecated! Use `dtype` instead!
-Preparing dummy cache for model-00020-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00020-of-00041.safetensors
-Preparing dummy cache for model-00038-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00038-of-00041.safetensors
-Preparing dummy cache for model-00014-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00014-of-00041.safetensors
-Preparing dummy cache for model-00039-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00039-of-00041.safetensors
-Preparing dummy cache for model-00013-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00013-of-00041.safetensors
-Preparing dummy cache for model-00024-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00024-of-00041.safetensors
-Preparing dummy cache for model-00026-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00026-of-00041.safetensors
-Preparing dummy cache for model-00025-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00025-of-00041.safetensors
-Preparing dummy cache for model-00028-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00028-of-00041.safetensors
-Preparing dummy cache for model-00001-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00001-of-00041.safetensors
-Preparing dummy cache for model-00027-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00027-of-00041.safetensors
-Preparing dummy cache for model-00018-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00018-of-00041.safetensors
-Preparing dummy cache for model-00009-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00009-of-00041.safetensors
-Preparing dummy cache for model-00005-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00005-of-00041.safetensors
-Preparing dummy cache for model-00037-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00037-of-00041.safetensors
-Preparing dummy cache for model-00041-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00041-of-00041.safetensors
-Preparing dummy cache for model-00029-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00029-of-00041.safetensors
-Preparing dummy cache for model-00006-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00006-of-00041.safetensors
-Preparing dummy cache for model-00040-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00040-of-00041.safetensors
-Preparing dummy cache for model-00032-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00032-of-00041.safetensors
-Preparing dummy cache for model-00021-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00021-of-00041.safetensors
-Preparing dummy cache for model-00016-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00016-of-00041.safetensors
-Preparing dummy cache for model-00004-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00004-of-00041.safetensors
-Preparing dummy cache for model-00002-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00002-of-00041.safetensors
-Preparing dummy cache for model-00031-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00031-of-00041.safetensors
-Preparing dummy cache for model-00036-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00036-of-00041.safetensors
-Preparing dummy cache for model-00023-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00023-of-00041.safetensors
-Preparing dummy cache for model-00012-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00012-of-00041.safetensors
-Preparing dummy cache for model-00011-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00011-of-00041.safetensors
-Preparing dummy cache for model-00034-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00034-of-00041.safetensors
-Preparing dummy cache for model-00007-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00007-of-00041.safetensors
-Preparing dummy cache for model-00030-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00030-of-00041.safetensors
-Preparing dummy cache for model-00019-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00019-of-00041.safetensors
-Preparing dummy cache for model-00003-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00003-of-00041.safetensors
-Preparing dummy cache for model-00015-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00015-of-00041.safetensors
-Preparing dummy cache for model-00010-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00010-of-00041.safetensors
-Preparing dummy cache for model-00033-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00033-of-00041.safetensors
-Preparing dummy cache for model-00035-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00035-of-00041.safetensors
-Preparing dummy cache for model-00022-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00022-of-00041.safetensors
-Preparing dummy cache for model-00017-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00017-of-00041.safetensors
-Preparing dummy cache for model-00008-of-00041.safetensors
-Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Instruct/snapshots/9c7f2fbe84465e40164a94cc16cd30b6999b0cc7/model-00008-of-00041.safetensors
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-`torch_dtype` is deprecated! Use `dtype` instead!
-`torch_dtype` is deprecated! Use `dtype` instead!
-[2025-10-21 00:40:14 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
-[2025-10-21 00:40:14 TP0] Init torch distributed begin.
-`torch_dtype` is deprecated! Use `dtype` instead!
-`torch_dtype` is deprecated! Use `dtype` instead!
-[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[2025-10-21 00:40:14 TP0] sglang is using nccl==2.28.6
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[2025-10-21 00:40:15 TP0] Init torch distributed ends. mem usage=1.46 GB
-[2025-10-21 00:40:19 TP0] Load weight begin. avail mem=273.72 GB
-[2025-10-21 00:40:19 TP1] using attn output gate!
-[2025-10-21 00:40:19 TP3] using attn output gate!
-[2025-10-21 00:40:19 TP0] using attn output gate!
-[2025-10-21 00:40:19 TP1] Using model weights format ['*.safetensors']
-[2025-10-21 00:40:19 TP2] using attn output gate!
-[2025-10-21 00:40:20 TP3] Using model weights format ['*.safetensors']
-[2025-10-21 00:40:20 TP0] Using model weights format ['*.safetensors']
-[2025-10-21 00:40:20 TP2] Using model weights format ['*.safetensors']
-Loading safetensors checkpoint shards:   0% Completed | 0/41 [00:00<?, ?it/s]
-Loading safetensors checkpoint shards:   2% Completed | 1/41 [00:00<00:36,  1.09it/s]
-Loading safetensors checkpoint shards:   5% Completed | 2/41 [00:01<00:35,  1.10it/s]
-Loading safetensors checkpoint shards:   7% Completed | 3/41 [00:02<00:36,  1.03it/s]
-Loading safetensors checkpoint shards:  10% Completed | 4/41 [00:03<00:35,  1.05it/s]
-Loading safetensors checkpoint shards:  12% Completed | 5/41 [00:04<00:34,  1.06it/s]
-Loading safetensors checkpoint shards:  15% Completed | 6/41 [00:05<00:33,  1.04it/s]
-Loading safetensors checkpoint shards:  17% Completed | 7/41 [00:06<00:33,  1.00it/s]
-Loading safetensors checkpoint shards:  20% Completed | 8/41 [00:07<00:32,  1.03it/s]
-Loading safetensors checkpoint shards:  22% Completed | 9/41 [00:08<00:31,  1.02it/s]
-Loading safetensors checkpoint shards:  24% Completed | 10/41 [00:09<00:30,  1.03it/s]
-Loading safetensors checkpoint shards:  27% Completed | 11/41 [00:10<00:28,  1.04it/s]
-Loading safetensors checkpoint shards:  29% Completed | 12/41 [00:11<00:27,  1.06it/s]
-Loading safetensors checkpoint shards:  32% Completed | 13/41 [00:12<00:26,  1.07it/s]
-Loading safetensors checkpoint shards:  34% Completed | 14/41 [00:13<00:25,  1.07it/s]
-Loading safetensors checkpoint shards:  37% Completed | 15/41 [00:14<00:24,  1.06it/s]
-Loading safetensors checkpoint shards:  39% Completed | 16/41 [00:15<00:23,  1.08it/s]
-Loading safetensors checkpoint shards:  41% Completed | 17/41 [00:16<00:22,  1.08it/s]
-Loading safetensors checkpoint shards:  44% Completed | 18/41 [00:16<00:19,  1.16it/s]
-Loading safetensors checkpoint shards:  46% Completed | 19/41 [00:17<00:19,  1.16it/s]
-Loading safetensors checkpoint shards:  49% Completed | 20/41 [00:18<00:19,  1.10it/s]
-Loading safetensors checkpoint shards:  51% Completed | 21/41 [00:19<00:18,  1.09it/s]
-Loading safetensors checkpoint shards:  54% Completed | 22/41 [00:20<00:17,  1.10it/s]
-Loading safetensors checkpoint shards:  56% Completed | 23/41 [00:21<00:17,  1.06it/s]
-Loading safetensors checkpoint shards:  59% Completed | 24/41 [00:22<00:15,  1.08it/s]
-Loading safetensors checkpoint shards:  61% Completed | 25/41 [00:23<00:14,  1.11it/s]
-Loading safetensors checkpoint shards:  63% Completed | 26/41 [00:24<00:13,  1.10it/s]
-Loading safetensors checkpoint shards:  66% Completed | 27/41 [00:25<00:13,  1.03it/s]
-Loading safetensors checkpoint shards:  68% Completed | 28/41 [00:26<00:12,  1.02it/s]
-Loading safetensors checkpoint shards:  71% Completed | 29/41 [00:27<00:11,  1.06it/s]
-Loading safetensors checkpoint shards:  73% Completed | 30/41 [00:28<00:10,  1.09it/s]
-Loading safetensors checkpoint shards:  76% Completed | 31/41 [00:28<00:08,  1.11it/s]
-Loading safetensors checkpoint shards:  78% Completed | 32/41 [00:29<00:08,  1.05it/s]
-Loading safetensors checkpoint shards:  80% Completed | 33/41 [00:30<00:07,  1.04it/s]
-Loading safetensors checkpoint shards:  83% Completed | 34/41 [00:31<00:06,  1.03it/s]
-Loading safetensors checkpoint shards:  88% Completed | 36/41 [00:32<00:03,  1.36it/s]
-Loading safetensors checkpoint shards:  90% Completed | 37/41 [00:33<00:03,  1.27it/s]
-Loading safetensors checkpoint shards:  93% Completed | 38/41 [00:34<00:02,  1.24it/s]
-Loading safetensors checkpoint shards:  95% Completed | 39/41 [00:35<00:01,  1.19it/s]
-Loading safetensors checkpoint shards:  98% Completed | 40/41 [00:36<00:00,  1.12it/s]
-Loading safetensors checkpoint shards: 100% Completed | 41/41 [00:37<00:00,  1.12it/s]
-Loading safetensors checkpoint shards: 100% Completed | 41/41 [00:37<00:00,  1.09it/s]
+########################################
+# All GraphModules are printed in graph_module_XXXXXX.py, including those which failed to compile.
+########################################
 
-[2025-10-21 00:40:58 TP0] Load weight end. type=Qwen3NextForCausalLM, dtype=torch.bfloat16, avail mem=236.32 GB, mem usage=37.40 GB.
-[2025-10-21 00:40:58 TP0] Hybrid GDN model detected, disable radix cache
-[2025-10-21 00:40:58 TP1] Hybrid GDN model detected, disable radix cache
-[2025-10-21 00:40:58 TP2] Hybrid GDN model detected, disable radix cache
-[2025-10-21 00:40:58 TP3] Hybrid GDN model detected, disable radix cache
-[2025-10-21 00:40:58 TP0] Using KV cache dtype: torch.bfloat16
-[2025-10-21 00:40:58 TP1] Mamba Cache is allocated. conv_state size: 0.21GB, ssm_state size: 9.02GB 
-[2025-10-21 00:40:58 TP0] Mamba Cache is allocated. conv_state size: 0.21GB, ssm_state size: 9.02GB 
-[2025-10-21 00:40:58 TP2] Mamba Cache is allocated. conv_state size: 0.21GB, ssm_state size: 9.02GB 
-[2025-10-21 00:40:58 TP3] Mamba Cache is allocated. conv_state size: 0.21GB, ssm_state size: 9.02GB 
-[2025-10-21 00:40:58 TP3] KV Cache is allocated. #tokens: 17093556, K size: 97.81 GB, V size: 97.81 GB
-[2025-10-21 00:40:58 TP0] KV Cache is allocated. #tokens: 17093556, K size: 97.81 GB, V size: 97.81 GB
-[2025-10-21 00:40:58 TP0] Memory pool end. avail mem=30.80 GB
-[2025-10-21 00:40:58 TP1] KV Cache is allocated. #tokens: 17093556, K size: 97.81 GB, V size: 97.81 GB
-[2025-10-21 00:40:58 TP2] KV Cache is allocated. #tokens: 17093556, K size: 97.81 GB, V size: 97.81 GB
-[2025-10-21 00:40:58 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=30.74 GB
-[2025-10-21 00:40:58 TP0] Capture cuda graph bs [1]
-  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=30.74 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+`torch_dtype` is deprecated! Use `dtype` instead!
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 19:07:30 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
+[2025-10-21 19:07:30 TP0] Init torch distributed begin.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[2025-10-21 19:07:33 TP0] sglang is using nccl==2.28.6
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[2025-10-21 19:07:38 TP0] Init torch distributed ends. mem usage=1.25 GB
+[2025-10-21 19:07:40 TP0] Load weight begin. avail mem=76.72 GB
+[2025-10-21 19:07:40 TP1] using attn output gate!
+[2025-10-21 19:07:40 TP4] using attn output gate!
+[2025-10-21 19:07:40 TP0] using attn output gate!
+[2025-10-21 19:07:40 TP6] using attn output gate!
+[2025-10-21 19:07:40 TP2] using attn output gate!
+[2025-10-21 19:07:41 TP3] using attn output gate!
+[2025-10-21 19:07:41 TP7] using attn output gate!
+[2025-10-21 19:07:41 TP0] Load weight end. type=Qwen3NextForCausalLM, dtype=torch.bfloat16, avail mem=57.93 GB, mem usage=18.79 GB.
+[2025-10-21 19:07:41 TP5] using attn output gate!
+[2025-10-21 19:07:41 TP0] Hybrid GDN model detected, disable radix cache
+[2025-10-21 19:07:41 TP0] Using KV cache dtype: torch.bfloat16
+[2025-10-21 19:07:41 TP3] Hybrid GDN model detected, disable radix cache
+[2025-10-21 19:07:41 TP4] Hybrid GDN model detected, disable radix cache
+[2025-10-21 19:07:41 TP6] Hybrid GDN model detected, disable radix cache
+[2025-10-21 19:07:41 TP1] Hybrid GDN model detected, disable radix cache
+[2025-10-21 19:07:41 TP7] Hybrid GDN model detected, disable radix cache
+[2025-10-21 19:07:41 TP2] Hybrid GDN model detected, disable radix cache
+[2025-10-21 19:07:41 TP5] Hybrid GDN model detected, disable radix cache
+[2025-10-21 19:07:41 TP0] Mamba Cache is allocated. conv_state size: 0.11GB, ssm_state size: 4.51GB
+[2025-10-21 19:07:41 TP7] Mamba Cache is allocated. conv_state size: 0.11GB, ssm_state size: 4.51GB
+[2025-10-21 19:07:41 TP6] Mamba Cache is allocated. conv_state size: 0.11GB, ssm_state size: 4.51GB
+[2025-10-21 19:07:41 TP5] Mamba Cache is allocated. conv_state size: 0.11GB, ssm_state size: 4.51GB
+[2025-10-21 19:07:41 TP4] Mamba Cache is allocated. conv_state size: 0.11GB, ssm_state size: 4.51GB
+[2025-10-21 19:07:41 TP3] Mamba Cache is allocated. conv_state size: 0.11GB, ssm_state size: 4.51GB
+[2025-10-21 19:07:41 TP2] Mamba Cache is allocated. conv_state size: 0.11GB, ssm_state size: 4.51GB
+[2025-10-21 19:07:41 TP1] Mamba Cache is allocated. conv_state size: 0.11GB, ssm_state size: 4.51GB
+[2025-10-21 19:07:41 TP5] KV Cache is allocated. #tokens: 3525569, K size: 20.17 GB, V size: 20.17 GB
+[2025-10-21 19:07:41 TP2] KV Cache is allocated. #tokens: 3525569, K size: 20.17 GB, V size: 20.17 GB
+[2025-10-21 19:07:41 TP7] KV Cache is allocated. #tokens: 3525569, K size: 20.17 GB, V size: 20.17 GB
+[2025-10-21 19:07:41 TP6] KV Cache is allocated. #tokens: 3525569, K size: 20.17 GB, V size: 20.17 GB
+[2025-10-21 19:07:41 TP4] KV Cache is allocated. #tokens: 3525569, K size: 20.17 GB, V size: 20.17 GB
+[2025-10-21 19:07:41 TP1] KV Cache is allocated. #tokens: 3525569, K size: 20.17 GB, V size: 20.17 GB
+[2025-10-21 19:07:41 TP0] KV Cache is allocated. #tokens: 3525569, K size: 20.17 GB, V size: 20.17 GB
+[2025-10-21 19:07:41 TP0] Memory pool end. avail mem=12.43 GB
+[2025-10-21 19:07:41 TP3] KV Cache is allocated. #tokens: 3525569, K size: 20.17 GB, V size: 20.17 GB
+[2025-10-21 19:07:42 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=12.33 GB
+[2025-10-21 19:07:44 TP0] Capture cuda graph bs [1]
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+Capturing batches (bs=1 avail_mem=12.33 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/nvfuser/__init__.py:9: UserWarning: Be careful! You've imported nvfuser when the nvfuser_direct module is already imported.
   warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+/usr/local/lib/python3.12/dist-packages/nvfuser/__init__.py:9: UserWarning: Be careful! You've imported nvfuser when the nvfuser_direct module is already imported.
   warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+/usr/local/lib/python3.12/dist-packages/nvfuser/__init__.py:9: UserWarning: Be careful! You've imported nvfuser when the nvfuser_direct module is already imported.
   warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+/usr/local/lib/python3.12/dist-packages/nvfuser/__init__.py:9: UserWarning: Be careful! You've imported nvfuser when the nvfuser_direct module is already imported.
   warnings.warn(
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-Capturing batches (bs=1 avail_mem=30.74 GB):   0%|          | 0/1 [00:04<?, ?it/s]
-[2025-10-21 00:41:03 TP0] Registering 0 cuda graph addresses
-[2025-10-21 00:41:03 TP1] Registering 0 cuda graph addresses
-[2025-10-21 00:41:03 TP2] Registering 0 cuda graph addresses
-[2025-10-21 00:41:03 TP3] Registering 0 cuda graph addresses
+/usr/local/lib/python3.12/dist-packages/nvfuser/__init__.py:9: UserWarning: Be careful! You've imported nvfuser when the nvfuser_direct module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser/__init__.py:9: UserWarning: Be careful! You've imported nvfuser when the nvfuser_direct module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser/__init__.py:9: UserWarning: Be careful! You've imported nvfuser when the nvfuser_direct module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser/__init__.py:9: UserWarning: Be careful! You've imported nvfuser when the nvfuser_direct module is already imported.
+  warnings.warn(
+[2025-10-21 19:07:51 TP7] Registering 0 cuda graph addresses
+[2025-10-21 19:07:51 TP1] Registering 0 cuda graph addresses
+[2025-10-21 19:07:51 TP2] Registering 0 cuda graph addresses
+[2025-10-21 19:07:51 TP4] Registering 0 cuda graph addresses
+[2025-10-21 19:07:51 TP5] Registering 0 cuda graph addresses
+[2025-10-21 19:07:51 TP3] Registering 0 cuda graph addresses
+[2025-10-21 19:07:51 TP6] Registering 0 cuda graph addresses
+
+Capturing batches (bs=1 avail_mem=12.33 GB):   0%|          | 0/1 [00:06<?, ?it/s]
+[2025-10-21 19:07:51 TP0] Registering 0 cuda graph addresses
 Process Process-4:
-Process Process-2:
-Process Process-3:
+Process Process-8:
 Process Process-1:
+Process Process-2:
+Process Process-5:
+Process Process-6:
+Process Process-3:
+Process Process-7:
 Traceback (most recent call last):
-Traceback (most recent call last):
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
-    self.capture()
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
     self.capture()
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
     ) = self.capture_one_batch_size(bs, forward)
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Traceback (most recent call last):
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
     run_once()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
-    ) = self.capture_one_batch_size(bs, forward)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Traceback (most recent call last):
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
     logits_output_or_pp_proxy_tensors = forward(
                                         ^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
-    run_once()
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 263, in __call__
     return self._func(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
-    logits_output_or_pp_proxy_tensors = forward(
-                                        ^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
-    self.capture()
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 845, in compile_wrapper
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 899, in compile_wrapper
     raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
-    return self._func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2124, in _call_user_compiler
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2309, in _call_user_compiler
     raise BackendCompilerFailed(
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
-    ) = self.capture_one_batch_size(bs, forward)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 845, in compile_wrapper
-    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2099, in _call_user_compiler
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2284, in _call_user_compiler
     compiled_fn = compiler_fn(gm, example_inputs)
                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
-    self.capture()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
-    run_once()
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2124, in _call_user_compiler
-    raise BackendCompilerFailed(
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
-    ) = self.capture_one_batch_size(bs, forward)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
     compiled_gm = compiler_fn(gm, example_inputs)
                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
-    run_once()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
-    logits_output_or_pp_proxy_tensors = forward(
-                                        ^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2099, in _call_user_compiler
-    compiled_fn = compiler_fn(gm, example_inputs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2425, in __call__
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2439, in __call__
     return self.compiler_fn(model_, inputs_, **self.kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
-    logits_output_or_pp_proxy_tensors = forward(
-                                        ^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 117, in __call__
-    split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
-    return self._func(*args, **kwargs)
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 147, in __call__
+    split_module, subgraph_info = _splitter(
+                                  ^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/splitter.py", line 273, in _splitter
+    jit_fn = ModuleWrapper(torch_inductor(graph_module, fake_args))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/__init__.py", line 52, in compile
+    return compile_fx(gm, example_inputs, config_patches=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2465, in compile_fx
+    return _maybe_wrap_and_compile_fx_main(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2539, in _maybe_wrap_and_compile_fx_main
+    return _compile_fx_main(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2726, in _compile_fx_main
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/backends/common.py", line 117, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/aot_autograd.py", line 1108, in aot_module_simplified
+    aot_graph_capture = aot_stage1_graph_capture(aot_state, functional_call)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_compile.py", line 174, in aot_stage1_graph_capture
+    aot_dispatch_base_graph(  # type: ignore[assignment]
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 236, in aot_dispatch_base_graph
+    fw_module = _create_graph(
+                ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 82, in _create_graph
+    fx_g = make_fx(
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2433, in wrapped
+    return make_fx_tracer.trace(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2360, in trace
+    return self._trace_inner(f, *args)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
-    return self._func(*args, **kwargs)
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2322, in _trace_inner
+    t = dispatch_trace(
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
-    compiled_gm = compiler_fn(gm, example_inputs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 147, in _splitter
-    split_gm: torch.fx.GraphModule = split_module(
-                                     ^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 845, in compile_wrapper
-    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 845, in compile_wrapper
-    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2425, in __call__
-    return self.compiler_fn(model_, inputs_, **self.kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 315, in split_module
-    instantiate_node_partition_mapping(node)
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2124, in _call_user_compiler
-    raise BackendCompilerFailed(
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2124, in _call_user_compiler
-    raise BackendCompilerFailed(
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 117, in __call__
-    split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 256, in instantiate_node_partition_mapping
-    partition_name = str(split_callback(node))
-                         ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 147, in _splitter
-    split_gm: torch.fx.GraphModule = split_module(
-                                     ^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2099, in _call_user_compiler
-    compiled_fn = compiler_fn(gm, example_inputs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 122, in callback
-    is_thunder_supported, split_reason = is_node_supported_by_thunder(node)
-                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2099, in _call_user_compiler
-    compiled_fn = compiler_fn(gm, example_inputs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 315, in split_module
-    instantiate_node_partition_mapping(node)
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
-    compiled_gm = compiler_fn(gm, example_inputs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/utils.py", line 402, in is_node_supported_by_thunder
-    assert target is not None, f"Failed to find method {node.target}"
-           ^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2425, in __call__
-    return self.compiler_fn(model_, inputs_, **self.kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
-    compiled_gm = compiler_fn(gm, example_inputs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 256, in instantiate_node_partition_mapping
-    partition_name = str(split_callback(node))
-                         ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 117, in __call__
-    split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 122, in callback
-    is_thunder_supported, split_reason = is_node_supported_by_thunder(node)
-                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 147, in _splitter
-    split_gm: torch.fx.GraphModule = split_module(
-                                     ^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 315, in split_module
-    instantiate_node_partition_mapping(node)
-torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xf7d5a1b139e0>' raised:
-AssertionError: Failed to find method wait_stream
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1309, in dispatch_trace
+    graph = tracer.trace(root, concrete_args)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 868, in trace
+    (self.create_arg(fn(*args)),),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 357, in create_arg
+    return handler(self, a)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <lambda>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <genexpr>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 403, in create_arg
+    raise NotImplementedError(f"argument of type: {type(a)}")
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f132db09880>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
 
 Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
 
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/utils.py", line 402, in is_node_supported_by_thunder
-    assert target is not None, f"Failed to find method {node.target}"
-           ^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 256, in instantiate_node_partition_mapping
-    partition_name = str(split_callback(node))
-                         ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2425, in __call__
-    return self.compiler_fn(model_, inputs_, **self.kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
 
 During handling of the above exception, another exception occurred:
-
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 122, in callback
-    is_thunder_supported, split_reason = is_node_supported_by_thunder(node)
-                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 117, in __call__
-    split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xe290815d0b60>' raised:
-AssertionError: Failed to find method wait_stream
-
-Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/utils.py", line 402, in is_node_supported_by_thunder
-    assert target is not None, f"Failed to find method {node.target}"
-           ^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 147, in _splitter
-    split_gm: torch.fx.GraphModule = split_module(
-                                     ^^^^^^^^^^^^^
-
-During handling of the above exception, another exception occurred:
-
-  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 315, in split_module
-    instantiate_node_partition_mapping(node)
-torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xe872443a46e0>' raised:
-AssertionError: Failed to find method wait_stream
-
-Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
 
 Traceback (most recent call last):
   File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
     self.run()
-  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 256, in instantiate_node_partition_mapping
-    partition_name = str(split_callback(node))
-                         ^^^^^^^^^^^^^^^^^^^^
-
-During handling of the above exception, another exception occurred:
-
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 122, in callback
-    is_thunder_supported, split_reason = is_node_supported_by_thunder(node)
-                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
     self._target(*self._args, **self._kwargs)
-Traceback (most recent call last):
   File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
     model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/utils.py", line 402, in is_node_supported_by_thunder
-    assert target is not None, f"Failed to find method {node.target}"
-           ^^^^^^^^^^^^^^^^^^
   File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
     model_runner = ModelRunner(
                    ^^^^^^^^^^^^
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
     self.initialize(min_per_gpu_memory)
-torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xec7f602bb9e0>' raised:
-AssertionError: Failed to find method wait_stream
-
-Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
-
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
     self.init_device_graphs()
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
-    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-During handling of the above exception, another exception occurred:
-
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
     self.graph_runner = graph_runners[self.device](self)
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Traceback (most recent call last):
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
-    model_runner = ModelRunner(
-                   ^^^^^^^^^^^^
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
     raise Exception(
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
-    self.initialize(min_per_gpu_memory)
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xf7d5a1b139e0>' raised:
-AssertionError: Failed to find method wait_stream
+Traceback (most recent call last):
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f132db09880>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
 
 Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
 
@@ -481,25 +296,362 @@ Possible solutions:
 2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
 3. disable torch compile by not using --enable-torch-compile
 4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
-Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose 
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose
 
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
-    self.init_device_graphs()
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 263, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 899, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2309, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2284, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2439, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 147, in __call__
+    split_module, subgraph_info = _splitter(
+                                  ^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/splitter.py", line 273, in _splitter
+    jit_fn = ModuleWrapper(torch_inductor(graph_module, fake_args))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/__init__.py", line 52, in compile
+    return compile_fx(gm, example_inputs, config_patches=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2465, in compile_fx
+    return _maybe_wrap_and_compile_fx_main(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2539, in _maybe_wrap_and_compile_fx_main
+    return _compile_fx_main(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2726, in _compile_fx_main
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/backends/common.py", line 117, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/aot_autograd.py", line 1108, in aot_module_simplified
+    aot_graph_capture = aot_stage1_graph_capture(aot_state, functional_call)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_compile.py", line 174, in aot_stage1_graph_capture
+    aot_dispatch_base_graph(  # type: ignore[assignment]
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 236, in aot_dispatch_base_graph
+    fw_module = _create_graph(
+                ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 82, in _create_graph
+    fx_g = make_fx(
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2433, in wrapped
+    return make_fx_tracer.trace(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2360, in trace
+    return self._trace_inner(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2322, in _trace_inner
+    t = dispatch_trace(
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1309, in dispatch_trace
+    graph = tracer.trace(root, concrete_args)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 868, in trace
+    (self.create_arg(fn(*args)),),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 357, in create_arg
+    return handler(self, a)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <lambda>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <genexpr>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 403, in create_arg
+    raise NotImplementedError(f"argument of type: {type(a)}")
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f4a7e0e15e0>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 263, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 899, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2309, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2284, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2439, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 147, in __call__
+    split_module, subgraph_info = _splitter(
+                                  ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/splitter.py", line 273, in _splitter
+    jit_fn = ModuleWrapper(torch_inductor(graph_module, fake_args))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/__init__.py", line 52, in compile
+    return compile_fx(gm, example_inputs, config_patches=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 263, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2465, in compile_fx
+    return _maybe_wrap_and_compile_fx_main(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2539, in _maybe_wrap_and_compile_fx_main
+    return _compile_fx_main(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 899, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2726, in _compile_fx_main
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2309, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/backends/common.py", line 117, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2284, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/aot_autograd.py", line 1108, in aot_module_simplified
+    aot_graph_capture = aot_stage1_graph_capture(aot_state, functional_call)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2439, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_compile.py", line 174, in aot_stage1_graph_capture
+    aot_dispatch_base_graph(  # type: ignore[assignment]
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 147, in __call__
+    split_module, subgraph_info = _splitter(
+                                  ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 236, in aot_dispatch_base_graph
+    fw_module = _create_graph(
+                ^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/splitter.py", line 273, in _splitter
+    jit_fn = ModuleWrapper(torch_inductor(graph_module, fake_args))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 82, in _create_graph
+    fx_g = make_fx(
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/__init__.py", line 52, in compile
+    return compile_fx(gm, example_inputs, config_patches=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2433, in wrapped
+    return make_fx_tracer.trace(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2465, in compile_fx
+    return _maybe_wrap_and_compile_fx_main(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2360, in trace
+    return self._trace_inner(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2539, in _maybe_wrap_and_compile_fx_main
+    return _compile_fx_main(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2322, in _trace_inner
+    t = dispatch_trace(
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2726, in _compile_fx_main
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/backends/common.py", line 117, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/aot_autograd.py", line 1108, in aot_module_simplified
+    aot_graph_capture = aot_stage1_graph_capture(aot_state, functional_call)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1309, in dispatch_trace
+    graph = tracer.trace(root, concrete_args)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_compile.py", line 174, in aot_stage1_graph_capture
+    aot_dispatch_base_graph(  # type: ignore[assignment]
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 236, in aot_dispatch_base_graph
+    fw_module = _create_graph(
+                ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 868, in trace
+    (self.create_arg(fn(*args)),),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 82, in _create_graph
+    fx_g = make_fx(
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2433, in wrapped
+    return make_fx_tracer.trace(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 357, in create_arg
+    return handler(self, a)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2360, in trace
+    return self._trace_inner(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2322, in _trace_inner
+    t = dispatch_trace(
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <lambda>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
     self._target(*self._args, **self._kwargs)
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
-    self.graph_runner = graph_runners[self.device](self)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <genexpr>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                      ^^^^^^^^^^^^^^^^^^^^^
   File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
     model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
-    raise Exception(
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1309, in dispatch_trace
+    graph = tracer.trace(root, concrete_args)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
   File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
     model_runner = ModelRunner(
                    ^^^^^^^^^^^^
-Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xe290815d0b60>' raised:
-AssertionError: Failed to find method wait_stream
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 868, in trace
+    (self.create_arg(fn(*args)),),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 403, in create_arg
+    raise NotImplementedError(f"argument of type: {type(a)}")
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 357, in create_arg
+    return handler(self, a)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <lambda>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f6b4205f7a0>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <genexpr>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f4a7e0e15e0>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
 
 Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
 
@@ -508,50 +660,169 @@ Possible solutions:
 2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
 3. disable torch compile by not using --enable-torch-compile
 4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
-Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose 
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 403, in create_arg
+    raise NotImplementedError(f"argument of type: {type(a)}")
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7fcc19403950>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 263, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 899, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2309, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2284, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2439, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 147, in __call__
+    split_module, subgraph_info = _splitter(
+                                  ^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/splitter.py", line 273, in _splitter
+    jit_fn = ModuleWrapper(torch_inductor(graph_module, fake_args))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/__init__.py", line 52, in compile
+    return compile_fx(gm, example_inputs, config_patches=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2465, in compile_fx
+    return _maybe_wrap_and_compile_fx_main(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2539, in _maybe_wrap_and_compile_fx_main
+    return _compile_fx_main(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2726, in _compile_fx_main
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/backends/common.py", line 117, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/aot_autograd.py", line 1108, in aot_module_simplified
+    aot_graph_capture = aot_stage1_graph_capture(aot_state, functional_call)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_compile.py", line 174, in aot_stage1_graph_capture
+    aot_dispatch_base_graph(  # type: ignore[assignment]
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 236, in aot_dispatch_base_graph
+    fw_module = _create_graph(
+                ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 82, in _create_graph
+    fx_g = make_fx(
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2433, in wrapped
+    return make_fx_tracer.trace(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2360, in trace
+    return self._trace_inner(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2322, in _trace_inner
+    t = dispatch_trace(
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1309, in dispatch_trace
+    graph = tracer.trace(root, concrete_args)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 868, in trace
+    (self.create_arg(fn(*args)),),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 357, in create_arg
+    return handler(self, a)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <lambda>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <genexpr>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 403, in create_arg
+    raise NotImplementedError(f"argument of type: {type(a)}")
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f5b49192030>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
 
   File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
     self.run()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
-    self.initialize(min_per_gpu_memory)
+
+During handling of the above exception, another exception occurred:
+
   File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
     self._target(*self._args, **self._kwargs)
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
-    self.init_device_graphs()
+Traceback (most recent call last):
   File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
     model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
-    self.graph_runner = graph_runners[self.device](self)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
     model_runner = ModelRunner(
                    ^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
-    raise Exception(
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
     self.initialize(min_per_gpu_memory)
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
     self.init_device_graphs()
-Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xe872443a46e0>' raised:
-AssertionError: Failed to find method wait_stream
-
-Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
-
-Possible solutions:
-1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
-2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
-3. disable torch compile by not using --enable-torch-compile
-4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
-Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose 
-
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
     self.graph_runner = graph_runners[self.device](self)
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
     raise Exception(
-Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xec7f602bb9e0>' raised:
-AssertionError: Failed to find method wait_stream
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f6b4205f7a0>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
 
 Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
 
@@ -560,20 +831,534 @@ Possible solutions:
 2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
 3. disable torch compile by not using --enable-torch-compile
 4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
-Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose 
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose
 
-[rank0]:[W1021 00:41:04.159642581 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank1]:[W1021 00:41:04.197982421 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank2]:[W1021 00:41:04.198089430 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank3]:[W1021 00:41:04.198232918 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7fcc19403950>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose
+
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f5b49192030>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose
+
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 263, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 899, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2309, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2284, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2439, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 147, in __call__
+    split_module, subgraph_info = _splitter(
+                                  ^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/splitter.py", line 273, in _splitter
+    jit_fn = ModuleWrapper(torch_inductor(graph_module, fake_args))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/__init__.py", line 52, in compile
+    return compile_fx(gm, example_inputs, config_patches=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2465, in compile_fx
+    return _maybe_wrap_and_compile_fx_main(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2539, in _maybe_wrap_and_compile_fx_main
+    return _compile_fx_main(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2726, in _compile_fx_main
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/backends/common.py", line 117, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/aot_autograd.py", line 1108, in aot_module_simplified
+    aot_graph_capture = aot_stage1_graph_capture(aot_state, functional_call)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_compile.py", line 174, in aot_stage1_graph_capture
+    aot_dispatch_base_graph(  # type: ignore[assignment]
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 236, in aot_dispatch_base_graph
+    fw_module = _create_graph(
+                ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 82, in _create_graph
+    fx_g = make_fx(
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2433, in wrapped
+    return make_fx_tracer.trace(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2360, in trace
+    return self._trace_inner(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2322, in _trace_inner
+    t = dispatch_trace(
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1309, in dispatch_trace
+    graph = tracer.trace(root, concrete_args)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 868, in trace
+    (self.create_arg(fn(*args)),),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 357, in create_arg
+    return handler(self, a)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <lambda>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <genexpr>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 403, in create_arg
+    raise NotImplementedError(f"argument of type: {type(a)}")
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 263, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7fad8362b890>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 899, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2309, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2284, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2439, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 147, in __call__
+    split_module, subgraph_info = _splitter(
+                                  ^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/splitter.py", line 273, in _splitter
+    jit_fn = ModuleWrapper(torch_inductor(graph_module, fake_args))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/__init__.py", line 52, in compile
+    return compile_fx(gm, example_inputs, config_patches=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2465, in compile_fx
+    return _maybe_wrap_and_compile_fx_main(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2539, in _maybe_wrap_and_compile_fx_main
+    return _compile_fx_main(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2726, in _compile_fx_main
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 263, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/backends/common.py", line 117, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 899, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2309, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/aot_autograd.py", line 1108, in aot_module_simplified
+    aot_graph_capture = aot_stage1_graph_capture(aot_state, functional_call)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2284, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_compile.py", line 174, in aot_stage1_graph_capture
+    aot_dispatch_base_graph(  # type: ignore[assignment]
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 236, in aot_dispatch_base_graph
+    fw_module = _create_graph(
+                ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2439, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 82, in _create_graph
+    fx_g = make_fx(
+           ^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/compiler.py", line 147, in __call__
+    split_module, subgraph_info = _splitter(
+                                  ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2433, in wrapped
+    return make_fx_tracer.trace(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/dynamo/splitter.py", line 273, in _splitter
+    jit_fn = ModuleWrapper(torch_inductor(graph_module, fake_args))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2360, in trace
+    return self._trace_inner(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/__init__.py", line 52, in compile
+    return compile_fx(gm, example_inputs, config_patches=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2322, in _trace_inner
+    t = dispatch_trace(
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2465, in compile_fx
+    return _maybe_wrap_and_compile_fx_main(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2539, in _maybe_wrap_and_compile_fx_main
+    return _compile_fx_main(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_inductor/compile_fx.py", line 2726, in _compile_fx_main
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1309, in dispatch_trace
+    graph = tracer.trace(root, concrete_args)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/backends/common.py", line 117, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 868, in trace
+    (self.create_arg(fn(*args)),),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/aot_autograd.py", line 1108, in aot_module_simplified
+    aot_graph_capture = aot_stage1_graph_capture(aot_state, functional_call)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_compile.py", line 174, in aot_stage1_graph_capture
+    aot_dispatch_base_graph(  # type: ignore[assignment]
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 236, in aot_dispatch_base_graph
+    fw_module = _create_graph(
+                ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 357, in create_arg
+    return handler(self, a)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_functorch/_aot_autograd/graph_capture.py", line 82, in _create_graph
+    fx_g = make_fx(
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <lambda>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2433, in wrapped
+    return make_fx_tracer.trace(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2360, in trace
+    return self._trace_inner(f, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <genexpr>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 2322, in _trace_inner
+    t = dispatch_trace(
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 403, in create_arg
+    raise NotImplementedError(f"argument of type: {type(a)}")
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1309, in dispatch_trace
+    graph = tracer.trace(root, concrete_args)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1098, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 868, in trace
+    (self.create_arg(fn(*args)),),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f0c421ab7a0>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 357, in create_arg
+    return handler(self, a)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <lambda>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 819, in <genexpr>
+    _create_arg_bypass[tuple] = lambda self, a: tuple(self.create_arg(elem) for elem in a)
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/experimental/proxy_tensor.py", line 1154, in create_arg
+    return super().create_arg(a)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/_symbolic_trace.py", line 457, in create_arg
+    return super().create_arg(a)
+           ^^^^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/proxy.py", line 403, in create_arg
+    raise NotImplementedError(f"argument of type: {type(a)}")
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f3e2160f6e0>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7fad8362b890>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f3e2160f6e0>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose
+
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0x7f0c421ab7a0>' raised:
+NotImplementedError: argument of type: <class 'torch.cuda.streams.Stream'>
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose
+
+[rank5]:[W1021 19:07:57.030881444 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W1021 19:07:58.888547813 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]:[W1021 19:07:58.353308977 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank4]:[W1021 19:07:58.373637149 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank7]:[W1021 19:07:58.474691514 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W1021 19:07:58.505224222 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank6]:[W1021 19:07:59.676819090 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W1021 19:07:59.955469663 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
 
 ================================================================================
 ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/Qwen/Qwen3-Next-80B-A3B-Instruct
 Files:
-  - log.txt (47,654 bytes)
-  - rank0_0.py (9,937 bytes)
-  - rank1_0.py (9,953 bytes)
-  - rank2_0.py (9,955 bytes)
-  - rank3_0.py (9,959 bytes)
+  - graph_module_170076.py (32,957 bytes)
+  - graph_module_186309.py (32,957 bytes)
+  - graph_module_216725.py (4,414 bytes)
+  - graph_module_317595.py (32,957 bytes)
+  - graph_module_36912.py (32,957 bytes)
+  - graph_module_423239.py (32,957 bytes)
+  - graph_module_481357.py (4,417 bytes)
+  - graph_module_642110.py (4,414 bytes)
+  - graph_module_672867.py (32,957 bytes)
+  - graph_module_765413.py (4,406 bytes)
+  - graph_module_838431.py (32,957 bytes)
+  - graph_module_911167.py (4,414 bytes)
+  - graph_module_925784.py (4,414 bytes)
+  - graph_module_929779.py (4,417 bytes)
+  - graph_module_94578.py (4,415 bytes)
+  - graph_module_956955.py (32,957 bytes)
+  - log.txt (91,774 bytes)
+  - rank0_0.py (9,210 bytes)
+  - rank1_0.py (9,226 bytes)
+  - rank2_0.py (9,226 bytes)
+  - rank3_0.py (9,226 bytes)
+  - rank4_0.py (9,226 bytes)
+  - rank5_0.py (9,228 bytes)
+  - rank6_0.py (9,232 bytes)
+  - rank7_0.py (9,232 bytes)
 ================================================================================
 
