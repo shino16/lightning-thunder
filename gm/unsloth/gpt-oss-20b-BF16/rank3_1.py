@@ -1,46 +1,52 @@
 # Rank: 3, Graph 1
 
 class GraphModule(torch.nn.Module):
-    def forward(self, l_hidden_states_: "bf16[1, 2880]", l_self_input_layernorm_parameters_weight_: "bf16[2880]"):
+    def forward(self, l_hidden_states_: "bf16[1, 2880]", l_self_layer_communicator_input_layernorm_parameters_weight_: "bf16[2880]"):
         # No stacktrace found for following nodes
-        thunder_0 = self.thunder_0(l_hidden_states_, l_self_input_layernorm_parameters_weight_);  l_hidden_states_ = l_self_input_layernorm_parameters_weight_ = None
-        return (thunder_0,)
+        inductor_0 = self.inductor_0(l_self_layer_communicator_input_layernorm_parameters_weight_);  l_self_layer_communicator_input_layernorm_parameters_weight_ = None
+        thunder_1 = self.thunder_1(l_hidden_states_)
+        inductor_2 = self.inductor_2(thunder_1, l_hidden_states_, inductor_0);  l_hidden_states_ = inductor_0 = inductor_2 = None
+        return (thunder_1,)
         
-    class thunder_0(torch.nn.Module):
-        def forward(self, l_hidden_states_: "bf16[1, 2880]", l_self_input_layernorm_parameters_weight_: "bf16[2880]"):
-             # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:167 in forward_native, code: x = x.to(torch.float32)
-            x: "f32[1, 2880]" = l_hidden_states_.to(torch.float32);  l_hidden_states_ = None
+    class inductor_0(torch.nn.Module):
+        def forward(self, l_self_layer_communicator_input_layernorm_parameters_weight_: "bf16[2880]"):
+             # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:97 in forward_cuda, code: out = rmsnorm(x, self.weight.data, self.variance_epsilon)
+            _get_data_attr: "bf16[2880]" = torch._C._autograd._get_data_attr(l_self_layer_communicator_input_layernorm_parameters_weight_);  l_self_layer_communicator_input_layernorm_parameters_weight_ = None
+            return _get_data_attr
             
-             # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:190 in forward_native, code: variance = x_var.pow(2).mean(dim=-1, keepdim=True)
-            pow_1: "f32[1, 2880]" = x.pow(2)
-            variance: "f32[1, 1]" = pow_1.mean(dim = -1, keepdim = True);  pow_1 = None
-            
-             # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:191 in forward_native, code: x = x * torch.rsqrt(variance + self.variance_epsilon)
-            add: "f32[1, 1]" = variance + 1e-05;  variance = None
-            rsqrt: "f32[1, 1]" = torch.rsqrt(add);  add = None
-            x_1: "f32[1, 2880]" = x * rsqrt;  x = rsqrt = None
-            
-             # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:192 in forward_native, code: x = (x * self.weight).to(orig_dtype)
-            mul_1: "f32[1, 2880]" = x_1 * l_self_input_layernorm_parameters_weight_;  x_1 = l_self_input_layernorm_parameters_weight_ = None
-            x_2: "bf16[1, 2880]" = mul_1.to(torch.bfloat16);  mul_1 = None
-            return x_2
+        class _orig_mod(torch.nn.Module):
+            def forward(self, l_self_layer_communicator_input_layernorm_parameters_weight_: "bf16[2880]"):
+                 # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:97 in forward_cuda, code: out = rmsnorm(x, self.weight.data, self.variance_epsilon)
+                _get_data_attr: "bf16[2880]" = torch._C._autograd._get_data_attr(l_self_layer_communicator_input_layernorm_parameters_weight_);  l_self_layer_communicator_input_layernorm_parameters_weight_ = None
+                return _get_data_attr
+                
+    class thunder_1(torch.nn.Module):
+        def forward(self, l_hidden_states_: "bf16[1, 2880]"):
+             # File: /usr/local/lib/python3.12/dist-packages/sgl_kernel/elementwise.py:42 in rmsnorm, code: out = torch.empty_like(input)
+            out: "bf16[1, 2880]" = torch.empty_like(l_hidden_states_);  l_hidden_states_ = None
+            return out
             
         class _model(torch.nn.Module):
-            def forward(self, l_hidden_states_: "bf16[1, 2880]", l_self_input_layernorm_parameters_weight_: "bf16[2880]"):
-                 # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:167 in forward_native, code: x = x.to(torch.float32)
-                x: "f32[1, 2880]" = l_hidden_states_.to(torch.float32);  l_hidden_states_ = None
+            def forward(self, l_hidden_states_: "bf16[1, 2880]"):
+                 # File: /usr/local/lib/python3.12/dist-packages/sgl_kernel/elementwise.py:42 in rmsnorm, code: out = torch.empty_like(input)
+                out: "bf16[1, 2880]" = torch.empty_like(l_hidden_states_);  l_hidden_states_ = None
+                return out
                 
-                 # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:190 in forward_native, code: variance = x_var.pow(2).mean(dim=-1, keepdim=True)
-                pow_1: "f32[1, 2880]" = x.pow(2)
-                variance: "f32[1, 1]" = pow_1.mean(dim = -1, keepdim = True);  pow_1 = None
+    class inductor_2(torch.nn.Module):
+        def forward(self, out: "bf16[1, 2880]", l_hidden_states_: "bf16[1, 2880]", _get_data_attr: "bf16[2880]"):
+             # File: /usr/local/lib/python3.12/dist-packages/sgl_kernel/utils.py:49 in is_arch_support_pdl, code: major, minor = torch.cuda.get_device_capability(device)
+            get_device_capability = torch.cuda.get_device_capability(3);  get_device_capability = None
+            
+             # File: /usr/local/lib/python3.12/dist-packages/sgl_kernel/elementwise.py:45 in rmsnorm, code: torch.ops.sgl_kernel.rmsnorm.default(out, input, weight, eps, enable_pdl)
+            rmsnorm_default = torch.ops.sgl_kernel.rmsnorm.default(out, l_hidden_states_, _get_data_attr, 1e-05, True);  out = l_hidden_states_ = _get_data_attr = rmsnorm_default = None
+            return ()
+            
+        class _orig_mod(torch.nn.Module):
+            def forward(self, out: "bf16[1, 2880]", l_hidden_states_: "bf16[1, 2880]", _get_data_attr: "bf16[2880]"):
+                 # File: /usr/local/lib/python3.12/dist-packages/sgl_kernel/utils.py:49 in is_arch_support_pdl, code: major, minor = torch.cuda.get_device_capability(device)
+                get_device_capability = torch.cuda.get_device_capability(3);  get_device_capability = None
                 
-                 # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:191 in forward_native, code: x = x * torch.rsqrt(variance + self.variance_epsilon)
-                add: "f32[1, 1]" = variance + 1e-05;  variance = None
-                rsqrt: "f32[1, 1]" = torch.rsqrt(add);  add = None
-                x_1: "f32[1, 2880]" = x * rsqrt;  x = rsqrt = None
-                
-                 # File: /opt/sglang/sglang-src/python/sglang/srt/layers/layernorm.py:192 in forward_native, code: x = (x * self.weight).to(orig_dtype)
-                mul_1: "f32[1, 2880]" = x_1 * l_self_input_layernorm_parameters_weight_;  x_1 = l_self_input_layernorm_parameters_weight_ = None
-                x_2: "bf16[1, 2880]" = mul_1.to(torch.bfloat16);  mul_1 = None
-                return x_2
+                 # File: /usr/local/lib/python3.12/dist-packages/sgl_kernel/elementwise.py:45 in rmsnorm, code: torch.ops.sgl_kernel.rmsnorm.default(out, input, weight, eps, enable_pdl)
+                rmsnorm_default = torch.ops.sgl_kernel.rmsnorm.default(out, l_hidden_states_, _get_data_attr, 1e-05, True);  out = l_hidden_states_ = _get_data_attr = rmsnorm_default = None
+                return ()
                 

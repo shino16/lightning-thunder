@@ -1,40 +1,15 @@
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-`torch_dtype` is deprecated! Use `dtype` instead!
-Detected GPT-OSS model, enabling triton_kernels MOE kernel.
-TensorRT-LLM MHA only supports page_size of 16, 32 or 64, changing page_size from None to 64.
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-`torch_dtype` is deprecated! Use `dtype` instead!
-[2025-10-16 19:15:22 TP0] Init torch distributed begin.
-`torch_dtype` is deprecated! Use `dtype` instead!
-`torch_dtype` is deprecated! Use `dtype` instead!
-`torch_dtype` is deprecated! Use `dtype` instead!
-[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+#######################################################
+See README.md for a note on this.
+#######################################################
+
 [Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[2025-10-16 19:15:24 TP0] sglang is using nccl==2.28.3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
 [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
 [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
@@ -47,414 +22,421 @@ TensorRT-LLM MHA only supports page_size of 16, 32 or 64, changing page_size fro
 [Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[2025-10-16 19:15:27 TP0] Init torch distributed ends. mem usage=1.51 GB
-[2025-10-16 19:15:28 TP0] Load weight begin. avail mem=181.10 GB
-[2025-10-16 19:15:28 TP3] Using dummy random weights instead of downloading from HuggingFace
-[2025-10-16 19:15:28 TP2] Using dummy random weights instead of downloading from HuggingFace
-[2025-10-16 19:15:28 TP1] Using dummy random weights instead of downloading from HuggingFace
-[2025-10-16 19:15:28 TP0] Using dummy random weights instead of downloading from HuggingFace
-[2025-10-16 19:15:28 TP0] Load weight end. type=GptOssForCausalLM, dtype=torch.bfloat16, avail mem=171.24 GB, mem usage=9.86 GB.
-[2025-10-16 19:15:29 TP0] Using KV cache dtype: torch.bfloat16
-[2025-10-16 19:15:30 TP3] KV Cache is allocated. #tokens: 12225408, K size: 69.95 GB, V size: 69.95 GB
-[2025-10-16 19:15:30 TP0] KV Cache is allocated. #tokens: 12225408, K size: 69.95 GB, V size: 69.95 GB
-[2025-10-16 19:15:30 TP2] KV Cache is allocated. #tokens: 12225408, K size: 69.95 GB, V size: 69.95 GB
-[2025-10-16 19:15:30 TP0] Memory pool end. avail mem=29.27 GB
-[2025-10-16 19:15:30 TP1] KV Cache is allocated. #tokens: 12225408, K size: 69.95 GB, V size: 69.95 GB
-[2025-10-16 19:15:30 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=28.13 GB
-[2025-10-16 19:15:30 TP0] Capture cuda graph bs [1]
-  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=28.13 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-[2025-10-16 19:15:32 TP3] Registering 0 cuda graph addresses
-[2025-10-16 19:15:32 TP2] Registering 0 cuda graph addresses
-[2025-10-16 19:15:33 TP1] Registering 0 cuda graph addresses
-Capturing batches (bs=1 avail_mem=28.13 GB):   0%|          | 0/1 [00:02<?, ?it/s]
-[2025-10-16 19:15:33 TP0] Registering 0 cuda graph addresses
-Process Process-4:
-Process Process-3:
-Process Process-1:
-Process Process-2:
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
-    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
-    model_runner = ModelRunner(
-                   ^^^^^^^^^^^^
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
-    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
-    self.initialize(min_per_gpu_memory)
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
-    self.init_device_graphs()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
-    self.graph_runner = graph_runners[self.device](self)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
-    self.capture()
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
-    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
-    ) = self.capture_one_batch_size(bs, forward)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
-    model_runner = ModelRunner(
-                   ^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
-    self.initialize(min_per_gpu_memory)
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
-    self.init_device_graphs()
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
-    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
-    self.graph_runner = graph_runners[self.device](self)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
-    run_once()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
-    self.capture()
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
-    model_runner = ModelRunner(
-                   ^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
-    self.initialize(min_per_gpu_memory)
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
-    model_runner = ModelRunner(
-                   ^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
-    self.init_device_graphs()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
-    self.initialize(min_per_gpu_memory)
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
-    logits_output_or_pp_proxy_tensors = forward(
-                                        ^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
-    return self._func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
-    ) = self.capture_one_batch_size(bs, forward)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 832, in compile_wrapper
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
-    self.graph_runner = graph_runners[self.device](self)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
-    self.capture()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
-    self.init_device_graphs()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
-    ) = self.capture_one_batch_size(bs, forward)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
-    self.graph_runner = graph_runners[self.device](self)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
-    run_once()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
-    logits_output_or_pp_proxy_tensors = forward(
-                                        ^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
-    return self._func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/external_utils.py", line 68, in inner
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
-    run_once()
-  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
-    logits_output_or_pp_proxy_tensors = forward(
-                                        ^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
-    self.capture()
-  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
-    return self._func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
-    ) = self.capture_one_batch_size(bs, forward)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 832, in compile_wrapper
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/external_utils.py", line 68, in inner
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 643, in forward
-    hidden_states = self.model(
-                    ^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 832, in compile_wrapper
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/external_utils.py", line 68, in inner
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
-    run_once()
-  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
-    logits_output_or_pp_proxy_tensors = forward(
-                                        ^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
-    return self._func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 574, in forward
-    hidden_states, residual = layer(
-                              ^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 643, in forward
-    hidden_states = self.model(
-                    ^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 643, in forward
-    hidden_states = self.model(
-                    ^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 832, in compile_wrapper
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/external_utils.py", line 68, in inner
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 574, in forward
-    hidden_states, residual = layer(
-                              ^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 476, in forward
-    hidden_states = self.self_attn(
-                    ^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 643, in forward
-    hidden_states = self.model(
-                    ^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 574, in forward
-    hidden_states, residual = layer(
-                              ^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 370, in forward
-    s = self.forward_prepare(
-        ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 335, in forward_prepare
-    q, k = self.rotary_emb(
-           ^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 476, in forward
-    hidden_states = self.self_attn(
-                    ^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 574, in forward
-    hidden_states, residual = layer(
-                              ^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 476, in forward
-    hidden_states = self.self_attn(
-                    ^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 370, in forward
-    s = self.forward_prepare(
-        ^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/custom_op.py", line 67, in forward
-    return self._forward_method(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: RotaryEmbedding.forward_native() got an unexpected keyword argument 'fused_set_kv_buffer_arg'
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 335, in forward_prepare
-    q, k = self.rotary_emb(
-           ^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 370, in forward
-    s = self.forward_prepare(
-        ^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 476, in forward
-    hidden_states = self.self_attn(
-                    ^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 335, in forward_prepare
-    q, k = self.rotary_emb(
-           ^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/custom_op.py", line 67, in forward
-    return self._forward_method(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/custom_op.py", line 67, in forward
-    return self._forward_method(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: RotaryEmbedding.forward_native() got an unexpected keyword argument 'fused_set_kv_buffer_arg'
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 370, in forward
-    s = self.forward_prepare(
-        ^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/models/gpt_oss.py", line 335, in forward_prepare
-    q, k = self.rotary_emb(
-           ^^^^^^^^^^^^^^^^
-TypeError: RotaryEmbedding.forward_native() got an unexpected keyword argument 'fused_set_kv_buffer_arg'
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/custom_op.py", line 67, in forward
-    return self._forward_method(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: RotaryEmbedding.forward_native() got an unexpected keyword argument 'fused_set_kv_buffer_arg'
-[rank3]:[W1016 19:15:35.655507819 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank0]:[W1016 19:15:35.831793252 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank2]:[W1016 19:15:36.208857761 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank1]:[W1016 19:15:36.460342176 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+rank 1 allocated ipc_handles: [['0xecebd0000000', '0xecf4d6000000', '0xecebd2e00000', '0xecebd5c00000'], ['0xecebd8c00000', '0xecebd8a00000', '0xecebd8e00000', '0xecebd9000000'], ['0xed0296000000', '0xed0137600000', '0xed03f6000000', '0xed0556000000']]
+[2025-10-21 01:09:49.752] [info] lamportInitialize start: buffer: 0xed0137600000, size: 71303168
+rank 0 allocated ipc_handles: [['0xee85f6000000', '0xee7cf0000000', '0xee7cf2e00000', '0xee7cf5c00000'], ['0xee7cf8a00000', '0xee7cf8c00000', '0xee7cf8e00000', '0xee7cf9000000'], ['0xee90f6000000', '0xee9256000000', '0xee93b6000000', '0xee9516000000']]
+[2025-10-21 01:09:49.803] [info] lamportInitialize start: buffer: 0xee90f6000000, size: 71303168
+rank 3 allocated ipc_handles: [['0xf34470000000', '0xf34472e00000', '0xf34475c00000', '0xf34d76000000'], ['0xf34478c00000', '0xf34478e00000', '0xf34479000000', '0xf34478a00000'], ['0xf359d6000000', '0xf35b36000000', '0xf35c96000000', '0xf35876000000']]
+[2025-10-21 01:09:49.865] [info] lamportInitialize start: buffer: 0xf35876000000, size: 71303168
+rank 2 allocated ipc_handles: [['0xe771b0000000', '0xe771b2e00000', '0xe77ab6000000', '0xe771b5c00000'], ['0xe771b8c00000', '0xe771b8e00000', '0xe771b8a00000', '0xe771b9000000'], ['0xe78876000000', '0xe789d6000000', '0xe78717600000', '0xe78b36000000']]
+[2025-10-21 01:09:49.916] [info] lamportInitialize start: buffer: 0xe78717600000, size: 71303168
+set flag_ptr[3] = lamport_comm_size:  47185920
+Rank 1 workspace[0] 0xecebd0000000
+Rank 1 workspace[1] 0xecf4d6000000
+Rank 1 workspace[2] 0xecebd2e00000
+Rank 1 workspace[3] 0xecebd5c00000
+Rank 1 workspace[4] 0xecebd8c00000
+Rank 1 workspace[5] 0xecebd8a00000
+Rank 1 workspace[6] 0xecebd8e00000
+Rank 1 workspace[7] 0xecebd9000000
+Rank 1 workspace[8] 0xed0296000000
+Rank 1 workspace[9] 0xed0137600000
+Rank 1 workspace[10] 0xed03f6000000
+Rank 1 workspace[11] 0xed0556000000
+Rank 1 workspace[12] 0xed42e4064400
+set flag_ptr[3] = lamport_comm_size:  47185920
+Rank 2 workspace[0] 0xe771b0000000
+Rank 2 workspace[1] 0xe771b2e00000
+Rank 2 workspace[2] 0xe77ab6000000
+Rank 2 workspace[3] 0xe771b5c00000
+Rank 2 workspace[4] 0xe771b8c00000
+Rank 2 workspace[5] 0xe771b8e00000
+Rank 2 workspace[6] 0xe771b8a00000
+Rank 2 workspace[7] 0xe771b9000000
+Rank 2 workspace[8] 0xe78876000000
+Rank 2 workspace[9] 0xe789d6000000
+Rank 2 workspace[10] 0xe78717600000
+Rank 2 workspace[11] 0xe78b36000000
+Rank 2 workspace[12] 0xe7c8c4064400
+set flag_ptr[3] = lamport_comm_size:  47185920
+Rank 0 workspace[0] 0xee85f6000000
+Rank 0 workspace[1] 0xee7cf0000000
+Rank 0 workspace[2] 0xee7cf2e00000
+Rank 0 workspace[3] 0xee7cf5c00000
+Rank 0 workspace[4] 0xee7cf8a00000
+Rank 0 workspace[5] 0xee7cf8c00000
+Rank 0 workspace[6] 0xee7cf8e00000
+Rank 0 workspace[7] 0xee7cf9000000
+Rank 0 workspace[8] 0xee90f6000000
+Rank 0 workspace[9] 0xee9256000000
+Rank 0 workspace[10] 0xee93b6000000
+Rank 0 workspace[11] 0xee9516000000
+Rank 0 workspace[12] 0xeed364064400
+set flag_ptr[3] = lamport_comm_size:  47185920
+Rank 3 workspace[0] 0xf34470000000
+Rank 3 workspace[1] 0xf34472e00000
+Rank 3 workspace[2] 0xf34475c00000
+Rank 3 workspace[3] 0xf34d76000000
+Rank 3 workspace[4] 0xf34478c00000
+Rank 3 workspace[5] 0xf34478e00000
+Rank 3 workspace[6] 0xf34479000000
+Rank 3 workspace[7] 0xf34478a00000
+Rank 3 workspace[8] 0xf359d6000000
+Rank 3 workspace[9] 0xf35b36000000
+Rank 3 workspace[10] 0xf35c96000000
+Rank 3 workspace[11] 0xf35876000000
+Rank 3 workspace[12] 0xf39b44064400
+max_total_num_tokens=20312832
+Warmup ...
+Prefill. latency: 1.17874 s, throughput:    868.73 token/s
+Decode 0. Batch size: 1, latency: 1.34073 s, throughput:      0.75 token/s
+Decode 1. Batch size: 1, latency: 0.00550 s, throughput:    181.79 token/s
+Decode 2. Batch size: 1, latency: 0.00354 s, throughput:    282.80 token/s
+Decode 3. Batch size: 1, latency: 0.00349 s, throughput:    286.54 token/s
+Decode 4. Batch size: 1, latency: 0.00349 s, throughput:    286.94 token/s
+Decode.  median latency: 0.00343 s, median throughput:    291.38 token/s
+Total. latency:  2.569 s, throughput:    404.78 token/s
+Benchmark ...
+Prefill. latency: 0.08123 s, throughput:  12605.79 token/s
+Decode 0. Batch size: 1, latency: 0.00381 s, throughput:    262.30 token/s
+Decode 1. Batch size: 1, latency: 0.00329 s, throughput:    304.40 token/s
+Decode 2. Batch size: 1, latency: 0.00324 s, throughput:    308.20 token/s
+Decode 3. Batch size: 1, latency: 0.00324 s, throughput:    308.36 token/s
+Decode 4. Batch size: 1, latency: 0.00322 s, throughput:    310.16 token/s
+Decode.  median latency: 0.00323 s, median throughput:    309.63 token/s
+Total. latency:  0.130 s, throughput:   7983.27 token/s
 
 ================================================================================
 ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/unsloth/gpt-oss-20b-BF16
 Files:
-  - log.txt (32,122 bytes)
-  - rank0_0.py (9,937 bytes)
-  - rank0_1.py (3,448 bytes)
+  - log.txt (6,421 bytes)
+  - rank0_0.py (10,194 bytes)
+  - rank0_1.py (4,259 bytes)
+  - rank0_10.py (4,416 bytes)
+  - rank0_11.py (990 bytes)
+  - rank0_12.py (1,138 bytes)
+  - rank0_13.py (1,906 bytes)
+  - rank0_14.py (3,376 bytes)
+  - rank0_15.py (1,917 bytes)
+  - rank0_16.py (4,318 bytes)
+  - rank0_17.py (20,594 bytes)
+  - rank0_18.py (1,809 bytes)
+  - rank0_19.py (1,762 bytes)
   - rank0_2.py (1,626 bytes)
+  - rank0_20.py (5,340 bytes)
+  - rank0_21.py (3,074 bytes)
+  - rank0_22.py (1,095 bytes)
+  - rank0_23.py (1,074 bytes)
+  - rank0_24.py (2,513 bytes)
+  - rank0_25.py (1,833 bytes)
+  - rank0_26.py (1,082 bytes)
+  - rank0_27.py (3,358 bytes)
+  - rank0_28.py (2,530 bytes)
+  - rank0_29.py (4,416 bytes)
   - rank0_3.py (2,529 bytes)
-  - rank1_0.py (9,955 bytes)
-  - rank1_1.py (3,448 bytes)
+  - rank0_30.py (20,598 bytes)
+  - rank0_31.py (1,134 bytes)
+  - rank0_32.py (2,511 bytes)
+  - rank0_33.py (2,530 bytes)
+  - rank0_34.py (4,416 bytes)
+  - rank0_35.py (2,530 bytes)
+  - rank0_36.py (4,416 bytes)
+  - rank0_37.py (2,530 bytes)
+  - rank0_38.py (4,416 bytes)
+  - rank0_39.py (2,530 bytes)
+  - rank0_4.py (985 bytes)
+  - rank0_40.py (4,416 bytes)
+  - rank0_41.py (2,530 bytes)
+  - rank0_42.py (4,416 bytes)
+  - rank0_43.py (2,530 bytes)
+  - rank0_44.py (4,416 bytes)
+  - rank0_45.py (2,530 bytes)
+  - rank0_46.py (4,416 bytes)
+  - rank0_47.py (2,530 bytes)
+  - rank0_48.py (4,416 bytes)
+  - rank0_49.py (2,548 bytes)
+  - rank0_5.py (962 bytes)
+  - rank0_50.py (4,434 bytes)
+  - rank0_51.py (2,548 bytes)
+  - rank0_52.py (4,434 bytes)
+  - rank0_53.py (2,548 bytes)
+  - rank0_54.py (4,434 bytes)
+  - rank0_55.py (2,548 bytes)
+  - rank0_56.py (4,434 bytes)
+  - rank0_57.py (2,548 bytes)
+  - rank0_58.py (4,434 bytes)
+  - rank0_59.py (2,548 bytes)
+  - rank0_6.py (957 bytes)
+  - rank0_60.py (4,434 bytes)
+  - rank0_61.py (2,548 bytes)
+  - rank0_62.py (4,434 bytes)
+  - rank0_63.py (2,548 bytes)
+  - rank0_64.py (4,434 bytes)
+  - rank0_65.py (2,548 bytes)
+  - rank0_66.py (4,434 bytes)
+  - rank0_67.py (2,548 bytes)
+  - rank0_68.py (4,434 bytes)
+  - rank0_69.py (2,548 bytes)
+  - rank0_7.py (915 bytes)
+  - rank0_70.py (4,434 bytes)
+  - rank0_71.py (2,548 bytes)
+  - rank0_72.py (4,434 bytes)
+  - rank0_73.py (2,548 bytes)
+  - rank0_74.py (4,434 bytes)
+  - rank0_75.py (2,548 bytes)
+  - rank0_76.py (4,434 bytes)
+  - rank0_77.py (3,376 bytes)
+  - rank0_78.py (2,521 bytes)
+  - rank0_79.py (1,288 bytes)
+  - rank0_8.py (1,006 bytes)
+  - rank0_80.py (990 bytes)
+  - rank0_81.py (8,205 bytes)
+  - rank0_9.py (1,649 bytes)
+  - rank1_0.py (10,212 bytes)
+  - rank1_1.py (4,259 bytes)
+  - rank1_10.py (4,416 bytes)
+  - rank1_11.py (990 bytes)
+  - rank1_12.py (1,138 bytes)
+  - rank1_13.py (1,513 bytes)
+  - rank1_14.py (3,376 bytes)
+  - rank1_15.py (1,917 bytes)
+  - rank1_16.py (4,318 bytes)
+  - rank1_17.py (20,594 bytes)
+  - rank1_18.py (1,809 bytes)
+  - rank1_19.py (1,762 bytes)
   - rank1_2.py (1,626 bytes)
+  - rank1_20.py (5,340 bytes)
+  - rank1_21.py (3,074 bytes)
+  - rank1_22.py (1,095 bytes)
+  - rank1_23.py (1,074 bytes)
+  - rank1_24.py (2,513 bytes)
+  - rank1_25.py (1,833 bytes)
+  - rank1_26.py (1,082 bytes)
+  - rank1_27.py (3,358 bytes)
+  - rank1_28.py (2,530 bytes)
+  - rank1_29.py (4,416 bytes)
   - rank1_3.py (2,529 bytes)
-  - rank2_0.py (9,959 bytes)
-  - rank2_1.py (3,448 bytes)
+  - rank1_30.py (20,598 bytes)
+  - rank1_31.py (1,134 bytes)
+  - rank1_32.py (2,511 bytes)
+  - rank1_33.py (2,530 bytes)
+  - rank1_34.py (4,416 bytes)
+  - rank1_35.py (2,530 bytes)
+  - rank1_36.py (4,416 bytes)
+  - rank1_37.py (2,530 bytes)
+  - rank1_38.py (4,416 bytes)
+  - rank1_39.py (2,530 bytes)
+  - rank1_4.py (985 bytes)
+  - rank1_40.py (4,416 bytes)
+  - rank1_41.py (2,530 bytes)
+  - rank1_42.py (4,416 bytes)
+  - rank1_43.py (2,530 bytes)
+  - rank1_44.py (4,416 bytes)
+  - rank1_45.py (2,530 bytes)
+  - rank1_46.py (4,416 bytes)
+  - rank1_47.py (2,530 bytes)
+  - rank1_48.py (4,416 bytes)
+  - rank1_49.py (2,548 bytes)
+  - rank1_5.py (962 bytes)
+  - rank1_50.py (4,434 bytes)
+  - rank1_51.py (2,548 bytes)
+  - rank1_52.py (4,434 bytes)
+  - rank1_53.py (2,548 bytes)
+  - rank1_54.py (4,434 bytes)
+  - rank1_55.py (2,548 bytes)
+  - rank1_56.py (4,434 bytes)
+  - rank1_57.py (2,548 bytes)
+  - rank1_58.py (4,434 bytes)
+  - rank1_59.py (2,548 bytes)
+  - rank1_6.py (957 bytes)
+  - rank1_60.py (4,434 bytes)
+  - rank1_61.py (2,548 bytes)
+  - rank1_62.py (4,434 bytes)
+  - rank1_63.py (2,548 bytes)
+  - rank1_64.py (4,434 bytes)
+  - rank1_65.py (2,548 bytes)
+  - rank1_66.py (4,434 bytes)
+  - rank1_67.py (2,548 bytes)
+  - rank1_68.py (4,434 bytes)
+  - rank1_69.py (2,548 bytes)
+  - rank1_7.py (915 bytes)
+  - rank1_70.py (4,434 bytes)
+  - rank1_71.py (2,548 bytes)
+  - rank1_72.py (4,434 bytes)
+  - rank1_73.py (2,548 bytes)
+  - rank1_74.py (4,434 bytes)
+  - rank1_75.py (2,548 bytes)
+  - rank1_76.py (4,434 bytes)
+  - rank1_77.py (3,376 bytes)
+  - rank1_78.py (2,521 bytes)
+  - rank1_79.py (1,288 bytes)
+  - rank1_8.py (1,006 bytes)
+  - rank1_80.py (990 bytes)
+  - rank1_81.py (8,205 bytes)
+  - rank1_9.py (1,649 bytes)
+  - rank2_0.py (10,216 bytes)
+  - rank2_1.py (4,259 bytes)
+  - rank2_10.py (4,416 bytes)
+  - rank2_11.py (990 bytes)
+  - rank2_12.py (1,138 bytes)
+  - rank2_13.py (1,513 bytes)
+  - rank2_14.py (3,376 bytes)
+  - rank2_15.py (1,917 bytes)
+  - rank2_16.py (4,318 bytes)
+  - rank2_17.py (20,594 bytes)
+  - rank2_18.py (1,809 bytes)
+  - rank2_19.py (1,762 bytes)
   - rank2_2.py (1,626 bytes)
+  - rank2_20.py (5,340 bytes)
+  - rank2_21.py (3,074 bytes)
+  - rank2_22.py (1,095 bytes)
+  - rank2_23.py (1,074 bytes)
+  - rank2_24.py (2,513 bytes)
+  - rank2_25.py (1,833 bytes)
+  - rank2_26.py (1,082 bytes)
+  - rank2_27.py (3,358 bytes)
+  - rank2_28.py (2,530 bytes)
+  - rank2_29.py (4,416 bytes)
   - rank2_3.py (2,529 bytes)
-  - rank3_0.py (9,959 bytes)
-  - rank3_1.py (3,448 bytes)
+  - rank2_30.py (20,598 bytes)
+  - rank2_31.py (1,134 bytes)
+  - rank2_32.py (2,511 bytes)
+  - rank2_33.py (2,530 bytes)
+  - rank2_34.py (4,416 bytes)
+  - rank2_35.py (2,530 bytes)
+  - rank2_36.py (4,416 bytes)
+  - rank2_37.py (2,530 bytes)
+  - rank2_38.py (4,416 bytes)
+  - rank2_39.py (2,530 bytes)
+  - rank2_4.py (985 bytes)
+  - rank2_40.py (4,416 bytes)
+  - rank2_41.py (2,530 bytes)
+  - rank2_42.py (4,416 bytes)
+  - rank2_43.py (2,530 bytes)
+  - rank2_44.py (4,416 bytes)
+  - rank2_45.py (2,530 bytes)
+  - rank2_46.py (4,416 bytes)
+  - rank2_47.py (2,530 bytes)
+  - rank2_48.py (4,416 bytes)
+  - rank2_49.py (2,548 bytes)
+  - rank2_5.py (962 bytes)
+  - rank2_50.py (4,434 bytes)
+  - rank2_51.py (2,548 bytes)
+  - rank2_52.py (4,434 bytes)
+  - rank2_53.py (2,548 bytes)
+  - rank2_54.py (4,434 bytes)
+  - rank2_55.py (2,548 bytes)
+  - rank2_56.py (4,434 bytes)
+  - rank2_57.py (2,548 bytes)
+  - rank2_58.py (4,434 bytes)
+  - rank2_59.py (2,548 bytes)
+  - rank2_6.py (957 bytes)
+  - rank2_60.py (4,434 bytes)
+  - rank2_61.py (2,548 bytes)
+  - rank2_62.py (4,434 bytes)
+  - rank2_63.py (2,548 bytes)
+  - rank2_64.py (4,434 bytes)
+  - rank2_65.py (2,548 bytes)
+  - rank2_66.py (4,434 bytes)
+  - rank2_67.py (2,548 bytes)
+  - rank2_68.py (4,434 bytes)
+  - rank2_69.py (2,548 bytes)
+  - rank2_7.py (915 bytes)
+  - rank2_70.py (4,434 bytes)
+  - rank2_71.py (2,548 bytes)
+  - rank2_72.py (4,434 bytes)
+  - rank2_73.py (2,548 bytes)
+  - rank2_74.py (4,434 bytes)
+  - rank2_75.py (2,548 bytes)
+  - rank2_76.py (4,434 bytes)
+  - rank2_77.py (3,376 bytes)
+  - rank2_78.py (2,521 bytes)
+  - rank2_79.py (1,288 bytes)
+  - rank2_8.py (1,006 bytes)
+  - rank2_80.py (990 bytes)
+  - rank2_81.py (8,205 bytes)
+  - rank2_9.py (1,649 bytes)
+  - rank3_0.py (10,216 bytes)
+  - rank3_1.py (4,259 bytes)
+  - rank3_10.py (4,416 bytes)
+  - rank3_11.py (990 bytes)
+  - rank3_12.py (1,138 bytes)
+  - rank3_13.py (1,513 bytes)
+  - rank3_14.py (3,376 bytes)
+  - rank3_15.py (1,917 bytes)
+  - rank3_16.py (4,318 bytes)
+  - rank3_17.py (20,594 bytes)
+  - rank3_18.py (1,809 bytes)
+  - rank3_19.py (1,762 bytes)
   - rank3_2.py (1,626 bytes)
+  - rank3_20.py (5,340 bytes)
+  - rank3_21.py (3,074 bytes)
+  - rank3_22.py (1,095 bytes)
+  - rank3_23.py (1,074 bytes)
+  - rank3_24.py (2,513 bytes)
+  - rank3_25.py (1,833 bytes)
+  - rank3_26.py (1,082 bytes)
+  - rank3_27.py (3,358 bytes)
+  - rank3_28.py (2,530 bytes)
+  - rank3_29.py (4,416 bytes)
   - rank3_3.py (2,529 bytes)
+  - rank3_30.py (20,598 bytes)
+  - rank3_31.py (1,134 bytes)
+  - rank3_32.py (2,511 bytes)
+  - rank3_33.py (2,530 bytes)
+  - rank3_34.py (4,416 bytes)
+  - rank3_35.py (2,530 bytes)
+  - rank3_36.py (4,416 bytes)
+  - rank3_37.py (2,530 bytes)
+  - rank3_38.py (4,416 bytes)
+  - rank3_39.py (2,530 bytes)
+  - rank3_4.py (985 bytes)
+  - rank3_40.py (4,416 bytes)
+  - rank3_41.py (2,530 bytes)
+  - rank3_42.py (4,416 bytes)
+  - rank3_43.py (2,530 bytes)
+  - rank3_44.py (4,416 bytes)
+  - rank3_45.py (2,530 bytes)
+  - rank3_46.py (4,416 bytes)
+  - rank3_47.py (2,530 bytes)
+  - rank3_48.py (4,416 bytes)
+  - rank3_49.py (2,548 bytes)
+  - rank3_5.py (962 bytes)
+  - rank3_50.py (4,434 bytes)
+  - rank3_51.py (2,548 bytes)
+  - rank3_52.py (4,434 bytes)
+  - rank3_53.py (2,548 bytes)
+  - rank3_54.py (4,434 bytes)
+  - rank3_55.py (2,548 bytes)
+  - rank3_56.py (4,434 bytes)
+  - rank3_57.py (2,548 bytes)
+  - rank3_58.py (4,434 bytes)
+  - rank3_59.py (2,548 bytes)
+  - rank3_6.py (957 bytes)
+  - rank3_60.py (4,434 bytes)
+  - rank3_61.py (2,548 bytes)
+  - rank3_62.py (4,434 bytes)
+  - rank3_63.py (2,548 bytes)
+  - rank3_64.py (4,434 bytes)
+  - rank3_65.py (2,548 bytes)
+  - rank3_66.py (4,434 bytes)
+  - rank3_67.py (2,548 bytes)
+  - rank3_68.py (4,434 bytes)
+  - rank3_69.py (2,548 bytes)
+  - rank3_7.py (915 bytes)
+  - rank3_70.py (4,434 bytes)
+  - rank3_71.py (2,548 bytes)
+  - rank3_72.py (4,434 bytes)
+  - rank3_73.py (2,548 bytes)
+  - rank3_74.py (4,434 bytes)
+  - rank3_75.py (2,548 bytes)
+  - rank3_76.py (4,434 bytes)
+  - rank3_77.py (3,376 bytes)
+  - rank3_78.py (2,521 bytes)
+  - rank3_79.py (1,288 bytes)
+  - rank3_8.py (1,006 bytes)
+  - rank3_80.py (990 bytes)
+  - rank3_81.py (8,205 bytes)
+  - rank3_9.py (1,649 bytes)
 ================================================================================
 

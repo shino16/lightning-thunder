@@ -1,0 +1,968 @@
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Parse safetensors files:   0%|          | 0/163 [00:00<?, ?it/s]Parse safetensors files:   1%|          | 1/163 [00:03<09:06,  3.37s/it]Parse safetensors files:  71%|███████   | 116/163 [00:03<00:01, 46.42it/s]Parse safetensors files: 100%|██████████| 163/163 [00:03<00:00, 43.93it/s]
+A new version of the following files was downloaded from https://huggingface.co/deepseek-ai/DeepSeek-V3.1:
+- configuration_deepseek.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Preparing dummy cache for model-00089-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00089-of-000163.safetensors
+Preparing dummy cache for model-00061-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00061-of-000163.safetensors
+Preparing dummy cache for model-00142-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00142-of-000163.safetensors
+Preparing dummy cache for model-00005-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00005-of-000163.safetensors
+Preparing dummy cache for model-00092-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00092-of-000163.safetensors
+Preparing dummy cache for model-00130-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00130-of-000163.safetensors
+Preparing dummy cache for model-00036-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00036-of-000163.safetensors
+Preparing dummy cache for model-00063-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00063-of-000163.safetensors
+Preparing dummy cache for model-00060-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00060-of-000163.safetensors
+Preparing dummy cache for model-00058-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00058-of-000163.safetensors
+Preparing dummy cache for model-00009-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00009-of-000163.safetensors
+Preparing dummy cache for model-00121-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00121-of-000163.safetensors
+Preparing dummy cache for model-00014-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00014-of-000163.safetensors
+Preparing dummy cache for model-00090-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00090-of-000163.safetensors
+Preparing dummy cache for model-00047-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00047-of-000163.safetensors
+Preparing dummy cache for model-00016-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00016-of-000163.safetensors
+Preparing dummy cache for model-00159-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00159-of-000163.safetensors
+Preparing dummy cache for model-00136-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00136-of-000163.safetensors
+Preparing dummy cache for model-00083-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00083-of-000163.safetensors
+Preparing dummy cache for model-00079-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00079-of-000163.safetensors
+Preparing dummy cache for model-00023-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00023-of-000163.safetensors
+Preparing dummy cache for model-00108-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00108-of-000163.safetensors
+Preparing dummy cache for model-00086-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00086-of-000163.safetensors
+Preparing dummy cache for model-00152-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00152-of-000163.safetensors
+Preparing dummy cache for model-00085-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00085-of-000163.safetensors
+Preparing dummy cache for model-00153-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00153-of-000163.safetensors
+Preparing dummy cache for model-00126-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00126-of-000163.safetensors
+Preparing dummy cache for model-00055-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00055-of-000163.safetensors
+Preparing dummy cache for model-00111-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00111-of-000163.safetensors
+Preparing dummy cache for model-00160-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00160-of-000163.safetensors
+Preparing dummy cache for model-00059-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00059-of-000163.safetensors
+Preparing dummy cache for model-00115-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00115-of-000163.safetensors
+Preparing dummy cache for model-00082-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00082-of-000163.safetensors
+Preparing dummy cache for model-00161-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00161-of-000163.safetensors
+Preparing dummy cache for model-00037-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00037-of-000163.safetensors
+Preparing dummy cache for model-00102-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00102-of-000163.safetensors
+Preparing dummy cache for model-00078-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00078-of-000163.safetensors
+Preparing dummy cache for model-00146-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00146-of-000163.safetensors
+Preparing dummy cache for model-00035-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00035-of-000163.safetensors
+Preparing dummy cache for model-00125-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00125-of-000163.safetensors
+Preparing dummy cache for model-00080-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00080-of-000163.safetensors
+Preparing dummy cache for model-00043-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00043-of-000163.safetensors
+Preparing dummy cache for model-00051-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00051-of-000163.safetensors
+Preparing dummy cache for model-00137-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00137-of-000163.safetensors
+Preparing dummy cache for model-00045-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00045-of-000163.safetensors
+Preparing dummy cache for model-00081-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00081-of-000163.safetensors
+Preparing dummy cache for model-00162-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00162-of-000163.safetensors
+Preparing dummy cache for model-00070-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00070-of-000163.safetensors
+Preparing dummy cache for model-00056-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00056-of-000163.safetensors
+Preparing dummy cache for model-00011-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00011-of-000163.safetensors
+Preparing dummy cache for model-00119-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00119-of-000163.safetensors
+Preparing dummy cache for model-00122-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00122-of-000163.safetensors
+Preparing dummy cache for model-00094-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00094-of-000163.safetensors
+Preparing dummy cache for model-00144-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00144-of-000163.safetensors
+Preparing dummy cache for model-00155-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00155-of-000163.safetensors
+Preparing dummy cache for model-00093-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00093-of-000163.safetensors
+Preparing dummy cache for model-00098-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00098-of-000163.safetensors
+Preparing dummy cache for model-00066-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00066-of-000163.safetensors
+Preparing dummy cache for model-00057-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00057-of-000163.safetensors
+Preparing dummy cache for model-00048-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00048-of-000163.safetensors
+Preparing dummy cache for model-00068-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00068-of-000163.safetensors
+Preparing dummy cache for model-00042-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00042-of-000163.safetensors
+Preparing dummy cache for model-00099-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00099-of-000163.safetensors
+Preparing dummy cache for model-00007-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00007-of-000163.safetensors
+Preparing dummy cache for model-00041-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00041-of-000163.safetensors
+Preparing dummy cache for model-00067-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00067-of-000163.safetensors
+Preparing dummy cache for model-00031-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00031-of-000163.safetensors
+Preparing dummy cache for model-00110-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00110-of-000163.safetensors
+Preparing dummy cache for model-00004-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00004-of-000163.safetensors
+Preparing dummy cache for model-00018-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00018-of-000163.safetensors
+Preparing dummy cache for model-00148-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00148-of-000163.safetensors
+Preparing dummy cache for model-00074-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00074-of-000163.safetensors
+Preparing dummy cache for model-00034-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00034-of-000163.safetensors
+Preparing dummy cache for model-00163-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00163-of-000163.safetensors
+Preparing dummy cache for model-00123-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00123-of-000163.safetensors
+Preparing dummy cache for model-00091-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00091-of-000163.safetensors
+Preparing dummy cache for model-00040-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00040-of-000163.safetensors
+Preparing dummy cache for model-00154-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00154-of-000163.safetensors
+Preparing dummy cache for model-00109-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00109-of-000163.safetensors
+Preparing dummy cache for model-00062-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00062-of-000163.safetensors
+Preparing dummy cache for model-00124-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00124-of-000163.safetensors
+Preparing dummy cache for model-00029-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00029-of-000163.safetensors
+Preparing dummy cache for model-00015-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00015-of-000163.safetensors
+Preparing dummy cache for model-00038-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00038-of-000163.safetensors
+Preparing dummy cache for model-00046-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00046-of-000163.safetensors
+Preparing dummy cache for model-00071-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00071-of-000163.safetensors
+Preparing dummy cache for model-00135-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00135-of-000163.safetensors
+Preparing dummy cache for model-00069-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00069-of-000163.safetensors
+Preparing dummy cache for model-00131-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00131-of-000163.safetensors
+Preparing dummy cache for model-00052-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00052-of-000163.safetensors
+Preparing dummy cache for model-00002-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00002-of-000163.safetensors
+Preparing dummy cache for model-00157-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00157-of-000163.safetensors
+Preparing dummy cache for model-00127-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00127-of-000163.safetensors
+Preparing dummy cache for model-00001-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00001-of-000163.safetensors
+Preparing dummy cache for model-00006-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00006-of-000163.safetensors
+Preparing dummy cache for model-00139-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00139-of-000163.safetensors
+Preparing dummy cache for model-00120-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00120-of-000163.safetensors
+Preparing dummy cache for model-00021-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00021-of-000163.safetensors
+Preparing dummy cache for model-00054-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00054-of-000163.safetensors
+Preparing dummy cache for model-00150-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00150-of-000163.safetensors
+Preparing dummy cache for model-00151-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00151-of-000163.safetensors
+Preparing dummy cache for model-00050-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00050-of-000163.safetensors
+Preparing dummy cache for model-00028-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00028-of-000163.safetensors
+Preparing dummy cache for model-00143-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00143-of-000163.safetensors
+Preparing dummy cache for model-00149-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00149-of-000163.safetensors
+Preparing dummy cache for model-00076-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00076-of-000163.safetensors
+Preparing dummy cache for model-00114-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00114-of-000163.safetensors
+Preparing dummy cache for model-00101-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00101-of-000163.safetensors
+Preparing dummy cache for model-00106-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00106-of-000163.safetensors
+Preparing dummy cache for model-00010-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00010-of-000163.safetensors
+Preparing dummy cache for model-00129-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00129-of-000163.safetensors
+Preparing dummy cache for model-00084-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00084-of-000163.safetensors
+Preparing dummy cache for model-00103-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00103-of-000163.safetensors
+Preparing dummy cache for model-00012-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00012-of-000163.safetensors
+Preparing dummy cache for model-00039-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00039-of-000163.safetensors
+Preparing dummy cache for model-00008-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00008-of-000163.safetensors
+Preparing dummy cache for model-00147-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00147-of-000163.safetensors
+Preparing dummy cache for model-00064-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00064-of-000163.safetensors
+Preparing dummy cache for model-00118-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00118-of-000163.safetensors
+Preparing dummy cache for model-00088-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00088-of-000163.safetensors
+Preparing dummy cache for model-00087-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00087-of-000163.safetensors
+Preparing dummy cache for model-00141-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00141-of-000163.safetensors
+Preparing dummy cache for model-00113-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00113-of-000163.safetensors
+Preparing dummy cache for model-00022-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00022-of-000163.safetensors
+Preparing dummy cache for model-00158-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00158-of-000163.safetensors
+Preparing dummy cache for model-00104-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00104-of-000163.safetensors
+Preparing dummy cache for model-00020-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00020-of-000163.safetensors
+Preparing dummy cache for model-00030-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00030-of-000163.safetensors
+Preparing dummy cache for model-00072-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00072-of-000163.safetensors
+Preparing dummy cache for model-00105-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00105-of-000163.safetensors
+Preparing dummy cache for model-00044-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00044-of-000163.safetensors
+Preparing dummy cache for model-00138-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00138-of-000163.safetensors
+Preparing dummy cache for model-00049-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00049-of-000163.safetensors
+Preparing dummy cache for model-00117-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00117-of-000163.safetensors
+Preparing dummy cache for model-00024-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00024-of-000163.safetensors
+Preparing dummy cache for model-00032-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00032-of-000163.safetensors
+Preparing dummy cache for model-00075-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00075-of-000163.safetensors
+Preparing dummy cache for model-00128-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00128-of-000163.safetensors
+Preparing dummy cache for model-00145-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00145-of-000163.safetensors
+Preparing dummy cache for model-00077-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00077-of-000163.safetensors
+Preparing dummy cache for model-00065-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00065-of-000163.safetensors
+Preparing dummy cache for model-00003-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00003-of-000163.safetensors
+Preparing dummy cache for model-00013-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00013-of-000163.safetensors
+Preparing dummy cache for model-00112-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00112-of-000163.safetensors
+Preparing dummy cache for model-00100-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00100-of-000163.safetensors
+Preparing dummy cache for model-00097-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00097-of-000163.safetensors
+Preparing dummy cache for model-00033-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00033-of-000163.safetensors
+Preparing dummy cache for model-00133-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00133-of-000163.safetensors
+Preparing dummy cache for model-00140-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00140-of-000163.safetensors
+Preparing dummy cache for model-00025-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00025-of-000163.safetensors
+Preparing dummy cache for model-00132-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00132-of-000163.safetensors
+Preparing dummy cache for model-00134-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00134-of-000163.safetensors
+Preparing dummy cache for model-00017-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00017-of-000163.safetensors
+Preparing dummy cache for model-00095-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00095-of-000163.safetensors
+Preparing dummy cache for model-00107-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00107-of-000163.safetensors
+Preparing dummy cache for model-00053-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00053-of-000163.safetensors
+Preparing dummy cache for model-00156-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00156-of-000163.safetensors
+Preparing dummy cache for model-00019-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00019-of-000163.safetensors
+Preparing dummy cache for model-00073-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00073-of-000163.safetensors
+Preparing dummy cache for model-00027-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00027-of-000163.safetensors
+Preparing dummy cache for model-00096-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00096-of-000163.safetensors
+Preparing dummy cache for model-00116-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00116-of-000163.safetensors
+Preparing dummy cache for model-00026-of-000163.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--deepseek-ai--DeepSeek-V3.1/snapshots/c0781d039fb7a1ba2abc4add0bdc293e92d2b8db/model-00026-of-000163.safetensors
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 00:35:29 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
+[2025-10-21 00:35:29 TP0] Chunked prefix cache is turned on.
+[2025-10-21 00:35:29 TP0] Init torch distributed begin.
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 00:35:29 TP0] sglang is using nccl==2.28.6
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 00:35:30 TP0] Init torch distributed ends. mem usage=1.46 GB
+[2025-10-21 00:35:33 TP0] Load weight begin. avail mem=273.78 GB
+[2025-10-21 00:35:33 TP0] Detected fp8 checkpoint.
+[2025-10-21 00:35:33 TP0] Shared experts fusion optimization enabled.
+[2025-10-21 00:35:33 TP0] Using model weights format ['*.safetensors']
+[2025-10-21 00:35:33 TP2] Using model weights format ['*.safetensors']
+[2025-10-21 00:35:33 TP3] Using model weights format ['*.safetensors']
+[2025-10-21 00:35:33 TP1] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/163 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   1% Completed | 1/163 [00:00<00:17,  9.52it/s]
+Loading safetensors checkpoint shards:   2% Completed | 3/163 [00:00<00:10, 15.13it/s]
+Loading safetensors checkpoint shards:   3% Completed | 5/163 [00:00<00:17,  8.98it/s]
+Loading safetensors checkpoint shards:   4% Completed | 7/163 [00:00<00:17,  9.04it/s]
+Loading safetensors checkpoint shards:   6% Completed | 9/163 [00:01<00:33,  4.66it/s]
+Loading safetensors checkpoint shards:   7% Completed | 12/163 [00:01<00:21,  7.07it/s]
+Loading safetensors checkpoint shards:   9% Completed | 14/163 [00:01<00:17,  8.70it/s]
+Loading safetensors checkpoint shards:  10% Completed | 16/163 [00:02<00:30,  4.80it/s]
+Loading safetensors checkpoint shards:  11% Completed | 18/163 [00:04<01:06,  2.18it/s]
+Loading safetensors checkpoint shards:  12% Completed | 20/163 [00:05<01:08,  2.09it/s]
+Loading safetensors checkpoint shards:  13% Completed | 22/163 [00:05<00:50,  2.78it/s]
+Loading safetensors checkpoint shards:  15% Completed | 25/163 [00:06<00:32,  4.26it/s]
+Loading safetensors checkpoint shards:  17% Completed | 27/163 [00:06<00:25,  5.42it/s]
+Loading safetensors checkpoint shards:  18% Completed | 29/163 [00:06<00:29,  4.50it/s]
+Loading safetensors checkpoint shards:  19% Completed | 31/163 [00:07<00:26,  4.89it/s]
+Loading safetensors checkpoint shards:  20% Completed | 33/163 [00:07<00:27,  4.71it/s]
+Loading safetensors checkpoint shards:  21% Completed | 34/163 [00:07<00:25,  5.05it/s]
+Loading safetensors checkpoint shards:  22% Completed | 36/163 [00:07<00:19,  6.39it/s]
+Loading safetensors checkpoint shards:  23% Completed | 38/163 [00:07<00:16,  7.69it/s]
+Loading safetensors checkpoint shards:  25% Completed | 40/163 [00:08<00:13,  9.13it/s]
+Loading safetensors checkpoint shards:  26% Completed | 42/163 [00:08<00:11, 10.53it/s]
+Loading safetensors checkpoint shards:  27% Completed | 44/163 [00:08<00:10, 10.93it/s]
+Loading safetensors checkpoint shards:  28% Completed | 46/163 [00:09<00:23,  4.91it/s]
+Loading safetensors checkpoint shards:  29% Completed | 47/163 [00:09<00:31,  3.65it/s]
+Loading safetensors checkpoint shards:  30% Completed | 49/163 [00:10<00:23,  4.95it/s]
+Loading safetensors checkpoint shards:  31% Completed | 51/163 [00:10<00:27,  4.01it/s]
+Loading safetensors checkpoint shards:  33% Completed | 53/163 [00:10<00:20,  5.37it/s]
+Loading safetensors checkpoint shards:  34% Completed | 55/163 [00:11<00:32,  3.34it/s]
+Loading safetensors checkpoint shards:  35% Completed | 57/163 [00:12<00:23,  4.46it/s]
+Loading safetensors checkpoint shards:  37% Completed | 60/163 [00:12<00:15,  6.61it/s]
+Loading safetensors checkpoint shards:  39% Completed | 63/163 [00:12<00:11,  8.85it/s]
+Loading safetensors checkpoint shards:  40% Completed | 65/163 [00:12<00:09, 10.28it/s]
+Loading safetensors checkpoint shards:  41% Completed | 67/163 [00:13<00:19,  4.81it/s]
+Loading safetensors checkpoint shards:  42% Completed | 69/163 [00:14<00:33,  2.82it/s]
+Loading safetensors checkpoint shards:  44% Completed | 71/163 [00:15<00:24,  3.71it/s]
+Loading safetensors checkpoint shards:  45% Completed | 73/163 [00:15<00:18,  4.80it/s]
+Loading safetensors checkpoint shards:  46% Completed | 75/163 [00:16<00:36,  2.43it/s]
+Loading safetensors checkpoint shards:  47% Completed | 77/163 [00:17<00:26,  3.24it/s]
+Loading safetensors checkpoint shards:  48% Completed | 79/163 [00:17<00:19,  4.29it/s]
+Loading safetensors checkpoint shards:  50% Completed | 82/163 [00:17<00:18,  4.44it/s]
+Loading safetensors checkpoint shards:  52% Completed | 85/163 [00:17<00:12,  6.14it/s]
+Loading safetensors checkpoint shards:  53% Completed | 87/163 [00:18<00:17,  4.33it/s]
+Loading safetensors checkpoint shards:  55% Completed | 89/163 [00:18<00:13,  5.39it/s]
+Loading safetensors checkpoint shards:  56% Completed | 91/163 [00:19<00:16,  4.40it/s]
+Loading safetensors checkpoint shards:  57% Completed | 93/163 [00:19<00:13,  5.16it/s]
+Loading safetensors checkpoint shards:  58% Completed | 95/163 [00:20<00:11,  5.93it/s]
+Loading safetensors checkpoint shards:  60% Completed | 97/163 [00:20<00:09,  7.06it/s]
+Loading safetensors checkpoint shards:  61% Completed | 99/163 [00:20<00:09,  7.04it/s]
+Loading safetensors checkpoint shards:  62% Completed | 101/163 [00:20<00:07,  8.16it/s]
+Loading safetensors checkpoint shards:  63% Completed | 103/163 [00:20<00:06,  9.83it/s]
+Loading safetensors checkpoint shards:  64% Completed | 105/163 [00:20<00:05, 11.09it/s]
+Loading safetensors checkpoint shards:  66% Completed | 107/163 [00:20<00:04, 12.21it/s]
+Loading safetensors checkpoint shards:  67% Completed | 109/163 [00:21<00:04, 13.15it/s]
+Loading safetensors checkpoint shards:  68% Completed | 111/163 [00:22<00:09,  5.37it/s]
+Loading safetensors checkpoint shards:  69% Completed | 113/163 [00:22<00:12,  4.09it/s]
+Loading safetensors checkpoint shards:  70% Completed | 114/163 [00:23<00:13,  3.60it/s]
+Loading safetensors checkpoint shards:  71% Completed | 115/163 [00:23<00:11,  4.10it/s]
+Loading safetensors checkpoint shards:  72% Completed | 117/163 [00:23<00:08,  5.39it/s]
+Loading safetensors checkpoint shards:  73% Completed | 119/163 [00:23<00:06,  6.83it/s]
+Loading safetensors checkpoint shards:  75% Completed | 122/163 [00:23<00:04,  9.65it/s]
+Loading safetensors checkpoint shards:  76% Completed | 124/163 [00:24<00:06,  5.60it/s]
+Loading safetensors checkpoint shards:  77% Completed | 126/163 [00:25<00:09,  3.89it/s]
+Loading safetensors checkpoint shards:  79% Completed | 128/163 [00:25<00:07,  4.96it/s]
+Loading safetensors checkpoint shards:  80% Completed | 130/163 [00:25<00:05,  6.31it/s]
+Loading safetensors checkpoint shards:  81% Completed | 132/163 [00:26<00:06,  5.03it/s]
+Loading safetensors checkpoint shards:  82% Completed | 134/163 [00:26<00:04,  5.81it/s]
+Loading safetensors checkpoint shards:  83% Completed | 135/163 [00:26<00:04,  6.19it/s]
+Loading safetensors checkpoint shards:  84% Completed | 137/163 [00:26<00:03,  7.61it/s]
+Loading safetensors checkpoint shards:  85% Completed | 139/163 [00:26<00:02,  9.39it/s]
+Loading safetensors checkpoint shards:  87% Completed | 141/163 [00:27<00:04,  5.05it/s]
+Loading safetensors checkpoint shards:  88% Completed | 144/163 [00:27<00:02,  7.40it/s]
+Loading safetensors checkpoint shards:  90% Completed | 146/163 [00:27<00:01,  8.85it/s]
+Loading safetensors checkpoint shards:  91% Completed | 148/163 [00:28<00:03,  4.46it/s]
+Loading safetensors checkpoint shards:  92% Completed | 150/163 [00:29<00:02,  5.09it/s]
+Loading safetensors checkpoint shards:  93% Completed | 152/163 [00:29<00:01,  6.23it/s]
+Loading safetensors checkpoint shards:  94% Completed | 154/163 [00:29<00:01,  6.60it/s]
+Loading safetensors checkpoint shards:  96% Completed | 156/163 [00:29<00:00,  8.01it/s]
+Loading safetensors checkpoint shards:  97% Completed | 158/163 [00:29<00:00,  9.46it/s]
+Loading safetensors checkpoint shards:  98% Completed | 160/163 [00:29<00:00, 11.13it/s]
+Loading safetensors checkpoint shards:  99% Completed | 162/163 [00:29<00:00, 12.36it/s]
+Loading safetensors checkpoint shards: 100% Completed | 163/163 [00:30<00:00,  5.36it/s]
+
+[2025-10-21 00:37:09 TP0] Load weight end. type=DeepseekV3ForCausalLM, dtype=torch.bfloat16, avail mem=115.51 GB, mem usage=158.27 GB.
+[2025-10-21 00:37:09 TP0] Using KV cache dtype: torch.bfloat16
+[2025-10-21 00:37:09 TP0] KV Cache is allocated. #tokens: 1283877, KV size: 84.02 GB
+[2025-10-21 00:37:09 TP3] KV Cache is allocated. #tokens: 1283877, KV size: 84.02 GB
+[2025-10-21 00:37:09 TP2] KV Cache is allocated. #tokens: 1283877, KV size: 84.02 GB
+[2025-10-21 00:37:09 TP1] KV Cache is allocated. #tokens: 1283877, KV size: 84.02 GB
+[2025-10-21 00:37:09 TP0] Memory pool end. avail mem=28.93 GB
+[2025-10-21 00:37:09 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=28.45 GB
+[2025-10-21 00:37:09 TP0] Capture cuda graph bs [1]
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=28.45 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+[2025-10-21 00:37:26 TP0] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=2112,K=7168,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:26 TP3] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=2112,K=7168,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:26 TP2] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=2112,K=7168,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:26 TP1] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=2112,K=7168,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:30 TP3] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=6144,K=1536,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:30 TP0] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=6144,K=1536,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:30 TP1] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=6144,K=1536,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:30 TP2] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=6144,K=1536,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:36 TP3] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=7168,K=4096,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:36 TP0] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=7168,K=4096,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:36 TP1] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=7168,K=4096,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:36 TP2] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=7168,K=4096,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:38 TP1] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=9216,K=7168,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:39 TP2] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=9216,K=7168,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:39 TP0] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=9216,K=7168,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:39 TP3] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=9216,K=7168,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:40 TP1] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=7168,K=4608,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:40 TP2] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=7168,K=4608,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:40 TP3] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=7168,K=4608,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:40 TP0] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=7168,K=4608,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:37:44 TP3] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/configs/triton_3_4_0/E=257,N=512,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2025-10-21 00:37:44 TP1] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/configs/triton_3_4_0/E=257,N=512,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2025-10-21 00:37:44 TP2] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/configs/triton_3_4_0/E=257,N=512,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2025-10-21 00:37:44 TP0] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/configs/triton_3_4_0/E=257,N=512,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+Capturing batches (bs=1 avail_mem=28.45 GB): 100%|██████████| 1/1 [01:05<00:00, 65.78s/it]Capturing batches (bs=1 avail_mem=28.45 GB): 100%|██████████| 1/1 [01:05<00:00, 65.78s/it]
+[2025-10-21 00:38:15 TP0] Registering 0 cuda graph addresses
+[2025-10-21 00:38:15 TP3] Registering 0 cuda graph addresses
+[2025-10-21 00:38:15 TP2] Registering 0 cuda graph addresses
+[2025-10-21 00:38:16 TP1] Registering 0 cuda graph addresses
+[2025-10-21 00:38:16 TP0] Capture cuda graph end. Time elapsed: 66.64 s. mem usage=0.05 GB. avail mem=28.40 GB.
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4870: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  warnings.warn(  # warn only once
+[rank0]:[W1021 00:38:17.976174565 ProcessGroupNCCL.cpp:5087] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+max_total_num_tokens=1283877
+Warmup ...
+[2025-10-21 00:38:20 TP0] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=8192,K=512,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:38:20 TP1] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=8192,K=512,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:38:20 TP3] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=8192,K=512,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+[2025-10-21 00:38:20 TP2] Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /opt/sglang/sglang-src/python/sglang/srt/layers/quantization/configs/N=8192,K=512,device_name=NVIDIA_Graphics_Device,dtype=fp8_w8a8,block_shape=[128, 128].json
+Prefill. latency: 4.47600 s, throughput:    228.78 token/s
+Decode 0. Batch size: 1, latency: 0.19363 s, throughput:      5.16 token/s
+Decode 1. Batch size: 1, latency: 0.02153 s, throughput:     46.45 token/s
+Decode 2. Batch size: 1, latency: 0.02111 s, throughput:     47.36 token/s
+Decode 3. Batch size: 1, latency: 0.02105 s, throughput:     47.50 token/s
+Decode 4. Batch size: 1, latency: 0.02101 s, throughput:     47.59 token/s
+Decode.  median latency: 0.02103 s, median throughput:     47.55 token/s
+Total. latency:  4.965 s, throughput:    209.49 token/s
+Benchmark ...
+Prefill. latency: 0.20176 s, throughput:   5075.41 token/s
+Decode 0. Batch size: 1, latency: 0.02230 s, throughput:     44.84 token/s
+Decode 1. Batch size: 1, latency: 0.02101 s, throughput:     47.60 token/s
+Decode 2. Batch size: 1, latency: 0.02095 s, throughput:     47.73 token/s
+Decode 3. Batch size: 1, latency: 0.02098 s, throughput:     47.68 token/s
+Decode 4. Batch size: 1, latency: 0.02099 s, throughput:     47.64 token/s
+Decode.  median latency: 0.02087 s, median throughput:     47.91 token/s
+Total. latency:  0.517 s, throughput:   2013.21 token/s
+
+================================================================================
+ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/deepseek-ai/DeepSeek-V3.1
+Files:
+  - log.txt (65,847 bytes)
+  - rank0_0.py (10,897 bytes)
+  - rank0_1.py (3,619 bytes)
+  - rank0_10.py (1,920 bytes)
+  - rank0_100.py (8,206 bytes)
+  - rank0_11.py (1,308 bytes)
+  - rank0_12.py (12,776 bytes)
+  - rank0_13.py (981 bytes)
+  - rank0_14.py (7,781 bytes)
+  - rank0_15.py (1,157 bytes)
+  - rank0_16.py (4,899 bytes)
+  - rank0_17.py (3,993 bytes)
+  - rank0_18.py (1,098 bytes)
+  - rank0_19.py (1,920 bytes)
+  - rank0_2.py (3,988 bytes)
+  - rank0_20.py (1,308 bytes)
+  - rank0_21.py (6,403 bytes)
+  - rank0_22.py (3,993 bytes)
+  - rank0_23.py (1,098 bytes)
+  - rank0_24.py (1,920 bytes)
+  - rank0_25.py (1,308 bytes)
+  - rank0_26.py (1,580 bytes)
+  - rank0_27.py (3,993 bytes)
+  - rank0_28.py (1,098 bytes)
+  - rank0_29.py (1,920 bytes)
+  - rank0_3.py (1,097 bytes)
+  - rank0_30.py (1,308 bytes)
+  - rank0_31.py (1,622 bytes)
+  - rank0_32.py (4,946 bytes)
+  - rank0_33.py (7,781 bytes)
+  - rank0_34.py (7,781 bytes)
+  - rank0_35.py (7,781 bytes)
+  - rank0_36.py (6,403 bytes)
+  - rank0_37.py (936 bytes)
+  - rank0_38.py (2,433 bytes)
+  - rank0_39.py (1,083 bytes)
+  - rank0_4.py (1,915 bytes)
+  - rank0_40.py (7,017 bytes)
+  - rank0_41.py (7,781 bytes)
+  - rank0_42.py (7,781 bytes)
+  - rank0_43.py (7,781 bytes)
+  - rank0_44.py (7,781 bytes)
+  - rank0_45.py (7,781 bytes)
+  - rank0_46.py (7,781 bytes)
+  - rank0_47.py (7,797 bytes)
+  - rank0_48.py (7,797 bytes)
+  - rank0_49.py (7,797 bytes)
+  - rank0_5.py (1,307 bytes)
+  - rank0_50.py (7,797 bytes)
+  - rank0_51.py (7,797 bytes)
+  - rank0_52.py (7,797 bytes)
+  - rank0_53.py (7,797 bytes)
+  - rank0_54.py (7,797 bytes)
+  - rank0_55.py (7,797 bytes)
+  - rank0_56.py (7,797 bytes)
+  - rank0_57.py (7,797 bytes)
+  - rank0_58.py (7,797 bytes)
+  - rank0_59.py (7,797 bytes)
+  - rank0_6.py (3,241 bytes)
+  - rank0_60.py (7,797 bytes)
+  - rank0_61.py (7,797 bytes)
+  - rank0_62.py (7,799 bytes)
+  - rank0_63.py (7,799 bytes)
+  - rank0_64.py (7,799 bytes)
+  - rank0_65.py (7,799 bytes)
+  - rank0_66.py (7,799 bytes)
+  - rank0_67.py (7,799 bytes)
+  - rank0_68.py (7,799 bytes)
+  - rank0_69.py (7,799 bytes)
+  - rank0_7.py (3,225 bytes)
+  - rank0_70.py (7,799 bytes)
+  - rank0_71.py (7,799 bytes)
+  - rank0_72.py (7,799 bytes)
+  - rank0_73.py (7,799 bytes)
+  - rank0_74.py (7,799 bytes)
+  - rank0_75.py (7,799 bytes)
+  - rank0_76.py (7,799 bytes)
+  - rank0_77.py (7,799 bytes)
+  - rank0_78.py (7,799 bytes)
+  - rank0_79.py (7,799 bytes)
+  - rank0_8.py (3,992 bytes)
+  - rank0_80.py (7,799 bytes)
+  - rank0_81.py (7,799 bytes)
+  - rank0_82.py (7,799 bytes)
+  - rank0_83.py (7,799 bytes)
+  - rank0_84.py (7,799 bytes)
+  - rank0_85.py (7,799 bytes)
+  - rank0_86.py (7,799 bytes)
+  - rank0_87.py (7,799 bytes)
+  - rank0_88.py (7,799 bytes)
+  - rank0_89.py (7,799 bytes)
+  - rank0_9.py (1,097 bytes)
+  - rank0_90.py (7,799 bytes)
+  - rank0_91.py (7,799 bytes)
+  - rank0_92.py (7,799 bytes)
+  - rank0_93.py (7,799 bytes)
+  - rank0_94.py (7,799 bytes)
+  - rank0_95.py (7,799 bytes)
+  - rank0_96.py (7,799 bytes)
+  - rank0_97.py (7,799 bytes)
+  - rank0_98.py (6,403 bytes)
+  - rank0_99.py (4,550 bytes)
+  - rank1_0.py (10,913 bytes)
+  - rank1_1.py (3,619 bytes)
+  - rank1_10.py (1,920 bytes)
+  - rank1_100.py (8,206 bytes)
+  - rank1_11.py (1,308 bytes)
+  - rank1_12.py (12,776 bytes)
+  - rank1_13.py (981 bytes)
+  - rank1_14.py (7,781 bytes)
+  - rank1_15.py (1,157 bytes)
+  - rank1_16.py (4,899 bytes)
+  - rank1_17.py (3,993 bytes)
+  - rank1_18.py (1,098 bytes)
+  - rank1_19.py (1,920 bytes)
+  - rank1_2.py (3,988 bytes)
+  - rank1_20.py (1,308 bytes)
+  - rank1_21.py (6,403 bytes)
+  - rank1_22.py (3,993 bytes)
+  - rank1_23.py (1,098 bytes)
+  - rank1_24.py (1,920 bytes)
+  - rank1_25.py (1,308 bytes)
+  - rank1_26.py (1,580 bytes)
+  - rank1_27.py (3,993 bytes)
+  - rank1_28.py (1,098 bytes)
+  - rank1_29.py (1,920 bytes)
+  - rank1_3.py (1,097 bytes)
+  - rank1_30.py (1,308 bytes)
+  - rank1_31.py (1,622 bytes)
+  - rank1_32.py (4,946 bytes)
+  - rank1_33.py (7,781 bytes)
+  - rank1_34.py (7,781 bytes)
+  - rank1_35.py (7,781 bytes)
+  - rank1_36.py (6,403 bytes)
+  - rank1_37.py (936 bytes)
+  - rank1_38.py (2,433 bytes)
+  - rank1_39.py (1,083 bytes)
+  - rank1_4.py (1,915 bytes)
+  - rank1_40.py (7,017 bytes)
+  - rank1_41.py (7,781 bytes)
+  - rank1_42.py (7,781 bytes)
+  - rank1_43.py (7,781 bytes)
+  - rank1_44.py (7,781 bytes)
+  - rank1_45.py (7,781 bytes)
+  - rank1_46.py (7,781 bytes)
+  - rank1_47.py (7,797 bytes)
+  - rank1_48.py (7,797 bytes)
+  - rank1_49.py (7,797 bytes)
+  - rank1_5.py (1,307 bytes)
+  - rank1_50.py (7,797 bytes)
+  - rank1_51.py (7,797 bytes)
+  - rank1_52.py (7,797 bytes)
+  - rank1_53.py (7,797 bytes)
+  - rank1_54.py (7,797 bytes)
+  - rank1_55.py (7,797 bytes)
+  - rank1_56.py (7,797 bytes)
+  - rank1_57.py (7,797 bytes)
+  - rank1_58.py (7,797 bytes)
+  - rank1_59.py (7,797 bytes)
+  - rank1_6.py (3,241 bytes)
+  - rank1_60.py (7,797 bytes)
+  - rank1_61.py (7,797 bytes)
+  - rank1_62.py (7,799 bytes)
+  - rank1_63.py (7,799 bytes)
+  - rank1_64.py (7,799 bytes)
+  - rank1_65.py (7,799 bytes)
+  - rank1_66.py (7,799 bytes)
+  - rank1_67.py (7,799 bytes)
+  - rank1_68.py (7,799 bytes)
+  - rank1_69.py (7,799 bytes)
+  - rank1_7.py (3,225 bytes)
+  - rank1_70.py (7,799 bytes)
+  - rank1_71.py (7,799 bytes)
+  - rank1_72.py (7,799 bytes)
+  - rank1_73.py (7,799 bytes)
+  - rank1_74.py (7,799 bytes)
+  - rank1_75.py (7,799 bytes)
+  - rank1_76.py (7,799 bytes)
+  - rank1_77.py (7,799 bytes)
+  - rank1_78.py (7,799 bytes)
+  - rank1_79.py (7,799 bytes)
+  - rank1_8.py (3,992 bytes)
+  - rank1_80.py (7,799 bytes)
+  - rank1_81.py (7,799 bytes)
+  - rank1_82.py (7,799 bytes)
+  - rank1_83.py (7,799 bytes)
+  - rank1_84.py (7,799 bytes)
+  - rank1_85.py (7,799 bytes)
+  - rank1_86.py (7,799 bytes)
+  - rank1_87.py (7,799 bytes)
+  - rank1_88.py (7,799 bytes)
+  - rank1_89.py (7,799 bytes)
+  - rank1_9.py (1,097 bytes)
+  - rank1_90.py (7,799 bytes)
+  - rank1_91.py (7,799 bytes)
+  - rank1_92.py (7,799 bytes)
+  - rank1_93.py (7,799 bytes)
+  - rank1_94.py (7,799 bytes)
+  - rank1_95.py (7,799 bytes)
+  - rank1_96.py (7,799 bytes)
+  - rank1_97.py (7,799 bytes)
+  - rank1_98.py (6,403 bytes)
+  - rank1_99.py (4,550 bytes)
+  - rank2_0.py (10,913 bytes)
+  - rank2_1.py (3,619 bytes)
+  - rank2_10.py (1,920 bytes)
+  - rank2_100.py (8,206 bytes)
+  - rank2_11.py (1,308 bytes)
+  - rank2_12.py (12,776 bytes)
+  - rank2_13.py (981 bytes)
+  - rank2_14.py (7,781 bytes)
+  - rank2_15.py (1,157 bytes)
+  - rank2_16.py (4,899 bytes)
+  - rank2_17.py (3,993 bytes)
+  - rank2_18.py (1,098 bytes)
+  - rank2_19.py (1,920 bytes)
+  - rank2_2.py (3,988 bytes)
+  - rank2_20.py (1,308 bytes)
+  - rank2_21.py (6,403 bytes)
+  - rank2_22.py (3,993 bytes)
+  - rank2_23.py (1,098 bytes)
+  - rank2_24.py (1,920 bytes)
+  - rank2_25.py (1,308 bytes)
+  - rank2_26.py (1,580 bytes)
+  - rank2_27.py (3,993 bytes)
+  - rank2_28.py (1,098 bytes)
+  - rank2_29.py (1,920 bytes)
+  - rank2_3.py (1,097 bytes)
+  - rank2_30.py (1,308 bytes)
+  - rank2_31.py (1,622 bytes)
+  - rank2_32.py (4,946 bytes)
+  - rank2_33.py (7,781 bytes)
+  - rank2_34.py (7,781 bytes)
+  - rank2_35.py (7,781 bytes)
+  - rank2_36.py (6,403 bytes)
+  - rank2_37.py (936 bytes)
+  - rank2_38.py (2,433 bytes)
+  - rank2_39.py (1,083 bytes)
+  - rank2_4.py (1,915 bytes)
+  - rank2_40.py (7,017 bytes)
+  - rank2_41.py (7,781 bytes)
+  - rank2_42.py (7,781 bytes)
+  - rank2_43.py (7,781 bytes)
+  - rank2_44.py (7,781 bytes)
+  - rank2_45.py (7,781 bytes)
+  - rank2_46.py (7,781 bytes)
+  - rank2_47.py (7,797 bytes)
+  - rank2_48.py (7,797 bytes)
+  - rank2_49.py (7,797 bytes)
+  - rank2_5.py (1,307 bytes)
+  - rank2_50.py (7,797 bytes)
+  - rank2_51.py (7,797 bytes)
+  - rank2_52.py (7,797 bytes)
+  - rank2_53.py (7,797 bytes)
+  - rank2_54.py (7,797 bytes)
+  - rank2_55.py (7,797 bytes)
+  - rank2_56.py (7,797 bytes)
+  - rank2_57.py (7,797 bytes)
+  - rank2_58.py (7,797 bytes)
+  - rank2_59.py (7,797 bytes)
+  - rank2_6.py (3,241 bytes)
+  - rank2_60.py (7,797 bytes)
+  - rank2_61.py (7,797 bytes)
+  - rank2_62.py (7,799 bytes)
+  - rank2_63.py (7,799 bytes)
+  - rank2_64.py (7,799 bytes)
+  - rank2_65.py (7,799 bytes)
+  - rank2_66.py (7,799 bytes)
+  - rank2_67.py (7,799 bytes)
+  - rank2_68.py (7,799 bytes)
+  - rank2_69.py (7,799 bytes)
+  - rank2_7.py (3,225 bytes)
+  - rank2_70.py (7,799 bytes)
+  - rank2_71.py (7,799 bytes)
+  - rank2_72.py (7,799 bytes)
+  - rank2_73.py (7,799 bytes)
+  - rank2_74.py (7,799 bytes)
+  - rank2_75.py (7,799 bytes)
+  - rank2_76.py (7,799 bytes)
+  - rank2_77.py (7,799 bytes)
+  - rank2_78.py (7,799 bytes)
+  - rank2_79.py (7,799 bytes)
+  - rank2_8.py (3,992 bytes)
+  - rank2_80.py (7,799 bytes)
+  - rank2_81.py (7,799 bytes)
+  - rank2_82.py (7,799 bytes)
+  - rank2_83.py (7,799 bytes)
+  - rank2_84.py (7,799 bytes)
+  - rank2_85.py (7,799 bytes)
+  - rank2_86.py (7,799 bytes)
+  - rank2_87.py (7,799 bytes)
+  - rank2_88.py (7,799 bytes)
+  - rank2_89.py (7,799 bytes)
+  - rank2_9.py (1,097 bytes)
+  - rank2_90.py (7,799 bytes)
+  - rank2_91.py (7,799 bytes)
+  - rank2_92.py (7,799 bytes)
+  - rank2_93.py (7,799 bytes)
+  - rank2_94.py (7,799 bytes)
+  - rank2_95.py (7,799 bytes)
+  - rank2_96.py (7,799 bytes)
+  - rank2_97.py (7,799 bytes)
+  - rank2_98.py (6,403 bytes)
+  - rank2_99.py (4,550 bytes)
+  - rank3_0.py (10,915 bytes)
+  - rank3_1.py (3,619 bytes)
+  - rank3_10.py (1,920 bytes)
+  - rank3_100.py (8,206 bytes)
+  - rank3_11.py (1,308 bytes)
+  - rank3_12.py (12,776 bytes)
+  - rank3_13.py (981 bytes)
+  - rank3_14.py (7,781 bytes)
+  - rank3_15.py (1,157 bytes)
+  - rank3_16.py (4,899 bytes)
+  - rank3_17.py (3,993 bytes)
+  - rank3_18.py (1,098 bytes)
+  - rank3_19.py (1,920 bytes)
+  - rank3_2.py (3,988 bytes)
+  - rank3_20.py (1,308 bytes)
+  - rank3_21.py (6,403 bytes)
+  - rank3_22.py (3,993 bytes)
+  - rank3_23.py (1,098 bytes)
+  - rank3_24.py (1,920 bytes)
+  - rank3_25.py (1,308 bytes)
+  - rank3_26.py (1,580 bytes)
+  - rank3_27.py (3,993 bytes)
+  - rank3_28.py (1,098 bytes)
+  - rank3_29.py (1,920 bytes)
+  - rank3_3.py (1,097 bytes)
+  - rank3_30.py (1,308 bytes)
+  - rank3_31.py (1,622 bytes)
+  - rank3_32.py (4,946 bytes)
+  - rank3_33.py (7,781 bytes)
+  - rank3_34.py (7,781 bytes)
+  - rank3_35.py (7,781 bytes)
+  - rank3_36.py (6,403 bytes)
+  - rank3_37.py (936 bytes)
+  - rank3_38.py (2,433 bytes)
+  - rank3_39.py (1,083 bytes)
+  - rank3_4.py (1,915 bytes)
+  - rank3_40.py (7,017 bytes)
+  - rank3_41.py (7,781 bytes)
+  - rank3_42.py (7,781 bytes)
+  - rank3_43.py (7,781 bytes)
+  - rank3_44.py (7,781 bytes)
+  - rank3_45.py (7,781 bytes)
+  - rank3_46.py (7,781 bytes)
+  - rank3_47.py (7,797 bytes)
+  - rank3_48.py (7,797 bytes)
+  - rank3_49.py (7,797 bytes)
+  - rank3_5.py (1,307 bytes)
+  - rank3_50.py (7,797 bytes)
+  - rank3_51.py (7,797 bytes)
+  - rank3_52.py (7,797 bytes)
+  - rank3_53.py (7,797 bytes)
+  - rank3_54.py (7,797 bytes)
+  - rank3_55.py (7,797 bytes)
+  - rank3_56.py (7,797 bytes)
+  - rank3_57.py (7,797 bytes)
+  - rank3_58.py (7,797 bytes)
+  - rank3_59.py (7,797 bytes)
+  - rank3_6.py (3,241 bytes)
+  - rank3_60.py (7,797 bytes)
+  - rank3_61.py (7,797 bytes)
+  - rank3_62.py (7,799 bytes)
+  - rank3_63.py (7,799 bytes)
+  - rank3_64.py (7,799 bytes)
+  - rank3_65.py (7,799 bytes)
+  - rank3_66.py (7,799 bytes)
+  - rank3_67.py (7,799 bytes)
+  - rank3_68.py (7,799 bytes)
+  - rank3_69.py (7,799 bytes)
+  - rank3_7.py (3,225 bytes)
+  - rank3_70.py (7,799 bytes)
+  - rank3_71.py (7,799 bytes)
+  - rank3_72.py (7,799 bytes)
+  - rank3_73.py (7,799 bytes)
+  - rank3_74.py (7,799 bytes)
+  - rank3_75.py (7,799 bytes)
+  - rank3_76.py (7,799 bytes)
+  - rank3_77.py (7,799 bytes)
+  - rank3_78.py (7,799 bytes)
+  - rank3_79.py (7,799 bytes)
+  - rank3_8.py (3,992 bytes)
+  - rank3_80.py (7,799 bytes)
+  - rank3_81.py (7,799 bytes)
+  - rank3_82.py (7,799 bytes)
+  - rank3_83.py (7,799 bytes)
+  - rank3_84.py (7,799 bytes)
+  - rank3_85.py (7,799 bytes)
+  - rank3_86.py (7,799 bytes)
+  - rank3_87.py (7,799 bytes)
+  - rank3_88.py (7,799 bytes)
+  - rank3_89.py (7,799 bytes)
+  - rank3_9.py (1,097 bytes)
+  - rank3_90.py (7,799 bytes)
+  - rank3_91.py (7,799 bytes)
+  - rank3_92.py (7,799 bytes)
+  - rank3_93.py (7,799 bytes)
+  - rank3_94.py (7,799 bytes)
+  - rank3_95.py (7,799 bytes)
+  - rank3_96.py (7,799 bytes)
+  - rank3_97.py (7,799 bytes)
+  - rank3_98.py (6,403 bytes)
+  - rank3_99.py (4,550 bytes)
+================================================================================
+

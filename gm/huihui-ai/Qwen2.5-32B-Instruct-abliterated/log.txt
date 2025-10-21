@@ -1,0 +1,209 @@
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Parse safetensors files:   0%|          | 0/14 [00:00<?, ?it/s]Parse safetensors files:   7%|▋         | 1/14 [00:01<00:13,  1.05s/it]Parse safetensors files:  71%|███████▏  | 10/14 [00:01<00:00,  8.70it/s]Parse safetensors files: 100%|██████████| 14/14 [00:01<00:00,  9.79it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Preparing dummy cache for model-00002-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00002-of-00014.safetensors
+Preparing dummy cache for model-00013-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00013-of-00014.safetensors
+Preparing dummy cache for model-00007-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00007-of-00014.safetensors
+Preparing dummy cache for model-00001-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00001-of-00014.safetensors
+Preparing dummy cache for model-00014-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00014-of-00014.safetensors
+Preparing dummy cache for model-00009-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00009-of-00014.safetensors
+Preparing dummy cache for model-00006-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00006-of-00014.safetensors
+Preparing dummy cache for model-00012-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00012-of-00014.safetensors
+Preparing dummy cache for model-00005-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00005-of-00014.safetensors
+Preparing dummy cache for model-00010-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00010-of-00014.safetensors
+Preparing dummy cache for model-00008-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00008-of-00014.safetensors
+Preparing dummy cache for model-00003-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00003-of-00014.safetensors
+Preparing dummy cache for model-00011-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00011-of-00014.safetensors
+Preparing dummy cache for model-00004-of-00014.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--huihui-ai--Qwen2.5-32B-Instruct-abliterated/snapshots/546fc40530371049c02d9ed8abc95f65a6d69936/model-00004-of-00014.safetensors
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 00:26:44 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
+[2025-10-21 00:26:44 TP0] Init torch distributed begin.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 00:26:44 TP0] sglang is using nccl==2.28.6
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 00:26:45 TP0] Init torch distributed ends. mem usage=1.46 GB
+[2025-10-21 00:26:46 TP0] Load weight begin. avail mem=273.81 GB
+[2025-10-21 00:26:46 TP1] Using model weights format ['*.safetensors']
+[2025-10-21 00:26:46 TP0] Using model weights format ['*.safetensors']
+[2025-10-21 00:26:46 TP3] Using model weights format ['*.safetensors']
+[2025-10-21 00:26:46 TP2] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/14 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   7% Completed | 1/14 [00:00<00:01,  6.53it/s]
+Loading safetensors checkpoint shards:  14% Completed | 2/14 [00:00<00:01,  6.38it/s]
+Loading safetensors checkpoint shards:  29% Completed | 4/14 [00:00<00:01,  7.86it/s]
+Loading safetensors checkpoint shards:  36% Completed | 5/14 [00:00<00:01,  6.34it/s]
+Loading safetensors checkpoint shards:  43% Completed | 6/14 [00:01<00:01,  4.10it/s]
+Loading safetensors checkpoint shards:  50% Completed | 7/14 [00:01<00:01,  4.23it/s]
+Loading safetensors checkpoint shards:  57% Completed | 8/14 [00:01<00:01,  4.22it/s]
+Loading safetensors checkpoint shards:  64% Completed | 9/14 [00:01<00:01,  4.10it/s]
+Loading safetensors checkpoint shards:  71% Completed | 10/14 [00:02<00:00,  4.35it/s]
+Loading safetensors checkpoint shards:  79% Completed | 11/14 [00:02<00:00,  4.16it/s]
+Loading safetensors checkpoint shards:  86% Completed | 12/14 [00:02<00:00,  4.23it/s]
+Loading safetensors checkpoint shards:  93% Completed | 13/14 [00:02<00:00,  4.59it/s]
+Loading safetensors checkpoint shards: 100% Completed | 14/14 [00:02<00:00,  4.92it/s]
+Loading safetensors checkpoint shards: 100% Completed | 14/14 [00:02<00:00,  4.75it/s]
+
+[2025-10-21 00:26:50 TP0] Load weight end. type=Qwen2ForCausalLM, dtype=torch.bfloat16, avail mem=258.32 GB, mem usage=15.50 GB.
+[2025-10-21 00:26:50 TP0] Using KV cache dtype: torch.bfloat16
+[2025-10-21 00:26:50 TP1] KV Cache is allocated. #tokens: 3716337, K size: 113.41 GB, V size: 113.41 GB
+[2025-10-21 00:26:50 TP0] KV Cache is allocated. #tokens: 3716337, K size: 113.41 GB, V size: 113.41 GB
+[2025-10-21 00:26:50 TP0] Memory pool end. avail mem=30.78 GB
+[2025-10-21 00:26:50 TP3] KV Cache is allocated. #tokens: 3716337, K size: 113.41 GB, V size: 113.41 GB
+[2025-10-21 00:26:51 TP2] KV Cache is allocated. #tokens: 3716337, K size: 113.41 GB, V size: 113.41 GB
+[2025-10-21 00:26:51 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=30.12 GB
+[2025-10-21 00:26:51 TP0] Capture cuda graph bs [1]
+  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=30.12 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+[2025-10-21 00:27:02 TP2] Registering 0 cuda graph addresses
+Capturing batches (bs=1 avail_mem=30.12 GB): 100%|██████████| 1/1 [00:10<00:00, 10.21s/it]Capturing batches (bs=1 avail_mem=30.12 GB): 100%|██████████| 1/1 [00:10<00:00, 10.21s/it]
+[2025-10-21 00:27:02 TP0] Registering 0 cuda graph addresses
+[2025-10-21 00:27:02 TP3] Registering 0 cuda graph addresses
+[2025-10-21 00:27:02 TP1] Registering 0 cuda graph addresses
+[2025-10-21 00:27:02 TP0] Capture cuda graph end. Time elapsed: 10.89 s. mem usage=0.05 GB. avail mem=30.07 GB.
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4870: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  warnings.warn(  # warn only once
+[rank0]:[W1021 00:27:05.871571857 ProcessGroupNCCL.cpp:5087] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+max_total_num_tokens=3716337
+Warmup ...
+Prefill. latency: 3.02993 s, throughput:    337.96 token/s
+Decode 0. Batch size: 1, latency: 0.76813 s, throughput:      1.30 token/s
+Decode 1. Batch size: 1, latency: 0.00998 s, throughput:    100.22 token/s
+Decode 2. Batch size: 1, latency: 0.00963 s, throughput:    103.80 token/s
+Decode 3. Batch size: 1, latency: 0.00959 s, throughput:    104.31 token/s
+Decode 4. Batch size: 1, latency: 0.00952 s, throughput:    105.05 token/s
+Decode.  median latency: 0.00951 s, median throughput:    105.12 token/s
+Total. latency:  3.932 s, throughput:    264.52 token/s
+Benchmark ...
+Prefill. latency: 0.06838 s, throughput:  14975.34 token/s
+Decode 0. Batch size: 1, latency: 0.00992 s, throughput:    100.81 token/s
+Decode 1. Batch size: 1, latency: 0.01005 s, throughput:     99.55 token/s
+Decode 2. Batch size: 1, latency: 0.00957 s, throughput:    104.51 token/s
+Decode 3. Batch size: 1, latency: 0.00968 s, throughput:    103.27 token/s
+Decode 4. Batch size: 1, latency: 0.00952 s, throughput:    105.09 token/s
+Decode.  median latency: 0.00949 s, median throughput:    105.33 token/s
+Total. latency:  0.212 s, throughput:   4907.79 token/s
+
+================================================================================
+ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/huihui-ai/Qwen2.5-32B-Instruct-abliterated
+Files:
+  - log.txt (17,982 bytes)
+  - rank0_0.py (9,937 bytes)
+  - rank0_1.py (3,520 bytes)
+  - rank0_10.py (8,205 bytes)
+  - rank0_2.py (18,198 bytes)
+  - rank0_3.py (1,657 bytes)
+  - rank0_4.py (6,084 bytes)
+  - rank0_5.py (2,999 bytes)
+  - rank0_6.py (9,731 bytes)
+  - rank0_7.py (4,846 bytes)
+  - rank0_8.py (3,336 bytes)
+  - rank0_9.py (4,549 bytes)
+  - rank1_0.py (9,953 bytes)
+  - rank1_1.py (3,520 bytes)
+  - rank1_10.py (8,205 bytes)
+  - rank1_2.py (18,198 bytes)
+  - rank1_3.py (1,657 bytes)
+  - rank1_4.py (6,084 bytes)
+  - rank1_5.py (2,999 bytes)
+  - rank1_6.py (9,731 bytes)
+  - rank1_7.py (4,846 bytes)
+  - rank1_8.py (3,336 bytes)
+  - rank1_9.py (4,549 bytes)
+  - rank2_0.py (9,955 bytes)
+  - rank2_1.py (3,520 bytes)
+  - rank2_10.py (8,205 bytes)
+  - rank2_2.py (18,198 bytes)
+  - rank2_3.py (1,657 bytes)
+  - rank2_4.py (6,084 bytes)
+  - rank2_5.py (2,999 bytes)
+  - rank2_6.py (9,731 bytes)
+  - rank2_7.py (4,846 bytes)
+  - rank2_8.py (3,336 bytes)
+  - rank2_9.py (4,549 bytes)
+  - rank3_0.py (9,959 bytes)
+  - rank3_1.py (3,520 bytes)
+  - rank3_10.py (8,205 bytes)
+  - rank3_2.py (18,198 bytes)
+  - rank3_3.py (1,657 bytes)
+  - rank3_4.py (6,084 bytes)
+  - rank3_5.py (2,999 bytes)
+  - rank3_6.py (9,731 bytes)
+  - rank3_7.py (4,846 bytes)
+  - rank3_8.py (3,336 bytes)
+  - rank3_9.py (4,549 bytes)
+================================================================================
+

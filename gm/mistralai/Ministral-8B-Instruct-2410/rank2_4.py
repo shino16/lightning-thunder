@@ -1,7 +1,7 @@
 # Rank: 2, Graph 4
 
 class GraphModule(torch.nn.Module):
-    def forward(self, l_q_: "bf16[1, 8, 128]", l_paged_kv_cache_0_: "bf16[4253378, 2, 128]", l_paged_kv_cache_1_: "bf16[4253378, 2, 128]"):
+    def forward(self, l_q_: "bf16[1, 8, 128]", l_paged_kv_cache_0_: "bf16[6948896, 2, 128]", l_paged_kv_cache_1_: "bf16[6948896, 2, 128]"):
         # No stacktrace found for following nodes
         inductor_0 = self.inductor_0();  inductor_0 = None
         thunder_1 = self.thunder_1(l_paged_kv_cache_0_, l_paged_kv_cache_1_, l_q_);  l_paged_kv_cache_0_ = l_paged_kv_cache_1_ = l_q_ = None
@@ -24,12 +24,12 @@ class GraphModule(torch.nn.Module):
                 return ()
                 
     class thunder_1(torch.nn.Module):
-        def forward(self, l_paged_kv_cache_0_: "bf16[4253378, 2, 128]", l_paged_kv_cache_1_: "bf16[4253378, 2, 128]", l_q_: "bf16[1, 8, 128]"):
+        def forward(self, l_paged_kv_cache_0_: "bf16[6948896, 2, 128]", l_paged_kv_cache_1_: "bf16[6948896, 2, 128]", l_q_: "bf16[1, 8, 128]"):
              # File: /usr/local/lib/python3.12/dist-packages/flashinfer/utils.py:89 in _expand_4d, code: return x.unsqueeze(-3)
-            k_cache: "bf16[4253378, 1, 2, 128]" = l_paged_kv_cache_0_.unsqueeze(-3);  l_paged_kv_cache_0_ = None
+            k_cache: "bf16[6948896, 1, 2, 128]" = l_paged_kv_cache_0_.unsqueeze(-3);  l_paged_kv_cache_0_ = None
             
              # File: /usr/local/lib/python3.12/dist-packages/flashinfer/utils.py:89 in _expand_4d, code: return x.unsqueeze(-3)
-            v_cache: "bf16[4253378, 1, 2, 128]" = l_paged_kv_cache_1_.unsqueeze(-3);  l_paged_kv_cache_1_ = None
+            v_cache: "bf16[6948896, 1, 2, 128]" = l_paged_kv_cache_1_.unsqueeze(-3);  l_paged_kv_cache_1_ = None
             
              # File: /usr/local/lib/python3.12/dist-packages/flashinfer/decode.py:1273 in run, code: out = torch.empty_like(q)
             out: "bf16[1, 8, 128]" = torch.empty_like(l_q_);  l_q_ = None
@@ -46,12 +46,12 @@ class GraphModule(torch.nn.Module):
             return (k_cache, v_cache, out, buf)
             
         class _model(torch.nn.Module):
-            def forward(self, l_paged_kv_cache_0_: "bf16[4253378, 2, 128]", l_paged_kv_cache_1_: "bf16[4253378, 2, 128]", l_q_: "bf16[1, 8, 128]"):
+            def forward(self, l_paged_kv_cache_0_: "bf16[6948896, 2, 128]", l_paged_kv_cache_1_: "bf16[6948896, 2, 128]", l_q_: "bf16[1, 8, 128]"):
                  # File: /usr/local/lib/python3.12/dist-packages/flashinfer/utils.py:89 in _expand_4d, code: return x.unsqueeze(-3)
-                k_cache: "bf16[4253378, 1, 2, 128]" = l_paged_kv_cache_0_.unsqueeze(-3);  l_paged_kv_cache_0_ = None
+                k_cache: "bf16[6948896, 1, 2, 128]" = l_paged_kv_cache_0_.unsqueeze(-3);  l_paged_kv_cache_0_ = None
                 
                  # File: /usr/local/lib/python3.12/dist-packages/flashinfer/utils.py:89 in _expand_4d, code: return x.unsqueeze(-3)
-                v_cache: "bf16[4253378, 1, 2, 128]" = l_paged_kv_cache_1_.unsqueeze(-3);  l_paged_kv_cache_1_ = None
+                v_cache: "bf16[6948896, 1, 2, 128]" = l_paged_kv_cache_1_.unsqueeze(-3);  l_paged_kv_cache_1_ = None
                 
                  # File: /usr/local/lib/python3.12/dist-packages/flashinfer/decode.py:1273 in run, code: out = torch.empty_like(q)
                 out: "bf16[1, 8, 128]" = torch.empty_like(l_q_);  l_q_ = None

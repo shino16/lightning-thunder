@@ -1,0 +1,579 @@
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Parse safetensors files:   0%|          | 0/41 [00:00<?, ?it/s]Parse safetensors files:   2%|▏         | 1/41 [00:02<01:48,  2.71s/it]Parse safetensors files:   7%|▋         | 3/41 [00:03<00:31,  1.20it/s]Parse safetensors files: 100%|██████████| 41/41 [00:03<00:00, 12.96it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Preparing dummy cache for model-00038-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00038-of-00041.safetensors
+Preparing dummy cache for model-00014-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00014-of-00041.safetensors
+Preparing dummy cache for model-00015-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00015-of-00041.safetensors
+Preparing dummy cache for model-00039-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00039-of-00041.safetensors
+Preparing dummy cache for model-00027-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00027-of-00041.safetensors
+Preparing dummy cache for model-00031-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00031-of-00041.safetensors
+Preparing dummy cache for model-00011-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00011-of-00041.safetensors
+Preparing dummy cache for model-00028-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00028-of-00041.safetensors
+Preparing dummy cache for model-00019-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00019-of-00041.safetensors
+Preparing dummy cache for model-00006-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00006-of-00041.safetensors
+Preparing dummy cache for model-00041-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00041-of-00041.safetensors
+Preparing dummy cache for model-00023-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00023-of-00041.safetensors
+Preparing dummy cache for model-00033-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00033-of-00041.safetensors
+Preparing dummy cache for model-00018-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00018-of-00041.safetensors
+Preparing dummy cache for model-00002-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00002-of-00041.safetensors
+Preparing dummy cache for model-00013-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00013-of-00041.safetensors
+Preparing dummy cache for model-00037-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00037-of-00041.safetensors
+Preparing dummy cache for model-00026-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00026-of-00041.safetensors
+Preparing dummy cache for model-00029-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00029-of-00041.safetensors
+Preparing dummy cache for model-00003-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00003-of-00041.safetensors
+Preparing dummy cache for model-00017-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00017-of-00041.safetensors
+Preparing dummy cache for model-00012-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00012-of-00041.safetensors
+Preparing dummy cache for model-00009-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00009-of-00041.safetensors
+Preparing dummy cache for model-00030-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00030-of-00041.safetensors
+Preparing dummy cache for model-00005-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00005-of-00041.safetensors
+Preparing dummy cache for model-00024-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00024-of-00041.safetensors
+Preparing dummy cache for model-00035-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00035-of-00041.safetensors
+Preparing dummy cache for model-00034-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00034-of-00041.safetensors
+Preparing dummy cache for model-00010-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00010-of-00041.safetensors
+Preparing dummy cache for model-00001-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00001-of-00041.safetensors
+Preparing dummy cache for model-00032-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00032-of-00041.safetensors
+Preparing dummy cache for model-00022-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00022-of-00041.safetensors
+Preparing dummy cache for model-00007-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00007-of-00041.safetensors
+Preparing dummy cache for model-00025-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00025-of-00041.safetensors
+Preparing dummy cache for model-00004-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00004-of-00041.safetensors
+Preparing dummy cache for model-00036-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00036-of-00041.safetensors
+Preparing dummy cache for model-00008-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00008-of-00041.safetensors
+Preparing dummy cache for model-00016-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00016-of-00041.safetensors
+Preparing dummy cache for model-00020-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00020-of-00041.safetensors
+Preparing dummy cache for model-00040-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00040-of-00041.safetensors
+Preparing dummy cache for model-00021-of-00041.safetensors
+Saving dummy cache to /tmp/tmp.IKYSgx59gd/models--Qwen--Qwen3-Next-80B-A3B-Thinking/snapshots/e502dd4100cc68c0de57643fd4317ec93a128670/model-00021-of-00041.safetensors
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 00:42:26 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
+[2025-10-21 00:42:26 TP0] Init torch distributed begin.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 00:42:27 TP0] sglang is using nccl==2.28.6
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 00:42:29 TP0] Init torch distributed ends. mem usage=1.46 GB
+[2025-10-21 00:42:31 TP1] using attn output gate!
+[2025-10-21 00:42:32 TP0] Load weight begin. avail mem=273.72 GB
+[2025-10-21 00:42:32 TP0] using attn output gate!
+[2025-10-21 00:42:32 TP1] Using model weights format ['*.safetensors']
+[2025-10-21 00:42:32 TP2] using attn output gate!
+[2025-10-21 00:42:32 TP3] using attn output gate!
+[2025-10-21 00:42:32 TP0] Using model weights format ['*.safetensors']
+[2025-10-21 00:42:32 TP2] Using model weights format ['*.safetensors']
+[2025-10-21 00:42:32 TP3] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/41 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   2% Completed | 1/41 [00:00<00:36,  1.11it/s]
+Loading safetensors checkpoint shards:   5% Completed | 2/41 [00:01<00:35,  1.11it/s]
+Loading safetensors checkpoint shards:   7% Completed | 3/41 [00:02<00:37,  1.01it/s]
+Loading safetensors checkpoint shards:  10% Completed | 4/41 [00:03<00:36,  1.03it/s]
+Loading safetensors checkpoint shards:  12% Completed | 5/41 [00:05<00:37,  1.05s/it]
+Loading safetensors checkpoint shards:  15% Completed | 6/41 [00:06<00:36,  1.05s/it]
+Loading safetensors checkpoint shards:  17% Completed | 7/41 [00:07<00:36,  1.07s/it]
+Loading safetensors checkpoint shards:  20% Completed | 8/41 [00:08<00:34,  1.04s/it]
+Loading safetensors checkpoint shards:  22% Completed | 9/41 [00:09<00:33,  1.03s/it]
+Loading safetensors checkpoint shards:  24% Completed | 10/41 [00:10<00:31,  1.01s/it]
+Loading safetensors checkpoint shards:  27% Completed | 11/41 [00:11<00:29,  1.01it/s]
+Loading safetensors checkpoint shards:  29% Completed | 12/41 [00:12<00:28,  1.03it/s]
+Loading safetensors checkpoint shards:  32% Completed | 13/41 [00:13<00:27,  1.02it/s]
+Loading safetensors checkpoint shards:  34% Completed | 14/41 [00:13<00:25,  1.05it/s]
+Loading safetensors checkpoint shards:  37% Completed | 15/41 [00:14<00:24,  1.08it/s]
+Loading safetensors checkpoint shards:  39% Completed | 16/41 [00:15<00:22,  1.12it/s]
+Loading safetensors checkpoint shards:  41% Completed | 17/41 [00:16<00:20,  1.17it/s]
+Loading safetensors checkpoint shards:  44% Completed | 18/41 [00:17<00:18,  1.24it/s]
+Loading safetensors checkpoint shards:  46% Completed | 19/41 [00:17<00:17,  1.28it/s]
+Loading safetensors checkpoint shards:  49% Completed | 20/41 [00:18<00:17,  1.20it/s]
+Loading safetensors checkpoint shards:  51% Completed | 21/41 [00:19<00:17,  1.18it/s]
+Loading safetensors checkpoint shards:  54% Completed | 22/41 [00:20<00:15,  1.19it/s]
+Loading safetensors checkpoint shards:  56% Completed | 23/41 [00:21<00:15,  1.17it/s]
+Loading safetensors checkpoint shards:  59% Completed | 24/41 [00:22<00:14,  1.19it/s]
+Loading safetensors checkpoint shards:  61% Completed | 25/41 [00:22<00:13,  1.19it/s]
+Loading safetensors checkpoint shards:  63% Completed | 26/41 [00:23<00:12,  1.19it/s]
+Loading safetensors checkpoint shards:  66% Completed | 27/41 [00:24<00:11,  1.17it/s]
+Loading safetensors checkpoint shards:  68% Completed | 28/41 [00:25<00:11,  1.14it/s]
+Loading safetensors checkpoint shards:  71% Completed | 29/41 [00:26<00:10,  1.18it/s]
+Loading safetensors checkpoint shards:  73% Completed | 30/41 [00:27<00:09,  1.20it/s]
+Loading safetensors checkpoint shards:  76% Completed | 31/41 [00:28<00:08,  1.22it/s]
+Loading safetensors checkpoint shards:  78% Completed | 32/41 [00:28<00:07,  1.16it/s]
+Loading safetensors checkpoint shards:  80% Completed | 33/41 [00:29<00:06,  1.16it/s]
+Loading safetensors checkpoint shards:  83% Completed | 34/41 [00:30<00:06,  1.15it/s]
+Loading safetensors checkpoint shards:  88% Completed | 36/41 [00:31<00:03,  1.51it/s]
+Loading safetensors checkpoint shards:  90% Completed | 37/41 [00:32<00:02,  1.41it/s]
+Loading safetensors checkpoint shards:  93% Completed | 38/41 [00:33<00:02,  1.37it/s]
+Loading safetensors checkpoint shards:  95% Completed | 39/41 [00:34<00:01,  1.31it/s]
+Loading safetensors checkpoint shards:  98% Completed | 40/41 [00:34<00:00,  1.23it/s]
+Loading safetensors checkpoint shards: 100% Completed | 41/41 [00:35<00:00,  1.24it/s]
+Loading safetensors checkpoint shards: 100% Completed | 41/41 [00:35<00:00,  1.15it/s]
+
+[2025-10-21 00:43:08 TP0] Load weight end. type=Qwen3NextForCausalLM, dtype=torch.bfloat16, avail mem=236.32 GB, mem usage=37.40 GB.
+[2025-10-21 00:43:08 TP0] Hybrid GDN model detected, disable radix cache
+[2025-10-21 00:43:08 TP2] Hybrid GDN model detected, disable radix cache
+[2025-10-21 00:43:08 TP1] Hybrid GDN model detected, disable radix cache
+[2025-10-21 00:43:08 TP3] Hybrid GDN model detected, disable radix cache
+[2025-10-21 00:43:08 TP0] Using KV cache dtype: torch.bfloat16
+[2025-10-21 00:43:08 TP0] Mamba Cache is allocated. conv_state size: 0.21GB, ssm_state size: 9.02GB 
+[2025-10-21 00:43:08 TP1] Mamba Cache is allocated. conv_state size: 0.21GB, ssm_state size: 9.02GB 
+[2025-10-21 00:43:08 TP2] Mamba Cache is allocated. conv_state size: 0.21GB, ssm_state size: 9.02GB 
+[2025-10-21 00:43:08 TP3] Mamba Cache is allocated. conv_state size: 0.21GB, ssm_state size: 9.02GB 
+[2025-10-21 00:43:08 TP0] KV Cache is allocated. #tokens: 17093556, K size: 97.81 GB, V size: 97.81 GB
+[2025-10-21 00:43:08 TP0] Memory pool end. avail mem=30.80 GB
+[2025-10-21 00:43:08 TP1] KV Cache is allocated. #tokens: 17093556, K size: 97.81 GB, V size: 97.81 GB
+[2025-10-21 00:43:08 TP2] KV Cache is allocated. #tokens: 17093556, K size: 97.81 GB, V size: 97.81 GB
+[2025-10-21 00:43:08 TP3] KV Cache is allocated. #tokens: 17093556, K size: 97.81 GB, V size: 97.81 GB
+[2025-10-21 00:43:09 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=30.74 GB
+[2025-10-21 00:43:09 TP0] Capture cuda graph bs [1]
+  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=30.74 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+Capturing batches (bs=1 avail_mem=30.74 GB):   0%|          | 0/1 [00:04<?, ?it/s]
+[2025-10-21 00:43:14 TP0] Registering 0 cuda graph addresses
+[2025-10-21 00:43:14 TP1] Registering 0 cuda graph addresses
+[2025-10-21 00:43:14 TP2] Registering 0 cuda graph addresses
+[2025-10-21 00:43:14 TP3] Registering 0 cuda graph addresses
+Process Process-4:
+Process Process-2:
+Process Process-1:
+Process Process-3:
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 845, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2124, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2099, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 419, in __init__
+    self.capture()
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2425, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 117, in __call__
+    split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 147, in _splitter
+    split_gm: torch.fx.GraphModule = split_module(
+                                     ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 845, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 527, in capture
+    ) = self.capture_one_batch_size(bs, forward)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 315, in split_module
+    instantiate_node_partition_mapping(node)
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2124, in _call_user_compiler
+    raise BackendCompilerFailed(
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 256, in instantiate_node_partition_mapping
+    partition_name = str(split_callback(node))
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 698, in capture_one_batch_size
+    run_once()
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 122, in callback
+    is_thunder_supported, split_reason = is_node_supported_by_thunder(node)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2099, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 845, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 687, in run_once
+    logits_output_or_pp_proxy_tensors = forward(
+                                        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/utils.py", line 402, in is_node_supported_by_thunder
+    assert target is not None, f"Failed to find method {node.target}"
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2124, in _call_user_compiler
+    raise BackendCompilerFailed(
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xf7f002f4bce0>' raised:
+AssertionError: Failed to find method wait_stream
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2425, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 227, in __call__
+    return self._func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2099, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 117, in __call__
+    split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 147, in _splitter
+    split_gm: torch.fx.GraphModule = split_module(
+                                     ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 845, in compile_wrapper
+    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 315, in split_module
+    instantiate_node_partition_mapping(node)
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 256, in instantiate_node_partition_mapping
+    partition_name = str(split_callback(node))
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2124, in _call_user_compiler
+    raise BackendCompilerFailed(
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/output_graph.py", line 2099, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/repro/after_dynamo.py", line 156, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 122, in callback
+    is_thunder_supported, split_reason = is_node_supported_by_thunder(node)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2425, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/utils.py", line 402, in is_node_supported_by_thunder
+    assert target is not None, f"Failed to find method {node.target}"
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/__init__.py", line 2425, in __call__
+    return self.compiler_fn(model_, inputs_, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 117, in __call__
+    split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xf5f8d188ab70>' raised:
+AssertionError: Failed to find method wait_stream
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 147, in _splitter
+    split_gm: torch.fx.GraphModule = split_module(
+                                     ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/compiler.py", line 117, in __call__
+    split_module, subgraph_info = _splitter(gm, self._thunder_jit, self._torch_compile, sample_args)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 315, in split_module
+    instantiate_node_partition_mapping(node)
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 147, in _splitter
+    split_gm: torch.fx.GraphModule = split_module(
+                                     ^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 256, in instantiate_node_partition_mapping
+    partition_name = str(split_callback(node))
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 315, in split_module
+    instantiate_node_partition_mapping(node)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 122, in callback
+    is_thunder_supported, split_reason = is_node_supported_by_thunder(node)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/passes/split_module.py", line 256, in instantiate_node_partition_mapping
+    partition_name = str(split_callback(node))
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/utils.py", line 402, in is_node_supported_by_thunder
+    assert target is not None, f"Failed to find method {node.target}"
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/splitter.py", line 122, in callback
+    is_thunder_supported, split_reason = is_node_supported_by_thunder(node)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/usr/local/lib/python3.12/dist-packages/thunder/dynamo/utils.py", line 402, in is_node_supported_by_thunder
+    assert target is not None, f"Failed to find method {node.target}"
+           ^^^^^^^^^^^^^^^^^^
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xfbfc8d334320>' raised:
+AssertionError: Failed to find method wait_stream
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+torch._dynamo.exc.BackendCompilerFailed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xe72f4073b9e0>' raised:
+AssertionError: Failed to find method wait_stream
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xf7f002f4bce0>' raised:
+AssertionError: Failed to find method wait_stream
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xf5f8d188ab70>' raised:
+AssertionError: Failed to find method wait_stream
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose 
+
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 404, in initialize
+    self.init_device_graphs()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 1917, in init_device_graphs
+    self.graph_runner = graph_runners[self.device](self)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/cuda_graph_runner.py", line 421, in __init__
+    raise Exception(
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xe72f4073b9e0>' raised:
+AssertionError: Failed to find method wait_stream
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose 
+
+Exception: Capture cuda graph failed: backend='<thunder.dynamo.compiler.ThunderCompiler object at 0xfbfc8d334320>' raised:
+AssertionError: Failed to find method wait_stream
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+Possible solutions:
+1. set --mem-fraction-static to a smaller value (e.g., 0.8 or 0.7)
+2. set --cuda-graph-max-bs to a smaller value (e.g., 16)
+3. disable torch compile by not using --enable-torch-compile
+4. disable CUDA graph by --disable-cuda-graph. (Not recommended. Huge performance loss)
+Open an issue on GitHub https://github.com/sgl-project/sglang/issues/new/choose 
+
+[rank0]:[W1021 00:43:15.738902709 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]:[W1021 00:43:15.740803963 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W1021 00:43:15.750660444 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W1021 00:43:15.750757020 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+
+================================================================================
+ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/Qwen/Qwen3-Next-80B-A3B-Thinking
+Files:
+  - log.txt (47,576 bytes)
+  - rank0_0.py (9,937 bytes)
+  - rank1_0.py (9,953 bytes)
+  - rank2_0.py (9,955 bytes)
+  - rank3_0.py (9,959 bytes)
+================================================================================
+

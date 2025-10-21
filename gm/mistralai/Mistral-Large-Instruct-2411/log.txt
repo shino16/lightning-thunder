@@ -1,0 +1,267 @@
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Parse safetensors files:   0%|          | 0/51 [00:00<?, ?it/s]Parse safetensors files:   2%|▏         | 1/51 [00:02<02:00,  2.41s/it]Parse safetensors files:   6%|▌         | 3/51 [00:02<00:31,  1.51it/s]Parse safetensors files:  45%|████▌     | 23/51 [00:02<00:01, 15.38it/s]Parse safetensors files: 100%|██████████| 51/51 [00:02<00:00, 19.00it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Preparing dummy cache for model-00018-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00018-of-00051.safetensors
+Preparing dummy cache for model-00049-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00049-of-00051.safetensors
+Preparing dummy cache for model-00008-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00008-of-00051.safetensors
+Preparing dummy cache for model-00015-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00015-of-00051.safetensors
+Preparing dummy cache for model-00023-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00023-of-00051.safetensors
+Preparing dummy cache for model-00019-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00019-of-00051.safetensors
+Preparing dummy cache for model-00045-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00045-of-00051.safetensors
+Preparing dummy cache for model-00014-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00014-of-00051.safetensors
+Preparing dummy cache for model-00051-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00051-of-00051.safetensors
+Preparing dummy cache for model-00024-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00024-of-00051.safetensors
+Preparing dummy cache for model-00036-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00036-of-00051.safetensors
+Preparing dummy cache for model-00047-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00047-of-00051.safetensors
+Preparing dummy cache for model-00004-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00004-of-00051.safetensors
+Preparing dummy cache for model-00038-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00038-of-00051.safetensors
+Preparing dummy cache for model-00042-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00042-of-00051.safetensors
+Preparing dummy cache for model-00033-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00033-of-00051.safetensors
+Preparing dummy cache for model-00001-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00001-of-00051.safetensors
+Preparing dummy cache for model-00030-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00030-of-00051.safetensors
+Preparing dummy cache for model-00046-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00046-of-00051.safetensors
+Preparing dummy cache for model-00037-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00037-of-00051.safetensors
+Preparing dummy cache for model-00028-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00028-of-00051.safetensors
+Preparing dummy cache for model-00029-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00029-of-00051.safetensors
+Preparing dummy cache for model-00048-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00048-of-00051.safetensors
+Preparing dummy cache for model-00013-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00013-of-00051.safetensors
+Preparing dummy cache for model-00026-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00026-of-00051.safetensors
+Preparing dummy cache for model-00022-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00022-of-00051.safetensors
+Preparing dummy cache for model-00016-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00016-of-00051.safetensors
+Preparing dummy cache for model-00017-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00017-of-00051.safetensors
+Preparing dummy cache for model-00050-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00050-of-00051.safetensors
+Preparing dummy cache for model-00007-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00007-of-00051.safetensors
+Preparing dummy cache for model-00039-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00039-of-00051.safetensors
+Preparing dummy cache for model-00040-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00040-of-00051.safetensors
+Preparing dummy cache for model-00025-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00025-of-00051.safetensors
+Preparing dummy cache for model-00041-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00041-of-00051.safetensors
+Preparing dummy cache for model-00021-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00021-of-00051.safetensors
+Preparing dummy cache for model-00034-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00034-of-00051.safetensors
+Preparing dummy cache for model-00012-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00012-of-00051.safetensors
+Preparing dummy cache for model-00009-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00009-of-00051.safetensors
+Preparing dummy cache for model-00027-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00027-of-00051.safetensors
+Preparing dummy cache for model-00032-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00032-of-00051.safetensors
+Preparing dummy cache for model-00003-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00003-of-00051.safetensors
+Preparing dummy cache for model-00005-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00005-of-00051.safetensors
+Preparing dummy cache for model-00006-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00006-of-00051.safetensors
+Preparing dummy cache for model-00031-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00031-of-00051.safetensors
+Preparing dummy cache for model-00011-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00011-of-00051.safetensors
+Preparing dummy cache for model-00010-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00010-of-00051.safetensors
+Preparing dummy cache for model-00035-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00035-of-00051.safetensors
+Preparing dummy cache for model-00020-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00020-of-00051.safetensors
+Preparing dummy cache for model-00002-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00002-of-00051.safetensors
+Preparing dummy cache for model-00044-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00044-of-00051.safetensors
+Preparing dummy cache for model-00043-of-00051.safetensors
+Saving dummy cache to /tmp/tmp.erEnF57fcv/models--mistralai--Mistral-Large-Instruct-2411/snapshots/ba78820945ae22361b0274cf0ae6d696c967c1a4/model-00043-of-00051.safetensors
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 03:58:04 TP2] Downcasting torch.float32 to torch.float16.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 03:58:04 TP3] Downcasting torch.float32 to torch.float16.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 03:58:04 TP0] Downcasting torch.float32 to torch.float16.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 03:58:04 TP1] Downcasting torch.float32 to torch.float16.
+[2025-10-21 03:58:04 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
+[2025-10-21 03:58:04 TP0] Init torch distributed begin.
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 03:58:05 TP0] sglang is using nccl==2.28.6
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 03:58:06 TP0] Init torch distributed ends. mem usage=1.46 GB
+[2025-10-21 03:58:07 TP0] Load weight begin. avail mem=273.81 GB
+[2025-10-21 03:58:07 TP0] Load weight end. type=MistralForCausalLM, dtype=torch.float16, avail mem=216.65 GB, mem usage=57.16 GB.
+[2025-10-21 03:58:08 TP0] Using KV cache dtype: torch.float16
+[2025-10-21 03:58:08 TP1] KV Cache is allocated. #tokens: 2206314, K size: 92.58 GB, V size: 92.58 GB
+[2025-10-21 03:58:08 TP3] KV Cache is allocated. #tokens: 2206314, K size: 92.58 GB, V size: 92.58 GB
+[2025-10-21 03:58:08 TP2] KV Cache is allocated. #tokens: 2206314, K size: 92.58 GB, V size: 92.58 GB
+[2025-10-21 03:58:08 TP0] KV Cache is allocated. #tokens: 2206314, K size: 92.58 GB, V size: 92.58 GB
+[2025-10-21 03:58:08 TP0] Memory pool end. avail mem=29.35 GB
+[2025-10-21 03:58:16 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=28.81 GB
+[2025-10-21 03:58:17 TP0] Capture cuda graph bs [1]
+  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=28.81 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+[2025-10-21 03:58:58 TP3] Registering 0 cuda graph addresses
+[2025-10-21 03:58:58 TP1] Registering 0 cuda graph addresses
+[2025-10-21 03:58:58 TP2] Registering 0 cuda graph addresses
+Capturing batches (bs=1 avail_mem=28.81 GB): 100%|██████████| 1/1 [00:39<00:00, 39.65s/it]Capturing batches (bs=1 avail_mem=28.81 GB): 100%|██████████| 1/1 [00:39<00:00, 39.65s/it]
+[2025-10-21 03:58:58 TP0] Registering 0 cuda graph addresses
+[2025-10-21 03:58:58 TP0] Capture cuda graph end. Time elapsed: 41.72 s. mem usage=0.06 GB. avail mem=28.75 GB.
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4879: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  warnings.warn(  # warn only once
+[rank0]:[W1021 03:59:01.609022880 ProcessGroupNCCL.cpp:5117] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+max_total_num_tokens=2206314
+Warmup ...
+Prefill. latency: 86.79813 s, throughput:     11.80 token/s
+Decode 0. Batch size: 1, latency: 0.82804 s, throughput:      1.21 token/s
+Decode 1. Batch size: 1, latency: 0.01987 s, throughput:     50.32 token/s
+Decode 2. Batch size: 1, latency: 0.01946 s, throughput:     51.39 token/s
+Decode 3. Batch size: 1, latency: 0.01944 s, throughput:     51.44 token/s
+Decode 4. Batch size: 1, latency: 0.01947 s, throughput:     51.37 token/s
+Decode.  median latency: 0.01944 s, median throughput:     51.43 token/s
+Total. latency: 87.899 s, throughput:     11.83 token/s
+Benchmark ...
+Prefill. latency: 0.08007 s, throughput:  12788.81 token/s
+Decode 0. Batch size: 1, latency: 0.01974 s, throughput:     50.66 token/s
+Decode 1. Batch size: 1, latency: 0.01942 s, throughput:     51.50 token/s
+Decode 2. Batch size: 1, latency: 0.01947 s, throughput:     51.36 token/s
+Decode 3. Batch size: 1, latency: 0.01940 s, throughput:     51.55 token/s
+Decode 4. Batch size: 1, latency: 0.01934 s, throughput:     51.70 token/s
+Decode.  median latency: 0.01937 s, median throughput:     51.63 token/s
+Total. latency:  0.371 s, throughput:   2803.33 token/s
+
+================================================================================
+ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/mistralai/Mistral-Large-Instruct-2411
+Files:
+  - log.txt (25,249 bytes)
+  - rank0_0.py (9,926 bytes)
+  - rank0_1.py (3,526 bytes)
+  - rank0_10.py (8,147 bytes)
+  - rank0_2.py (17,710 bytes)
+  - rank0_3.py (1,647 bytes)
+  - rank0_4.py (6,107 bytes)
+  - rank0_5.py (2,996 bytes)
+  - rank0_6.py (9,729 bytes)
+  - rank0_7.py (4,854 bytes)
+  - rank0_8.py (3,321 bytes)
+  - rank0_9.py (4,557 bytes)
+  - rank1_0.py (9,940 bytes)
+  - rank1_1.py (3,526 bytes)
+  - rank1_10.py (8,147 bytes)
+  - rank1_2.py (17,710 bytes)
+  - rank1_3.py (1,647 bytes)
+  - rank1_4.py (6,107 bytes)
+  - rank1_5.py (2,996 bytes)
+  - rank1_6.py (9,729 bytes)
+  - rank1_7.py (4,854 bytes)
+  - rank1_8.py (3,321 bytes)
+  - rank1_9.py (4,557 bytes)
+  - rank2_0.py (9,944 bytes)
+  - rank2_1.py (3,526 bytes)
+  - rank2_10.py (8,147 bytes)
+  - rank2_2.py (17,710 bytes)
+  - rank2_3.py (1,647 bytes)
+  - rank2_4.py (6,107 bytes)
+  - rank2_5.py (2,996 bytes)
+  - rank2_6.py (9,729 bytes)
+  - rank2_7.py (4,854 bytes)
+  - rank2_8.py (3,321 bytes)
+  - rank2_9.py (4,557 bytes)
+  - rank3_0.py (9,944 bytes)
+  - rank3_1.py (3,526 bytes)
+  - rank3_10.py (8,147 bytes)
+  - rank3_2.py (17,710 bytes)
+  - rank3_3.py (1,647 bytes)
+  - rank3_4.py (6,107 bytes)
+  - rank3_5.py (2,996 bytes)
+  - rank3_6.py (9,729 bytes)
+  - rank3_7.py (4,854 bytes)
+  - rank3_8.py (3,321 bytes)
+  - rank3_9.py (4,557 bytes)
+================================================================================
+

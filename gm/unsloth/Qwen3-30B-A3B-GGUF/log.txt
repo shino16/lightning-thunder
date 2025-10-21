@@ -1,39 +1,29 @@
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
   import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
 `torch_dtype` is deprecated! Use `dtype` instead!
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
   import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
   import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
   import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
   import pynvml  # type: ignore[import]
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-/usr/local/lib/python3.12/dist-packages/nvfuser_direct/__init__.py:11: UserWarning: Be careful! You've imported nvfuser_direct when the nvfuser module is already imported.
-  warnings.warn(
-`torch_dtype` is deprecated! Use `dtype` instead!
-[2025-10-16 19:14:32 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
-[2025-10-16 19:14:32 TP0] Init torch distributed begin.
 `torch_dtype` is deprecated! Use `dtype` instead!
 `torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 04:06:50 TP0] Attention backend not explicitly specified. Use flashinfer backend by default.
+[2025-10-21 04:06:50 TP0] Init torch distributed begin.
 `torch_dtype` is deprecated! Use `dtype` instead!
 [Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[2025-10-16 19:14:34 TP0] sglang is using nccl==2.28.3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 04:06:51 TP0] sglang is using nccl==2.28.6
 [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
 [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
 [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
@@ -46,190 +36,146 @@
 [Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
 [Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
-[2025-10-16 19:14:37 TP0] Init torch distributed ends. mem usage=1.51 GB
-[2025-10-16 19:14:38 TP0] Load weight begin. avail mem=181.10 GB
-[2025-10-16 19:14:38 TP2] Using dummy random weights instead of downloading from HuggingFace
-[2025-10-16 19:14:38 TP3] Using dummy random weights instead of downloading from HuggingFace
-[2025-10-16 19:14:38 TP1] Using dummy random weights instead of downloading from HuggingFace
-[2025-10-16 19:14:38 TP0] Using dummy random weights instead of downloading from HuggingFace
-[2025-10-16 19:14:38 TP0] Load weight end. type=Qwen3MoeForCausalLM, dtype=torch.bfloat16, avail mem=166.80 GB, mem usage=14.31 GB.
-[2025-10-16 19:14:38 TP0] Using KV cache dtype: torch.bfloat16
-[2025-10-16 19:14:39 TP2] KV Cache is allocated. #tokens: 5918604, K size: 67.73 GB, V size: 67.73 GB
-[2025-10-16 19:14:39 TP3] KV Cache is allocated. #tokens: 5918604, K size: 67.73 GB, V size: 67.73 GB
-[2025-10-16 19:14:39 TP1] KV Cache is allocated. #tokens: 5918604, K size: 67.73 GB, V size: 67.73 GB
-[2025-10-16 19:14:39 TP0] KV Cache is allocated. #tokens: 5918604, K size: 67.73 GB, V size: 67.73 GB
-[2025-10-16 19:14:39 TP0] Memory pool end. avail mem=30.56 GB
-[2025-10-16 19:14:40 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=30.00 GB
-[2025-10-16 19:14:40 TP0] Capture cuda graph bs [1]
-  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=30.00 GB):   0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
-  torch._dynamo.utils.warn_once(msg)
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
-  torch._dynamo.utils.warn_once(msg)
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
-  torch._dynamo.utils.warn_once(msg)
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
-  torch._dynamo.utils.warn_once(msg)
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1598: UserWarning: Dynamo does not know how to trace the builtin `<unknown module>._SimpleCData.__new__.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
-If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
-If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
-  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
-[2025-10-16 19:14:53 TP2] Registering 0 cuda graph addresses
-[2025-10-16 19:14:53 TP3] Registering 0 cuda graph addresses
-Capturing batches (bs=1 avail_mem=30.00 GB): 100%|██████████| 1/1 [00:12<00:00, 12.63s/it][2025-10-16 19:14:53 TP1] Registering 0 cuda graph addresses
-Capturing batches (bs=1 avail_mem=30.00 GB): 100%|██████████| 1/1 [00:12<00:00, 12.67s/it]
-[2025-10-16 19:14:53 TP0] Registering 0 cuda graph addresses
-[2025-10-16 19:14:53 TP0] Capture cuda graph end. Time elapsed: 13.39 s. mem usage=0.07 GB. avail mem=29.94 GB.
+[2025-10-21 04:06:52 TP0] Init torch distributed ends. mem usage=1.46 GB
+[2025-10-21 04:06:54 TP0] Load weight begin. avail mem=273.81 GB
+Process Process-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 308, in initialize
+    self.load_model()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 757, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/__init__.py", line 28, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 486, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 228, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 660, in __init__
+    self.model = Qwen3MoeModel(
+                 ^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 638, in __init__
+    super().__init__(
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen2_moe.py", line 474, in __init__
+    self.layers, self.start_layer, self.end_layer = make_layers(
+                                                    ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 508, in make_layers
+    + get_offloader().wrap_modules(
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/offloader.py", line 36, in wrap_modules
+    return list(all_modules_generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 510, in <genexpr>
+    layer_fn(idx=idx, prefix=add_prefix(idx, prefix))
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen2_moe.py", line 476, in <lambda>
+    lambda idx, prefix: decoder_layer_type(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 498, in __init__
+    self.mlp = Qwen3MoeSparseMoeBlock(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 101, in __init__
+    self.experts = get_moe_impl_class(quant_config)(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 216, in __init__
+    self.quant_method: FusedMoEMethodBase = UnquantizedFusedMoEMethod(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/quantization/unquant.py", line 147, in __init__
+    from sglang.srt.layers.moe.fused_moe_triton.triton_kernels_moe import (
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/triton_kernels_moe.py", line 9, in <module>
+    from triton_kernels.matmul_ogs import (
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs.py", line 15, in <module>
+    from .matmul_ogs_details._matmul_ogs import _compute_writeback_idx
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs_details/_matmul_ogs.py", line 8, in <module>
+    from triton_kernels.numerics_details.flexpoint import float_to_flex, load_scale
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/numerics_details/flexpoint.py", line 55, in <module>
+    @tl.constexpr_function
+     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'triton.language' has no attribute 'constexpr_function'
 Process Process-1:
 Traceback (most recent call last):
-Process Process-4:
-Process Process-2:
-  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 308, in get_tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/tokenization_auto.py", line 1144, in from_pretrained
-    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2070, in from_pretrained
-    return cls._from_pretrained(
-           ^^^^^^^^^^^^^^^^^^^^^
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2108, in _from_pretrained
-    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2316, in _from_pretrained
-    tokenizer = cls(*init_inputs, **init_kwargs)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 308, in get_tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2/tokenization_qwen2.py", line 172, in __init__
-    with open(vocab_file, encoding="utf-8") as vocab_handle:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 308, in get_tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: expected str, bytes or os.PathLike object, not NoneType
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/tokenization_auto.py", line 1144, in from_pretrained
-    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2070, in from_pretrained
-    return cls._from_pretrained(
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/tokenization_auto.py", line 1144, in from_pretrained
-    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2108, in _from_pretrained
-    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2316, in _from_pretrained
-    tokenizer = cls(*init_inputs, **init_kwargs)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The above exception was the direct cause of the following exception:
-
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2/tokenization_qwen2.py", line 172, in __init__
-    with open(vocab_file, encoding="utf-8") as vocab_handle:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2070, in from_pretrained
-    return cls._from_pretrained(
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2108, in _from_pretrained
-    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: expected str, bytes or os.PathLike object, not NoneType
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2316, in _from_pretrained
-    tokenizer = cls(*init_inputs, **init_kwargs)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2/tokenization_qwen2.py", line 172, in __init__
-    with open(vocab_file, encoding="utf-8") as vocab_handle:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
     self.run()
-
-The above exception was the direct cause of the following exception:
-
-TypeError: expected str, bytes or os.PathLike object, not NoneType
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 308, in initialize
+    self.load_model()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 757, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/__init__.py", line 28, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 486, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 228, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 660, in __init__
+    self.model = Qwen3MoeModel(
+                 ^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 638, in __init__
+    super().__init__(
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen2_moe.py", line 474, in __init__
+    self.layers, self.start_layer, self.end_layer = make_layers(
+                                                    ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 508, in make_layers
+    + get_offloader().wrap_modules(
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/offloader.py", line 36, in wrap_modules
+    return list(all_modules_generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 510, in <genexpr>
+    layer_fn(idx=idx, prefix=add_prefix(idx, prefix))
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen2_moe.py", line 476, in <lambda>
+    lambda idx, prefix: decoder_layer_type(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 498, in __init__
+    self.mlp = Qwen3MoeSparseMoeBlock(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 101, in __init__
+    self.experts = get_moe_impl_class(quant_config)(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 216, in __init__
+    self.quant_method: FusedMoEMethodBase = UnquantizedFusedMoEMethod(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/quantization/unquant.py", line 147, in __init__
+    from sglang.srt.layers.moe.fused_moe_triton.triton_kernels_moe import (
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/triton_kernels_moe.py", line 9, in <module>
+    from triton_kernels.matmul_ogs import (
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs.py", line 15, in <module>
+    from .matmul_ogs_details._matmul_ogs import _compute_writeback_idx
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs_details/_matmul_ogs.py", line 8, in <module>
+    from triton_kernels.numerics_details.flexpoint import float_to_flex, load_scale
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/numerics_details/flexpoint.py", line 55, in <module>
+    @tl.constexpr_function
+     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'triton.language' has no attribute 'constexpr_function'
 Process Process-3:
-Traceback (most recent call last):
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
-    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 170, in load_model
-    tokenizer = get_tokenizer(
-                ^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 323, in get_tokenizer
-    raise RuntimeError(err_msg) from e
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-RuntimeError: Failed to load the tokenizer. If you are using a LLaMA V1 model consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-Traceback (most recent call last):
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
-    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 170, in load_model
-    tokenizer = get_tokenizer(
-                ^^^^^^^^^^^^^^
-max_total_num_tokens=5918604
-  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 323, in get_tokenizer
-    raise RuntimeError(err_msg) from e
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-RuntimeError: Failed to load the tokenizer. If you are using a LLaMA V1 model consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
-  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 308, in get_tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
-    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/tokenization_auto.py", line 1144, in from_pretrained
-    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 170, in load_model
-    tokenizer = get_tokenizer(
-                ^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 323, in get_tokenizer
-    raise RuntimeError(err_msg) from e
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2070, in from_pretrained
-    return cls._from_pretrained(
-           ^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: Failed to load the tokenizer. If you are using a LLaMA V1 model consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2108, in _from_pretrained
-    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 2316, in _from_pretrained
-    tokenizer = cls(*init_inputs, **init_kwargs)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2/tokenization_qwen2.py", line 172, in __init__
-    with open(vocab_file, encoding="utf-8") as vocab_handle:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: expected str, bytes or os.PathLike object, not NoneType
-
-The above exception was the direct cause of the following exception:
-
+Process Process-4:
 Traceback (most recent call last):
   File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
     self.run()
@@ -238,21 +184,141 @@ Traceback (most recent call last):
   File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
     model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 170, in load_model
-    tokenizer = get_tokenizer(
-                ^^^^^^^^^^^^^^
-  File "/opt/sglang/sglang-src/python/sglang/srt/hf_transformers_utils.py", line 323, in get_tokenizer
-    raise RuntimeError(err_msg) from e
-RuntimeError: Failed to load the tokenizer. If you are using a LLaMA V1 model consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
-[rank3]:[W1016 19:14:58.558710570 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank1]:[W1016 19:14:58.609095810 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank2]:[W1016 19:14:58.629255251 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank0]:[W1016 19:14:58.675835790 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 308, in initialize
+    self.load_model()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 757, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/__init__.py", line 28, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 486, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 228, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 660, in __init__
+    self.model = Qwen3MoeModel(
+                 ^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 638, in __init__
+    super().__init__(
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen2_moe.py", line 474, in __init__
+    self.layers, self.start_layer, self.end_layer = make_layers(
+                                                    ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 508, in make_layers
+    + get_offloader().wrap_modules(
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/offloader.py", line 36, in wrap_modules
+    return list(all_modules_generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 510, in <genexpr>
+    layer_fn(idx=idx, prefix=add_prefix(idx, prefix))
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen2_moe.py", line 476, in <lambda>
+    lambda idx, prefix: decoder_layer_type(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 498, in __init__
+    self.mlp = Qwen3MoeSparseMoeBlock(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 101, in __init__
+    self.experts = get_moe_impl_class(quant_config)(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 216, in __init__
+    self.quant_method: FusedMoEMethodBase = UnquantizedFusedMoEMethod(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/quantization/unquant.py", line 147, in __init__
+    from sglang.srt.layers.moe.fused_moe_triton.triton_kernels_moe import (
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/triton_kernels_moe.py", line 9, in <module>
+    from triton_kernels.matmul_ogs import (
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs.py", line 15, in <module>
+    from .matmul_ogs_details._matmul_ogs import _compute_writeback_idx
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs_details/_matmul_ogs.py", line 8, in <module>
+    from triton_kernels.numerics_details.flexpoint import float_to_flex, load_scale
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/numerics_details/flexpoint.py", line 55, in <module>
+    @tl.constexpr_function
+     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'triton.language' has no attribute 'constexpr_function'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 308, in initialize
+    self.load_model()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 757, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/__init__.py", line 28, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 486, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 228, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 660, in __init__
+    self.model = Qwen3MoeModel(
+                 ^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 638, in __init__
+    super().__init__(
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen2_moe.py", line 474, in __init__
+    self.layers, self.start_layer, self.end_layer = make_layers(
+                                                    ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 508, in make_layers
+    + get_offloader().wrap_modules(
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/offloader.py", line 36, in wrap_modules
+    return list(all_modules_generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 510, in <genexpr>
+    layer_fn(idx=idx, prefix=add_prefix(idx, prefix))
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen2_moe.py", line 476, in <lambda>
+    lambda idx, prefix: decoder_layer_type(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 498, in __init__
+    self.mlp = Qwen3MoeSparseMoeBlock(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/qwen3_moe.py", line 101, in __init__
+    self.experts = get_moe_impl_class(quant_config)(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 216, in __init__
+    self.quant_method: FusedMoEMethodBase = UnquantizedFusedMoEMethod(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/quantization/unquant.py", line 147, in __init__
+    from sglang.srt.layers.moe.fused_moe_triton.triton_kernels_moe import (
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/triton_kernels_moe.py", line 9, in <module>
+    from triton_kernels.matmul_ogs import (
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs.py", line 15, in <module>
+    from .matmul_ogs_details._matmul_ogs import _compute_writeback_idx
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs_details/_matmul_ogs.py", line 8, in <module>
+    from triton_kernels.numerics_details.flexpoint import float_to_flex, load_scale
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/numerics_details/flexpoint.py", line 55, in <module>
+    @tl.constexpr_function
+     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'triton.language' has no attribute 'constexpr_function'
+[rank1]:[W1021 04:06:55.865984578 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W1021 04:06:55.941642033 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W1021 04:06:55.137648927 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W1021 04:06:55.157851071 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
 
 ================================================================================
 ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/unsloth/Qwen3-30B-A3B-GGUF
 Files:
-  - log.txt (22,952 bytes)
+  - log.txt (22,277 bytes)
   - rank0_0.py (10,194 bytes)
   - rank0_1.py (3,619 bytes)
   - rank0_10.py (4,946 bytes)

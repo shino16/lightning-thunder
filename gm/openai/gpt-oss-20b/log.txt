@@ -1,0 +1,414 @@
+#######################################################
+See README.md for a note on this.
+#######################################################
+
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+rank 0 allocated ipc_handles: [['0xee0bbc200000', '0xedc410000000', '0xedc412e00000', '0xedc415c00000'], ['0xedc418a00000', '0xedc418c00000', '0xedc418e00000', '0xedc419000000'], ['0xedc3c0000000', '0xedc3c8800000', '0xedc3d1000000', '0xedc380000000']]
+[2025-10-21 02:00:16.730] [info] lamportInitialize start: buffer: 0xedc3c0000000, size: 71303168
+rank 1 allocated ipc_handles: [['0xeab730000000', '0xeafedc200000', '0xeab732e00000', '0xeab735c00000'], ['0xeab738c00000', '0xeab738a00000', '0xeab738e00000', '0xeab739000000'], ['0xeab6e0000000', '0xeafff1400000', '0xeab6e8800000', '0xeab6f1000000']]
+rank 3 allocated ipc_handles: [['0xe71470000000', '0xe71472e00000', '0xe71475c00000', '0xe75c1c200000'], ['0xe71478c00000', '0xe71478e00000', '0xe71479000000', '0xe71478a00000'], ['0xe71428800000', '0xe71431000000', '0xe713e0000000', '0xe71420000000']]
+[2025-10-21 02:00:16.780] [info] lamportInitialize start: buffer: 0xeafff1400000, size: 71303168
+[2025-10-21 02:00:16.793] [info] lamportInitialize start: buffer: 0xe71420000000, size: 71303168
+rank 2 allocated ipc_handles: [['0xefbd90000000', '0xefbd92e00000', '0xf0053c200000', '0xefbd95c00000'], ['0xefbd98c00000', '0xefbd98e00000', '0xefbd98a00000', '0xefbd99000000'], ['0xefbd40000000', '0xefbd48800000', '0xf00651400000', '0xefbd51000000']]
+[2025-10-21 02:00:16.835] [info] lamportInitialize start: buffer: 0xf00651400000, size: 71303168
+set flag_ptr[3] = lamport_comm_size:  47185920
+Rank 0 workspace[0] 0xee0bbc200000
+Rank 0 workspace[1] 0xedc410000000
+Rank 0 workspace[2] 0xedc412e00000
+Rank 0 workspace[3] 0xedc415c00000
+Rank 0 workspace[4] 0xedc418a00000
+Rank 0 workspace[5] 0xedc418c00000
+Rank 0 workspace[6] 0xedc418e00000
+Rank 0 workspace[7] 0xedc419000000
+Rank 0 workspace[8] 0xedc3c0000000
+Rank 0 workspace[9] 0xedc3c8800000
+Rank 0 workspace[10] 0xedc3d1000000
+Rank 0 workspace[11] 0xedc380000000
+Rank 0 workspace[12] 0xee16a4064400
+set flag_ptr[3] = lamport_comm_size:  47185920
+Rank 2 workspace[0] 0xefbd90000000
+Rank 2 workspace[1] 0xefbd92e00000
+Rank 2 workspace[2] 0xf0053c200000
+Rank 2 workspace[3] 0xefbd95c00000
+Rank 2 workspace[4] 0xefbd98c00000
+Rank 2 workspace[5] 0xefbd98e00000
+Rank 2 workspace[6] 0xefbd98a00000
+Rank 2 workspace[7] 0xefbd99000000
+Rank 2 workspace[8] 0xefbd40000000
+Rank 2 workspace[9] 0xefbd48800000
+Rank 2 workspace[10] 0xf00651400000
+Rank 2 workspace[11] 0xefbd51000000
+Rank 2 workspace[12] 0xf01064064400
+set flag_ptr[3] = lamport_comm_size:  47185920
+Rank 3 workspace[0] 0xe71470000000
+Rank 3 workspace[1] 0xe71472e00000
+Rank 3 workspace[2] 0xe71475c00000
+Rank 3 workspace[3] 0xe75c1c200000
+Rank 3 workspace[4] 0xe71478c00000
+Rank 3 workspace[5] 0xe71478e00000
+Rank 3 workspace[6] 0xe71479000000
+Rank 3 workspace[7] 0xe71478a00000
+Rank 3 workspace[8] 0xe71428800000
+Rank 3 workspace[9] 0xe71431000000
+Rank 3 workspace[10] 0xe713e0000000
+Rank 3 workspace[11] 0xe71420000000
+Rank 3 workspace[12] 0xe76704064400
+set flag_ptr[3] = lamport_comm_size:  47185920
+Rank 1 workspace[0] 0xeab730000000
+Rank 1 workspace[1] 0xeafedc200000
+Rank 1 workspace[2] 0xeab732e00000
+Rank 1 workspace[3] 0xeab735c00000
+Rank 1 workspace[4] 0xeab738c00000
+Rank 1 workspace[5] 0xeab738a00000
+Rank 1 workspace[6] 0xeab738e00000
+Rank 1 workspace[7] 0xeab739000000
+Rank 1 workspace[8] 0xeab6e0000000
+Rank 1 workspace[9] 0xeafff1400000
+Rank 1 workspace[10] 0xeab6e8800000
+Rank 1 workspace[11] 0xeab6f1000000
+Rank 1 workspace[12] 0xeb0a04064400
+max_total_num_tokens=20842240
+Warmup ...
+Prefill. latency: 2.77701 s, throughput:    368.74 token/s
+Decode 0. Batch size: 1, latency: 0.08751 s, throughput:     11.43 token/s
+Decode 1. Batch size: 1, latency: 0.00438 s, throughput:    228.10 token/s
+Decode 2. Batch size: 1, latency: 0.00237 s, throughput:    422.27 token/s
+Decode 3. Batch size: 1, latency: 0.00232 s, throughput:    430.49 token/s
+Decode 4. Batch size: 1, latency: 0.00226 s, throughput:    442.39 token/s
+Decode.  median latency: 0.00226 s, median throughput:    442.85 token/s
+Total. latency:  2.898 s, throughput:    358.82 token/s
+Benchmark ...
+Prefill. latency: 0.03290 s, throughput:  31129.21 token/s
+Decode 0. Batch size: 1, latency: 0.00272 s, throughput:    367.52 token/s
+Decode 1. Batch size: 1, latency: 0.00225 s, throughput:    443.68 token/s
+Decode 2. Batch size: 1, latency: 0.00224 s, throughput:    445.90 token/s
+Decode 3. Batch size: 1, latency: 0.00224 s, throughput:    446.38 token/s
+Decode 4. Batch size: 1, latency: 0.00222 s, throughput:    449.48 token/s
+Decode.  median latency: 0.00221 s, median throughput:    453.09 token/s
+Total. latency:  0.066 s, throughput:  15642.59 token/s
+
+================================================================================
+ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/openai/gpt-oss-20b
+Files:
+  - log.txt (6,421 bytes)
+  - rank0_0.py (10,194 bytes)
+  - rank0_1.py (4,259 bytes)
+  - rank0_10.py (4,416 bytes)
+  - rank0_11.py (990 bytes)
+  - rank0_12.py (1,138 bytes)
+  - rank0_13.py (1,906 bytes)
+  - rank0_14.py (3,376 bytes)
+  - rank0_15.py (1,917 bytes)
+  - rank0_16.py (990 bytes)
+  - rank0_17.py (1,775 bytes)
+  - rank0_18.py (1,259 bytes)
+  - rank0_19.py (1,202 bytes)
+  - rank0_2.py (1,626 bytes)
+  - rank0_20.py (3,394 bytes)
+  - rank0_21.py (1,833 bytes)
+  - rank0_22.py (1,082 bytes)
+  - rank0_23.py (3,358 bytes)
+  - rank0_24.py (2,530 bytes)
+  - rank0_25.py (4,416 bytes)
+  - rank0_26.py (2,530 bytes)
+  - rank0_27.py (4,416 bytes)
+  - rank0_28.py (2,530 bytes)
+  - rank0_29.py (4,416 bytes)
+  - rank0_3.py (2,529 bytes)
+  - rank0_30.py (2,530 bytes)
+  - rank0_31.py (4,416 bytes)
+  - rank0_32.py (2,530 bytes)
+  - rank0_33.py (4,416 bytes)
+  - rank0_34.py (2,530 bytes)
+  - rank0_35.py (4,416 bytes)
+  - rank0_36.py (2,530 bytes)
+  - rank0_37.py (4,416 bytes)
+  - rank0_38.py (2,530 bytes)
+  - rank0_39.py (4,416 bytes)
+  - rank0_4.py (985 bytes)
+  - rank0_40.py (2,530 bytes)
+  - rank0_41.py (4,416 bytes)
+  - rank0_42.py (2,548 bytes)
+  - rank0_43.py (4,434 bytes)
+  - rank0_44.py (2,548 bytes)
+  - rank0_45.py (4,434 bytes)
+  - rank0_46.py (2,548 bytes)
+  - rank0_47.py (4,434 bytes)
+  - rank0_48.py (2,548 bytes)
+  - rank0_49.py (4,434 bytes)
+  - rank0_5.py (962 bytes)
+  - rank0_50.py (2,548 bytes)
+  - rank0_51.py (4,434 bytes)
+  - rank0_52.py (2,548 bytes)
+  - rank0_53.py (4,434 bytes)
+  - rank0_54.py (2,548 bytes)
+  - rank0_55.py (4,434 bytes)
+  - rank0_56.py (2,548 bytes)
+  - rank0_57.py (4,434 bytes)
+  - rank0_58.py (2,548 bytes)
+  - rank0_59.py (4,434 bytes)
+  - rank0_6.py (957 bytes)
+  - rank0_60.py (2,548 bytes)
+  - rank0_61.py (4,434 bytes)
+  - rank0_62.py (2,548 bytes)
+  - rank0_63.py (4,434 bytes)
+  - rank0_64.py (2,548 bytes)
+  - rank0_65.py (4,434 bytes)
+  - rank0_66.py (2,548 bytes)
+  - rank0_67.py (4,434 bytes)
+  - rank0_68.py (2,548 bytes)
+  - rank0_69.py (4,434 bytes)
+  - rank0_7.py (915 bytes)
+  - rank0_70.py (3,376 bytes)
+  - rank0_71.py (2,521 bytes)
+  - rank0_72.py (1,288 bytes)
+  - rank0_73.py (990 bytes)
+  - rank0_74.py (8,205 bytes)
+  - rank0_8.py (1,006 bytes)
+  - rank0_9.py (1,649 bytes)
+  - rank1_0.py (10,212 bytes)
+  - rank1_1.py (4,259 bytes)
+  - rank1_10.py (4,416 bytes)
+  - rank1_11.py (990 bytes)
+  - rank1_12.py (1,138 bytes)
+  - rank1_13.py (1,513 bytes)
+  - rank1_14.py (3,376 bytes)
+  - rank1_15.py (1,917 bytes)
+  - rank1_16.py (990 bytes)
+  - rank1_17.py (1,775 bytes)
+  - rank1_18.py (1,259 bytes)
+  - rank1_19.py (1,202 bytes)
+  - rank1_2.py (1,626 bytes)
+  - rank1_20.py (3,394 bytes)
+  - rank1_21.py (1,833 bytes)
+  - rank1_22.py (1,082 bytes)
+  - rank1_23.py (3,358 bytes)
+  - rank1_24.py (2,530 bytes)
+  - rank1_25.py (4,416 bytes)
+  - rank1_26.py (2,530 bytes)
+  - rank1_27.py (4,416 bytes)
+  - rank1_28.py (2,530 bytes)
+  - rank1_29.py (4,416 bytes)
+  - rank1_3.py (2,529 bytes)
+  - rank1_30.py (2,530 bytes)
+  - rank1_31.py (4,416 bytes)
+  - rank1_32.py (2,530 bytes)
+  - rank1_33.py (4,416 bytes)
+  - rank1_34.py (2,530 bytes)
+  - rank1_35.py (4,416 bytes)
+  - rank1_36.py (2,530 bytes)
+  - rank1_37.py (4,416 bytes)
+  - rank1_38.py (2,530 bytes)
+  - rank1_39.py (4,416 bytes)
+  - rank1_4.py (985 bytes)
+  - rank1_40.py (2,530 bytes)
+  - rank1_41.py (4,416 bytes)
+  - rank1_42.py (2,548 bytes)
+  - rank1_43.py (4,434 bytes)
+  - rank1_44.py (2,548 bytes)
+  - rank1_45.py (4,434 bytes)
+  - rank1_46.py (2,548 bytes)
+  - rank1_47.py (4,434 bytes)
+  - rank1_48.py (2,548 bytes)
+  - rank1_49.py (4,434 bytes)
+  - rank1_5.py (962 bytes)
+  - rank1_50.py (2,548 bytes)
+  - rank1_51.py (4,434 bytes)
+  - rank1_52.py (2,548 bytes)
+  - rank1_53.py (4,434 bytes)
+  - rank1_54.py (2,548 bytes)
+  - rank1_55.py (4,434 bytes)
+  - rank1_56.py (2,548 bytes)
+  - rank1_57.py (4,434 bytes)
+  - rank1_58.py (2,548 bytes)
+  - rank1_59.py (4,434 bytes)
+  - rank1_6.py (957 bytes)
+  - rank1_60.py (2,548 bytes)
+  - rank1_61.py (4,434 bytes)
+  - rank1_62.py (2,548 bytes)
+  - rank1_63.py (4,434 bytes)
+  - rank1_64.py (2,548 bytes)
+  - rank1_65.py (4,434 bytes)
+  - rank1_66.py (2,548 bytes)
+  - rank1_67.py (4,434 bytes)
+  - rank1_68.py (2,548 bytes)
+  - rank1_69.py (4,434 bytes)
+  - rank1_7.py (915 bytes)
+  - rank1_70.py (3,376 bytes)
+  - rank1_71.py (2,521 bytes)
+  - rank1_72.py (1,288 bytes)
+  - rank1_73.py (990 bytes)
+  - rank1_74.py (8,205 bytes)
+  - rank1_8.py (1,006 bytes)
+  - rank1_9.py (1,649 bytes)
+  - rank2_0.py (10,216 bytes)
+  - rank2_1.py (4,259 bytes)
+  - rank2_10.py (4,416 bytes)
+  - rank2_11.py (990 bytes)
+  - rank2_12.py (1,138 bytes)
+  - rank2_13.py (1,513 bytes)
+  - rank2_14.py (3,376 bytes)
+  - rank2_15.py (1,917 bytes)
+  - rank2_16.py (990 bytes)
+  - rank2_17.py (1,775 bytes)
+  - rank2_18.py (1,259 bytes)
+  - rank2_19.py (1,202 bytes)
+  - rank2_2.py (1,626 bytes)
+  - rank2_20.py (3,394 bytes)
+  - rank2_21.py (1,833 bytes)
+  - rank2_22.py (1,082 bytes)
+  - rank2_23.py (3,358 bytes)
+  - rank2_24.py (2,530 bytes)
+  - rank2_25.py (4,416 bytes)
+  - rank2_26.py (2,530 bytes)
+  - rank2_27.py (4,416 bytes)
+  - rank2_28.py (2,530 bytes)
+  - rank2_29.py (4,416 bytes)
+  - rank2_3.py (2,529 bytes)
+  - rank2_30.py (2,530 bytes)
+  - rank2_31.py (4,416 bytes)
+  - rank2_32.py (2,530 bytes)
+  - rank2_33.py (4,416 bytes)
+  - rank2_34.py (2,530 bytes)
+  - rank2_35.py (4,416 bytes)
+  - rank2_36.py (2,530 bytes)
+  - rank2_37.py (4,416 bytes)
+  - rank2_38.py (2,530 bytes)
+  - rank2_39.py (4,416 bytes)
+  - rank2_4.py (985 bytes)
+  - rank2_40.py (2,530 bytes)
+  - rank2_41.py (4,416 bytes)
+  - rank2_42.py (2,548 bytes)
+  - rank2_43.py (4,434 bytes)
+  - rank2_44.py (2,548 bytes)
+  - rank2_45.py (4,434 bytes)
+  - rank2_46.py (2,548 bytes)
+  - rank2_47.py (4,434 bytes)
+  - rank2_48.py (2,548 bytes)
+  - rank2_49.py (4,434 bytes)
+  - rank2_5.py (962 bytes)
+  - rank2_50.py (2,548 bytes)
+  - rank2_51.py (4,434 bytes)
+  - rank2_52.py (2,548 bytes)
+  - rank2_53.py (4,434 bytes)
+  - rank2_54.py (2,548 bytes)
+  - rank2_55.py (4,434 bytes)
+  - rank2_56.py (2,548 bytes)
+  - rank2_57.py (4,434 bytes)
+  - rank2_58.py (2,548 bytes)
+  - rank2_59.py (4,434 bytes)
+  - rank2_6.py (957 bytes)
+  - rank2_60.py (2,548 bytes)
+  - rank2_61.py (4,434 bytes)
+  - rank2_62.py (2,548 bytes)
+  - rank2_63.py (4,434 bytes)
+  - rank2_64.py (2,548 bytes)
+  - rank2_65.py (4,434 bytes)
+  - rank2_66.py (2,548 bytes)
+  - rank2_67.py (4,434 bytes)
+  - rank2_68.py (2,548 bytes)
+  - rank2_69.py (4,434 bytes)
+  - rank2_7.py (915 bytes)
+  - rank2_70.py (3,376 bytes)
+  - rank2_71.py (2,521 bytes)
+  - rank2_72.py (1,288 bytes)
+  - rank2_73.py (990 bytes)
+  - rank2_74.py (8,205 bytes)
+  - rank2_8.py (1,006 bytes)
+  - rank2_9.py (1,649 bytes)
+  - rank3_0.py (10,216 bytes)
+  - rank3_1.py (4,259 bytes)
+  - rank3_10.py (4,416 bytes)
+  - rank3_11.py (990 bytes)
+  - rank3_12.py (1,138 bytes)
+  - rank3_13.py (1,513 bytes)
+  - rank3_14.py (3,376 bytes)
+  - rank3_15.py (1,917 bytes)
+  - rank3_16.py (990 bytes)
+  - rank3_17.py (1,775 bytes)
+  - rank3_18.py (1,259 bytes)
+  - rank3_19.py (1,202 bytes)
+  - rank3_2.py (1,626 bytes)
+  - rank3_20.py (3,394 bytes)
+  - rank3_21.py (1,833 bytes)
+  - rank3_22.py (1,082 bytes)
+  - rank3_23.py (3,358 bytes)
+  - rank3_24.py (2,530 bytes)
+  - rank3_25.py (4,416 bytes)
+  - rank3_26.py (2,530 bytes)
+  - rank3_27.py (4,416 bytes)
+  - rank3_28.py (2,530 bytes)
+  - rank3_29.py (4,416 bytes)
+  - rank3_3.py (2,529 bytes)
+  - rank3_30.py (2,530 bytes)
+  - rank3_31.py (4,416 bytes)
+  - rank3_32.py (2,530 bytes)
+  - rank3_33.py (4,416 bytes)
+  - rank3_34.py (2,530 bytes)
+  - rank3_35.py (4,416 bytes)
+  - rank3_36.py (2,530 bytes)
+  - rank3_37.py (4,416 bytes)
+  - rank3_38.py (2,530 bytes)
+  - rank3_39.py (4,416 bytes)
+  - rank3_4.py (985 bytes)
+  - rank3_40.py (2,530 bytes)
+  - rank3_41.py (4,416 bytes)
+  - rank3_42.py (2,548 bytes)
+  - rank3_43.py (4,434 bytes)
+  - rank3_44.py (2,548 bytes)
+  - rank3_45.py (4,434 bytes)
+  - rank3_46.py (2,548 bytes)
+  - rank3_47.py (4,434 bytes)
+  - rank3_48.py (2,548 bytes)
+  - rank3_49.py (4,434 bytes)
+  - rank3_5.py (962 bytes)
+  - rank3_50.py (2,548 bytes)
+  - rank3_51.py (4,434 bytes)
+  - rank3_52.py (2,548 bytes)
+  - rank3_53.py (4,434 bytes)
+  - rank3_54.py (2,548 bytes)
+  - rank3_55.py (4,434 bytes)
+  - rank3_56.py (2,548 bytes)
+  - rank3_57.py (4,434 bytes)
+  - rank3_58.py (2,548 bytes)
+  - rank3_59.py (4,434 bytes)
+  - rank3_6.py (957 bytes)
+  - rank3_60.py (2,548 bytes)
+  - rank3_61.py (4,434 bytes)
+  - rank3_62.py (2,548 bytes)
+  - rank3_63.py (4,434 bytes)
+  - rank3_64.py (2,548 bytes)
+  - rank3_65.py (4,434 bytes)
+  - rank3_66.py (2,548 bytes)
+  - rank3_67.py (4,434 bytes)
+  - rank3_68.py (2,548 bytes)
+  - rank3_69.py (4,434 bytes)
+  - rank3_7.py (915 bytes)
+  - rank3_70.py (3,376 bytes)
+  - rank3_71.py (2,521 bytes)
+  - rank3_72.py (1,288 bytes)
+  - rank3_73.py (990 bytes)
+  - rank3_74.py (8,205 bytes)
+  - rank3_8.py (1,006 bytes)
+  - rank3_9.py (1,649 bytes)
+================================================================================
+

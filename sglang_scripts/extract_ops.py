@@ -147,7 +147,7 @@ def extract_ops_from_file(filepath: Path) -> set[str]:
     return ops
 
 
-def extract_ops_from_model(model_name: str) -> list[str]:
+def extract_ops_from_model(model_name: str) -> tuple[dict[str, str], dict[str, list[str]]]:
     """Extract operations from all files for a given model."""
     # Get the base directory (project root)
     base_dir = Path(__file__).parent.parent
@@ -169,6 +169,7 @@ def extract_ops_from_model(model_name: str) -> list[str]:
     # Collect all operations with pattern-based deduplication
     # Map: normalized_pattern -> first occurrence of that pattern
     pattern_to_op: dict[str, str] = {}
+    pattern_to_files: dict[str, list[str]] = {}
 
     for py_file in py_files:
         ops = extract_ops_from_file(py_file)
@@ -179,15 +180,15 @@ def extract_ops_from_model(model_name: str) -> list[str]:
             if normalized not in pattern_to_op:
                 # First time seeing this pattern, save the original operation
                 pattern_to_op[normalized] = op
+                pattern_to_files.setdefault(normalized, []).append(py_file.name)
 
         print(f"  - {py_file.name}: found {len(ops)} operations")
 
     # Return the first occurrence of each unique pattern, sorted
-    unique_ops = list(pattern_to_op.values())
-    return sorted(unique_ops)
+    return pattern_to_op, pattern_to_files
 
 
-def save_ops(model_dir_name: str, ops: list[str], output_dir: Path):
+def save_ops(model_dir_name: str, ops: dict[str, str], files: dict[str, list[str]], output_dir: Path):
     """Save extracted operations to the output file."""
     output_file = output_dir / f"{model_dir_name}.py"
 
@@ -196,8 +197,10 @@ def save_ops(model_dir_name: str, ops: list[str], output_dir: Path):
 
     # Write operations to file
     with open(output_file, "w") as f:
-        for op in ops:
-            f.write(f"{op}\n")
+        for pattern, op in ops.items():
+            f.write(f"{pattern} -> {op}\n")
+            for file in files[pattern]:
+                f.write(f"  - {file}\n")
 
     print(f"  → Saved {len(ops)} unique operations to {output_file}")
 
@@ -232,11 +235,11 @@ def main():
         print(f"Processing single model: {model_name}")
 
         # Extract operations
-        ops = extract_ops_from_model(model_name)
+        ops, files = extract_ops_from_model(model_name)
 
         # Save to output file (use just the last part of the path)
         model_dir_name = Path(model_name).name
-        save_ops(model_dir_name, ops, gm_dir)
+        save_ops(model_dir_name, ops, files, gm_dir)
     else:
         # Process all models and combine into one file
         print("Scanning for all models in gm/ directory...")
@@ -265,14 +268,14 @@ def main():
 
             try:
                 # Extract operations from this model
-                ops = extract_ops_from_model(str(rel_path))
+                ops, files = extract_ops_from_model(str(rel_path))
                 print(f"  Found {len(ops)} unique operations")
 
                 # Add to global collection with pattern-based deduplication
-                for op in ops:
+                for pattern, op in ops.items():
                     normalized = normalize_operation(op)
                     if normalized not in global_pattern_to_op:
-                        global_pattern_to_op[normalized] = op
+                        global_pattern_to_op[normalized] = pattern
 
             except Exception as e:
                 print(f"  ✗ Error processing {model_name}: {e}")

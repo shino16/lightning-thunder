@@ -34,6 +34,7 @@ def populate_dummy_model_cache(model_name):
         "F16": torch.float16,
         "BF16": torch.bfloat16,
         "F8_E4M3": torch.float8_e4m3fn,
+        "U8": torch.uint8,
     }
 
     storage_folder = os.path.join(
@@ -43,12 +44,15 @@ def populate_dummy_model_cache(model_name):
 
     for filename, file_metadata in metadata.files_metadata.items():
         print(f"Preparing dummy cache for {filename}")
+        commit_hash = get_hf_file_metadata(hf_hub_url(model_name, filename)).commit_hash
+        pointer_path = _get_pointer_path(storage_folder, commit_hash, filename)
+        if os.path.exists(pointer_path):
+            print(f"Dummy cache already exists for {filename}")
+            continue
         dummy_tensors = {}
         for tensor_name, tensor_info in file_metadata.tensors.items():
             dtype = dtype_map[tensor_info.dtype]
             dummy_tensors[tensor_name] = torch.empty(tensor_info.shape, dtype=dtype)
-        commit_hash = get_hf_file_metadata(hf_hub_url(model_name, filename)).commit_hash
-        pointer_path = _get_pointer_path(storage_folder, commit_hash, filename)
         print(f"Saving dummy cache to {pointer_path}")
         os.makedirs(os.path.dirname(pointer_path), exist_ok=True)
         save_file(dummy_tensors, pointer_path)
