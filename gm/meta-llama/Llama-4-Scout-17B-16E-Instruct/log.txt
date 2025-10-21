@@ -1,0 +1,450 @@
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Parse safetensors files:   0%|          | 0/50 [00:00<?, ?it/s]Parse safetensors files:   2%|▏         | 1/50 [00:03<02:40,  3.28s/it]Parse safetensors files:   4%|▍         | 2/50 [00:03<01:16,  1.60s/it]Parse safetensors files:   8%|▊         | 4/50 [00:03<00:29,  1.54it/s]Parse safetensors files: 100%|██████████| 50/50 [00:03<00:00, 12.83it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Preparing dummy cache for model-00042-of-00050.safetensors
+Dummy cache already exists for model-00042-of-00050.safetensors
+Preparing dummy cache for model-00044-of-00050.safetensors
+Dummy cache already exists for model-00044-of-00050.safetensors
+Preparing dummy cache for model-00016-of-00050.safetensors
+Dummy cache already exists for model-00016-of-00050.safetensors
+Preparing dummy cache for model-00049-of-00050.safetensors
+Dummy cache already exists for model-00049-of-00050.safetensors
+Preparing dummy cache for model-00008-of-00050.safetensors
+Dummy cache already exists for model-00008-of-00050.safetensors
+Preparing dummy cache for model-00012-of-00050.safetensors
+Dummy cache already exists for model-00012-of-00050.safetensors
+Preparing dummy cache for model-00032-of-00050.safetensors
+Dummy cache already exists for model-00032-of-00050.safetensors
+Preparing dummy cache for model-00050-of-00050.safetensors
+Dummy cache already exists for model-00050-of-00050.safetensors
+Preparing dummy cache for model-00047-of-00050.safetensors
+Dummy cache already exists for model-00047-of-00050.safetensors
+Preparing dummy cache for model-00037-of-00050.safetensors
+Dummy cache already exists for model-00037-of-00050.safetensors
+Preparing dummy cache for model-00033-of-00050.safetensors
+Dummy cache already exists for model-00033-of-00050.safetensors
+Preparing dummy cache for model-00046-of-00050.safetensors
+Dummy cache already exists for model-00046-of-00050.safetensors
+Preparing dummy cache for model-00020-of-00050.safetensors
+Dummy cache already exists for model-00020-of-00050.safetensors
+Preparing dummy cache for model-00009-of-00050.safetensors
+Dummy cache already exists for model-00009-of-00050.safetensors
+Preparing dummy cache for model-00030-of-00050.safetensors
+Dummy cache already exists for model-00030-of-00050.safetensors
+Preparing dummy cache for model-00004-of-00050.safetensors
+Dummy cache already exists for model-00004-of-00050.safetensors
+Preparing dummy cache for model-00006-of-00050.safetensors
+Dummy cache already exists for model-00006-of-00050.safetensors
+Preparing dummy cache for model-00029-of-00050.safetensors
+Dummy cache already exists for model-00029-of-00050.safetensors
+Preparing dummy cache for model-00048-of-00050.safetensors
+Dummy cache already exists for model-00048-of-00050.safetensors
+Preparing dummy cache for model-00010-of-00050.safetensors
+Dummy cache already exists for model-00010-of-00050.safetensors
+Preparing dummy cache for model-00038-of-00050.safetensors
+Dummy cache already exists for model-00038-of-00050.safetensors
+Preparing dummy cache for model-00027-of-00050.safetensors
+Dummy cache already exists for model-00027-of-00050.safetensors
+Preparing dummy cache for model-00045-of-00050.safetensors
+Dummy cache already exists for model-00045-of-00050.safetensors
+Preparing dummy cache for model-00014-of-00050.safetensors
+Dummy cache already exists for model-00014-of-00050.safetensors
+Preparing dummy cache for model-00001-of-00050.safetensors
+Dummy cache already exists for model-00001-of-00050.safetensors
+Preparing dummy cache for model-00025-of-00050.safetensors
+Dummy cache already exists for model-00025-of-00050.safetensors
+Preparing dummy cache for model-00013-of-00050.safetensors
+Dummy cache already exists for model-00013-of-00050.safetensors
+Preparing dummy cache for model-00005-of-00050.safetensors
+Dummy cache already exists for model-00005-of-00050.safetensors
+Preparing dummy cache for model-00036-of-00050.safetensors
+Dummy cache already exists for model-00036-of-00050.safetensors
+Preparing dummy cache for model-00028-of-00050.safetensors
+Dummy cache already exists for model-00028-of-00050.safetensors
+Preparing dummy cache for model-00043-of-00050.safetensors
+Dummy cache already exists for model-00043-of-00050.safetensors
+Preparing dummy cache for model-00039-of-00050.safetensors
+Dummy cache already exists for model-00039-of-00050.safetensors
+Preparing dummy cache for model-00002-of-00050.safetensors
+Dummy cache already exists for model-00002-of-00050.safetensors
+Preparing dummy cache for model-00026-of-00050.safetensors
+Dummy cache already exists for model-00026-of-00050.safetensors
+Preparing dummy cache for model-00040-of-00050.safetensors
+Dummy cache already exists for model-00040-of-00050.safetensors
+Preparing dummy cache for model-00021-of-00050.safetensors
+Dummy cache already exists for model-00021-of-00050.safetensors
+Preparing dummy cache for model-00019-of-00050.safetensors
+Dummy cache already exists for model-00019-of-00050.safetensors
+Preparing dummy cache for model-00011-of-00050.safetensors
+Dummy cache already exists for model-00011-of-00050.safetensors
+Preparing dummy cache for model-00041-of-00050.safetensors
+Dummy cache already exists for model-00041-of-00050.safetensors
+Preparing dummy cache for model-00015-of-00050.safetensors
+Dummy cache already exists for model-00015-of-00050.safetensors
+Preparing dummy cache for model-00023-of-00050.safetensors
+Dummy cache already exists for model-00023-of-00050.safetensors
+Preparing dummy cache for model-00024-of-00050.safetensors
+Dummy cache already exists for model-00024-of-00050.safetensors
+Preparing dummy cache for model-00031-of-00050.safetensors
+Dummy cache already exists for model-00031-of-00050.safetensors
+Preparing dummy cache for model-00003-of-00050.safetensors
+Dummy cache already exists for model-00003-of-00050.safetensors
+Preparing dummy cache for model-00022-of-00050.safetensors
+Dummy cache already exists for model-00022-of-00050.safetensors
+Preparing dummy cache for model-00035-of-00050.safetensors
+Dummy cache already exists for model-00035-of-00050.safetensors
+Preparing dummy cache for model-00017-of-00050.safetensors
+Dummy cache already exists for model-00017-of-00050.safetensors
+Preparing dummy cache for model-00034-of-00050.safetensors
+Dummy cache already exists for model-00034-of-00050.safetensors
+Preparing dummy cache for model-00007-of-00050.safetensors
+Dummy cache already exists for model-00007-of-00050.safetensors
+Preparing dummy cache for model-00018-of-00050.safetensors
+Dummy cache already exists for model-00018-of-00050.safetensors
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[2025-10-21 05:08:19 TP1] Multimodal is disabled for llama4. To enable it, set --enable-multimodal.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 05:08:19 TP3] Multimodal is disabled for llama4. To enable it, set --enable-multimodal.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 05:08:19 TP2] Multimodal is disabled for llama4. To enable it, set --enable-multimodal.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 05:08:20 TP0] Multimodal is disabled for llama4. To enable it, set --enable-multimodal.
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2025-10-21 05:08:20 TP0] Init torch distributed begin.
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 05:08:24 TP0] sglang is using nccl==2.28.6
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[2025-10-21 05:08:43 TP0] Init torch distributed ends. mem usage=1.46 GB
+[2025-10-21 05:09:26 TP0] Load weight begin. avail mem=273.81 GB
+Process Process-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 308, in initialize
+    self.load_model()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 757, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/__init__.py", line 28, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 486, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 228, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/mllama4.py", line 463, in __init__
+    self.language_model = Llama4ForCausalLM(
+                          ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 544, in __init__
+    super().__init__(config, quant_config, prefix)
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama.py", line 421, in __init__
+    self.model = self._init_model(config, quant_config, add_prefix("model", prefix))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 558, in _init_model
+    return Llama4Model(config, quant_config=quant_config, prefix=prefix)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 488, in __init__
+    self.layers = make_layers(
+                  ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 508, in make_layers
+    + get_offloader().wrap_modules(
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/offloader.py", line 36, in wrap_modules
+    return list(all_modules_generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 510, in <genexpr>
+    layer_fn(idx=idx, prefix=add_prefix(idx, prefix))
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 490, in <lambda>
+    lambda idx, prefix: Llama4DecoderLayer(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 388, in __init__
+    self.feed_forward = Llama4MoE(
+                        ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 113, in __init__
+    self.experts = FusedMoE(
+                   ^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 216, in __init__
+    self.quant_method: FusedMoEMethodBase = UnquantizedFusedMoEMethod(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/quantization/unquant.py", line 147, in __init__
+    from sglang.srt.layers.moe.fused_moe_triton.triton_kernels_moe import (
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/triton_kernels_moe.py", line 9, in <module>
+    from triton_kernels.matmul_ogs import (
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs.py", line 15, in <module>
+    from .matmul_ogs_details._matmul_ogs import _compute_writeback_idx
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs_details/_matmul_ogs.py", line 8, in <module>
+    from triton_kernels.numerics_details.flexpoint import float_to_flex, load_scale
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/numerics_details/flexpoint.py", line 55, in <module>
+    @tl.constexpr_function
+     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'triton.language' has no attribute 'constexpr_function'
+Process Process-3:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 308, in initialize
+    self.load_model()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 757, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/__init__.py", line 28, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 486, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 228, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/mllama4.py", line 463, in __init__
+    self.language_model = Llama4ForCausalLM(
+                          ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 544, in __init__
+    super().__init__(config, quant_config, prefix)
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama.py", line 421, in __init__
+    self.model = self._init_model(config, quant_config, add_prefix("model", prefix))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 558, in _init_model
+    return Llama4Model(config, quant_config=quant_config, prefix=prefix)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 488, in __init__
+    self.layers = make_layers(
+                  ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 508, in make_layers
+    + get_offloader().wrap_modules(
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/offloader.py", line 36, in wrap_modules
+    return list(all_modules_generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 510, in <genexpr>
+    layer_fn(idx=idx, prefix=add_prefix(idx, prefix))
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 490, in <lambda>
+    lambda idx, prefix: Llama4DecoderLayer(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 388, in __init__
+    self.feed_forward = Llama4MoE(
+                        ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 113, in __init__
+    self.experts = FusedMoE(
+                   ^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 216, in __init__
+    self.quant_method: FusedMoEMethodBase = UnquantizedFusedMoEMethod(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/quantization/unquant.py", line 147, in __init__
+    from sglang.srt.layers.moe.fused_moe_triton.triton_kernels_moe import (
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/triton_kernels_moe.py", line 9, in <module>
+    from triton_kernels.matmul_ogs import (
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs.py", line 15, in <module>
+    from .matmul_ogs_details._matmul_ogs import _compute_writeback_idx
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs_details/_matmul_ogs.py", line 8, in <module>
+    from triton_kernels.numerics_details.flexpoint import float_to_flex, load_scale
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/numerics_details/flexpoint.py", line 55, in <module>
+    @tl.constexpr_function
+     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'triton.language' has no attribute 'constexpr_function'
+Process Process-4:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 308, in initialize
+    self.load_model()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 757, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/__init__.py", line 28, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 486, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 228, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/mllama4.py", line 463, in __init__
+    self.language_model = Llama4ForCausalLM(
+                          ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 544, in __init__
+    super().__init__(config, quant_config, prefix)
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama.py", line 421, in __init__
+    self.model = self._init_model(config, quant_config, add_prefix("model", prefix))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 558, in _init_model
+    return Llama4Model(config, quant_config=quant_config, prefix=prefix)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 488, in __init__
+    self.layers = make_layers(
+                  ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 508, in make_layers
+    + get_offloader().wrap_modules(
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/offloader.py", line 36, in wrap_modules
+    return list(all_modules_generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 510, in <genexpr>
+    layer_fn(idx=idx, prefix=add_prefix(idx, prefix))
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 490, in <lambda>
+    lambda idx, prefix: Llama4DecoderLayer(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 388, in __init__
+    self.feed_forward = Llama4MoE(
+                        ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 113, in __init__
+    self.experts = FusedMoE(
+                   ^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 216, in __init__
+    self.quant_method: FusedMoEMethodBase = UnquantizedFusedMoEMethod(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/quantization/unquant.py", line 147, in __init__
+    from sglang.srt.layers.moe.fused_moe_triton.triton_kernels_moe import (
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/triton_kernels_moe.py", line 9, in <module>
+    from triton_kernels.matmul_ogs import (
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs.py", line 15, in <module>
+    from .matmul_ogs_details._matmul_ogs import _compute_writeback_idx
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs_details/_matmul_ogs.py", line 8, in <module>
+    from triton_kernels.numerics_details.flexpoint import float_to_flex, load_scale
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/numerics_details/flexpoint.py", line 55, in <module>
+    @tl.constexpr_function
+     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'triton.language' has no attribute 'constexpr_function'
+Process Process-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 524, in latency_test
+    model_runner, tokenizer = load_model(server_args, port_args, tp_rank)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/bench_one_batch.py", line 156, in load_model
+    model_runner = ModelRunner(
+                   ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 261, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 308, in initialize
+    self.load_model()
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_executor/model_runner.py", line 757, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/__init__.py", line 28, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 486, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/model_loader/loader.py", line 228, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/mllama4.py", line 463, in __init__
+    self.language_model = Llama4ForCausalLM(
+                          ^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 544, in __init__
+    super().__init__(config, quant_config, prefix)
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama.py", line 421, in __init__
+    self.model = self._init_model(config, quant_config, add_prefix("model", prefix))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 558, in _init_model
+    return Llama4Model(config, quant_config=quant_config, prefix=prefix)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 488, in __init__
+    self.layers = make_layers(
+                  ^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 508, in make_layers
+    + get_offloader().wrap_modules(
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/offloader.py", line 36, in wrap_modules
+    return list(all_modules_generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/utils.py", line 510, in <genexpr>
+    layer_fn(idx=idx, prefix=add_prefix(idx, prefix))
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 490, in <lambda>
+    lambda idx, prefix: Llama4DecoderLayer(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 388, in __init__
+    self.feed_forward = Llama4MoE(
+                        ^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/models/llama4.py", line 113, in __init__
+    self.experts = FusedMoE(
+                   ^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 216, in __init__
+    self.quant_method: FusedMoEMethodBase = UnquantizedFusedMoEMethod(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/quantization/unquant.py", line 147, in __init__
+    from sglang.srt.layers.moe.fused_moe_triton.triton_kernels_moe import (
+  File "/opt/sglang/sglang-src/python/sglang/srt/layers/moe/fused_moe_triton/triton_kernels_moe.py", line 9, in <module>
+    from triton_kernels.matmul_ogs import (
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs.py", line 15, in <module>
+    from .matmul_ogs_details._matmul_ogs import _compute_writeback_idx
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/matmul_ogs_details/_matmul_ogs.py", line 8, in <module>
+    from triton_kernels.numerics_details.flexpoint import float_to_flex, load_scale
+  File "/usr/local/lib/python3.12/dist-packages/triton_kernels/numerics_details/flexpoint.py", line 55, in <module>
+    @tl.constexpr_function
+     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'triton.language' has no attribute 'constexpr_function'
+[rank1]:[W1021 05:09:35.404832928 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W1021 05:09:35.483694719 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W1021 05:09:35.485400580 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W1021 05:09:35.525840007 ProcessGroupNCCL.cpp:1536] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+
+================================================================================
+ThunderFX debug info saved to: /opt/pytorch/lightning-thunder/gm/meta-llama/Llama-4-Scout-17B-16E-Instruct
+Files:
+  - log.txt (30,750 bytes)
+================================================================================

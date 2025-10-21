@@ -12,6 +12,7 @@ ThunderFX compiled the following modules with SGLang.
 - deepseek-ai/DeepSeek-V3.1
 - huihui-ai/Qwen2.5-32B-Instruct-abliterated
 - meta-llama/Llama-4-Maverick-17B-128E-Instruct
+- meta-llama/Llama-4-Scout-17B-16E-Instruct
 - microsoft/Phi-4-mini-reasoning
 - mistralai/Magistral-Small-2509
 - mistralai/Ministral-8B-Instruct-2410
@@ -41,6 +42,6 @@ except that the former sets some NVTX annotations for profiling and creates dumm
 
 See [`gm/all_ops.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/gm/all_ops.py) for the list of ops in those GraphModules that Thunder did not support. This file was produced by [`sglang_scripts/extract_ops.py`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/sglang_scripts/extract_ops.py).
 
-Note. meta-llama/Llama-4-Maverick-17B-128E-Instruct requires specifying `--attention-backend [fa3|aiter|triton]`. However, all gives the error `AttributeError: module 'triton.language' has no attribute 'constexpr_function'` as seen in [`gm/meta-llama-Llama-4-Maverick-17B-128E-Instruct/log.txt`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/gm/meta-llama-Llama-4-Maverick-17B-128E-Instruct/log.txt). It is also run with `--load-format dummy` option, without creating model cache. This was because the weight tensors were too big for a typical disk space of a node.
+Note. meta-llama/Llama-4-Maverick-17B-128E-Instruct and Llama-4-Scout-17B-16E-Instruct require specifying `--attention-backend [fa3|aiter|triton]`. However, any combination gives the error `AttributeError: module 'triton.language' has no attribute 'constexpr_function'` as seen in [`gm/meta-llama-Llama-4-Maverick-17B-128E-Instruct/log.txt`](https://github.com/shino16/lightning-thunder/tree/sglang-graph-modules/gm/meta-llama-Llama-4-Maverick-17B-128E-Instruct/log.txt). The former is also run with `--load-format dummy` option without creating model cache, because the weight tensors were too big for a typical disk space of a node.
 
-Note. On openai/gpt-oss-20b and unsloth/gpt-oss-20b-BF16, a `_to_torch` call switches the CustomOp's forward implementation from forward_cuda to PyTorch-native implementation, cuasing a TypeError for an unrecognized argument. I edited patch_model to remove the problematic `_to_torch` calls.
+Note. On openai/gpt-oss-20b and unsloth/gpt-oss-20b-BF16, a `_to_torch` call switches the CustomOp's forward implementation from forward_cuda to PyTorch-native implementation, causing a TypeError for an unrecognized argument. I edited patch_model to remove the problematic `_to_torch` calls.
