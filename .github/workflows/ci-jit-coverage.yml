@@ -10,8 +10,6 @@ on:
       - ".github/load-jit-coverage-report.py"
       - "examples/coverage/*"
   workflow_dispatch: {}
-  schedule:
-    - cron: "0 0 * * *" # every midnight
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.head_ref }}
