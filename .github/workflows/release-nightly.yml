@@ -6,8 +6,6 @@ on:
     types: [opened, reopened, ready_for_review, synchronize]
     paths:
       - ".github/workflows/release-nightly.yml"
-  schedule:
-    - cron: "0 0 * * 0" # on Sundays
   workflow_dispatch: {}
 
 defaults:
