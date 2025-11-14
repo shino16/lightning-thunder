@@ -65,7 +65,7 @@ def main():
     model_name = sys.argv[1]
     os.environ["THUNDER_SAVE_DIR"] = os.path.join("gm", model_name)
 
-    # populate_dummy_model_cache(model_name)
+    populate_dummy_model_cache(model_name)
 
     args = [
         "--model-path",
