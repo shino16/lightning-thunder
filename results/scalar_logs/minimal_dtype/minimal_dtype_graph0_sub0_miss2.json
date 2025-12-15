@@ -1,0 +1,9 @@
+{
+  "iter_idx": 1,
+  "graph_idx": 0,
+  "subgraph_idx": 0,
+  "cache_misses": 2,
+  "input_summary": {
+    "dtype": "torch.bfloat16"
+  }
+}

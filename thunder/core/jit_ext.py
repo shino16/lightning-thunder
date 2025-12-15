@@ -4,6 +4,15 @@ from typing import Any
 import collections
 from collections.abc import Callable, Sequence
 import dataclasses
+import os
+_DEBUG_SCALARS = os.getenv("THUNDER_DEBUG_SCALARS")
+
+
+def _scalar_debug(msg: str) -> None:
+    """Lightweight debug logger for scalar/symbolic proxy decisions."""
+    if _DEBUG_SCALARS:
+        print(f"[thunder-scalar-debug] {msg}")
+
 from functools import wraps
 import contextvars
 from contextlib import contextmanager
@@ -282,6 +291,11 @@ class JitCtx:
 
             # TODO: other caching modes
             co: CACHE_OPTIONS = get_cache_option()
+            if _DEBUG_SCALARS:
+                _scalar_debug(
+                    f"tensor proxify cache={co.name} shape={list(uvalue.shape)} dtype={uvalue.dtype} "
+                    f"requires_grad={uvalue.requires_grad}"
+                )
             if co is CACHE_OPTIONS.CONSTANT_VALUES:
                 if is_dtensor_proxy(p):
                     self.add_constraint((check_dtensor_spec_repr, p, uvalue._spec))
@@ -303,6 +317,11 @@ class JitCtx:
             assert p.history is not None, f"{p.history}, {value.provenance} {type(p)}"
 
             co: CACHE_OPTIONS = get_cache_option()
+            if _DEBUG_SCALARS:
+                _scalar_debug(
+                    f"scalar proxify cache={co.name} type={type(uvalue).__name__} value={uvalue} "
+                    f"history={getattr(p, 'history', None)}"
+                )
             if co is CACHE_OPTIONS.CONSTANT_VALUES:
                 if isinstance(uvalue, str):
                     self.add_constraint((clang.check_string_value, p, uvalue))

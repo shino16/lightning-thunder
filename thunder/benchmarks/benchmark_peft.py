@@ -3,6 +3,7 @@ import os
 import random
 import time
 import logging
+from pathlib import Path
 from contextlib import contextmanager
 from datetime import timedelta
 from looseversion import LooseVersion
@@ -16,6 +17,7 @@ from tqdm import tqdm
 from transformers import AutoConfig, AutoModel, AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, get_peft_model
 from datasets import Dataset
+from thunder.benchmarks.scalar_recompile_tracker import ScalarRecompileTracker
 
 # Set up distributed training variables
 WORLD_SIZE = int(os.environ.get("WORLD_SIZE", 1))
@@ -232,7 +234,7 @@ def setup_fsdp2(model: torch.nn.Module) -> torch.nn.Module:
     return model
 
 
-def setup_compilation(model, backend: str, thunder_cache: str | None = None):
+def setup_compilation(model, backend: str, thunder_cache: str | None = None, dynamic: bool | None = None):
     # TODO from thunder.executors.transformer_engineex import transformer_engine_ex
     """Apply compilation settings to the model."""
     if backend in ("thunder", "inductor"):
@@ -244,7 +246,7 @@ def setup_compilation(model, backend: str, thunder_cache: str | None = None):
 
     if backend == "inductor":
         logger.info("Compiling model with torch.compile")
-        model = torch.compile(model)
+        model = torch.compile(model, dynamic=dynamic)
 
     elif "thunder" in backend:
         import thunder
@@ -268,8 +270,9 @@ def setup_compilation(model, backend: str, thunder_cache: str | None = None):
             from thunder.dynamo import thunderfx
 
             # TODO get parameters out from thunderfx CompiledObject
-            compiled_object = thunderfx(model, transforms=xforms, executors=executors, cache=thunder_cache)
+            compiled_object = thunderfx(model, transforms=xforms, executors=executors, cache=thunder_cache, dynamic=dynamic)
             model = compiled_object._func
+            model._thunderfx_obj = compiled_object
             model._thunder_backend = compiled_object._backend
 
     return model
@@ -330,6 +333,19 @@ def parse_args():
         default=False,
         help="Enable gradient checkpointing. Disabled by default due to potential compatibility issues with compilers.",
     )
+    parser.add_argument(
+        "--dynamic",
+        type=str,
+        choices=["none", "true", "false"],
+        default="none",
+        help="torch.compile dynamic flag (None uses torch default).",
+    )
+    parser.add_argument(
+        "--scalar-log-dir",
+        type=str,
+        default=None,
+        help="Directory to store scalar/recompile logs and GraphModules",
+    )
 
     args = parser.parse_args()
 
@@ -375,6 +391,7 @@ def main(args: argparse.Namespace):
     # Setup logger and log level
     logger.addFilter(rank_filter)
     logger.setLevel(logging.DEBUG if args.verbose else logging.INFO)
+    dynamic_flag = {"none": None, "true": True, "false": False}[args.dynamic]
 
     logger.info(args)
     logger.debug(f"Initialized process group: rank {GLOBAL_RANK}, local rank {LOCAL_RANK}, world size {WORLD_SIZE}")
@@ -472,10 +489,14 @@ def main(args: argparse.Namespace):
     model = model.to_empty(device=f"cuda:{LOCAL_RANK}")
     model.apply(lambda m: m.reset_parameters() if hasattr(m, "reset_parameters") else None)
 
+    # Prepare recompile tracker
+    recompile_tracker = ScalarRecompileTracker(args.scalar_log_dir, run_label="training") if args.scalar_log_dir else ScalarRecompileTracker(None, run_label="training")
+    recompile_events: list[dict[str, object]] = []
+
     # Apply compilation if needed
     if args.compile != "eager":
         logger.info(f"Applying compilation: {args.compile} to model")
-        model = setup_compilation(model, args.compile, thunder_cache=args.thunder_cache)
+        model = setup_compilation(model, args.compile, thunder_cache=args.thunder_cache, dynamic=dynamic_flag)
         logger.info("Compilation applied to model")
 
     # Verify only LoRA parameters are trainable
@@ -566,6 +587,24 @@ def main(args: argparse.Namespace):
         optimizer.step()
         optimizer.zero_grad(set_to_none=True)  # More memory efficient
 
+        if recompile_tracker.enabled and "thunder" in args.compile:
+            input_summary = {
+                "step": step,
+                "batch_size": args.mbs,
+                "seq_length": seq_len,
+                "dynamic": dynamic_flag,
+                "backend": args.compile,
+            }
+            if "jit" in args.compile:
+                events = recompile_tracker.track_thunder_jit(model, step, input_summary)
+            else:
+                compiled_obj = getattr(model, "_thunderfx_obj", None)
+                if compiled_obj is not None:
+                    events = recompile_tracker.track_thunder_fx(compiled_obj, step, input_summary)
+                else:
+                    events = []
+            recompile_events.extend(events)
+
         # Track iteration time
         t1 = time.perf_counter()
         iteration_time = t1 - iter_t0
@@ -617,6 +656,11 @@ def main(args: argparse.Namespace):
         WORLD_SIZE,
         num_recompilations,
     )
+
+    if recompile_tracker.enabled and recompile_events:
+        events_path = Path(args.scalar_log_dir) / "training_recompile_events.json"
+        with open(events_path, "w") as f:
+            json.dump(recompile_events, f, indent=2)
 
     # Clean up distributed environment if needed
     if WORLD_SIZE > 1:

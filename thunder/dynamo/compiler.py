@@ -5,6 +5,8 @@ from typing import TYPE_CHECKING
 import warnings
 from pathlib import Path
 import copy
+import os
+import json
 
 import torch
 from torch._guards import CompileContext as TorchCompileContext
@@ -41,6 +43,9 @@ _DEFAULT_THUNDER_FUSION_TYPE = "dataflow"
 # leading to NCCL hang-up due to collective mismatch.
 # TODO(kshitij12345): Investigate more and understand if the bug is in PyTorch or elsewhere.
 _DEFAULT_THUNDERFX_DISABLE_SPLIT_AUTOGRAD = True
+
+_DEBUG_DYNAMO = os.getenv("THUNDER_DEBUG_DYNAMO")
+_DEBUG_DYNAMO_FILE = os.getenv("THUNDER_DEBUG_DYNAMO_FILE")
 
 
 def is_in_torch_compile() -> bool:
@@ -128,6 +133,8 @@ class ThunderCompiler:
             "thunderfx_disable_split_autograd", _DEFAULT_THUNDERFX_DISABLE_SPLIT_AUTOGRAD
         )
         self.thunder_options = thunder_options
+        self.compile_invocations: int = 0
+        self.compile_events: list[dict[str, object]] = []
 
     def __call__(self, gm: torch.fx.GraphModule, sample_args: list[torch.SymInt, torch.Tensor], **compile_options):
         from thunder import jit
@@ -137,6 +144,33 @@ class ThunderCompiler:
         # Dynamo uses lazy generation of the underlying Python code, so we need to
         # force recompilation of the GraphModule before passing it to Thunder.
         recompile_graph(gm)
+
+        self.compile_invocations += 1
+        if _DEBUG_DYNAMO:
+            guard_sources = []
+            try:
+                guard_sources = [getattr(g, "guard_source", None) for g in getattr(gm, "_guards", [])]
+                guard_sources = [g.name if g is not None else None for g in guard_sources]
+            except Exception:
+                guard_sources = []
+            event = {
+                "compile_idx": self.compile_invocations,
+                "graph_nodes": len(list(gm.graph.nodes)),
+                "placeholders": [n.name for n in gm.graph.nodes if n.op == "placeholder"],
+                "has_symbolic_input": is_dynamic_inputs(sample_args),
+                "guards": guard_sources,
+                "compile_options": compile_options,
+            }
+            self.compile_events.append(event)
+            target_file = _DEBUG_DYNAMO_FILE
+            if target_file:
+                try:
+                    with open(target_file, "a") as f:
+                        f.write(json.dumps(event) + "\n")
+                except Exception:
+                    warnings.warn(f"Failed to write dynamo debug event to {target_file}")
+            else:
+                print(f"[thunder-dynamo-debug] {event}")
 
         # The whole graph may not be supported by `thunder`, so we split it in `thunder` supported sections
         # and unsupported sections which are passed to `torch.compile(backend='inductor')`

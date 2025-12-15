@@ -76,6 +76,27 @@ assert pythonex is not None
 _PACKAGE_ROOT = os.path.dirname(__file__)
 _PROJECT_ROOT = os.path.dirname(_PACKAGE_ROOT)
 
+_DEBUG_CACHE = os.getenv("THUNDER_DEBUG_CACHE")
+
+
+def _cache_debug(msg: str) -> None:
+    if _DEBUG_CACHE:
+        print(f"[thunder-cache] {msg}")
+
+
+def _summarize_arg(a: Any) -> str:
+    if isinstance(a, pytorch.Tensor):
+        return f"Tensor(shape={list(a.shape)},dtype={a.dtype},device={a.device})"
+    if isinstance(a, (int, float, bool, str)):
+        return repr(a)
+    return type(a).__name__
+
+
+def _summarize_args(args: tuple[Any, ...], kwargs: dict[str, Any]) -> str:
+    parts = [_summarize_arg(a) for a in args]
+    parts.extend(f"{k}={_summarize_arg(v)}" for k, v in kwargs.items())
+    return ", ".join(parts)
+
 # TODO RC1 Review exposed names
 __all__ = [
     # module aliases
@@ -739,6 +760,10 @@ def jit(
                     cs.last_prologue_transformation_stop = 0
                     cs.last_computation_transformation_start = 0
                     cs.last_computation_transformation_stop = 0
+                    _cache_debug(
+                        f"cache hit option={cd.cache_option.name} args=({_summarize_args(args, kwargs)}) "
+                        f"prologue={pro.__name__ if hasattr(pro, '__name__') else 'fn'}"
+                    )
 
                     return cache_entry, inps, pro_to_epi
 
@@ -771,6 +796,10 @@ def jit(
 
         cs.cache_misses += 1
         cs.last_trace_cache_stop = time.perf_counter_ns()
+        _cache_debug(
+            f"cache miss option={cd.cache_option.name} args=({_summarize_args(args, kwargs)}) "
+            f"misses={cs.cache_misses}"
+        )
 
         # Resets use of compile flags
         cs.last_compile_reasons = defaultdict(list)

@@ -13,6 +13,7 @@ from __future__ import annotations
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING
+from pathlib import Path
 import argparse
 import json
 import os
@@ -38,6 +39,7 @@ from torch.distributed.tensor import DTensor
 
 import thunder
 from thunder.dynamo.compiler import thunderfx
+from thunder.benchmarks.scalar_recompile_tracker import ScalarRecompileTracker
 from thunder.benchmarks.layers_for_inference_benchmark import (
     GroupedSwiGLU,
     Llama4MoE,
@@ -226,6 +228,8 @@ class InferenceBenchmarkConfig:
     profile: bool
     thunder_cache: str | None
     enable_thunder_cudagraph: bool
+    dynamic: bool | None
+    scalar_log_dir: str | None
 
 
 @dataclass
@@ -345,11 +349,13 @@ class InferenceBenchmark:
 
         # `thunderfx` seems to hide the access to vocab_size somewhere so
         # store it here before any compiler is applied.
-        self.vocab_size = model.vocab_size
+        self.vocab_size = getattr(model, "vocab_size", None) or getattr(self.hf_config, "vocab_size")
 
         if self.config.enable_nvfp4:
             _quantize_llama4(model)
         self.model = self._compile_model(model)
+        self._recompile_tracker = ScalarRecompileTracker(self.config.scalar_log_dir, run_label="inference")
+        self.recompile_events: list[dict[str, Any]] = []
 
     @property
     def _thunder_jit_options(self) -> dict[str, Any]:
@@ -378,9 +384,9 @@ class InferenceBenchmark:
             case "eager":
                 return model
             case "inductor":
-                return torch.compile(model, mode="reduce-overhead")
+                return torch.compile(model, mode="reduce-overhead", dynamic=self.config.dynamic)
             case "thunder":
-                return thunderfx(model, **self._thunder_jit_options)
+                return thunderfx(model, dynamic=self.config.dynamic, **self._thunder_jit_options)
             case "thunderjit":
                 return thunder.jit(model, **self._thunder_jit_options)
             case _:
@@ -566,6 +572,19 @@ class InferenceBenchmark:
                 torch.cuda.cudart().cudaProfilerStop()
 
             all_metrics.append(iter_metrics)
+            if self._recompile_tracker.enabled and self.config.mode in ("thunder", "thunderjit"):
+                input_summary = {
+                    "batch_size": self.config.batch_size,
+                    "input_length": self.config.input_length,
+                    "output_length": self.config.output_length,
+                    "dynamic": self.config.dynamic,
+                    "mode": self.config.mode,
+                }
+                if self.config.mode == "thunder":
+                    events = self._recompile_tracker.track_thunder_fx(self.model, len(all_metrics), input_summary)
+                else:
+                    events = self._recompile_tracker.track_thunder_jit(self.model, len(all_metrics), input_summary)
+                self.recompile_events.extend(events)
 
             # Track metrics
             self.metrics.iteration_times.append(iter_metrics["total_time"])
@@ -580,6 +599,11 @@ class InferenceBenchmark:
         if torch.cuda.is_available():
             self.metrics.memory_used_gb = torch.cuda.memory_allocated() / 1e9
             self.metrics.peak_memory_gb = torch.cuda.max_memory_allocated() / 1e9
+
+        if self._recompile_tracker.enabled and self.recompile_events:
+            events_path = Path(self.config.scalar_log_dir) / "inference_recompile_events.json"
+            with open(events_path, "w") as f:
+                json.dump(self.recompile_events, f, indent=2)
 
         if self.config.fx_report_folder is not None and self.config.mode == "thunder":
             self.model._backend.save_reproducer_to_folder(self.config.fx_report_folder)
@@ -795,6 +819,19 @@ Examples:
     )
     parser.add_argument("--enable-thunder-cudagraph", action="store_true", help="Pass CUDAGraphTransform to Thunder")
     parser.add_argument("--attn-implementation", type=str, default=None, help="Attention implementation")
+    parser.add_argument(
+        "--dynamic",
+        type=str,
+        choices=("none", "true", "false"),
+        default="none",
+        help="torch.compile dynamic flag. none=>default torch behaviour",
+    )
+    parser.add_argument(
+        "--scalar-log-dir",
+        type=str,
+        default=None,
+        help="Directory to store scalar/recompile logs and GraphModules",
+    )
 
     args = parser.parse_args()
     return args
@@ -830,6 +867,8 @@ def main():
         profile=args.profile,
         thunder_cache=args.thunder_cache,
         enable_thunder_cudagraph=args.enable_thunder_cudagraph,
+        dynamic={"none": None, "true": True, "false": False}[args.dynamic],
+        scalar_log_dir=args.scalar_log_dir,
     )
     benchmark = InferenceBenchmark(config)
 

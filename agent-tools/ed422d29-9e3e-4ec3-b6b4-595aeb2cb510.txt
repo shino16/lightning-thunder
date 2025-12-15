@@ -1,0 +1,288 @@
+/usr/local/lib/python3.12/dist-packages/torch/library.py:356: UserWarning: Warning only once for all operators,  other operators may also be overridden.
+  Overriding a previously registered kernel for the same operator and the same dispatch key
+  operator: flash_attn::_flash_attn_backward(Tensor dout, Tensor q, Tensor k, Tensor v, Tensor out, Tensor softmax_lse, Tensor(a6!)? dq, Tensor(a7!)? dk, Tensor(a8!)? dv, float dropout_p, float softmax_scale, bool causal, SymInt window_size_left, SymInt window_size_right, float softcap, Tensor? alibi_slopes, bool deterministic, Tensor? rng_state=None) -> Tensor
+    registered at /usr/local/lib/python3.12/dist-packages/torch/_library/custom_ops.py:922
+  dispatch key: ADInplaceOrView
+  previous kernel: no debug info
+       new kernel: registered at /usr/local/lib/python3.12/dist-packages/torch/_library/custom_ops.py:922 (Triggered internally at /opt/pytorch/pytorch/aten/src/ATen/core/dispatch/OperatorEntry.cpp:208.)
+  self.m.impl(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1765803403.605884  201610 collection_registry.cc:88] Trying to register 2 metrics with the same name: /coordination_service/agent/enabled. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+W0000 00:00:1765803403.610927  201610 collection_registry.cc:88] Trying to register 2 metrics with the same name: /coordination_service/preempt_manager/reached_sync_point_usage. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+W0000 00:00:1765803403.610947  201610 collection_registry.cc:88] Trying to register 2 metrics with the same name: /coordination_service/preempt_manager/notified. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+W0000 00:00:1765803403.610951  201610 collection_registry.cc:88] Trying to register 2 metrics with the same name: /coordination_service/preempt_manager/set_sync_point. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+W0000 00:00:1765803403.610955  201610 collection_registry.cc:88] Trying to register 2 metrics with the same name: /coordination_service/preempt_manager/reached_sync_point. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+/usr/local/lib/python3.12/dist-packages/transformer_engine/__init__.py:59: RuntimeWarning: Detected a Jax installation but could not find the shared object file for the Transformer Engine Jax extension library. If this is not intentional, please reinstall Transformer Engine with `pip install transformer_engine[jax]` or build from source with `NVTE_FRAMEWORK=jax`.
+  warnings.warn(
+25-12-15 04:56:46 INFO Namespace(model='sshleifer/tiny-gpt2', max_steps=4, skip_iters=1, mbs=1, grad_acc_steps=1, seq_length=64, var_seq_length=False, compile='thunder', thunder_cache='symbolic values', verbose=False, trust_remote_code=False, fixed_num_hidden_layers=None, attn_implementation='sdpa', gradient_checkpointing=False, dynamic='none', scalar_log_dir='results/scalar_logs_v3/peft_thunder_static')
+25-12-15 04:56:46 INFO Global batch size: 1 (mbs: 1, grad_acc_steps: 1, world_size: 1)
+25-12-15 04:56:46 INFO Loading tokenizer
+25-12-15 04:56:46 INFO Loading base model on meta device...
+25-12-15 04:56:46 INFO Base model loaded on meta device
+25-12-15 04:56:46 INFO Configured model for static shapes with sequence length: 64
+25-12-15 04:56:46 INFO Gradient checkpointing disabled
+25-12-15 04:56:46 INFO Applying LoRA to model
+/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/layer.py:2285: UserWarning: fan_in_fan_out is set to False but the target module is `Conv1D`. Setting fan_in_fan_out to True.
+  warnings.warn(
+25-12-15 04:56:46 INFO LoRA applied to model
+25-12-15 04:56:46 INFO Verifying gradient setup...
+25-12-15 04:56:46 INFO Applying compilation: thunder to model
+25-12-15 04:56:46 INFO Resetting cache size for torch.dynamo
+25-12-15 04:56:46 INFO Disabled gradient checkpointing for Thunder compilation
+25-12-15 04:56:46 INFO Thunder used executors: ['cudnn', 'sdpa', 'torchcompile_xentropy', 'nvfuser', 'custom_op']
+25-12-15 04:56:46 INFO Applying Thunder compilation with 5 executors
+25-12-15 04:56:46 INFO Using ThunderFX
+25-12-15 04:56:46 INFO Compilation applied to model
+25-12-15 04:56:46 INFO Trainable parameters: 1,024
+25-12-15 04:56:46 INFO Total parameters: 204,252
+25-12-15 04:56:46 INFO Trainable parameter ratio: 0.50%
+Map:   0%|          | 0/4 [00:00<?, ? examples/s]Map: 100%|██████████| 4/4 [00:00<00:00, 46.00 examples/s]
+25-12-15 04:56:46 INFO Starting training...
+Training:   0%|          | 0/4 [00:00<?, ?step/s]/opt/pytorch/lightning-thunder/thunder/core/options.py:81: UserWarning: The 'symbolic values' cache option is highly experimental and for development only.
+  warnings.warn("The 'symbolic values' cache option is highly experimental and for development only.")
+/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/user_defined.py:1783: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return ctor(*args, **kwargs)
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[1, 64],dtype=torch.int64,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64] dtype=torch.int64 requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[1, 64],dtype=torch.int64,device=cuda:0), Tensor(shape=[50257, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1024, 2],dtype=torch.bfloat16,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64] dtype=torch.int64 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[50257, 2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1024, 2] dtype=torch.bfloat16 requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[64, 6],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[16, 2],dtype=torch.float32,device=cuda:0), Tensor(shape=[6, 16],dtype=torch.float32,device=cuda:0), Tensor(shape=[1, 1, 64, 64],dtype=torch.bool,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[64, 6] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[16, 2] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[6, 16] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 1, 64, 64] dtype=torch.bool requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[16, 2],dtype=torch.float32,device=cuda:0), Tensor(shape=[2, 16],dtype=torch.float32,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[16, 2] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2, 16] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[64, 8],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[16, 2],dtype=torch.float32,device=cuda:0), Tensor(shape=[8, 16],dtype=torch.float32,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[64, 8] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[16, 2] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[8, 16] dtype=torch.float32 requires_grad=True
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64, 8],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[16, 8],dtype=torch.float32,device=cuda:0), Tensor(shape=[2, 16],dtype=torch.float32,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 8] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[16, 8] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2, 16] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[64, 6],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[16, 2],dtype=torch.float32,device=cuda:0), Tensor(shape=[6, 16],dtype=torch.float32,device=cuda:0), Tensor(shape=[1, 1, 64, 64],dtype=torch.bool,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[64, 6] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[16, 2] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[6, 16] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 1, 64, 64] dtype=torch.bool requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[16, 2],dtype=torch.float32,device=cuda:0), Tensor(shape=[2, 16],dtype=torch.float32,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[16, 2] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2, 16] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[64, 8],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[16, 2],dtype=torch.float32,device=cuda:0), Tensor(shape=[8, 16],dtype=torch.float32,device=cuda:0)) misses=1
+/opt/pytorch/lightning-thunder/thunder/core/options.py:81: UserWarning: The 'symbolic values' cache option is highly experimental and for development only.
+  warnings.warn("The 'symbolic values' cache option is highly experimental and for development only.")
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[64, 8] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[16, 2] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[8, 16] dtype=torch.float32 requires_grad=True
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64, 8],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[16, 8],dtype=torch.float32,device=cuda:0), Tensor(shape=[2, 16],dtype=torch.float32,device=cuda:0), Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[2],dtype=torch.bfloat16,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 8] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[16, 8] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2, 16] dtype=torch.float32 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[2] dtype=torch.bfloat16 requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[1, 64, 2],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[50257, 2],dtype=torch.bfloat16,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 2] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[50257, 2] dtype=torch.bfloat16 requires_grad=False
+[thunder-cache] cache miss option=SYMBOLIC_VALUES args=(Tensor(shape=[1, 64, 50257],dtype=torch.bfloat16,device=cuda:0), Tensor(shape=[1, 64],dtype=torch.int64,device=cuda:0)) misses=1
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64, 50257] dtype=torch.bfloat16 requires_grad=True
+[thunder-scalar-debug] tensor proxify cache=SYMBOLIC_VALUES shape=[1, 64] dtype=torch.int64 requires_grad=False
+Training:   0%|          | 0/4 [00:35<?, ?step/s]
+Traceback (most recent call last):
+  File "/opt/pytorch/lightning-thunder/thunder/benchmarks/benchmark_peft.py", line 777, in <module>
+    main(args)
+  File "/opt/pytorch/lightning-thunder/thunder/benchmarks/benchmark_peft.py", line 580, in main
+    outputs = model(**batch)
+              ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 440, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 919, in compile_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/peft/peft_model.py", line 1923, in forward
+    return self.base_model(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/tuners_utils.py", line 308, in forward
+    return self.model.forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/gpt2/modeling_gpt2.py", line 1076, in forward
+    transformer_outputs = self.transformer(
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/gpt2/modeling_gpt2.py", line 1105, in torch_dynamo_resume_in_forward_at_1076
+    loss = self.loss_function(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/loss/loss_utils.py", line 45, in ForCausalLMLoss
+    def ForCausalLMLoss(
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 440, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 1136, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py", line 924, in call_wrapped
+    return self._wrapped_call(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py", line 454, in __call__
+    raise e
+  File "/usr/local/lib/python3.12/dist-packages/torch/fx/graph_module.py", line 441, in __call__
+    return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<eval_with_key>.202", line 5, in forward
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/core/module.py", line 80, in forward
+    res = self._forward_fn(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/__init__.py", line 872, in wrapped
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/__init__.py", line 922, in fn_
+    result = cache_entry.computation_fn(*inps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/__init__.py", line 827, in wrapped
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pytorch/lightning-thunder/thunder/executors/torchex.py", line 169, in no_autocast_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "thunder.computation_48", line 108, in computation
+  File "/opt/pytorch/lightning-thunder/thunder/executors/nvfuserex_impl.py", line 567, in __call__
+    return fd.execute(
+           ^^^^^^^^^^^
+  File "/opt/pytorch/nvfuser/python/nvfuser_direct/__init__.py", line 369, in execute
+    return self.fec.execute(
+           ^^^^^^^^^^^^^^^^^
+RuntimeError:  INTERNAL ASSERT FAILED at /opt/pytorch/nvfuser/csrc/runtime/fusion_kernel_runtime.cpp:456, please report a bug with repro script to NVFuser at https://github.com/NVIDIA/Fuser/issues. 
+Expected thread_pool_error_message.empty() . Detected exception while compiling fusion segments in parallel. Error messages from all threads are printed below.
+
+Error from segmentation group 1:  INTERNAL ASSERT FAILED at /opt/pytorch/nvfuser/csrc/device_lower/validation.cpp:1486, please report a bug with repro script to NVFuser at https://github.com/NVIDIA/Fuser/issues. 
+Expected def == nullptr || def->isA<LoadStoreOp>() || def->isA<SliceOp>() || def->isA<PadOp>() || def->isA<IndexSelectOp>() || (def->isA<TernaryOp>() && def->as<TernaryOp>()->getTernaryOpType() == TernaryOpType::Where) || (def->isA<ReductionOp>() && def->as<ReductionOp>()->serialGridReductionRequested()) || (def->isA<UnaryOp>() && def->as<UnaryOp>()->getUnaryOpType() == UnaryOpType::Cast) . Vectorized accesses cannot be inline with computation: T35_l_float[iblockIdx.y192{( (( (( getMetaData(T1) )).logical_size ))[1] )}, rS113{50}rf, iblockIdx.x114{4}rf_c, rUS115{1}rf, ithreadIdx.x116{256}rf, rV110{1}rf] ca_pos( 1 ) produce_pos( 1 )
+   = reduction( T26_l_float[iblockIdx.y191{( (( (( getMetaData(T1) )).logical_size ))[1] )}, iS124{50}, iblockIdx.x125{4}_c, iUS126{1}, ithreadIdx.x127{256}, iS121{1}] ca_pos( 1 ) produce_pos( 6 ), op = max, initial value = double(-inf), allreduce = false )
+
+Exception raised from validateAndCollectVectorizeInfo at /opt/pytorch/nvfuser/csrc/device_lower/validation.cpp:1486 (most recent call first):
+frame #0: nvfuser::nvfCheckFail(char const*, char const*, long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x94 (0x7f822d9ec403 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #1: nvfuser::nvfErrorFail(char const*, char const*, long, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x7a (0x7f822d9ec500 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #2: <unknown function> + 0xbe1443 (0x7f822d888443 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #3: <unknown function> + 0x9ff851 (0x7f822d6a6851 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #4: nvfuser::GpuLower::GpuLower(nvfuser::Fusion*, nvfuser::CompileParams const&) + 0x6eb (0x7f822d6a4219 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #5: <unknown function> + 0x141cf23 (0x7f822e0c3f23 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #6: nvfuser::CompiledKernel::CompiledKernel(nvfuser::Fusion*, nvfuser::CompileParams, c10::Device, nvfuser::SchedulerType, long, long, long, long, std::vector<std::function<void (nvfuser::GpuLower*)>, std::allocator<std::function<void (nvfuser::GpuLower*)> > > const&, std::vector<std::function<void (nvfuser::kir::Kernel*)>, std::allocator<std::function<void (nvfuser::kir::Kernel*)> > > const&) + 0x12d (0x7f822e0b8133 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #7: <unknown function> + 0x1453cee (0x7f822e0facee in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #8: nvfuser::KernelExecutor::compile(nvfuser::Fusion*, nvfuser::KernelArgumentHolder const&, nvfuser::LaunchParams const&, nvfuser::CompileParams, nvfuser::SchedulerType) + 0x545 (0x7f822e0e8f1f in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #9: <unknown function> + 0x1464613 (0x7f822e10b613 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #10: <unknown function> + 0x14cc61e (0x7f822e17361e in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #11: <unknown function> + 0x14c9a16 (0x7f822e170a16 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #12: <unknown function> + 0x14cddf6 (0x7f822e174df6 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #13: <unknown function> + 0x14cd99c (0x7f822e17499c in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #14: <unknown function> + 0x14cd71c (0x7f822e17471c in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #15: c10::ThreadPool::main_loop(unsigned long) + 0x29d (0x7fa6dca7bf4d in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #16: <unknown function> + 0xecdb4 (0x7fa70b352db4 in /usr/lib/x86_64-linux-gnu/libstdc++.so.6)
+frame #17: <unknown function> + 0x9caa4 (0x7fa717043aa4 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #18: <unknown function> + 0x129c6c (0x7fa7170d0c6c in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+
+Use NVFUSER_DISABLE=parallel_compile to simplify error message.
+Exception raised from compileFusionParallel at /opt/pytorch/nvfuser/csrc/runtime/fusion_kernel_runtime.cpp:456 (most recent call first):
+frame #0: nvfuser::nvfCheckFail(char const*, char const*, long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x94 (0x7f822d9ec403 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #1: nvfuser::nvfErrorFail(char const*, char const*, long, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x7a (0x7f822d9ec500 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #2: <unknown function> + 0x14ca25a (0x7f822e17125a in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #3: nvfuser::FusionExecutorCache::runFusionWithInputs(nvfuser::KernelArgumentHolder, std::optional<nvfuser::PrimDataType>, std::optional<signed char>) + 0x141 (0x7f822e1555c1 in /opt/pytorch/nvfuser/python/nvfuser_direct/../build/libnvfuser_codegen.so)
+frame #4: <unknown function> + 0x2dee07 (0x7f8231268e07 in /opt/pytorch/nvfuser/python/nvfuser_direct/_C_DIRECT.cpython-312-x86_64-linux-gnu.so)
+frame #5: <unknown function> + 0x2fb233 (0x7f8231285233 in /opt/pytorch/nvfuser/python/nvfuser_direct/_C_DIRECT.cpython-312-x86_64-linux-gnu.so)
+frame #6: <unknown function> + 0x2f4dc5 (0x7f823127edc5 in /opt/pytorch/nvfuser/python/nvfuser_direct/_C_DIRECT.cpython-312-x86_64-linux-gnu.so)
+frame #7: <unknown function> + 0x2ed179 (0x7f8231277179 in /opt/pytorch/nvfuser/python/nvfuser_direct/_C_DIRECT.cpython-312-x86_64-linux-gnu.so)
+frame #8: <unknown function> + 0x2ed268 (0x7f8231277268 in /opt/pytorch/nvfuser/python/nvfuser_direct/_C_DIRECT.cpython-312-x86_64-linux-gnu.so)
+frame #9: <unknown function> + 0x55e50 (0x7f8230fdfe50 in /opt/pytorch/nvfuser/python/nvfuser_direct/_C_DIRECT.cpython-312-x86_64-linux-gnu.so)
+frame #10: python() [0x581e4f]
+<omitting python frames>
+frame #14: python() [0x5a3398]
+frame #17: python() [0x54c96d]
+frame #19: python() [0x54c96d]
+frame #22: python() [0x5a3398]
+frame #25: python() [0x54c96d]
+frame #27: python() [0x54c96d]
+frame #29: python() [0x54c96d]
+frame #32: python() [0x5a3398]
+frame #35: python() [0x54c96d]
+frame #37: <unknown function> + 0x946ecd (0x7fa70a558ecd in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #39: <unknown function> + 0x946ecd (0x7fa70a558ecd in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #40: python() [0x54c96d]
+frame #42: <unknown function> + 0x946ecd (0x7fa70a558ecd in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #43: python() [0x54c96d]
+frame #45: <unknown function> + 0x946ecd (0x7fa70a558ecd in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #47: python() [0x5a3398]
+frame #50: dynamo_eval_custom_code + 0x1f1 (0x7fa70a5576b1 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #51: <unknown function> + 0x946e88 (0x7fa70a558e88 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #54: dynamo_eval_custom_code + 0x1f1 (0x7fa70a5576b1 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #55: <unknown function> + 0x946e88 (0x7fa70a558e88 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #57: dynamo_eval_custom_code + 0x1f1 (0x7fa70a5576b1 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #58: <unknown function> + 0x946e88 (0x7fa70a558e88 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #59: python() [0x54ca34]
+frame #62: dynamo_eval_custom_code + 0x1f1 (0x7fa70a5576b1 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #63: <unknown function> + 0x946e88 (0x7fa70a558e88 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+
