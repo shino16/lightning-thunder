@@ -258,6 +258,9 @@ def setup_compilation(model, backend: str, thunder_cache: str | None = None, dyn
             logger.info("Disabled gradient checkpointing for Thunder compilation")
 
         executors = thunder.get_default_executors()
+        if getattr(model, "_disable_nvfuser", False):
+            executors = [ex for ex in executors if ex.name != "nvfuser"]
+            logger.info("NVFuser executor disabled by flag; using executors: %s", [ex.name for ex in executors])
         xforms: list = [NvtxProfileTransform()]
         logger.info(f"Thunder used executors: {[ex.name for ex in executors]}")
         logger.info(f"Applying Thunder compilation with {len(executors)} executors")
@@ -270,7 +273,9 @@ def setup_compilation(model, backend: str, thunder_cache: str | None = None, dyn
             from thunder.dynamo import thunderfx
 
             # TODO get parameters out from thunderfx CompiledObject
-            compiled_object = thunderfx(model, transforms=xforms, executors=executors, cache=thunder_cache, dynamic=dynamic)
+            compiled_object = thunderfx(
+                model, transforms=xforms, executors=executors, cache=thunder_cache, dynamic=dynamic
+            )
             model = compiled_object._func
             model._thunderfx_obj = compiled_object
             model._thunder_backend = compiled_object._backend
@@ -345,6 +350,11 @@ def parse_args():
         type=str,
         default=None,
         help="Directory to store scalar/recompile logs and GraphModules",
+    )
+    parser.add_argument(
+        "--disable-nvfuser",
+        action="store_true",
+        help="Disable nvfuser executor in Thunder to avoid nvfuser codegen issues",
     )
 
     args = parser.parse_args()
@@ -496,6 +506,8 @@ def main(args: argparse.Namespace):
     # Apply compilation if needed
     if args.compile != "eager":
         logger.info(f"Applying compilation: {args.compile} to model")
+        if args.disable_nvfuser:
+            model._disable_nvfuser = True  # type: ignore[attr-defined]
         model = setup_compilation(model, args.compile, thunder_cache=args.thunder_cache, dynamic=dynamic_flag)
         logger.info("Compilation applied to model")
 
@@ -735,7 +747,10 @@ def print_training_summary(
 
         # Calculate expected values
         expected_batches = args.max_steps * WORLD_SIZE
-        expected_tokens = expected_batches * args.seq_length * args.mbs
+        if args.var_seq_length:
+            expected_tokens = total_tokens_processed_all  # variable lengths; rely on measured total
+        else:
+            expected_tokens = expected_batches * args.seq_length * args.mbs
 
         # Log verification results
         logger.info("Verification:")
@@ -749,13 +764,17 @@ def print_training_summary(
         assert total_batches_processed == expected_batches, (
             f"Expected {expected_batches} batches, but processed {total_batches_processed}"
         )
-        assert total_tokens_processed_all == expected_tokens, (
-            f"Expected {expected_tokens} tokens, but processed {total_tokens_processed_all}"
-        )
+        if not args.var_seq_length:
+            assert total_tokens_processed_all == expected_tokens, (
+                f"Expected {expected_tokens} tokens, but processed {total_tokens_processed_all}"
+            )
     else:
         # Single GPU verification
         expected_batches = args.max_steps
-        expected_tokens = expected_batches * args.seq_length * args.mbs
+        if args.var_seq_length:
+            expected_tokens = total_tokens_processed
+        else:
+            expected_tokens = expected_batches * args.seq_length * args.mbs
 
         logger.info("Verification:")
         logger.info(f"Batches processed: {batches_processed}")
@@ -767,9 +786,10 @@ def print_training_summary(
         assert batches_processed == expected_batches, (
             f"Expected {expected_batches} batches, but processed {batches_processed}"
         )
-        assert total_tokens_processed == expected_tokens, (
-            f"Expected {expected_tokens} tokens, but processed {total_tokens_processed}"
-        )
+        if not args.var_seq_length:
+            assert total_tokens_processed == expected_tokens, (
+                f"Expected {expected_tokens} tokens, but processed {total_tokens_processed}"
+            )
 
 
 if __name__ == "__main__":

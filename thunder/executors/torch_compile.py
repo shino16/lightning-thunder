@@ -50,11 +50,11 @@ def make_compiled(
     for bsym in region_trace.bound_symbols:
         if bsym.sym == prims.unpack_trivial:
             continue
-        for o in bsym.flat_outs:
+        for o in bsym.flat_proxy_outs:
             if o is not None:
                 region_trace.add_name(o.name)
         for sbsym in bsym.subsymbols:
-            for o in sbsym.flat_outs:
+            for o in sbsym.flat_proxy_outs:
                 if o is not None and o.name not in region_trace.names:
                     region_trace.add_name(o.name)
 
